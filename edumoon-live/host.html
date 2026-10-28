@@ -228,6 +228,21 @@ function optHTML(opts, st) {
   }).join("")}</div>`;
 }
 
+let copied = false;
+function inviteText() {
+  return `🌙 EduMoon Live is starting!\n${SESSION.club}: ${SESSION.title}\n\nTap to join: ${joinURL()}\nRoom code: ${code}\n\nJust enter your name and you're in. Fastest answers win points!`;
+}
+async function copyInvite() {
+  const t = inviteText();
+  try { await navigator.clipboard.writeText(t); }
+  catch (e) {
+    const ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e2) {} ta.remove();
+  }
+  copied = true; render();
+  setTimeout(() => { copied = false; if (phase === "lobby") render(); }, 4000);
+}
+
 function render() {
   const S = $("#stage"), n = playerList().length;
   if (phase === "lobby") {
@@ -238,6 +253,10 @@ function render() {
         <div class="url">${H.esc(url.replace(/^https?:\/\//, "").split("?")[0])}</div>
         <div><span class="muted" style="font-weight:700">Room code</span><div class="code">${code}</div></div>
         <div class="qr" id="qr" aria-label="QR code to join"></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <button class="btn" id="copyInvite" type="button" onclick="copyInvite()">${copied ? "Copied! Paste it in Zoom or WhatsApp" : "Copy invite message"}</button>
+          <span class="muted" style="font-size:14px">The link already has the room code in it, so students only type their name.</span>
+        </div>
       </section>
       <section class="card" style="display:flex;flex-direction:column;gap:18px">
         <div style="display:flex;align-items:center;gap:16px">${H.nova("happy", 72)}<div><div class="count">${n}</div><span class="muted" style="font-weight:700">${n === 1 ? "player" : "players"} in the room</span></div></div>
