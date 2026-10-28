@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EduMoon Live</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Player phone page: one column, big thumb-sized buttons. */
+.wrap{max-width:560px}
+.screen{display:flex;flex-direction:column;gap:18px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:24px 0}
+.hero h1{font-size:32px;line-height:1.1}
+.hero p{font-size:18px;color:var(--soft);line-height:1.5;max-width:34ch}
+form.join{display:flex;flex-direction:column;gap:14px}
+label{font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.err{color:var(--miss);font-weight:700;font-size:15px;min-height:20px}
+.head{display:flex;align-items:center;gap:10px}
+.head .pill{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:var(--fuel);color:#1F1600}
+.head .t{margin-left:auto;font-family:var(--display);font-weight:700;font-size:30px;font-variant-numeric:tabular-nums}
+.head .t.low{color:var(--miss)}
+.prompt{font-size:24px;line-height:1.2}
+.ans{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ans.two{grid-template-columns:1fr}
+.ab{border-radius:18px;min-height:110px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:8px;font-weight:800;font-size:17px;text-align:left;line-height:1.25;transition:transform .08s}
+.ab:active:not(:disabled){transform:scale(.97)}
+.ab .sym{font-size:26px}
+.ab.pick{outline:4px solid var(--moon);outline-offset:-4px}
+.ab.fade{opacity:.3}
+.locked{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:30px 0}
+.locked h2{font-size:28px}
+.keys{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.key{height:46px;border-radius:10px;background:var(--panel);border:2px solid var(--line);font-family:var(--display);font-weight:600;font-size:20px}
+.key.hit{background:var(--win);border-color:var(--win);color:#06321F}
+.key.miss{background:transparent;border-color:#3A2E5E;color:var(--miss);text-decoration:line-through;opacity:.6}
+.toast{min-height:26px;font-weight:800;font-size:17px;text-align:center}
+.toast.ok{color:var(--win)} .toast.no{color:var(--miss)}
+.solve{display:flex;gap:8px}
+.solve .btn{padding:0 16px}
+.result{border-radius:24px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.result.good{background:linear-gradient(135deg,#0F6E56,#1D9E75)}
+.result.bad{background:linear-gradient(135deg,#3A1F5E,#5B2A6E)}
+.result h2{font-size:34px}
+.result .pts{font-family:var(--display);font-size:44px;font-weight:700;color:var(--fuel)}
+.rank{font-family:var(--display);font-weight:700;font-size:72px;color:var(--fuel);line-height:1}
+.me{display:flex;justify-content:space-between;align-items:center;background:var(--deep);border:1px solid var(--line);border-radius:16px;padding:12px 16px;font-weight:800}
+.me b{font-family:var(--display);font-size:22px;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <img src="icon.png" alt="EduMoon">
+    <div class="brand"><small id="club">EduMoon Live</small><b id="title">Join the game</b></div>
+  </div>
+  <main class="screen" id="screen" aria-live="polite"></main>
+</div>
+
+<script src="firebase-config.js"></script>
+<script src="game.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+let code = (new URLSearchParams(location.search).get("room") || "").toUpperCase(), pid, me = null, st = null, players = {}, answered = {}, toast = { txt: "", cls: "" }, pending = false;
+
+async function boot() {
+  await DB.init();
+  pid = code && H.ss("edumoon-pid-" + code);
+  if (code && pid) { const p = await DB.get(`rooms/${code}/players/${pid}`); if (p) return enter(); }
+  joinScreen();
+}
+
+function joinScreen(err = "") {
+  $("#screen").innerHTML = `<div class="hero">${H.nova("happy", 96)}<h1>Ready to play?</h1><p>Enter the room code from the Zoom screen and your name.</p></div>
+    <form class="join card" id="jf">
+      <label for="room">Room code</label><input class="field" id="room" maxlength="4" autocomplete="off" placeholder="ABCD" value="${H.esc(code)}" style="text-transform:uppercase;font-family:var(--display);font-size:28px;letter-spacing:.2em">
+      <label for="nm">Your name</label><input class="field" id="nm" maxlength="18" autocomplete="off" placeholder="Priya from AU">
+      <p class="err" id="err">${H.esc(err)}</p>
+      <button class="btn" type="submit">Join game</button>
+      ${DB.mode === "demo" ? `<p class="muted" style="font-size:13px">Demo mode: works only in other tabs on the host's computer.</p>` : ""}
+    </form>`;
+  if (!code) $("#room").focus(); else $("#nm").focus();
+  $("#jf").onsubmit = async e => {
+    e.preventDefault();
+    const c = $("#room").value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 4), name = $("#nm").value.trim();
+    if (c.length !== 4) return $("#err").textContent = "Enter the 4-character room code.";
+    if (!name) return $("#err").textContent = "Enter your name so you show up on the leaderboard.";
+    const room = await DB.get(`rooms/${c}/state`);
+    if (!room) return $("#err").textContent = "No game with that code. Check the code on the Zoom screen.";
+    code = c; pid = H.ss("edumoon-pid-" + code) || (Date.now().toString(36) + Math.random().toString(36).slice(2, 7));
+    H.ss("edumoon-pid-" + code, pid);
+    await DB.set(`rooms/${code}/players/${pid}`, { name, score: 0, last: 0, joined: DB.now() });
+    enter();
+  };
+}
+
+function enter() {
+  DB.on(`rooms/${code}/state`, v => { const prevQ = st && st.q, prevP = st && st.phase; st = v; if (!st || st.q !== prevQ || st.phase !== prevP) toast = { txt: "", cls: "" }; render(); });
+  DB.on(`rooms/${code}/players`, v => { players = v || {}; me = players[pid] || null; render(); });
+  setInterval(tick, 250);
+}
+
+function rankOf() {
+  const all = Object.entries(players).map(([id, p]) => ({ id, ...p })).sort((a, b) => (b.score || 0) - (a.score || 0) || String(a.name).localeCompare(b.name));
+  return { rank: all.findIndex(p => p.id === pid) + 1, of: all.length };
+}
+function tick() {
+  const t = $("#t"); if (!t || !st || !st.endsAt) return;
+  const left = Math.max(0, st.endsAt - DB.now()); t.textContent = Math.ceil(left / 1000); t.classList.toggle("low", left < 5000);
+}
+function meBar() { return me ? `<div class="me"><span>${H.esc(me.name)}</span><b>${me.score || 0} pts</b></div>` : ""; }
+
+async function answer(a) {
+  if (pending || answered[st.q] !== undefined) return;
+  pending = true; answered[st.q] = a;
+  await DB.claim(`rooms/${code}/answers/${st.q}/${pid}`, { a, t: DB.now() });
+  pending = false; render();
+}
+let lastLetter = null;
+async function letter(L) {
+  if (pending) return; pending = true;
+  const q = st.q, won = await DB.claim(`rooms/${code}/hang/${q}/letters/${L}`, { pid, name: me ? me.name : "", t: DB.now() });
+  pending = false;
+  if (!won) { toast = { txt: "Someone tapped " + L + " first!", cls: "no" }; render(); return; }
+  lastLetter = { L, q }; toast = { txt: "Checking " + L + "…", cls: "" }; render();
+}
+function letterResult() {
+  if (!lastLetter || !st || st.q !== lastLetter.q) return;
+  const L = lastLetter.L;
+  if ((st.mask || "").includes(L)) { toast = { txt: "You found " + L + "! +" + H.LETTER_PTS, cls: "ok" }; lastLetter = null; }
+  else if ((st.wrong || []).includes(L)) { toast = { txt: L + " is not in the word. Fuel lost!", cls: "no" }; lastLetter = null; }
+}
+async function trySolve(e) {
+  e.preventDefault(); const w = $("#sw").value.trim(); if (!w) return;
+  await DB.set(`rooms/${code}/hang/${st.q}/tries/${pid}`, { w, t: DB.now(), name: me ? me.name : "" });
+  $("#sw").value = ""; toast = { txt: "Guess sent! Watch the screen…", cls: "ok" }; render();
+}
+async function sendType(e) {
+  e.preventDefault(); const v = $("#tv").value.trim();
+  if (!v) { $("#terr").textContent = "Type an answer first."; return; }
+  answer(v);
+}
+
+function render() {
+  const S = $("#screen"), ae = document.activeElement, key = st ? st.phase + ":" + st.q : "none";
+  letterResult();
+  if (ae && ae.tagName === "INPUT" && ae.value && key === render.key && !(st && st.type === "hangman")) return; // don't wipe what they're typing
+  let keep = null; if (ae && ae.id === "sw" && key === render.key) keep = { v: ae.value, s: ae.selectionStart };
+  render.key = key;
+  if (!st) { S.innerHTML = `<div class="hero">${H.nova("worried", 96)}<h1>This game has ended</h1><p>Ask the host for a new room code.</p></div>`; return; }
+  $("#club").textContent = "EduMoon Live · " + (st.club || "");
+  $("#title").textContent = st.title || "EduMoon Live";
+  const head = st.phase === "question" ? `<div class="head"><span class="pill">Round ${st.q + 1} of ${st.total}</span><span class="t" id="t"></span></div>` : "";
+  if (st.phase === "lobby") {
+    S.innerHTML = `${meBar()}<div class="hero">${H.nova("happy", 110)}<h1>You're in, ${H.esc(me ? me.name : "")}!</h1><p>See your name on the Zoom screen? The game starts soon. Keep this page open.</p></div>`;
+  } else if (st.phase === "question") {
+    const mine = answered[st.q];
+    if (st.type === "hangman") {
+      const mask = st.mask || "", wrong = st.wrong || [];
+      const words = mask.split(" ");
+      S.innerHTML = `${head}<h2 class="prompt">${H.esc(st.prompt)}</h2>
+        <div class="tiles" style="--tw:${Math.max(26, Math.min(40, Math.floor(320 / Math.max(...words.map(w => w.length)))))}px">${words.map(w => `<div class="tw">${[...w].map(c => `<span class="tile ${c !== "_" ? "on" : ""}">${c === "_" ? "" : c}</span>`).join("")}</div>`).join("")}</div>
+        <div class="fuel">${Array.from({ length: H.MAX_WRONG }, (_, i) => `<span class="cell ${i < (st.fuel ?? H.MAX_WRONG) ? "" : "out"}"></span>`).join("")}</div>
+        <p class="toast ${toast.cls}">${H.esc(toast.txt)}</p>
+        <div class="keys">${[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map(L => { const hit = mask.includes(L), miss = wrong.includes(L); return `<button class="key ${hit ? "hit" : miss ? "miss" : ""}" ${hit || miss ? "disabled" : ""} onclick="letter('${L}')" aria-label="Letter ${L}">${L}</button>`; }).join("")}</div>
+        <form class="solve" onsubmit="trySolve(event)"><label class="sr" for="sw">Guess the whole word</label><input class="field" id="sw" autocomplete="off" placeholder="Know it? Type the whole word"><button class="btn" type="submit">Go</button></form>
+        ${st.hint ? `<p class="muted" style="font-size:14px">Hint: ${H.esc(st.hint)}</p>` : ""}${meBar()}`;
+      if (keep) { const i = $("#sw"); i.value = keep.v; i.focus(); try { i.setSelectionRange(keep.s, keep.s); } catch (e) {} }
+    } else if (mine !== undefined) {
+      S.innerHTML = `${head}<div class="locked">${H.nova("calm", 90)}<h2>Locked in!</h2><p class="muted">Waiting for everyone else… Faster correct answers get more points.</p></div>${meBar()}`;
+    } else if (st.type === "type") {
+      S.innerHTML = `${head}<h2 class="prompt">${H.esc(st.prompt)}</h2>
+        <form class="join" onsubmit="sendType(event)"><label for="tv">Your answer</label><input class="field" id="tv" autocomplete="off" placeholder="Type your answer"><p class="err" id="terr"></p><button class="btn" type="submit">Submit</button></form>${meBar()}`;
+      $("#tv").addEventListener("input", () => $("#terr").textContent = "");
+    } else {
+      const opts = st.options || [], tf = st.type === "tf";
+      S.innerHTML = `${head}<h2 class="prompt">${H.esc(st.prompt)}</h2>
+        <div class="ans ${tf ? "two" : ""}">${opts.map((o, i) => { const O = tf ? H.OPT[i === 0 ? 0 : 3] : H.OPT[i]; const val = tf ? i === 0 : i; return `<button class="ab" style="background:${O.c};color:${O.ink}" onclick='answer(${JSON.stringify(val)})'><span class="sym" aria-hidden="true">${O.s}</span><span>${H.esc(o)}</span></button>`; }).join("")}</div>${meBar()}`;
+    }
+    tick();
+  } else if (st.phase === "reveal") {
+    const got = me && me.last > 0;
+    let ans = "";
+    if (st.type === "mcq" || st.type === "tf") ans = (st.options || [])[st.correct];
+    else ans = st.correct;
+    S.innerHTML = `<div class="result ${got ? "good" : "bad"}">${H.nova(got ? "party" : "worried", 90)}<h2>${got ? "Correct!" : st.type === "hangman" ? "Round over" : "Not this time"}</h2>${got ? `<span class="pts">+${me.last}</span>` : ""}<p style="font-weight:700">Answer: ${H.esc(ans)}</p></div>
+      <p class="muted" style="text-align:center;font-size:16px">${H.esc(st.learn || "")}</p>${meBar()}`;
+  } else if (st.phase === "board" || st.phase === "end") {
+    const r = rankOf(), end = st.phase === "end";
+    S.innerHTML = `<div class="hero">${H.nova(r.rank && r.rank <= 3 ? "party" : "happy", 100)}<span class="eyebrow">${end ? "Final rank" : "Your rank"}</span><div class="rank">#${r.rank || "–"}</div><p>of ${r.of} players · ${me ? me.score || 0 : 0} points</p>
+      ${end ? `<p>${r.rank === 1 ? "Champion of the week!" : r.rank <= 3 ? "Podium finish! Amazing." : "Great game! Come back next week to climb higher."}</p>` : `<p>Watch the screen for the next round.</p>`}</div>`;
+  }
+}
+boot();
+</script>
+</body>
+</html>
