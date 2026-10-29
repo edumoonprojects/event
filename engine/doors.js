@@ -131,7 +131,7 @@
   D.myAnswerText = (s, a) => {
     if (a == null) return "";
     if (s.kind === "choice") return s.options[a];
-    if (s.kind === "bug") return `${s.outputOptions[a.o] || "?"}, bug on line ${a.l + 1}`;
+    if (s.kind === "bug") return `${s.outputOptions[a.o] || "?"}, ${s.lineLabel || "bug on line"} ${a.l + 1}`;
     return String(a);
   };
 
@@ -145,6 +145,7 @@
   D.trace = rows => `<pre class="code" aria-label="Step by step">${rows.map(([c, note]) => `<span class="ln">${esc(c)}${note ? `   <span class="c">// ${esc(note)}</span>` : ""}</span>`).join("")}</pre>`;
 
   D.vStory = s => `
+    ${s.art ? D.art() : ""}
     <p class="eyebrow coral">${esc(s.alert)}</p>
     <h1 class="title">${esc(s.title)}</h1>
     <div class="grid">${s.cards.map(([ic, t]) => `<div class="card"><span class="icon" aria-hidden="true">${ic}</span><p class="big">${esc(t)}</p></div>`).join("")}</div>`;
@@ -173,14 +174,20 @@
       <div style="display:flex;flex-direction:column;gap:12px">
         ${s.points.map(([h, t], i) => `<div class="card${i === s.points.length - 1 && s.highlightLast ? " amber" : ""}"><h3>${esc(h)}</h3><p class="big ${i === s.points.length - 1 && s.highlightLast ? "" : "muted"}">${esc(t)}</p></div>`).join("")}
       </div>
-      <div class="card" style="background:#070A1F">
+      ${s.side ? D.vSide(s.side) : `<div class="card" style="background:#070A1F">
         <p class="eyebrow">Example</p>
         ${D.code(s.code)}
         ${s.boxes ? `<div class="chips" aria-label="Array boxes">${s.boxes.map((v, i) => `<span class="chip">a[${i}] = ${v}</span>`).join("")}</div>` : ""}
         <p class="eyebrow green">Shows</p>
         <p class="out">${esc(s.output)}</p>
-      </div>
+      </div>`}
     </div>`;
+
+  // A list of [icon, title, text] rows beside a learn screen (games without code).
+  D.vSide = side => `<div class="card side">
+        <p class="eyebrow">${esc(side.label || "Example")}</p>
+        ${side.items.map(([ic, h, t]) => `<div class="srow"><span class="icon" aria-hidden="true">${ic}</span><div><b>${esc(h)}</b>${t ? `<span class="muted">${esc(t)}</span>` : ""}</div></div>`).join("")}
+      </div>`;
 
   D.vDoorHead = (s, si, room) => `
     <div class="doorhead">
@@ -195,7 +202,7 @@
     <p class="eyebrow green">${s.eyebrow ? esc(s.eyebrow) : `${esc(W.round)} ${D.doorNo(si)}`} · ${esc(W.unlocked)}</p>
     <div class="split">
       <div style="display:flex;flex-direction:column;gap:14px">
-        <div class="card"><p class="muted">The answer is</p><p class="answer${D.answerText(s).length > 14 ? " long" : ""}">${esc(D.answerText(s))}</p>${s.kind === "bug" ? `<p class="big">The bug is on <b>line ${s.bugLine + 1}</b>: ${esc(s.bugText)}</p>` : ""}</div>
+        <div class="card"><p class="muted">The answer is</p><p class="answer${D.answerText(s).length > 14 ? " long" : ""}">${esc(D.answerText(s))}</p>${s.kind === "bug" ? `<p class="big">${esc(s.bugLabel || "The bug is on")} <b>line ${s.bugLine + 1}</b>: ${esc(s.bugText)}</p>` : ""}</div>
         ${s.trace ? D.trace(s.trace) : ""}${s.explain ? `<p class="big">${D.rich(s.explain)}</p>` : ""}
         <p class="note">${esc(s.note)}</p>
       </div>
@@ -237,7 +244,14 @@
     <p class="eyebrow">${esc(s.eyebrow || "Take it home")}</p>
     <h1 class="title">${esc(s.title || "Your power words")}</h1>
     <p class="big muted">${esc(s.note || "Screenshot this and use one new word every day.")}</p>
-    <div class="words">${D.allWords().map(([w, m]) => `<div class="word"><b>${esc(w)}</b><span>${esc(m)}</span></div>`).join("")}</div>`;
+    <div class="words">${(s.items || D.allWords()).map(([w, m]) => `<div class="word"><b>${esc(w)}</b><span>${esc(m)}</span></div>`).join("")}</div>`;
+
+  // "match" step: everyone opens a personal quiz page (like Find My Path) on their own phone.
+  D.matchURL = s => new URL(s.url, location.href).href;
+  D.vMatch = s => `
+    <p class="eyebrow">${esc(s.eyebrow || "Just for you")}</p>
+    <h1 class="title">${esc(s.title)}</h1>
+    ${s.note ? `<p class="big muted">${esc(s.note)}</p>` : ""}`;
 
   D.vKey = () => `
     <div class="keyslide">

@@ -168,3 +168,10 @@ mark.pw{background:var(--amber);color:#1C1300;border-radius:6px;padding:0 .25em;
 @keyframes rise{from{transform:translateY(14px);opacity:0}}
 @keyframes drop{from{transform:translateY(-40px);opacity:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Learn screens without code: a list of rows (Career Map) */
+.side{gap:12px}
+.srow{display:flex;gap:14px;align-items:flex-start}
+.srow .icon{font-size:30px;line-height:1.1;flex:none}
+.srow b{display:block;font-size:clamp(17px,1.6vw,22px)}
+.srow .muted{display:block;font-size:clamp(14px,1.3vw,17px)}

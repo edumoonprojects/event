@@ -19,6 +19,12 @@ window.ZONE = {
 
   games: [
     {
+      club: "skills", icon: "🧭", title: "Life After BTech: Career Map", added: "2026-10-29",
+      desc: "Learn 8 real career paths after BTech: guess the job, bust career myths, fix a 4-year plan. Then every student finds their own best-fit path.",
+      years: "1st & 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "📱 Phones only",
+      host: "career-map/host.html", player: "career-map/"
+    },
+    {
       club: "english", icon: "🎬", title: "Movie Story Time: Baahubali", added: "2026-10-29",
       desc: "Hear the Baahubali story in simple English, learn 20 power words like usurp, clandestine and magnanimous, guess what happens next, and speak if you dare.",
       years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "📱 Phones only",

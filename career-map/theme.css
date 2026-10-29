@@ -1,0 +1,18 @@
+/* Career Map: deep green “night road” theme for the Skills Club (overrides the engine colours). */
+:root{
+  --bg:#06140F; --panel:#0E281F; --panel2:#0A2019; --line:#1E4A3A;
+  --ink:#EEFAF4; --soft:#A8D3C1; --amber:#FFC857; --green:#3DDC97; --coral:#FF8A65; --blue:#6FC6E8;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#0F3D2C 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFC857,#FFE08A)}
+.btn{background:linear-gradient(135deg,#3DDC97,#11A36A);color:#03170F}
+/* This game has no code: plan lines use normal text and wrap on phones. */
+.code{background:#071A13;font-family:var(--body);white-space:pre-wrap;font-size:clamp(16px,1.9vw,26px);line-height:1.45}
+.code .ln{padding:6px 18px}
+.code [data-line]:hover{background:#0F3326}
+.letter{background:linear-gradient(135deg,#FFC857,#F4A93B)}
+.letter small,.letter b{color:#2A1A00}
+.brow:first-child{border-color:var(--green)}
+.opt{font-family:var(--body);font-weight:800}

@@ -69,7 +69,7 @@
     let a = null;
     if (s.kind === "number") { const v = ($("#num") || {}).value; if (v == null || !/^-?\d+$/.test(String(v).trim())) return say("Type a whole number first."); a = parseInt(v, 10); }
     if (s.kind === "choice") { if (pick == null) return say("Tap an answer first."); a = pick; }
-    if (s.kind === "bug") { if (pick == null) return say("First pick what it shows."); if (pickLine == null) return say("Now tap the line with the bug."); a = { o: pick, l: pickLine }; }
+    if (s.kind === "bug") { if (pick == null) return say(s.say1 || "First pick what it shows."); if (pickLine == null) return say(s.say2 || "Now tap the line with the bug."); a = { o: pick, l: pickLine }; }
     busy = true;
     await DB.claim(`rooms/${code}/ans/${i}/${pid}`, { a, t: DB.now() });
     busy = false;
@@ -112,6 +112,7 @@
     else if (step.type === "speak") M.innerHTML = D.vSpeak(step) + `<div class="card" id="live"></div>`;
     else if (step.type === "wordlist") M.innerHTML = D.vWordlist(step);
     else if (step.type === "end") M.innerHTML = `<div id="live"></div>`;
+    else if (step.type === "match") M.innerHTML = D.vMatch(step) + `<a class="btn wide" style="text-align:center;text-decoration:none;display:block" href="${esc(D.matchURL(step))}" target="_blank" rel="noopener">${esc(step.button || "Open it ➜")}</a><p class="muted center">It opens in a new tab. Come back here after.</p>`;
     if (step.type === "door" && s.phase === "open") answerArea();
     window.scrollTo(0, 0);
   }
@@ -123,8 +124,8 @@
     if (myAns(i)) { A.innerHTML = D.code(s.code); return; }
     if (s.kind === "bug") {
       A.innerHTML = `
-        <div class="card"><p class="eyebrow">Step 1 · What does it show?</p><div class="opts">${s.outputOptions.map((o, k) => `<button class="opt${pick === k ? " pick" : ""}" data-pick="${k}" aria-pressed="${pick === k}">${esc(o)}</button>`).join("")}</div></div>
-        <div class="card"><p class="eyebrow">Step 2 · Tap the line with the bug</p>${D.code(s.code, { tap: true, pick: pickLine })}</div>`;
+        <div class="card"><p class="eyebrow">Step 1 · ${esc(s.step1 || "What does it show?")}</p><div class="opts${s.outputOptions.some(o => String(o).length > 5) ? " long" : ""}">${s.outputOptions.map((o, k) => `<button class="opt${pick === k ? " pick" : ""}" data-pick="${k}" aria-pressed="${pick === k}">${esc(o)}</button>`).join("")}</div></div>
+        <div class="card"><p class="eyebrow">Step 2 · ${esc(s.step2 || "Tap the line with the bug")}</p>${D.code(s.code, { tap: true, pick: pickLine })}</div>`;
     } else {
       A.innerHTML = D.code(s.code) + (s.kind === "number"
         ? `<div class="card"><label class="lbl" for="num">Your answer</label><input class="field" id="num" inputmode="numeric" pattern="-?[0-9]*" autocomplete="off" placeholder="Type a number" style="font-family:var(--display);font-size:32px"></div>`
@@ -155,7 +156,7 @@
       const r = D.answerPoints(room, i, pid);
       let cls = "none", head = "No answer this time", sub = "You didn’t lock in an answer.";
       if (r.answered && r.ok) { cls = "good"; head = "Cracked it! 🎉"; sub = `+${r.base} correct · +${r.speed} speed`; }
-      else if (r.answered && step.kind === "bug" && (r.o || r.l)) { cls = "bad"; head = "Half right!"; sub = `+${r.base}. You found ${r.o ? "the output" : "the bug"}, but not ${r.o ? "the bug" : "the output"}.`; }
+      else if (r.answered && step.kind === "bug" && (r.o || r.l)) { cls = "bad"; head = "Half right!"; const po = step.partO || "the output", pl = step.partL || "the bug"; sub = `+${r.base}. You got ${r.o ? po : pl}, but not ${r.o ? pl : po}.`; }
       else if (r.answered) { cls = "bad"; head = "Not this time"; sub = `You said ${D.myAnswerText(step, r.a)}.`; }
       L.innerHTML = `<div class="result ${cls}"><h2>${head}</h2><p class="big">${esc(sub)}</p>${r.pts ? `<p class="pts">+${r.pts}</p>` : ""}</div>`;
       return;

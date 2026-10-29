@@ -153,6 +153,14 @@
     else if (step.type === "tale") M.innerHTML = D.vTale(step);
     else if (step.type === "speak") M.innerHTML = D.vSpeak(step) + `<div class="card" id="live"></div>`;
     else if (step.type === "wordlist") M.innerHTML = D.vWordlist(step);
+    else if (step.type === "match") {
+      M.innerHTML = D.vMatch(step) + `
+        <div class="card" style="flex-direction:row;align-items:center;gap:24px;flex-wrap:wrap">
+          <div class="qr" id="matchqr" aria-label="QR code for ${esc(step.title)}"></div>
+          <div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:8px"><p class="big"><b>Everyone, scan this on your own phone.</b></p><p class="muted">Already in the game? There’s also a button on your game screen.</p><p class="url">${esc(D.matchURL(step))}</p></div>
+        </div>`;
+      if (window.QRCode) new QRCode($("#matchqr"), { text: D.matchURL(step), width: 200, height: 200, colorDark: "#0A0E27", colorLight: "#F2F4FB" });
+    }
     else if (step.type === "end") {
       M.innerHTML = `<div id="live"></div>
         <div class="card amber" style="flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap">
