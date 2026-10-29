@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Resume Score · EduMoon</title>
+<meta name="description" content="10 quick checks for your resume: get a score out of 10 and your top 3 fixes. By EduMoon Skills Club.">
+<link rel="icon" href="../engine/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Nunito+Sans:wght@400;700;800&display=swap">
+<link rel="stylesheet" href="../engine/doors.css">
+<link rel="stylesheet" href="theme.css">
+<script src="../engine/icons.js"></script>
+<script src="content.js"></script>
+<style>
+  main{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+  .hero{background:linear-gradient(135deg,#0F3E46,#0B2126);border:2px solid var(--amber);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px}
+  .hero h1{font-family:var(--display);font-size:clamp(28px,7vw,42px);margin:0;line-height:1.1}
+  .hero > .ic{width:52px;height:52px;color:var(--amber)}
+  .q{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+  .q b{font-size:18px}
+  .q .muted{font-size:15px}
+  .yn{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .yn button{border-radius:12px;padding:10px;font:inherit;font-weight:800;font-size:16px;background:var(--panel2);border:2px solid var(--line);color:var(--ink);cursor:pointer;min-height:46px}
+  .yn button[aria-pressed="true"].y{background:var(--green);border-color:var(--green);color:#03241A}
+  .yn button[aria-pressed="true"].n{background:var(--coral);border-color:var(--coral);color:#2A0A06}
+  .score{font-family:var(--display);font-size:clamp(64px,18vw,110px);font-weight:700;line-height:1;color:var(--amber)}
+  .score small{font-size:.35em;color:var(--soft)}
+  .fix{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px}
+  .fix .no{font-family:var(--display);font-weight:700;color:var(--amber);font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+  .fix b{font-size:19px}
+  .day{display:flex;gap:12px;align-items:baseline;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+  .day b{font-family:var(--display);color:var(--amber);flex:none;width:52px}
+  a.btn{text-align:center;text-decoration:none;display:block}
+  .btn.ghost{background:transparent;border:2px solid var(--line);color:var(--soft)}
+  .foot{color:var(--soft);font-size:13px;text-align:center;margin:8px 0 24px}
+  .err{color:var(--coral);min-height:1.2em;margin:0}
+</style>
+</head>
+<body class="player">
+<div class="wrap">
+  <header class="top">
+    <img src="../engine/icon.png" alt="EduMoon">
+    <div class="brand"><small>EduMoon Skills Club</small><b>My Resume Score</b></div>
+  </header>
+  <main id="main" aria-live="polite"></main>
+  <p class="foot">Built by Vikas Kapuganti for EduMoon</p>
+</div>
+<script>
+(function () {
+  const C = window.RESUME_CHECK;
+  // How to fix each check (same order as the checklist).
+  const HOW = [
+    "Cut anything that doesn’t help for this role: declarations, personal details, old school marks.",
+    "Make a free email like firstname.lastname@gmail.com and use it only for jobs.",
+    "Write one line: your year and branch + what you’ve built + the role you want.",
+    "Rewrite each project as: Built [what] with [tools], used by [number] people.",
+    "Remove any skill you can’t explain for 2 minutes. Mark beginner skills as (basic).",
+    "Pin your best GitHub projects and set a custom LinkedIn URL with your name.",
+    "Delete “hardworking, honest” and filler hobbies. Use that space for a project.",
+    "Send it to one friend or senior tonight and ask them to mark every typo.",
+    "Export as PDF and name it Firstname_Lastname_Resume.pdf.",
+    "Add your latest project, course or event. Set a reminder to update it every semester."
+  ];
+  const PLAN = [
+    "Make a free, name-based email just for jobs.",
+    "Write your Education and Skills sections. Only skills you can explain.",
+    "Write your best project as: Built [what] with [tools], used by [number] people.",
+    "Add one more project, an internship, or an event you organised.",
+    "Create GitHub and LinkedIn profiles. Pin your projects. Add the links.",
+    "Fit everything on one page. Ask a friend or senior to check it for typos.",
+    "Export as Firstname_Lastname_Resume.pdf. Done! Update it every semester."
+  ];
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const M = document.getElementById("main");
+  const ans = {};
+  const link = location.href.split("?")[0];
+
+  function ask() {
+    M.innerHTML = `
+      <div class="hero">${ic("file-text")}<h1>How strong is your resume?</h1>
+        <p class="big muted" style="margin:0">Open your resume, then answer 10 quick checks honestly. Only you see this.</p></div>
+      ${C.map(([t, d], k) => `<div class="q"><div><b>${k + 1}. ${esc(t)}</b><br><span class="muted">${esc(d)}</span></div>
+        <div class="yn" role="group" aria-label="${esc(t)}"><button class="y" data-k="${k}" data-v="1" aria-pressed="${ans[k] === 1}">Yes</button><button class="n" data-k="${k}" data-v="0" aria-pressed="${ans[k] === 0}">Not yet</button></div></div>`).join("")}
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn wide" id="go">Show my score →</button>
+      <button class="btn ghost wide" id="none">I don’t have a resume yet</button>`;
+    M.querySelectorAll(".yn button").forEach(b => (b.onclick = () => {
+      ans[+b.dataset.k] = +b.dataset.v;
+      b.parentNode.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    }));
+    document.getElementById("go").onclick = () => {
+      const left = C.length - Object.keys(ans).length;
+      if (left) return (document.getElementById("err").textContent = `Answer all 10 checks first (${left} left).`);
+      result();
+    };
+    document.getElementById("none").onclick = plan;
+  }
+
+  function result() {
+    const score = C.filter((_, k) => ans[k] === 1).length;
+    const todo = C.map((c, k) => k).filter(k => ans[k] === 0).slice(0, 3);
+    const msg = score >= 9 ? "Excellent! Your resume is ready. Start applying, and keep it updated."
+      : score >= 7 ? "Strong! A few quick fixes and it’s ready to send."
+      : score >= 4 ? "Good start. Fix these tonight and your resume will stand out."
+      : "Lots to gain! Do these 3 fixes first. Every one makes a big difference.";
+    const share = `My resume scored ${score}/10 on EduMoon’s Resume Score. Check yours in 2 minutes: ${link}`;
+    M.innerHTML = `
+      <div class="hero"><p class="eyebrow" style="margin:0">Your resume score</p><p class="score">${score}<small> / 10</small></p><p class="big" style="margin:0">${esc(msg)}</p></div>
+      ${todo.length ? `<p class="eyebrow">Your top ${todo.length} fix${todo.length === 1 ? "" : "es"} for tonight</p>
+      ${todo.map((k, i) => `<div class="fix"><span class="no">Fix ${i + 1} · ${esc(C[k][0])}</span><b>${esc(HOW[k])}</b></div>`).join("")}` : `<div class="fix"><span class="no">All 10 checks passed</span><b>Ask a senior or a working professional to review it, and tailor the top line for each job you apply to.</b></div>`}
+      <a class="btn wide" href="https://wa.me/?text=${encodeURIComponent(share)}" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="btn ghost wide" id="again">Check again</button>
+      <a class="btn ghost wide" href="https://chat.whatsapp.com/EqrtHVWwh3OI2aFhg6Zz6s" target="_blank" rel="noopener">Join the EduMoon Skills Club</a>`;
+    document.getElementById("again").onclick = ask;
+    window.scrollTo(0, 0);
+  }
+
+  function plan() {
+    const share = `I’m making my first resume in 7 days with EduMoon’s plan. Try it: ${link}`;
+    M.innerHTML = `
+      <div class="hero">${ic("rocket")}<h1>Your 7-day resume plan</h1>
+        <p class="big muted" style="margin:0">No resume yet? Perfect time to start. 20 minutes a day, and you’ll have a strong one-page resume in a week.</p></div>
+      ${PLAN.map((t, d) => `<div class="day"><b>Day ${d + 1}</b><span>${esc(t)}</span></div>`).join("")}
+      <a class="btn wide" href="https://wa.me/?text=${encodeURIComponent(share)}" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="btn ghost wide" id="again">I have a resume: check it</button>
+      <a class="btn ghost wide" href="https://chat.whatsapp.com/EqrtHVWwh3OI2aFhg6Zz6s" target="_blank" rel="noopener">Join the EduMoon Skills Club</a>`;
+    document.getElementById("again").onclick = ask;
+    window.scrollTo(0, 0);
+  }
+
+  ask();
+})();
+</script>
+</body>
+</html>

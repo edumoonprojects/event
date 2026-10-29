@@ -16,9 +16,9 @@ window.GAME = {
   steps: [
     {
       type: "story",
-      alert: "⚠ Security alert · 6:00 PM",
+      alert: "Security alert · 6:00 PM",
       title: "The computer lab has locked itself. You’re inside.",
-      cards: [["🔒", "5 doors stand between you and the exit"], ["💻", "Each one is locked by a piece of C code"], ["🔑", "Crack a door, win a letter of the master key"]]
+      cards: [["lock", "5 doors stand between you and the exit"], ["code", "Each one is locked by a piece of C code"], ["key", "Crack a door, win a letter of the master key"]]
     },
     { type: "rules" },
 

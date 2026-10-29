@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Nunito+Sans:wght@400;700;800&display=swap">
 <link rel="stylesheet" href="../engine/doors.css">
 <link rel="stylesheet" href="theme.css">
+<script src="../engine/icons.js"></script>
 <style>
   main{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
   .prog{height:8px;background:var(--panel);border-radius:99px;overflow:hidden}
@@ -17,9 +18,9 @@
   .choices{display:flex;flex-direction:column;gap:12px}
   .choice{display:flex;gap:14px;align-items:center;text-align:left;background:var(--panel);border:2px solid var(--line);color:var(--ink);border-radius:16px;padding:16px 18px;font:inherit;font-size:18px;cursor:pointer;min-height:64px}
   .choice:hover,.choice:focus-visible{border-color:var(--green);outline:none}
-  .choice .em{font-size:28px;flex:none}
+  .choice .em{flex:none;width:36px;height:36px;border-radius:10px;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-weight:700;color:var(--amber)}
   .hero{background:linear-gradient(135deg,#0F3D2C,#0A2019);border:2px solid var(--green);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px}
-  .hero .big-ic{font-size:64px;line-height:1}
+  .hero .big-ic{color:var(--green)}.hero .big-ic .ic{width:60px;height:60px}.mini .ic{color:var(--green)}
   .hero h1{font-family:var(--display);font-size:clamp(30px,7vw,44px);margin:0;line-height:1.1}
   .step{background:linear-gradient(135deg,#FFC857,#FFE08A);color:#2A1A00;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
   .step small{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
@@ -39,7 +40,7 @@
 <div class="wrap">
   <header class="top">
     <img src="../engine/icon.png" alt="EduMoon">
-    <div class="brand"><small>EduMoon Skills Club</small><b>Find My Path 🔮</b></div>
+    <div class="brand"><small>EduMoon Skills Club</small><b>Find My Path</b></div>
   </header>
   <main id="main" aria-live="polite"></main>
   <p class="foot">Built by Vikas Kapuganti for EduMoon</p>
@@ -54,22 +55,22 @@
     D: { name: "The Deep Thinkers & Public Servants", careers: ["higher", "govt"] }
   };
   const C = {
-    sde: { ic: "💻", name: "Software Developer", what: "You build the apps and websites people use every day, turning ideas into working code.", skills: "Programming · problem solving · Git and GitHub", step: "Pick one language (Python or C). Practise 20 minutes a day this week and solve 3 easy problems on LeetCode or HackerRank." },
-    cloud: { ic: "☁️", name: "Cloud Engineer", what: "You keep big apps running smoothly for millions of users, on servers in the cloud.", skills: "Linux · networking · AWS, Azure or Google Cloud", step: "Learn 10 basic Linux commands this week, then watch one free “What is cloud computing?” video." },
-    data: { ic: "📊", name: "Data Analyst", what: "You find answers hidden in numbers and help companies make better decisions.", skills: "Excel · SQL · Python · charts", step: "Download a free dataset you love (cricket, movies, music) and make one chart in Excel or Google Sheets." },
-    cyber: { ic: "🛡️", name: "Cybersecurity Analyst", what: "You protect companies and people from hackers, and find weak spots before attackers do.", skills: "Networking · Linux · security basics", step: "Make a free TryHackMe account and finish one beginner room this week." },
-    uiux: { ic: "🎨", name: "UI/UX Designer", what: "You design apps and websites that are easy and beautiful to use.", skills: "Figma · design basics · understanding users", step: "Make a free Figma account and redesign one screen of an app you use every day." },
-    pm: { ic: "🧭", name: "Product Manager", what: "You decide what an app should build next, and lead designers and developers to build it.", skills: "Communication · understanding users · tech basics", step: "Pick an app you use daily. Write down 3 problems with it and how you’d fix each one." },
-    higher: { ic: "🎓", name: "Higher Studies", what: "You go deep into a subject: GATE (M.Tech or PSU jobs), an MS abroad, or an MBA.", skills: "Strong basics · maths · steady study habits", step: "Download the GATE syllabus for your branch and mark the subjects you already enjoy." },
-    govt: { ic: "🏛️", name: "Government Jobs", what: "You serve the public in a stable, respected job through exams like SSC, banking, railways or state PSC.", skills: "Aptitude · reasoning · English · current affairs", step: "Pick one exam, read its exam pattern, and try one free aptitude and reasoning practice test." }
+    sde: { ic: "code", name: "Software Developer", what: "You build the apps and websites people use every day, turning ideas into working code.", skills: "Programming · problem solving · Git and GitHub", step: "Pick one language (Python or C). Practise 20 minutes a day this week and solve 3 easy problems on LeetCode or HackerRank." },
+    cloud: { ic: "cloud", name: "Cloud Engineer", what: "You keep big apps running smoothly for millions of users, on servers in the cloud.", skills: "Linux · networking · AWS, Azure or Google Cloud", step: "Learn 10 basic Linux commands this week, then watch one free “What is cloud computing?” video." },
+    data: { ic: "chart-column", name: "Data Analyst", what: "You find answers hidden in numbers and help companies make better decisions.", skills: "Excel · SQL · Python · charts", step: "Download a free dataset you love (cricket, movies, music) and make one chart in Excel or Google Sheets." },
+    cyber: { ic: "shield", name: "Cybersecurity Analyst", what: "You protect companies and people from hackers, and find weak spots before attackers do.", skills: "Networking · Linux · security basics", step: "Make a free TryHackMe account and finish one beginner room this week." },
+    uiux: { ic: "palette", name: "UI/UX Designer", what: "You design apps and websites that are easy and beautiful to use.", skills: "Figma · design basics · understanding users", step: "Make a free Figma account and redesign one screen of an app you use every day." },
+    pm: { ic: "compass", name: "Product Manager", what: "You decide what an app should build next, and lead designers and developers to build it.", skills: "Communication · understanding users · tech basics", step: "Pick an app you use daily. Write down 3 problems with it and how you’d fix each one." },
+    higher: { ic: "graduation-cap", name: "Higher Studies", what: "You go deep into a subject: GATE (M.Tech or PSU jobs), an MS abroad, or an MBA.", skills: "Strong basics · maths · steady study habits", step: "Download the GATE syllabus for your branch and mark the subjects you already enjoy." },
+    govt: { ic: "landmark", name: "Government Jobs", what: "You serve the public in a stable, respected job through exams like SSC, banking, railways or state PSC.", skills: "Aptitude · reasoning · English · current affairs", step: "Pick one exam, read its exam pattern, and try one free aptitude and reasoning practice test." }
   };
   const Q = [
-    { q: "Which subject did you enjoy most in school?", o: [["🧩", "Maths puzzles and logic", "A", "sde"], ["🔬", "Science: finding out why things happen", "B", "data"], ["🖍️", "Art, drawing or debates", "C", "uiux"], ["🌏", "Social studies and general knowledge", "D", "govt"]] },
-    { q: "A free Saturday. What sounds most fun?", o: [["🛠️", "Build a small app or website", "A", "sde"], ["🏏", "Dig into cricket stats to find patterns", "B", "data"], ["🎉", "Organise an event with friends", "C", "pm"], ["📚", "Read deeply about one topic I love", "D", "higher"]] },
-    { q: "Your college fest website crashes. What do you do?", o: [["🔌", "Get the servers back up so people can register", "A", "cloud"], ["🕵️", "Check if someone hacked it", "B", "cyber"], ["🎨", "Redesign the page so it’s easier to use", "C", "uiux"], ["📋", "Write clear rules so it never happens again", "D", "govt"]] },
-    { q: "Which sentence sounds most like you?", o: [["⚙️", "“I like making things work.”", "A", "cloud"], ["🔍", "“I notice what others miss.”", "B", "cyber"], ["🗣️", "“I like leading people and deciding what to do.”", "C", "pm"], ["🏅", "“I want a secure, respected job, and I can study hard for it.”", "D", "govt"]] },
-    { q: "Pick a superpower.", o: [["🤖", "Make any app or machine do what I say", "A", "sde"], ["🔢", "See the truth hidden in numbers", "B", "data"], ["✨", "Make anything look beautiful and simple", "C", "uiux"], ["🧠", "Become an expert in anything by studying", "D", "higher"]] },
-    { q: "In 10 years, you’d love to be…", o: [["🌐", "Running the tech that keeps big apps online", "A", "cloud"], ["🛡️", "Protecting companies from hackers", "B", "cyber"], ["🚀", "Leading a team, or my own startup", "C", "pm"], ["👩‍🏫", "A professor, researcher or expert in my field", "D", "higher"]] }
+    { q: "Which subject did you enjoy most in school?", o: [["", "Maths puzzles and logic", "A", "sde"], ["", "Science: finding out why things happen", "B", "data"], ["", "Art, drawing or debates", "C", "uiux"], ["", "Social studies and general knowledge", "D", "govt"]] },
+    { q: "A free Saturday. What sounds most fun?", o: [["", "Build a small app or website", "A", "sde"], ["", "Dig into cricket stats to find patterns", "B", "data"], ["", "Organise an event with friends", "C", "pm"], ["", "Read deeply about one topic I love", "D", "higher"]] },
+    { q: "Your college fest website crashes. What do you do?", o: [["", "Get the servers back up so people can register", "A", "cloud"], ["", "Check if someone hacked it", "B", "cyber"], ["", "Redesign the page so it’s easier to use", "C", "uiux"], ["", "Write clear rules so it never happens again", "D", "govt"]] },
+    { q: "Which sentence sounds most like you?", o: [["", "“I like making things work.”", "A", "cloud"], ["", "“I notice what others miss.”", "B", "cyber"], ["", "“I like leading people and deciding what to do.”", "C", "pm"], ["", "“I want a secure, respected job, and I can study hard for it.”", "D", "govt"]] },
+    { q: "Pick a superpower.", o: [["", "Make any app or machine do what I say", "A", "sde"], ["", "See the truth hidden in numbers", "B", "data"], ["", "Make anything look beautiful and simple", "C", "uiux"], ["", "Become an expert in anything by studying", "D", "higher"]] },
+    { q: "In 10 years, you’d love to be…", o: [["", "Running the tech that keeps big apps online", "A", "cloud"], ["", "Protecting companies from hackers", "B", "cyber"], ["", "Leading a team, or my own startup", "C", "pm"], ["", "A professor, researcher or expert in my field", "D", "higher"]] }
   ];
   const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const M = document.getElementById("main");
@@ -77,9 +78,9 @@
 
   function intro() {
     M.innerHTML = `
-      <div class="hero"><span class="big-ic" aria-hidden="true">🔮</span><h1>Find your path after BTech</h1>
+      <div class="hero"><span class="big-ic">${ic("sparkles")}</span><h1>Find your path after BTech</h1>
       <p class="big muted" style="margin:0">6 quick questions. No marks, no wrong answers. Just pick what feels most like you.</p></div>
-      <button class="btn wide" id="go">Start ➜</button>`;
+      <button class="btn wide" id="go">Start →</button>`;
     document.getElementById("go").onclick = () => { picks = []; ask(); };
   }
 
@@ -89,8 +90,8 @@
       <div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="6" aria-valuenow="${i}"><i style="width:${(i / Q.length) * 100}%"></i></div>
       <p class="eyebrow">Question ${i + 1} of ${Q.length}</p>
       <h2 class="q">${esc(Qi.q)}</h2>
-      <div class="choices">${Qi.o.map((o, k) => `<button class="choice" data-k="${k}"><span class="em" aria-hidden="true">${o[0]}</span><span>${esc(o[1])}</span></button>`).join("")}</div>
-      ${i ? `<button class="backq" id="back">◀ Back</button>` : ""}`;
+      <div class="choices">${Qi.o.map((o, k) => `<button class="choice" data-k="${k}"><span class="em" aria-hidden="true">${"ABCD"[k]}</span><span>${esc(o[1])}</span></button>`).join("")}</div>
+      ${i ? `<button class="backq" id="back">← Back</button>` : ""}`;
     M.querySelectorAll(".choice").forEach(b => (b.onclick = () => { picks.push(+b.dataset.k); picks.length === Q.length ? result() : ask(); }));
     const bk = document.getElementById("back"); if (bk) bk.onclick = () => { picks.pop(); ask(); };
     window.scrollTo(0, 0);
@@ -104,18 +105,18 @@
     const f1 = fams[0], f2 = fams[1];
     const inFam = f => FAM[f].careers.slice().sort((a, b) => (car[b] || 0) - (car[a] || 0) || (last[b] ?? -1) - (last[a] ?? -1));
     const [top, mate] = inFam(f1), other = inFam(f2)[0], T = C[top];
-    const share = `🔮 I took EduMoon’s Find My Path quiz. My best-fit career after BTech: ${T.ic} ${T.name}!\n\nFind yours in 1 minute: ${location.href.split("?")[0]}`;
+    const share = `I took EduMoon’s Find My Path quiz. My best-fit career after BTech: ${T.name}!\n\nFind yours in 1 minute: ${location.href.split("?")[0]}`;
     M.innerHTML = `
       <p class="eyebrow">Your best-fit path · ${esc(FAM[f1].name)}</p>
-      <div class="hero"><span class="big-ic" aria-hidden="true">${T.ic}</span><h1>${esc(T.name)}</h1>
+      <div class="hero"><span class="big-ic">${ic(T.ic)}</span><h1>${esc(T.name)}</h1>
         <p class="big" style="margin:0">${esc(T.what)}</p>
         <p class="muted" style="margin:0"><b>Start with:</b> ${esc(T.skills)}</p></div>
       <div class="step"><small>Your first step this week</small><p>${esc(T.step)}</p></div>
       <div class="row2">
-        <div class="mini"><span class="muted">Also explore</span><b>${C[mate].ic} ${esc(C[mate].name)}</b></div>
-        <div class="mini"><span class="muted">Your 2nd match</span><b>${C[other].ic} ${esc(C[other].name)}</b></div>
+        <div class="mini"><span class="muted">Also explore</span><b>${ic(C[mate].ic)} ${esc(C[mate].name)}</b></div>
+        <div class="mini"><span class="muted">Your 2nd match</span><b>${ic(C[other].ic)} ${esc(C[other].name)}</b></div>
       </div>
-      <p class="switch">You’re in 1st or 2nd year, so this is a <b>starting point, not a final decision</b>. Try this path for 1 month. If it doesn’t feel right, switch and try another. Exploring is the plan. 🧭</p>
+      <p class="switch">You’re in 1st or 2nd year, so this is a <b>starting point, not a final decision</b>. Try this path for 1 month. If it doesn’t feel right, switch and try another. Exploring is the plan.</p>
       <a class="btn wide" href="https://wa.me/?text=${encodeURIComponent(share)}" target="_blank" rel="noopener">Share on WhatsApp</a>
       <button class="btn ghost wide" id="again">Try again</button>
       <a class="btn ghost wide" href="https://chat.whatsapp.com/EqrtHVWwh3OI2aFhg6Zz6s" target="_blank" rel="noopener">Join the EduMoon Skills Club</a>`;

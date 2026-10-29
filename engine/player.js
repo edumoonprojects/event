@@ -29,7 +29,7 @@
     if (code) { const s = await DB.get(`rooms/${code}/state`); if (s && s.mode) mode = s.mode; }
     const w = mode === "solo" ? "Your name" : "Team name";
     $("#main").innerHTML = `
-      <div class="center" style="padding:12px 0"><span class="icon" style="font-size:56px" aria-hidden="true">🔐</span><h1 class="title">${esc(G.title)}</h1><p class="big muted">${esc(G.tagline)}</p></div>
+      <div class="center" style="padding:12px 0"><span class="icon big">${ic("gamepad-2")}</span><h1 class="title">${esc(G.title)}</h1><p class="big muted">${esc(G.tagline)}</p></div>
       <form class="card" id="jf" style="gap:12px">
         <label class="lbl" for="room">Room code</label>
         <input class="field" id="room" maxlength="4" autocomplete="off" autocapitalize="characters" placeholder="ABCD" value="${esc(code)}" style="font-family:var(--display);font-size:30px;letter-spacing:.2em;text-transform:uppercase">
@@ -98,7 +98,7 @@
 
   function full() {
     const s = st(), i = s.step, step = S[i], M = $("#main");
-    if (s.phase === "lobby") { M.innerHTML = `<div class="center" style="padding:24px 0"><span class="icon" style="font-size:64px" aria-hidden="true">✅</span><h1 class="title">You’re in, ${esc(me().name)}!</h1><p class="big muted">Wait for the host to start. Keep this page open.</p></div><div class="card" id="live"></div>`; return; }
+    if (s.phase === "lobby") { M.innerHTML = `<div class="center" style="padding:24px 0"><span class="icon big">${ic("circle-check")}</span><h1 class="title">You’re in, ${esc(me().name)}!</h1><p class="big muted">Wait for the host to start. Keep this page open.</p></div><div class="card" id="live"></div>`; return; }
     if (!step) return;
     if (step.type === "story") M.innerHTML = D.vStory(step) + listenNote();
     else if (step.type === "rules") M.innerHTML = D.vRules(s.mode) + listenNote();
@@ -111,13 +111,14 @@
     else if (step.type === "tale") M.innerHTML = D.vTale(step) + listenNote();
     else if (step.type === "speak") M.innerHTML = D.vSpeak(step) + `<div class="card" id="live"></div>`;
     else if (step.type === "wordlist") M.innerHTML = D.vWordlist(step);
+    else if (step.type === "compare") M.innerHTML = D.vCompare(step) + listenNote();
     else if (step.type === "end") M.innerHTML = `<div id="live"></div>`;
-    else if (step.type === "match") M.innerHTML = D.vMatch(step) + `<a class="btn wide" style="text-align:center;text-decoration:none;display:block" href="${esc(D.matchURL(step))}" target="_blank" rel="noopener">${esc(step.button || "Open it ➜")}</a><p class="muted center">It opens in a new tab. Come back here after.</p>`;
+    else if (step.type === "match") M.innerHTML = D.vMatch(step) + `<a class="btn wide" style="text-align:center;text-decoration:none;display:block" href="${esc(D.matchURL(step))}" target="_blank" rel="noopener">${esc(step.button || "Open it →")}</a><p class="muted center">It opens in a new tab. Come back here after.</p>`;
     if (step.type === "door" && s.phase === "open") answerArea();
     window.scrollTo(0, 0);
   }
 
-  const listenNote = () => `<p class="muted center">👂 Listen to your host. The next screen appears when they tap Next.</p>`;
+  const listenNote = () => `<p class="muted center">${ic("ear")} Listen to your host. The next screen appears when they tap Next.</p>`;
 
   function answerArea() {
     const i = st().step, s = S[i], A = $("#ansarea");
@@ -144,9 +145,9 @@
       const mine = myAns(i), n = Object.keys((room.ans && room.ans[i]) || {}).length, h = myHint(i);
       const free = hintsUsed() === 0 || h;
       L.innerHTML = mine
-        ? `<div class="result none"><span class="icon" style="font-size:44px" aria-hidden="true">🔒</span><h2>Locked in!</h2><p class="big">Your answer: <b>${esc(D.myAnswerText(step, mine.a))}</b></p><p class="muted">${n} of ${ps} ${w}s locked in. Wait for the host to reveal…</p></div>`
-        : `<button class="btn wide lockbtn" id="lock">Lock it in 🔒</button><p class="err" id="say" role="alert"></p><p class="muted" id="tnote"></p>
-           ${h ? `<div class="hintbox">💡 ${esc(step.hint)}</div>` : `<button class="btn ghost wide" id="hint">${hintArm ? "Tap again to use it (−30 points)" : free ? "💡 Use your free hint" : "💡 Hint (costs 30 points)"}</button>`}
+        ? `<div class="result none"><span class="icon big">${ic("lock")}</span><h2>Locked in!</h2><p class="big">Your answer: <b>${esc(D.myAnswerText(step, mine.a))}</b></p><p class="muted">${n} of ${ps} ${w}s locked in. Wait for the host to reveal…</p></div>`
+        : `<button class="btn wide lockbtn" id="lock">Lock it in</button><p class="err" id="say" role="alert"></p><p class="muted" id="tnote"></p>
+           ${h ? `<div class="hintbox">${ic("lightbulb")} ${esc(step.hint)}</div>` : `<button class="btn ghost wide" id="hint">${hintArm ? "Tap again to use it (−30 points)" : free ? ic("lightbulb") + " Use your free hint" : ic("lightbulb") + " Hint (costs 30 points)"}</button>`}
            <p class="muted">${n} of ${ps} ${w}s locked in</p>`;
       const lb = $("#lock"); if (lb) lb.onclick = lockIn;
       const hb = $("#hint"); if (hb) hb.onclick = hint;
@@ -155,7 +156,7 @@
     if (step.type === "door" && s.phase === "reveal") {
       const r = D.answerPoints(room, i, pid);
       let cls = "none", head = "No answer this time", sub = "You didn’t lock in an answer.";
-      if (r.answered && r.ok) { cls = "good"; head = "Cracked it! 🎉"; sub = `+${r.base} correct · +${r.speed} speed`; }
+      if (r.answered && r.ok) { cls = "good"; head = "Cracked it!"; sub = `+${r.base} correct · +${r.speed} speed`; }
       else if (r.answered && step.kind === "bug" && (r.o || r.l)) { cls = "bad"; head = "Half right!"; const po = step.partO || "the output", pl = step.partL || "the bug"; sub = `+${r.base}. You got ${r.o ? po : pl}, but not ${r.o ? pl : po}.`; }
       else if (r.answered) { cls = "bad"; head = "Not this time"; sub = `You said ${D.myAnswerText(step, r.a)}.`; }
       L.innerHTML = `<div class="result ${cls}"><h2>${head}</h2><p class="big">${esc(sub)}</p>${r.pts ? `<p class="pts">+${r.pts}</p>` : ""}</div>`;
@@ -168,7 +169,7 @@
     }
     if (step.type === "speak") {
       const got = room.bonus && room.bonus[i] && room.bonus[i][pid];
-      L.innerHTML = got ? `<div class="result good"><h2>You spoke! 🎤</h2><p class="pts">+${got}</p></div>`
+      L.innerHTML = got ? `<div class="result good"><h2>You spoke!</h2><p class="pts">+${got}</p></div>`
         : `<p class="big">Want to speak? Raise your hand or unmute. It’s completely optional, and there’s no wrong English!</p>`;
       return;
     }

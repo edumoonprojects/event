@@ -38,3 +38,9 @@
 .steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:18px;line-height:1.4}
 .foot{color:var(--soft);font-size:14px;text-align:center;margin-top:24px}
 .foot a{color:var(--amber)}
+
+/* Line icons (no emoji) */
+.cicon .ic{width:44px;height:44px}
+.chero .cicon .ic{width:64px;height:64px}
+.gicon .ic{width:1em;height:1em;color:var(--c)}
+.badges .ic{width:15px;height:15px;opacity:.85}

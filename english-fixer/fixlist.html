@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Fix List · EduMoon</title>
+<meta name="description" content="Tick the English phrases you use and get your own top 5 fixes and a 7-day challenge. By EduMoon English Club.">
+<link rel="icon" href="../engine/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Nunito+Sans:wght@400;700;800&display=swap">
+<link rel="stylesheet" href="../engine/doors.css">
+<link rel="stylesheet" href="theme.css">
+<script src="../engine/icons.js"></script>
+<style>
+  main{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+  .hero{background:linear-gradient(135deg,#4A1838,#22101F);border:2px solid var(--coral);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px}
+  .hero h1{font-family:var(--display);font-size:clamp(28px,7vw,42px);margin:0;line-height:1.1}
+  .hero .ic{width:52px;height:52px;color:var(--coral)}
+  .tick{display:flex;gap:14px;align-items:center;text-align:left;background:var(--panel);border:2px solid var(--line);color:var(--ink);border-radius:16px;padding:14px 16px;font:inherit;font-size:17px;font-weight:700;cursor:pointer;min-height:58px;width:100%}
+  .tick .box{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid var(--soft);display:grid;place-items:center}
+  .tick .box .ic{width:18px;height:18px;opacity:0}
+  .tick[aria-pressed="true"]{border-color:var(--coral);background:#3A1531}
+  .tick[aria-pressed="true"] .box{background:var(--coral);border-color:var(--coral);color:#fff}
+  .tick[aria-pressed="true"] .box .ic{opacity:1}
+  .list{display:flex;flex-direction:column;gap:10px}
+  .fix{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px}
+  .fix .no{font-family:var(--display);font-weight:700;color:var(--coral);font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+  .fix s{color:var(--soft);text-decoration-color:var(--coral)}
+  .fix b{font-size:19px}
+  .fix .tip{color:var(--soft);font-size:15px}
+  .days{display:grid;grid-template-columns:1fr;gap:8px}
+  .day{display:flex;gap:12px;align-items:baseline;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+  .day b{font-family:var(--display);color:var(--amber);flex:none;width:52px}
+  a.btn{text-align:center;text-decoration:none;display:block}
+  .btn.ghost{background:transparent;border:2px solid var(--line);color:var(--soft)}
+  .sticky{position:sticky;bottom:12px}
+  .foot{color:var(--soft);font-size:13px;text-align:center;margin:8px 0 24px}
+</style>
+</head>
+<body class="player">
+<div class="wrap">
+  <header class="top">
+    <img src="../engine/icon.png" alt="EduMoon">
+    <div class="brand"><small>EduMoon English Club</small><b>My Fix List</b></div>
+  </header>
+  <main id="main" aria-live="polite"></main>
+  <p class="foot">Built by Vikas Kapuganti for EduMoon</p>
+</div>
+<script>
+(function () {
+  // Most important first: these are the ones we fix first in the result.
+  const P = [
+    ["Myself Ravi.", "I am Ravi. / My name is Ravi.", "Your very first sentence in every interview."],
+    ["Kindly do the needful.", "Could you please [the exact thing] by [day]?", "Say exactly what you need, and when."],
+    ["I am having one doubt.", "I have a question.", "“Doubt” means you think something may be wrong."],
+    ["PFA my resume.", "I have attached my resume for the [role] role.", "No short forms in emails to HR."],
+    ["Please revert back.", "Please reply when you can.", "Abroad, “revert” means “go back to an old state”."],
+    ["I passed out in 2024.", "I graduated in 2024.", "Abroad, “passed out” means fainted!"],
+    ["My native is Guntur.", "My hometown is Guntur.", "Or: I’m originally from Guntur."],
+    ["I am belonging to Vizag.", "I am from Vizag.", "“Belong” almost never takes -ing."],
+    ["He don’t know.", "He doesn’t know.", "He, she, it → doesn’t."],
+    ["Let’s discuss about it.", "Let’s discuss it.", "Discuss already means “talk about”."],
+    ["Can we prepone it?", "Can we move it earlier?", "“Prepone” is understood only in India."],
+    ["I am out of station.", "I’m out of town.", "Or: I’m travelling."],
+    ["I am in tension.", "I’m stressed. / I’m worried.", "Name the feeling directly."],
+    ["Please repeat once again.", "Could you repeat that, please?", "“Repeat” already means “again”."],
+    ["I will return back the book.", "I will return the book.", "“Return” already means “give back”."],
+    ["What is your good name?", "May I know your name?", "“Good name” is a translation; abroad it sounds odd."]
+  ];
+  const BONUS = [
+    ["“Tell me about yourself”: I’m…", "Who you are → what you’ve built → what you want. 30 seconds.", "Practise it out loud once a day."],
+    ["“What’s your weakness?”", "A real weakness + what you are doing about it.", "Avoid “I’m a perfectionist”."],
+    ["Ending an email", "Thank you for your time. / I’m looking forward to hearing from you.", "Simple and warm."]
+  ];
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const M = document.getElementById("main");
+  let on = new Set();
+
+  function pick() {
+    M.innerHTML = `
+      <div class="hero">${ic("spell-check")}<h1>Which of these do you say?</h1>
+        <p class="big muted" style="margin:0">Be honest, nobody else sees this. Tick every phrase you use with friends, in class or on WhatsApp.</p></div>
+      <div class="list">${P.map((p, k) => `<button class="tick" data-k="${k}" aria-pressed="${on.has(k)}"><span class="box">${ic("check")}</span><span>${esc(p[0])}</span></button>`).join("")}</div>
+      <div class="sticky"><button class="btn wide" id="go">Show my fix list (${on.size} ticked) →</button></div>`;
+    M.querySelectorAll(".tick").forEach(b => (b.onclick = () => { const k = +b.dataset.k; on.has(k) ? on.delete(k) : on.add(k); b.setAttribute("aria-pressed", on.has(k)); document.getElementById("go").textContent = `Show my fix list (${on.size} ticked) →`; }));
+    document.getElementById("go").onclick = result;
+  }
+
+  function result() {
+    const mine = P.filter((_, k) => on.has(k)), top = mine.slice(0, 5), more = mine.length - top.length;
+    const list = top.length ? top : BONUS;
+    const plan = [];
+    for (let d = 0; d < 7; d++) {
+      const f = mine.length ? mine[d % mine.length] : BONUS[d % BONUS.length];
+      plan.push(mine.length ? `Say “${f[1]}” at least once today, instead of “${f[0]}”.` : `${f[0]}: ${f[1]}`);
+    }
+    plan[6] = "Record a 30-second “Tell me about yourself” on your phone. Listen once, and record it again.";
+    const share = `I made my English Fix List with EduMoon. ${mine.length} habits to fix, 7 days to do it. Make yours: ${location.href.split("?")[0]}`;
+    M.innerHTML = `
+      <div class="hero">${ic("badge-check")}<h1>${mine.length ? `Your top ${top.length} fix${top.length === 1 ? "" : "es"}` : "You already sound clear!"}</h1>
+        <p class="big muted" style="margin:0">${mine.length ? "Fix these first. They matter most in interviews and emails." : "None of the common habits. Here are 3 advanced ones to master next."}</p></div>
+      ${list.map((f, i) => `<div class="fix"><span class="no">Fix ${i + 1}</span>${mine.length ? `<s>${esc(f[0])}</s>` : `<span class="muted">${esc(f[0])}</span>`}<b>${esc(f[1])}</b><span class="tip">${esc(f[2])}</span></div>`).join("")}
+      ${more > 0 ? `<p class="muted">And ${more} more. They’re on the “Say this, not that” card from the game.</p>` : ""}
+      <p class="eyebrow">Your 7-day challenge</p>
+      <div class="days">${plan.map((t, d) => `<div class="day"><b>Day ${d + 1}</b><span>${esc(t)}</span></div>`).join("")}</div>
+      <a class="btn wide" href="https://wa.me/?text=${encodeURIComponent(share)}" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="btn ghost wide" id="again">Change my ticks</button>
+      <a class="btn ghost wide" href="https://chat.whatsapp.com/EqrtHVWwh3OI2aFhg6Zz6s" target="_blank" rel="noopener">Join the EduMoon English Club</a>`;
+    document.getElementById("again").onclick = pick;
+    window.scrollTo(0, 0);
+  }
+
+  pick();
+})();
+</script>
+</body>
+</html>

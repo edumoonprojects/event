@@ -17,11 +17,11 @@
 
   // Words each game can change in content.js (G.words). Defaults are Escape the Lab's.
   const W = D.W = Object.assign({
-    round: "Door", unlocked: "Unlocked 🔓", badgeLabel: "Letter won",
+    round: "Door", unlocked: "Unlocked", badgeLabel: "Letter won",
     rulesEyebrow: "How every door works", rulesTitle: "Learn it. Crack it. Escape.",
     learnText: "The host teaches one C idea.", crackTitle: "Crack", crackText: "Solve the door and lock in your answer on the phone.",
     nobody: "Nobody cracked this door. It fools almost everyone!", cracked: "cracked it",
-    next: "Next door ▶", finale: "Reveal the master key ▶", winner: "escaped first! 🏆", endLine: "You escaped the lab! 🔓"
+    next: "Next door →", finale: "Reveal the master key →", winner: "escaped first!", endLine: "You escaped the lab!"
   }, G.words || {});
   D.doorSteps = G.steps.map((s, i) => (s.type === "door" ? i : -1)).filter(i => i >= 0);
   D.doorNo = si => D.doorSteps.indexOf(si) + 1;
@@ -148,7 +148,7 @@
     ${s.art ? D.art() : ""}
     <p class="eyebrow coral">${esc(s.alert)}</p>
     <h1 class="title">${esc(s.title)}</h1>
-    <div class="grid">${s.cards.map(([ic, t]) => `<div class="card"><span class="icon" aria-hidden="true">${ic}</span><p class="big">${esc(t)}</p></div>`).join("")}</div>`;
+    <div class="grid">${s.cards.map(([n, t]) => `<div class="card"><span class="icon">${ic(n)}</span><p class="big">${esc(t)}</p></div>`).join("")}</div>`;
 
   D.vRules = mode => {
     const w = D.teamWord(mode);
@@ -156,9 +156,9 @@
     <p class="eyebrow">${esc(W.rulesEyebrow)}</p>
     <h1 class="title">${esc(W.rulesTitle)}</h1>
     <div class="grid">
-      <div class="card"><span class="icon" aria-hidden="true">📖</span><h3>1 · Learn</h3><p class="big muted">${esc(W.learnText)}</p></div>
-      <div class="card"><span class="icon" aria-hidden="true">🔐</span><h3>2 · ${esc(W.crackTitle)}</h3><p class="big muted">${esc(W.crackText)}</p></div>
-      <div class="card amber"><span class="icon" aria-hidden="true">⚡</span><h3>3 · Reveal</h3><p class="big muted">Faster correct answers score more.</p></div>
+      <div class="card"><span class="icon">${ic("book-open")}</span><h3>1 · Learn</h3><p class="big muted">${esc(W.learnText)}</p></div>
+      <div class="card"><span class="icon">${ic("lock")}</span><h3>2 · ${esc(W.crackTitle)}</h3><p class="big muted">${esc(W.crackText)}</p></div>
+      <div class="card amber"><span class="icon">${ic("zap")}</span><h3>3 · Reveal</h3><p class="big muted">Faster correct answers score more.</p></div>
     </div>
     <div class="grid">
       <div class="card"><p class="big"><b>+100</b> correct · <b>up to +50</b> for speed</p></div>
@@ -186,7 +186,7 @@
   // A list of [icon, title, text] rows beside a learn screen (games without code).
   D.vSide = side => `<div class="card side">
         <p class="eyebrow">${esc(side.label || "Example")}</p>
-        ${side.items.map(([ic, h, t]) => `<div class="srow"><span class="icon" aria-hidden="true">${ic}</span><div><b>${esc(h)}</b>${t ? `<span class="muted">${esc(t)}</span>` : ""}</div></div>`).join("")}
+        ${side.items.map(([n, h, t]) => `<div class="srow"><span class="icon">${ic(n)}</span><div><b>${esc(h)}</b>${t ? `<span class="muted">${esc(t)}</span>` : ""}</div></div>`).join("")}
       </div>`;
 
   D.vDoorHead = (s, si, room) => `
@@ -206,14 +206,14 @@
         ${s.trace ? D.trace(s.trace) : ""}${s.explain ? `<p class="big">${D.rich(s.explain)}</p>` : ""}
         <p class="note">${esc(s.note)}</p>
       </div>
-      <div class="letter"><small>${esc(W.badgeLabel)}</small><b class="${s.letter ? "" : "emo"}">${esc(s.letter || s.badge || "✅")}</b></div>
+      <div class="letter"><small>${esc(W.badgeLabel)}</small><b class="${s.letter ? "" : "emo"}">${s.letter ? esc(s.letter) : (ic(s.badge) || ic("circle-check"))}</b></div>
     </div>`;
 
   D.vBoard = (room, si, me) => {
     const rows = D.table(room, si), f = D.fastest(room, si), last = si === D.doorSteps[D.doorSteps.length - 1], s = G.steps[si];
     return `
     <p class="eyebrow">Leaderboard · ${s.boardLabel ? esc(s.boardLabel) : `after ${esc(W.round)} ${D.doorNo(si)}`}${last ? " (final)" : ""}</p>
-    ${f ? `<div class="fast"><span class="icon" aria-hidden="true">⚡</span><p class="big">Fastest: <b>${esc(f.name)}</b>, locked in correctly in ${D.secs(f.took)}</p></div>` : `<div class="fast"><span class="icon" aria-hidden="true">🤯</span><p class="big">${esc(W.nobody)}</p></div>`}
+    ${f ? `<div class="fast"><span class="icon">${ic("zap")}</span><p class="big">Fastest: <b>${esc(f.name)}</b>, locked in correctly in ${D.secs(f.took)}</p></div>` : `<div class="fast"><span class="icon">${ic("target")}</span><p class="big">${esc(W.nobody)}</p></div>`}
     <div class="board">${rows.length ? rows.map(r => D.brow(r, me)).join("") : `<p class="muted">No ${D.teamWord(room.state && room.state.mode)}s yet.</p>`}</div>`;
   };
 
@@ -236,7 +236,7 @@
     <p class="eyebrow">Power words</p>
     <div class="words">${s.words.map(([w, m]) => `<div class="word"><b>${esc(w)}</b><span>${esc(m)}</span></div>`).join("")}</div>`;
   D.vSpeak = s => `
-    <p class="eyebrow">${esc(s.eyebrow || "Speaking time 🎤")}</p>
+    <p class="eyebrow">${esc(s.eyebrow || "Speaking time")}</p>
     <h1 class="title">${esc(s.prompt)}</h1>
     ${s.note ? `<p class="big muted">${esc(s.note)}</p>` : ""}`;
   D.allWords = () => G.steps.filter(s => s.type === "tale").flatMap(s => s.words);
@@ -252,6 +252,16 @@
     <p class="eyebrow">${esc(s.eyebrow || "Just for you")}</p>
     <h1 class="title">${esc(s.title)}</h1>
     ${s.note ? `<p class="big muted">${esc(s.note)}</p>` : ""}`;
+
+  // "compare" step: a Before → After screen (Resume Rescue).
+  D.vCompare = s => `
+    <p class="eyebrow">${esc(s.eyebrow || "Before → After")}</p>
+    <h1 class="title">${esc(s.title)}</h1>
+    <div class="cmp">
+      <div class="card cmp-b"><p class="eyebrow">${ic("circle-x")} ${esc(s.beforeLabel || "Before")}</p>${s.before.map(l => `<p class="cl">${esc(l)}</p>`).join("")}</div>
+      <div class="card cmp-a"><p class="eyebrow">${ic("circle-check")} ${esc(s.afterLabel || "After")}</p>${s.after.map(l => `<p class="cl">${esc(l)}</p>`).join("")}</div>
+    </div>
+    ${s.note ? `<p class="note">${esc(s.note)}</p>` : ""}`;
 
   D.vKey = () => `
     <div class="keyslide">
@@ -272,7 +282,7 @@
   };
   D.offerCard = (r, mine) => {
     const o = D.offerFor(r.total);
-    return `<div class="offer${mine ? " mine" : ""}"><span class="icon" aria-hidden="true">${o.icon}</span>
+    return `<div class="offer${mine ? " mine" : ""}"><span class="icon">${ic(o.icon)}</span>
       <div class="ot"><small>${mine ? "Your offer letter" : "#" + r.rank + " · " + esc(r.name)}</small><b>${esc(o.title)}</b><span class="muted">${esc(o.text)}</span></div>
       <span class="sc">${r.total}</span></div>`;
   };
@@ -293,9 +303,9 @@
       const si = +el.dataset.timer, tm = room && room.timing && room.timing[si];
       if (!tm) { el.textContent = ""; return; }
       const left = tm.t0 + tm.dur * 1000 - DB.now();
-      if (left <= 0) { el.textContent = "⏰ Time’s up!"; el.className = "timer up"; return; }
+      if (left <= 0) { el.innerHTML = ic("alarm-clock") + " Time’s up!"; el.className = "timer up"; return; }
       const s = Math.ceil(left / 1000);
-      el.textContent = "⏱ " + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+      el.innerHTML = ic("clock") + " " + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
       el.className = "timer" + (left < 10000 ? " low" : "");
     });
   };

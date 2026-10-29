@@ -8,27 +8,27 @@ window.GAME = {
   club: "Coding Club",
   tagline: "5 rounds of real placement-style coding questions. Which company will hire your team?",
   words: {
-    round: "Round", unlocked: "Cleared ✅", badgeLabel: "Round cleared",
+    round: "Round", unlocked: "Cleared", badgeLabel: "Round cleared",
     rulesEyebrow: "How the hiring drive works", rulesTitle: "Learn it. Solve it. Get hired.",
     learnText: "The host teaches the topic placement tests ask about.", crackTitle: "Solve",
     crackText: "Solve the question and lock in your answer on the phone.",
     nobody: "Nobody cleared this round. It catches people in real tests too!", cracked: "cleared it",
-    next: "Next round ▶", finale: "Open the offer letters ▶", winner: "got the best offer! 🏆", endLine: "Placement Round complete! 💼"
+    next: "Next round →", finale: "Open the offer letters →", winner: "got the best offer!", endLine: "Placement Round complete!"
   },
   offerEyebrow: "EduMoon Tech · Hiring results",
   offerTitle: "Your offer letters are here",
   offers: [
-    { min: 0.7, icon: "🚀", title: "Product company offer", text: "Google-level. Your logic is interview ready." },
-    { min: 0.45, icon: "💼", title: "Top service company offer", text: "Solid! A few more practice rounds and you’re at the top." },
-    { min: 0.2, icon: "🏢", title: "Startup offer", text: "Good start. Practise one problem a day." },
-    { min: 0, icon: "📚", title: "Internship offer", text: "Everyone starts here. Keep practising and come back next week!" }
+    { min: 0.7, icon: "rocket", title: "Product company offer", text: "Google-level. Your logic is interview ready." },
+    { min: 0.45, icon: "briefcase", title: "Top service company offer", text: "Solid! A few more practice rounds and you’re at the top." },
+    { min: 0.2, icon: "landmark", title: "Startup offer", text: "Good start. Practise one problem a day." },
+    { min: 0, icon: "book-open", title: "Internship offer", text: "Everyone starts here. Keep practising and come back next week!" }
   ],
   steps: [
     {
       type: "story",
-      alert: "📢 EduMoon Tech · Hiring drive · Today",
+      alert: "EduMoon Tech · Hiring drive · Today",
       title: "5 rounds stand between your team and an offer letter.",
-      cards: [["📝", "Real placement-style questions, like TCS, Infosys and Wipro tests"], ["⚡", "Faster correct answers score more"], ["💼", "Your score decides which company hires you"]]
+      cards: [["file-text", "Real placement-style questions, like TCS, Infosys and Wipro tests"], ["zap", "Faster correct answers score more"], ["briefcase", "Your score decides which company hires you"]]
     },
     { type: "rules" },
 
@@ -49,7 +49,7 @@ window.GAME = {
       hint: "How many times does 5 fit into 17? What’s left over?",
       trace: [["17 / 5", "5 fits 3 times → 3"], ["17 % 5", "17 - 15 = 2 left over → 2"]],
       note: "Said 3.4? With int, C throws away the decimal part. This trap is in almost every placement test.",
-      badge: "📝"
+      badge: "file-text"
     },
 
     // ---------- Round 2: nested loops ----------
@@ -69,7 +69,7 @@ window.GAME = {
       hint: "Look closely: the inner loop goes up to i, not to 3. Count for i = 1, 2 and 3.",
       trace: [["i = 1", "inner runs 1 time → *"], ["i = 2", "inner runs 2 times → **"], ["i = 3", "inner runs 3 times → ***"], ["total", "1 + 2 + 3 = 6"]],
       note: "Said 9? The inner loop stops at i, not at 3. This makes a triangle pattern.",
-      badge: "⭐"
+      badge: "star"
     },
 
     // ---------- Round 3: functions ----------
@@ -89,7 +89,7 @@ window.GAME = {
       hint: "Work from the inside out. What does add(2, 3) give?",
       trace: [["add(2, 3)", "2 + 3 = 5"], ["square(5)", "5 × 5 = 25"]],
       note: "Said 13? That’s 2² + 3². But add runs first, so it’s (2 + 3)².",
-      badge: "🧩"
+      badge: "code"
     },
 
     // ---------- Round 4: strings ----------
@@ -109,7 +109,7 @@ window.GAME = {
       hint: "Number the letters from 0: C is 0, O is 1…",
       trace: [["index: 0  1  2  3", ""], ["       C  O  D  E", ""], ["s[3]", "E"], ["s[0]", "C"]],
       note: "Said DC? You counted from 1. Index 0 is the first letter.",
-      badge: "🔤"
+      badge: "spell-check"
     },
 
     // ---------- Round 5: interview ----------
@@ -129,7 +129,7 @@ window.GAME = {
       hint: "Try it on paper. After the first loop rev should be 3, after the second 32.",
       trace: [["d = 3", "rev = 0 × 10 + 3 = 3"], ["d = 2", "rev = 3 × 10 + 2 = 32"], ["d = 1", "rev = 32 × 10 + 1 = 321"]],
       note: "Interview tip: explain it out loud, step by step. The host can give +50 to a team that explains it well.",
-      badge: "🎤"
+      badge: "mic"
     },
 
     { type: "offer" },

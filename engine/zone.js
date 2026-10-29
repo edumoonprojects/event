@@ -6,7 +6,7 @@
   const Z = window.ZONE, body = document.body, club = body.dataset.club, root = body.dataset.root || "";
   const $ = q => document.querySelector(q);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const LEVEL = { beginner: ["🟢", "Beginner"], medium: ["🟡", "Medium"], advanced: ["🔴", "Advanced"] };
+  const LEVEL = { beginner: ["#3DDC97", "Beginner"], medium: ["#FFB830", "Medium"], advanced: ["#FF6B6B", "Advanced"] };
   const byClub = id => Z.clubs.find(c => c.id === id);
   const gamesOf = id => Z.games.filter(g => g.club === id).sort((a, b) => (b.added || "").localeCompare(a.added || ""));
   const latest = () => Z.games.slice().sort((a, b) => (b.added || "").localeCompare(a.added || "")).slice(0, 3);
@@ -15,19 +15,19 @@
   const badges = g => {
     const lv = LEVEL[g.level] || LEVEL.beginner;
     return `<ul class="badges" aria-label="Game details">
-      <li><span aria-hidden="true">🎓</span> ${esc(g.years)}</li>
-      <li>${lv[0]} ${lv[1]}</li>
-      <li><span aria-hidden="true">⏱</span> ${esc(g.time)}</li>
-      <li><span aria-hidden="true">👥</span> ${esc(g.group)}</li>
-      <li>${esc(g.needs)}</li>
+      <li>${ic("graduation-cap")} ${esc(g.years)}</li>
+      <li><span class="dot" style="background:${lv[0]}" aria-hidden="true"></span> ${lv[1]}</li>
+      <li>${ic("clock")} ${esc(g.time)}</li>
+      <li>${ic("users")} ${esc(g.group)}</li>
+      <li>${ic("smartphone")} ${esc(g.needs)}</li>
     </ul>`;
   };
 
   const gameCard = (g, showClub) => {
     const c = byClub(g.club);
     return `<article class="gcard" style="--c:${c.color};--c2:${c.color2}">
-      <div class="ghead">${showClub ? `<span class="clubtag">${c.icon} ${esc(c.name)}</span>` : ""}${isNew(g) ? `<span class="newtag">New</span>` : ""}</div>
-      <h3><span aria-hidden="true">${g.icon}</span> ${esc(g.title)}</h3>
+      <div class="ghead">${showClub ? `<span class="clubtag">${ic(c.icon)} ${esc(c.name)}</span>` : ""}${isNew(g) ? `<span class="newtag">New</span>` : ""}</div>
+      <h3><span class="gicon">${ic(g.icon)}</span> ${esc(g.title)}</h3>
       <p class="muted">${esc(g.desc)}</p>
       ${badges(g)}
       <div class="gbtns"><a class="btn" href="${root}${g.host}">Host this game</a><a class="btn ghost" href="${root}${g.player}">Player page</a></div>
@@ -48,7 +48,7 @@
       </section>
       <section class="clubs" aria-label="Clubs">
         ${Z.clubs.map(c => { const n = gamesOf(c.id).length; return `<a class="ccard" href="${root}${c.id}/" style="--c:${c.color};--c2:${c.color2}">
-          <span class="cicon" aria-hidden="true">${c.icon}</span><h2>${esc(c.name)}</h2><p>${esc(c.tagline)}</p>
+          <span class="cicon">${ic(c.icon)}</span><h2>${esc(c.name)}</h2><p>${esc(c.tagline)}</p>
           <span class="ccount">${n ? n + (n === 1 ? " game" : " games") : "New games landing soon"} →</span></a>`; }).join("")}
       </section>
       <section class="block"><p class="eyebrow">Latest events</p><div class="ggrid">${latest().map(g => gameCard(g, true)).join("")}</div></section>
@@ -61,7 +61,7 @@
     $("#main").innerHTML = `
       <a class="backlink" href="${root}">← EduMoon Game Zone</a>
       <section class="chero" style="--c:${c.color};--c2:${c.color2}">
-        <span class="cicon" aria-hidden="true">${c.icon}</span>
+        <span class="cicon">${ic(c.icon)}</span>
         <div><h1 class="zt">${esc(c.name)}</h1><p class="big">${esc(c.about)}</p></div>
       </section>
       <section class="block"><p class="eyebrow">${list.length} ${list.length === 1 ? "game" : "games"} to host</p>

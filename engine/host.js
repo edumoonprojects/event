@@ -34,8 +34,8 @@
       <h1 class="title">${esc(G.title)}</h1>
       <p class="big muted">${esc(G.tagline)}</p>
       <div class="modes" role="radiogroup" aria-label="How will people play?">
-        <button class="mode${pickMode === "teams" ? " on" : ""}" role="radio" aria-checked="${pickMode === "teams"}" data-mode="teams"><b>👥 Teams</b><span class="muted">One phone per team of 3–4. Best for 8+ people.</span></button>
-        <button class="mode${pickMode === "solo" ? " on" : ""}" role="radio" aria-checked="${pickMode === "solo"}" data-mode="solo"><b>🙋 Solo</b><span class="muted">Everyone plays on their own phone. Best for small groups.</span></button>
+        <button class="mode${pickMode === "teams" ? " on" : ""}" role="radio" aria-checked="${pickMode === "teams"}" data-mode="teams"><b>${ic("users")} Teams</b><span class="muted">One phone per team of 3–4. Best for 8+ people.</span></button>
+        <button class="mode${pickMode === "solo" ? " on" : ""}" role="radio" aria-checked="${pickMode === "solo"}" data-mode="solo"><b>${ic("user")} Solo</b><span class="muted">Everyone plays on their own phone. Best for small groups.</span></button>
       </div>
       <button class="btn wide" id="create">Create game room</button>
       ${DB.mode === "demo" ? `<p class="muted">Demo mode: Firebase isn’t connected, so players can only join from other tabs on this device.</p>` : ""}`;
@@ -153,6 +153,7 @@
     else if (step.type === "tale") M.innerHTML = D.vTale(step);
     else if (step.type === "speak") M.innerHTML = D.vSpeak(step) + `<div class="card" id="live"></div>`;
     else if (step.type === "wordlist") M.innerHTML = D.vWordlist(step);
+    else if (step.type === "compare") M.innerHTML = D.vCompare(step);
     else if (step.type === "match") {
       M.innerHTML = D.vMatch(step) + `
         <div class="card" style="flex-direction:row;align-items:center;gap:24px;flex-wrap:wrap">
@@ -183,7 +184,7 @@
     if (step && step.type === "door" && s.phase === "open") {
       const ans = (room.ans && room.ans[i]) || {}, n = Object.keys(ans).length;
       L.innerHTML = `<div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span class="count">${n} / ${ps.length}</span><span class="big muted">${w}s locked in</span></div>
-        <div class="chips">${ps.map(p => `<span class="chip${ans[p.pid] ? " on" : ""}">${ans[p.pid] ? "🔒 " : ""}${esc(p.name)}</span>`).join("")}</div>
+        <div class="chips">${ps.map(p => `<span class="chip${ans[p.pid] ? " on" : ""}">${ans[p.pid] ? ic("lock") + " " : ""}${esc(p.name)}</span>`).join("")}</div>
         ${n >= ps.length && ps.length ? `<p class="note">Everyone has locked in. Tap Reveal when you’re ready!</p>` : ""}`;
       return;
     }
@@ -191,7 +192,7 @@
       const right = ps.filter(p => D.answerPoints(room, i, p.pid).ok), b = (room.bonus && room.bonus[i]) || {};
       L.innerHTML = `<p class="big"><b>${right.length} of ${ps.length}</b> ${w}s ${esc(D.W.cracked)}.</p>
         <p class="eyebrow">Explain bonus: tap the ${w} that explained it well (+${D.POINTS.explain})</p>
-        <div class="chips">${ps.map(p => `<button class="chip${b[p.pid] ? " on" : ""}" data-bonus="${esc(p.pid)}" aria-pressed="${!!b[p.pid]}">${b[p.pid] ? "⭐ " : ""}${esc(p.name)}</button>`).join("") || `<span class="muted">No ${w}s</span>`}</div>`;
+        <div class="chips">${ps.map(p => `<button class="chip${b[p.pid] ? " on" : ""}" data-bonus="${esc(p.pid)}" aria-pressed="${!!b[p.pid]}">${b[p.pid] ? ic("star") + " " : ""}${esc(p.name)}</button>`).join("") || `<span class="muted">No ${w}s</span>`}</div>`;
       L.querySelectorAll("[data-bonus]").forEach(btn => (btn.onclick = () => toggleBonus(btn.dataset.bonus)));
       return;
     }
@@ -200,7 +201,7 @@
     if (step && step.type === "speak") {
       const b = (room.bonus && room.bonus[i]) || {}, pts = step.points || 100;
       L.innerHTML = `<p class="eyebrow">Optional · tap whoever spoke (+${pts}). Nobody? Just tap Next.</p>
-        <div class="chips">${ps.map(p => `<button class="chip${b[p.pid] ? " on" : ""}" data-bonus="${esc(p.pid)}" aria-pressed="${!!b[p.pid]}">${b[p.pid] ? "🎤 " : ""}${esc(p.name)}</button>`).join("") || `<span class="muted">No ${w}s</span>`}</div>`;
+        <div class="chips">${ps.map(p => `<button class="chip${b[p.pid] ? " on" : ""}" data-bonus="${esc(p.pid)}" aria-pressed="${!!b[p.pid]}">${b[p.pid] ? ic("mic") + " " : ""}${esc(p.name)}</button>`).join("") || `<span class="muted">No ${w}s</span>`}</div>`;
       L.querySelectorAll("[data-bonus]").forEach(btn => (btn.onclick = () => toggleBonus(btn.dataset.bonus)));
       return;
     }
@@ -214,12 +215,12 @@
   function bar() {
     const s = st(), i = s.step, step = S[i];
     $("#bar").hidden = false;
-    let label = "Next ▶", dis = false;
-    if (s.phase === "lobby") { label = "Start game ▶"; dis = !players().length; }
-    else if (step && step.type === "door" && s.phase === "open") label = "Reveal answer 🔓";
-    else if (step && step.type === "door" && s.phase === "reveal") label = D.hasBoard(i) ? "Show leaderboard 🏆" : "Next ▶";
+    let label = "Next →", dis = false;
+    if (s.phase === "lobby") { label = "Start game →"; dis = !players().length; }
+    else if (step && step.type === "door" && s.phase === "open") label = "Reveal answer";
+    else if (step && step.type === "door" && s.phase === "reveal") label = D.hasBoard(i) ? "Show leaderboard" : "Next →";
     else if (step && step.type === "door" && s.phase === "board") label = i === D.doorSteps[D.doorSteps.length - 1] ? D.W.finale : D.W.next;
-    else if (i === S.length - 1) { label = "Game over 🎉"; dis = true; }
+    else if (i === S.length - 1) { label = "Game over"; dis = true; }
     $("#next").textContent = label; $("#next").disabled = dis;
     $("#back").disabled = s.phase === "lobby";
     $("#more").hidden = !(step && step.type === "door" && s.phase === "open");
@@ -228,7 +229,7 @@
 
   async function copyInvite() {
     const w = st().mode === "solo" ? "your name" : "your team name";
-    const msg = `🔐 ${G.title} is starting!\nEduMoon ${G.club}\n\nTap to join: ${joinURL()}\nRoom code: ${code}\n\nOpen it on your phone and enter ${w}.`;
+    const msg = `${G.title} is starting!\nEduMoon ${G.club}\n\nTap to join: ${joinURL()}\nRoom code: ${code}\n\nOpen it on your phone and enter ${w}.`;
     try { await navigator.clipboard.writeText(msg); flash("Copied! Paste it in Zoom or WhatsApp"); }
     catch (e) { prompt("Copy this invite:", msg); }
   }

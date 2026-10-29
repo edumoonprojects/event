@@ -175,3 +175,25 @@ mark.pw{background:var(--amber);color:#1C1300;border-radius:6px;padding:0 .25em;
 .srow .icon{font-size:30px;line-height:1.1;flex:none}
 .srow b{display:block;font-size:clamp(17px,1.6vw,22px)}
 .srow .muted{display:block;font-size:clamp(14px,1.3vw,17px)}
+
+/* Line icons (no emoji) */
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-0.14em;flex:none}
+.icon{display:inline-flex;color:var(--amber)}
+.icon .ic{width:30px;height:30px}
+.icon.big .ic{width:56px;height:56px}
+.fast .icon .ic{width:28px;height:28px}
+.offer .icon .ic{width:40px;height:40px}
+.srow .icon .ic{width:28px;height:28px}
+.letter b.emo .ic{width:clamp(64px,8vw,110px);height:clamp(64px,8vw,110px);stroke-width:1.75}
+.timer .ic{width:.9em;height:.9em}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:1px}
+
+/* Before → After (Resume Rescue) */
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.cmp .card{gap:8px}
+.cmp .cl{margin:0;padding:8px 0;border-top:1px solid var(--line);font-size:clamp(15px,1.5vw,19px);line-height:1.4}
+.cmp .cl:first-of-type{border-top:none}
+.cmp-b{border-color:#7A2E2E}
+.cmp-b .eyebrow{color:var(--coral)}
+.cmp-a{border-color:var(--green)}
+.cmp-a .eyebrow{color:var(--green)}
