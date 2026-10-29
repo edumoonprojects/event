@@ -1,0 +1,15 @@
+/* Movie Story Time: royal maroon-and-gold theme (overrides the engine colours). */
+:root{
+  --bg:#170909; --panel:#2A1312; --panel2:#200E0D; --line:#5A2A1E;
+  --ink:#FBF3E6; --soft:#E6CDB0; --amber:#E8B04A; --green:#5FD49A; --coral:#FF8A65; --blue:#7FC4E0;
+  --display:'Cinzel','Space Grotesk',Georgia,serif;
+}
+body{background:radial-gradient(circle at 80% 0%,#4A1716 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+h1,h2,h3{letter-spacing:.01em}
+.title{font-size:clamp(28px,4vw,54px)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#E8B04A,#F6D27C)}
+.btn{background:linear-gradient(135deg,#E8B04A,#F6D27C);color:#2A1300}
+.tale{background:var(--panel2);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,2.6vw,30px)}
+.brow:first-child{border-color:var(--amber)}
+.letter{background:linear-gradient(135deg,#5FD49A,#3DB57D)}

@@ -108,6 +108,9 @@
     else if (step.type === "door" && s.phase === "board") M.innerHTML = `<div id="live"></div>`;
     else if (step.type === "key") M.innerHTML = D.vKey();
     else if (step.type === "offer") M.innerHTML = `<div id="live"></div>`;
+    else if (step.type === "tale") M.innerHTML = D.vTale(step) + listenNote();
+    else if (step.type === "speak") M.innerHTML = D.vSpeak(step) + `<div class="card" id="live"></div>`;
+    else if (step.type === "wordlist") M.innerHTML = D.vWordlist(step);
     else if (step.type === "end") M.innerHTML = `<div id="live"></div>`;
     if (step.type === "door" && s.phase === "open") answerArea();
     window.scrollTo(0, 0);
@@ -162,13 +165,19 @@
       L.innerHTML = (row ? `<div class="card amber center"><p class="eyebrow" style="color:#4A3300">Your ${w}</p><p class="answer" style="color:#1C1300">#${row.rank}</p><p class="big">${row.total} points</p></div>` : "") + D.vBoard(room, i, pid);
       return;
     }
+    if (step.type === "speak") {
+      const got = room.bonus && room.bonus[i] && room.bonus[i][pid];
+      L.innerHTML = got ? `<div class="result good"><h2>You spoke! 🎤</h2><p class="pts">+${got}</p></div>`
+        : `<p class="big">Want to speak? Raise your hand or unmute. It’s completely optional, and there’s no wrong English!</p>`;
+      return;
+    }
     if (step.type === "offer") {
-      const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]), row = rows.find(r => r.pid === pid);
+      const rows = D.table(room, D.lastStep()), row = rows.find(r => r.pid === pid);
       L.innerHTML = (row ? D.offerCard(row, true) : "") + `<p class="eyebrow">Everyone’s offers</p><div class="board">${rows.filter(r => r.pid !== pid).map(r => D.offerCard(r)).join("")}</div>`;
       return;
     }
     if (step.type === "end") {
-      const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]), row = rows.find(r => r.pid === pid);
+      const rows = D.table(room, D.lastStep()), row = rows.find(r => r.pid === pid);
       L.innerHTML = `<div class="card amber center"><p class="eyebrow" style="color:#4A3300">You finished</p><p class="answer" style="color:#1C1300">#${row ? row.rank : "–"}</p><p class="big">${row ? row.total : 0} points · ${esc(D.W.endLine)}</p></div>
         ${D.vPodium(rows)}
         <a class="btn wide green" style="text-align:center;text-decoration:none;display:block" href="${esc(step.joinUrl)}" target="_blank" rel="noopener">${esc(step.joinButton)}</a>

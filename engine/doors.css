@@ -91,6 +91,8 @@ label.lbl{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:upp
 
 /* reveal */
 .answer{font-family:var(--display);font-weight:700;font-size:clamp(40px,7vw,96px);color:var(--green);line-height:1}
+.letter b.emo{font-size:clamp(56px,8vw,110px);line-height:1.15}
+.answer.long{font-size:clamp(24px,3.4vw,44px);line-height:1.2}
 .letter{background:var(--green);color:#06321F;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:18px;text-align:center}
 .letter b{font-family:var(--display);font-size:clamp(72px,11vw,160px);line-height:1}
 .letter small{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
@@ -109,6 +111,16 @@ label.lbl{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:upp
 .brow .sc{font-family:var(--display);font-size:clamp(20px,2.2vw,28px);font-weight:700;font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
 .fast{display:flex;align-items:center;gap:12px;background:#2A230E;border:1px solid #6B5310;border-radius:16px;padding:14px 18px;font-weight:800}
 .fast .icon{font-size:28px}
+
+/* story games */
+.art{border-radius:20px;overflow:hidden;line-height:0}
+.art svg{display:block;width:100%;height:auto}
+.tale{display:flex;flex-direction:column;gap:12px;font-size:clamp(18px,2vw,26px);line-height:1.6}
+mark.pw{background:var(--amber);color:#1C1300;border-radius:6px;padding:0 .25em;font-weight:800}
+.words{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.word{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.word b{font-family:var(--display);font-size:20px;color:var(--amber)}
+.word span{color:var(--soft);font-size:15px;line-height:1.35}
 
 /* offer letters */
 .offer{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px;animation:rise .45s backwards}

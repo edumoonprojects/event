@@ -78,7 +78,7 @@
     const s = st(), i = s.step;
     if (s.phase === "lobby") return go(0);
     if (D.isDoor(i) && s.phase === "open") return setState({ phase: "reveal" });
-    if (D.isDoor(i) && s.phase === "reveal") return setState({ phase: "board" });
+    if (D.isDoor(i) && s.phase === "reveal") return D.hasBoard(i) ? setState({ phase: "board" }) : go(i + 1);
     if (i < S.length - 1) return go(i + 1);
   }
 
@@ -88,7 +88,7 @@
     if (D.isDoor(i) && s.phase === "board") return setState({ phase: "reveal" });
     if (i === 0) return setState({ step: -1, phase: "lobby" });
     const p = i - 1;
-    if (D.isDoor(p)) return setState({ step: p, phase: "board" });
+    if (D.isDoor(p)) return setState({ step: p, phase: D.hasBoard(p) ? "board" : "reveal" });
     setState({ step: p, phase: "show" });
   }
 
@@ -107,7 +107,7 @@
 
   async function toggleBonus(pid) {
     const i = st().step, has = room.bonus && room.bonus[i] && room.bonus[i][pid];
-    await DB.set(`${base()}/bonus/${i}/${pid}`, has ? null : D.POINTS.explain);
+    await DB.set(`${base()}/bonus/${i}/${pid}`, has ? null : (S[i].type === "speak" ? S[i].points || 100 : D.POINTS.explain));
   }
 
   function flash(t) { const el = document.createElement("div"); el.className = "toast"; el.textContent = t; document.body.appendChild(el); setTimeout(() => el.remove(), 1600); }
@@ -150,6 +150,9 @@
     else if (step.type === "door" && s.phase === "board") M.innerHTML = `<div id="live"></div>`;
     else if (step.type === "key") M.innerHTML = D.vKey();
     else if (step.type === "offer") M.innerHTML = `<div id="live"></div>`;
+    else if (step.type === "tale") M.innerHTML = D.vTale(step);
+    else if (step.type === "speak") M.innerHTML = D.vSpeak(step) + `<div class="card" id="live"></div>`;
+    else if (step.type === "wordlist") M.innerHTML = D.vWordlist(step);
     else if (step.type === "end") {
       M.innerHTML = `<div id="live"></div>
         <div class="card amber" style="flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap">
@@ -186,8 +189,15 @@
     }
     if (step && step.type === "door" && s.phase === "board") { L.innerHTML = D.vBoard(room, i); return; }
     if (step && step.type === "offer") { L.innerHTML = D.vOffers(room); return; }
+    if (step && step.type === "speak") {
+      const b = (room.bonus && room.bonus[i]) || {}, pts = step.points || 100;
+      L.innerHTML = `<p class="eyebrow">Optional · tap whoever spoke (+${pts}). Nobody? Just tap Next.</p>
+        <div class="chips">${ps.map(p => `<button class="chip${b[p.pid] ? " on" : ""}" data-bonus="${esc(p.pid)}" aria-pressed="${!!b[p.pid]}">${b[p.pid] ? "🎤 " : ""}${esc(p.name)}</button>`).join("") || `<span class="muted">No ${w}s</span>`}</div>`;
+      L.querySelectorAll("[data-bonus]").forEach(btn => (btn.onclick = () => toggleBonus(btn.dataset.bonus)));
+      return;
+    }
     if (step && step.type === "end") {
-      const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]);
+      const rows = D.table(room, D.lastStep());
       L.innerHTML = `<p class="eyebrow">Final results</p><h1 class="title">${rows[0] ? esc(rows[0].name) + " " + esc(D.W.winner) : "Game over"}</h1>
         ${D.vPodium(rows)}<div class="board">${rows.map(r => D.brow(r)).join("")}</div>`;
     }
@@ -199,7 +209,7 @@
     let label = "Next ▶", dis = false;
     if (s.phase === "lobby") { label = "Start game ▶"; dis = !players().length; }
     else if (step && step.type === "door" && s.phase === "open") label = "Reveal answer 🔓";
-    else if (step && step.type === "door" && s.phase === "reveal") label = "Show leaderboard 🏆";
+    else if (step && step.type === "door" && s.phase === "reveal") label = D.hasBoard(i) ? "Show leaderboard 🏆" : "Next ▶";
     else if (step && step.type === "door" && s.phase === "board") label = i === D.doorSteps[D.doorSteps.length - 1] ? D.W.finale : D.W.next;
     else if (i === S.length - 1) { label = "Game over 🎉"; dis = true; }
     $("#next").textContent = label; $("#next").disabled = dis;

@@ -26,6 +26,12 @@
   D.doorSteps = G.steps.map((s, i) => (s.type === "door" ? i : -1)).filter(i => i >= 0);
   D.doorNo = si => D.doorSteps.indexOf(si) + 1;
   D.isDoor = si => !!G.steps[si] && G.steps[si].type === "door";
+  // Steps that can score: doors, plus optional speaking turns (host-awarded points).
+  D.scoredSteps = G.steps.map((s, i) => (s.type === "door" || s.type === "speak" ? i : -1)).filter(i => i >= 0);
+  // Doors followed by a leaderboard (a door can skip it with board: false).
+  D.hasBoard = si => D.isDoor(si) && G.steps[si].board !== false;
+  D.boardSteps = D.doorSteps.filter(si => D.hasBoard(si));
+  D.lastStep = () => D.scoredSteps[D.scoredSteps.length - 1];
   D.teamWord = mode => (mode === "solo" ? "player" : "team");
 
   // ---------- scoring ----------
@@ -72,15 +78,16 @@
   };
 
   // Leaderboard after door step `upto` (inclusive). Includes rank movement since the previous door.
+  // "Round" points and rank movement are measured since the previous leaderboard.
   D.table = (room, upto) => {
     const players = room.players || {}, pen = D.hintPenalties(room);
-    const doors = D.doorSteps.filter(i => i <= upto);
-    const prevDoors = doors.slice(0, -1), last = doors[doors.length - 1];
+    const steps = D.scoredSteps.filter(i => i <= upto);
+    const prevBoard = D.boardSteps.filter(i => i < upto).pop();
+    const before = steps.filter(i => prevBoard != null && i <= prevBoard);
     const rows = Object.entries(players).map(([pid, p]) => {
-      const total = doors.reduce((t, si) => t + D.stepPoints(room, si, pid, pen), 0);
-      const prev = prevDoors.reduce((t, si) => t + D.stepPoints(room, si, pid, pen), 0);
-      const round = last != null ? D.stepPoints(room, last, pid, pen) : 0;
-      return { pid, name: p.name || "Team", total, prev, round };
+      const total = steps.reduce((t, si) => t + D.stepPoints(room, si, pid, pen), 0);
+      const prev = before.reduce((t, si) => t + D.stepPoints(room, si, pid, pen), 0);
+      return { pid, name: p.name || "Team", total, prev, round: total - prev };
     });
     const by = key => rows.slice().sort((a, b) => b[key] - a[key] || String(a.name).localeCompare(b.name));
     by("prev").forEach((r, i) => (r.prevRank = i + 1));
@@ -89,11 +96,15 @@
     return ranked;
   };
 
-  D.fastest = (room, si) => {
+  // Fastest correct lock-in among the doors since the previous leaderboard.
+  D.fastest = (room, upto) => {
     let best = null;
-    Object.keys((room.ans && room.ans[si]) || {}).forEach(pid => {
-      const r = D.answerPoints(room, si, pid);
-      if (r.ok && (!best || r.took < best.took)) best = { pid, took: r.took, name: (room.players && room.players[pid] && room.players[pid].name) || "Team" };
+    const prevBoard = D.boardSteps.filter(i => i < upto).pop();
+    D.doorSteps.filter(si => si <= upto && (prevBoard == null || si > prevBoard)).forEach(si => {
+      Object.keys((room.ans && room.ans[si]) || {}).forEach(pid => {
+        const r = D.answerPoints(room, si, pid);
+        if (r.ok && (!best || r.took < best.took)) best = { pid, took: r.took, name: (room.players && room.players[pid] && room.players[pid].name) || "Team" };
+      });
     });
     return best;
   };
@@ -125,7 +136,7 @@
   };
 
   // ---------- screens ----------
-  D.code = (lines, o = {}) => `<pre class="code" aria-label="Code">${lines.map((l, i) => {
+  D.code = (lines, o = {}) => !lines ? "" : `<pre class="code" aria-label="Code">${lines.map((l, i) => {
     const cls = "ln" + (o.bad === i ? " bad" : "") + (o.pick === i ? " pick" : "");
     const tap = o.tap ? ` data-line="${i}" role="button" tabindex="0" aria-label="Line ${i + 1}: ${esc(l)}"` : "";
     return `<span class="${cls}"${tap}>${esc(l) || " "}</span>`;
@@ -151,7 +162,7 @@
     <div class="grid">
       <div class="card"><p class="big"><b>+100</b> correct · <b>up to +50</b> for speed</p></div>
       <div class="card"><p class="big"><b>1 free hint</b> per ${w}. Extra hints <b>−30</b></p></div>
-      <div class="card"><p class="big">Explain the answer well: <b>+50</b>. Final boss: <b>double</b></p></div>
+      <div class="card"><p class="big">${W.rulesExtra || "Explain the answer well: <b>+50</b>. Final boss: <b>double</b>"}</p></div>
     </div>`;
   };
 
@@ -174,27 +185,27 @@
   D.vDoorHead = (s, si, room) => `
     <div class="doorhead">
       <div style="display:flex;flex-direction:column;gap:8px">
-        <p class="eyebrow ${s.double ? "coral" : ""}">${esc(W.round)} ${D.doorNo(si)} of ${D.doorSteps.length} · ${esc(s.name)}${s.double ? " · Double points" : ""}</p>
+        <p class="eyebrow ${s.double ? "coral" : ""}">${s.eyebrow ? esc(s.eyebrow) : `${esc(W.round)} ${D.doorNo(si)} of ${D.doorSteps.length} · ${esc(s.name)}`}${s.double ? " · Double points" : ""}</p>
         <h1 class="title">${esc(s.prompt)}</h1>
       </div>
       <span class="timer" data-timer="${si}" aria-live="off"></span>
     </div>`;
 
   D.vReveal = (s, si) => `
-    <p class="eyebrow green">${esc(W.round)} ${D.doorNo(si)} · ${esc(W.unlocked)}</p>
+    <p class="eyebrow green">${s.eyebrow ? esc(s.eyebrow) : `${esc(W.round)} ${D.doorNo(si)}`} · ${esc(W.unlocked)}</p>
     <div class="split">
       <div style="display:flex;flex-direction:column;gap:14px">
-        <div class="card"><p class="muted">The answer is</p><p class="answer">${esc(D.answerText(s))}</p>${s.kind === "bug" ? `<p class="big">The bug is on <b>line ${s.bugLine + 1}</b>: ${esc(s.bugText)}</p>` : ""}</div>
-        ${D.trace(s.trace)}
+        <div class="card"><p class="muted">The answer is</p><p class="answer${D.answerText(s).length > 14 ? " long" : ""}">${esc(D.answerText(s))}</p>${s.kind === "bug" ? `<p class="big">The bug is on <b>line ${s.bugLine + 1}</b>: ${esc(s.bugText)}</p>` : ""}</div>
+        ${s.trace ? D.trace(s.trace) : ""}${s.explain ? `<p class="big">${D.rich(s.explain)}</p>` : ""}
         <p class="note">${esc(s.note)}</p>
       </div>
-      <div class="letter"><small>${esc(W.badgeLabel)}</small><b>${esc(s.letter || s.badge || "✅")}</b></div>
+      <div class="letter"><small>${esc(W.badgeLabel)}</small><b class="${s.letter ? "" : "emo"}">${esc(s.letter || s.badge || "✅")}</b></div>
     </div>`;
 
   D.vBoard = (room, si, me) => {
-    const rows = D.table(room, si), f = D.fastest(room, si), last = si === D.doorSteps[D.doorSteps.length - 1];
+    const rows = D.table(room, si), f = D.fastest(room, si), last = si === D.doorSteps[D.doorSteps.length - 1], s = G.steps[si];
     return `
-    <p class="eyebrow">Leaderboard · after ${esc(W.round)} ${D.doorNo(si)}${last ? " (final)" : ""}</p>
+    <p class="eyebrow">Leaderboard · ${s.boardLabel ? esc(s.boardLabel) : `after ${esc(W.round)} ${D.doorNo(si)}`}${last ? " (final)" : ""}</p>
     ${f ? `<div class="fast"><span class="icon" aria-hidden="true">⚡</span><p class="big">Fastest: <b>${esc(f.name)}</b>, locked in correctly in ${D.secs(f.took)}</p></div>` : `<div class="fast"><span class="icon" aria-hidden="true">🤯</span><p class="big">${esc(W.nobody)}</p></div>`}
     <div class="board">${rows.length ? rows.map(r => D.brow(r, me)).join("") : `<p class="muted">No ${D.teamWord(room.state && room.state.mode)}s yet.</p>`}</div>`;
   };
@@ -205,6 +216,28 @@
       <span class="nm">${esc(r.name)} ${mv > 0 ? `<span class="mv">▲ ${mv}</span>` : mv < 0 ? `<span class="mv dn">▼ ${-mv}</span>` : ""}</span>
       <span class="gain${r.round < 0 ? " neg" : ""}">${r.round > 0 ? "+" + r.round : r.round < 0 ? "−" + -r.round : ""}</span><span class="sc">${r.total}</span></div>`;
   };
+
+  // ---------- story games (English Club) ----------
+  // **word** in story text becomes a highlighted power word.
+  D.rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<mark class="pw">$1</mark>');
+  D.art = () => (G.art ? `<div class="art" aria-hidden="true">${G.art}</div>` : "");
+  D.vTale = s => `
+    ${D.art()}
+    <p class="eyebrow">${esc(s.eyebrow)}</p>
+    <h1 class="title">${esc(s.title)}</h1>
+    <div class="tale">${s.text.map(p => `<p>${D.rich(p)}</p>`).join("")}</div>
+    <p class="eyebrow">Power words</p>
+    <div class="words">${s.words.map(([w, m]) => `<div class="word"><b>${esc(w)}</b><span>${esc(m)}</span></div>`).join("")}</div>`;
+  D.vSpeak = s => `
+    <p class="eyebrow">${esc(s.eyebrow || "Speaking time 🎤")}</p>
+    <h1 class="title">${esc(s.prompt)}</h1>
+    ${s.note ? `<p class="big muted">${esc(s.note)}</p>` : ""}`;
+  D.allWords = () => G.steps.filter(s => s.type === "tale").flatMap(s => s.words);
+  D.vWordlist = s => `
+    <p class="eyebrow">${esc(s.eyebrow || "Take it home")}</p>
+    <h1 class="title">${esc(s.title || "Your power words")}</h1>
+    <p class="big muted">${esc(s.note || "Screenshot this and use one new word every day.")}</p>
+    <div class="words">${D.allWords().map(([w, m]) => `<div class="word"><b>${esc(w)}</b><span>${esc(m)}</span></div>`).join("")}</div>`;
 
   D.vKey = () => `
     <div class="keyslide">
@@ -230,7 +263,7 @@
       <span class="sc">${r.total}</span></div>`;
   };
   D.vOffers = room => {
-    const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]);
+    const rows = D.table(room, D.lastStep());
     return `<p class="eyebrow">${esc(G.offerEyebrow || "Offer letters")}</p><h1 class="title">${esc(G.offerTitle || "Your results")}</h1>
       <div class="board">${rows.map(r => D.offerCard(r)).join("") || `<p class="muted">No teams yet.</p>`}</div>`;
   };

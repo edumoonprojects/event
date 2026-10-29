@@ -19,6 +19,12 @@ window.ZONE = {
 
   games: [
     {
+      club: "english", icon: "🎬", title: "Movie Story Time: Baahubali", added: "2026-10-29",
+      desc: "Hear the Baahubali story in simple English, learn 20 power words like usurp, clandestine and magnanimous, guess what happens next, and speak if you dare.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "📱 Phones only",
+      host: "movie-story-time/host.html", player: "movie-story-time/"
+    },
+    {
       club: "coding", icon: "💼", title: "Placement Round", added: "2026-10-29",
       desc: "5 rounds of real placement-style questions: /, %, patterns, functions, strings and an interview question. Every team gets an offer letter.",
       years: "2nd, 3rd & final year", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "📱 Phones only",
