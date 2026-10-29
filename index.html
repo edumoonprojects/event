@@ -3,47 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>EduMoon Games</title>
+<title>EduMoon Game Zone</title>
+<meta name="description" content="Interactive games for EduMoon's Coding, English and Skills clubs. Host from your phone, play from yours.">
 <link rel="icon" href="engine/icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Nunito+Sans:wght@400;700;800&display=swap">
 <link rel="stylesheet" href="engine/doors.css">
-<style>
-.game{display:flex;flex-direction:column;gap:12px}
-.game .row{display:flex;gap:10px;flex-wrap:wrap}
-.game a{text-decoration:none;text-align:center}
-.soon{opacity:.6}
-</style>
+<link rel="stylesheet" href="engine/zone.css">
 </head>
-<body class="player">
-<div class="wrap" style="max-width:900px">
+<body class="zone" data-club="" data-root="">
+<div class="wrap">
   <header class="top">
-    <img src="engine/icon.png" alt="EduMoon">
-    <div class="brand"><small>EduMoon</small><b>Games for every club</b></div>
+    <a href="" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit"><img src="engine/icon.png" alt="EduMoon"><div class="brand"><small>EduMoon</small><b>Game Zone</b></div></a>
   </header>
-  <main>
-    <p class="eyebrow">Hosts and College Ambassadors</p>
-    <h1 class="title">Pick a game to host</h1>
-    <p class="big muted">Players don’t need this page. They join with the QR code or link on the host screen.</p>
-    <div class="grid">
-      <div class="card game">
-        <p class="eyebrow">Coding Club · 35 min · First and second years</p>
-        <h2>🔐 Escape the Lab</h2>
-        <p class="muted">5 locked doors, 5 C concepts: variables, if-else, loops, bugs and arrays. Teams or solo.</p>
-        <div class="row"><a class="btn" href="escape-the-lab/host.html">Host this game</a><a class="btn ghost" href="escape-the-lab/">Player page</a></div>
-      </div>
-      <div class="card game">
-        <p class="eyebrow">Coding Club · 25 min · Beginners</p>
-        <h2>🌐 What Happens When You Tap?</h2>
-        <p class="muted">The EduMoon Live quiz: how the internet works, with quiz rounds and word hunts.</p>
-        <div class="row"><a class="btn" href="edumoon-live/host.html">Host this game</a><a class="btn ghost" href="edumoon-live/">Player page</a></div>
-      </div>
-      <div class="card game soon">
-        <p class="eyebrow">Coming soon</p>
-        <h2>💼 Placement Round</h2>
-        <p class="muted">Real placement-style questions from TCS, Infosys and Wipro tests.</p>
-      </div>
-    </div>
-  </main>
+  <main id="main"></main>
+  <footer class="foot">Built by <a href="https://github.com/vikaskapuganti">Vikas Kapuganti</a> for <a href="https://theedumoon.com">EduMoon</a></footer>
 </div>
+<script src="engine/games.js"></script>
+<script src="engine/zone.js"></script>
 </body>
 </html>

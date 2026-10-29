@@ -14,6 +14,15 @@
   };
 
   D.POINTS = { correct: 100, speed: 50, explain: 50, hint: 30 };
+
+  // Words each game can change in content.js (G.words). Defaults are Escape the Lab's.
+  const W = D.W = Object.assign({
+    round: "Door", unlocked: "Unlocked 🔓", badgeLabel: "Letter won",
+    rulesEyebrow: "How every door works", rulesTitle: "Learn it. Crack it. Escape.",
+    learnText: "The host teaches one C idea.", crackTitle: "Crack", crackText: "Solve the door and lock in your answer on the phone.",
+    nobody: "Nobody cracked this door. It fools almost everyone!", cracked: "cracked it",
+    next: "Next door ▶", finale: "Reveal the master key ▶", winner: "escaped first! 🏆", endLine: "You escaped the lab! 🔓"
+  }, G.words || {});
   D.doorSteps = G.steps.map((s, i) => (s.type === "door" ? i : -1)).filter(i => i >= 0);
   D.doorNo = si => D.doorSteps.indexOf(si) + 1;
   D.isDoor = si => !!G.steps[si] && G.steps[si].type === "door";
@@ -97,6 +106,7 @@
     return D.doorSteps.filter(si => si < st.step || (si === st.step && st.phase !== "open")).length;
   };
   D.keyline = st => {
+    if (!G.key) return "";
     const n = D.lettersWon(st), L = G.key.split("");
     return `<span class="keyline" aria-label="Master key: ${n} of ${L.length} letters">KEY ${L.map((c, i) => (i < n ? `<b>${c}</b>` : "_")).join(" ")}</span>`;
   };
@@ -131,11 +141,11 @@
   D.vRules = mode => {
     const w = D.teamWord(mode);
     return `
-    <p class="eyebrow">How every door works</p>
-    <h1 class="title">Learn it. Crack it. Escape.</h1>
+    <p class="eyebrow">${esc(W.rulesEyebrow)}</p>
+    <h1 class="title">${esc(W.rulesTitle)}</h1>
     <div class="grid">
-      <div class="card"><span class="icon" aria-hidden="true">📖</span><h3>1 · Learn</h3><p class="big muted">The host teaches one C idea.</p></div>
-      <div class="card"><span class="icon" aria-hidden="true">🔐</span><h3>2 · Crack</h3><p class="big muted">Solve the door and lock in your answer on the phone.</p></div>
+      <div class="card"><span class="icon" aria-hidden="true">📖</span><h3>1 · Learn</h3><p class="big muted">${esc(W.learnText)}</p></div>
+      <div class="card"><span class="icon" aria-hidden="true">🔐</span><h3>2 · ${esc(W.crackTitle)}</h3><p class="big muted">${esc(W.crackText)}</p></div>
       <div class="card amber"><span class="icon" aria-hidden="true">⚡</span><h3>3 · Reveal</h3><p class="big muted">Faster correct answers score more.</p></div>
     </div>
     <div class="grid">
@@ -146,7 +156,7 @@
   };
 
   D.vLearn = s => `
-    <p class="eyebrow">Before Door ${s.door} · Learn</p>
+    <p class="eyebrow">Before ${esc(W.round)} ${s.door} · Learn</p>
     <h1 class="title">${esc(s.title)}</h1>
     <div class="split">
       <div style="display:flex;flex-direction:column;gap:12px">
@@ -164,28 +174,28 @@
   D.vDoorHead = (s, si, room) => `
     <div class="doorhead">
       <div style="display:flex;flex-direction:column;gap:8px">
-        <p class="eyebrow ${s.double ? "coral" : ""}">Door ${D.doorNo(si)} of ${D.doorSteps.length} · ${esc(s.name)}${s.double ? " · Double points" : ""}</p>
+        <p class="eyebrow ${s.double ? "coral" : ""}">${esc(W.round)} ${D.doorNo(si)} of ${D.doorSteps.length} · ${esc(s.name)}${s.double ? " · Double points" : ""}</p>
         <h1 class="title">${esc(s.prompt)}</h1>
       </div>
       <span class="timer" data-timer="${si}" aria-live="off"></span>
     </div>`;
 
   D.vReveal = (s, si) => `
-    <p class="eyebrow green">Door ${D.doorNo(si)} · Unlocked 🔓</p>
+    <p class="eyebrow green">${esc(W.round)} ${D.doorNo(si)} · ${esc(W.unlocked)}</p>
     <div class="split">
       <div style="display:flex;flex-direction:column;gap:14px">
         <div class="card"><p class="muted">The answer is</p><p class="answer">${esc(D.answerText(s))}</p>${s.kind === "bug" ? `<p class="big">The bug is on <b>line ${s.bugLine + 1}</b>: ${esc(s.bugText)}</p>` : ""}</div>
         ${D.trace(s.trace)}
         <p class="note">${esc(s.note)}</p>
       </div>
-      <div class="letter"><small>Letter won</small><b>${esc(s.letter)}</b></div>
+      <div class="letter"><small>${esc(W.badgeLabel)}</small><b>${esc(s.letter || s.badge || "✅")}</b></div>
     </div>`;
 
   D.vBoard = (room, si, me) => {
     const rows = D.table(room, si), f = D.fastest(room, si), last = si === D.doorSteps[D.doorSteps.length - 1];
     return `
-    <p class="eyebrow">Leaderboard · after Door ${D.doorNo(si)}${last ? " (final)" : ""}</p>
-    ${f ? `<div class="fast"><span class="icon" aria-hidden="true">⚡</span><p class="big">Fastest: <b>${esc(f.name)}</b>, locked in correctly in ${D.secs(f.took)}</p></div>` : `<div class="fast"><span class="icon" aria-hidden="true">🤯</span><p class="big">Nobody cracked this door. It fools almost everyone!</p></div>`}
+    <p class="eyebrow">Leaderboard · after ${esc(W.round)} ${D.doorNo(si)}${last ? " (final)" : ""}</p>
+    ${f ? `<div class="fast"><span class="icon" aria-hidden="true">⚡</span><p class="big">Fastest: <b>${esc(f.name)}</b>, locked in correctly in ${D.secs(f.took)}</p></div>` : `<div class="fast"><span class="icon" aria-hidden="true">🤯</span><p class="big">${esc(W.nobody)}</p></div>`}
     <div class="board">${rows.length ? rows.map(r => D.brow(r, me)).join("") : `<p class="muted">No ${D.teamWord(room.state && room.state.mode)}s yet.</p>`}</div>`;
   };
 
@@ -203,6 +213,27 @@
       <h1 class="title">${esc(G.keyTitle)}</h1>
       <p class="big">${esc(G.keyLine)}</p>
     </div>`;
+
+  // Offer letters (Placement Round style endings): G.offers = [{min: 0.75, icon, title, text}, ...] best first.
+  D.maxPoints = () => D.doorSteps.reduce((t, si) => {
+    const s = G.steps[si], m = s.double ? 2 : 1;
+    return t + (s.kind === "bug" ? 2 : 1) * D.POINTS.correct * m + D.POINTS.speed * m;
+  }, 0);
+  D.offerFor = total => {
+    const pct = total / D.maxPoints(), list = G.offers || [];
+    return list.find(o => pct >= o.min) || list[list.length - 1];
+  };
+  D.offerCard = (r, mine) => {
+    const o = D.offerFor(r.total);
+    return `<div class="offer${mine ? " mine" : ""}"><span class="icon" aria-hidden="true">${o.icon}</span>
+      <div class="ot"><small>${mine ? "Your offer letter" : "#" + r.rank + " · " + esc(r.name)}</small><b>${esc(o.title)}</b><span class="muted">${esc(o.text)}</span></div>
+      <span class="sc">${r.total}</span></div>`;
+  };
+  D.vOffers = room => {
+    const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]);
+    return `<p class="eyebrow">${esc(G.offerEyebrow || "Offer letters")}</p><h1 class="title">${esc(G.offerTitle || "Your results")}</h1>
+      <div class="board">${rows.map(r => D.offerCard(r)).join("") || `<p class="muted">No teams yet.</p>`}</div>`;
+  };
 
   D.vPodium = rows => {
     const top = [rows[1], rows[0], rows[2]], h = [120, 170, 90], col = ["#B6C1E6", "#FFB830", "#E2A77A"], lab = ["2", "1", "3"];

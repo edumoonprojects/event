@@ -149,6 +149,7 @@
     else if (step.type === "door" && s.phase === "reveal") M.innerHTML = D.vReveal(step, i) + `<div class="card" id="live"></div>`;
     else if (step.type === "door" && s.phase === "board") M.innerHTML = `<div id="live"></div>`;
     else if (step.type === "key") M.innerHTML = D.vKey();
+    else if (step.type === "offer") M.innerHTML = `<div id="live"></div>`;
     else if (step.type === "end") {
       M.innerHTML = `<div id="live"></div>
         <div class="card amber" style="flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap">
@@ -177,16 +178,17 @@
     }
     if (step && step.type === "door" && s.phase === "reveal") {
       const right = ps.filter(p => D.answerPoints(room, i, p.pid).ok), b = (room.bonus && room.bonus[i]) || {};
-      L.innerHTML = `<p class="big"><b>${right.length} of ${ps.length}</b> ${w}s cracked it.</p>
+      L.innerHTML = `<p class="big"><b>${right.length} of ${ps.length}</b> ${w}s ${esc(D.W.cracked)}.</p>
         <p class="eyebrow">Explain bonus: tap the ${w} that explained it well (+${D.POINTS.explain})</p>
         <div class="chips">${ps.map(p => `<button class="chip${b[p.pid] ? " on" : ""}" data-bonus="${esc(p.pid)}" aria-pressed="${!!b[p.pid]}">${b[p.pid] ? "⭐ " : ""}${esc(p.name)}</button>`).join("") || `<span class="muted">No ${w}s</span>`}</div>`;
       L.querySelectorAll("[data-bonus]").forEach(btn => (btn.onclick = () => toggleBonus(btn.dataset.bonus)));
       return;
     }
     if (step && step.type === "door" && s.phase === "board") { L.innerHTML = D.vBoard(room, i); return; }
+    if (step && step.type === "offer") { L.innerHTML = D.vOffers(room); return; }
     if (step && step.type === "end") {
       const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]);
-      L.innerHTML = `<p class="eyebrow">Final results</p><h1 class="title">${rows[0] ? esc(rows[0].name) + " escaped first! 🏆" : "Game over"}</h1>
+      L.innerHTML = `<p class="eyebrow">Final results</p><h1 class="title">${rows[0] ? esc(rows[0].name) + " " + esc(D.W.winner) : "Game over"}</h1>
         ${D.vPodium(rows)}<div class="board">${rows.map(r => D.brow(r)).join("")}</div>`;
     }
   }
@@ -198,7 +200,7 @@
     if (s.phase === "lobby") { label = "Start game ▶"; dis = !players().length; }
     else if (step && step.type === "door" && s.phase === "open") label = "Reveal answer 🔓";
     else if (step && step.type === "door" && s.phase === "reveal") label = "Show leaderboard 🏆";
-    else if (step && step.type === "door" && s.phase === "board") label = i === D.doorSteps[D.doorSteps.length - 1] ? "Reveal the master key ▶" : "Next door ▶";
+    else if (step && step.type === "door" && s.phase === "board") label = i === D.doorSteps[D.doorSteps.length - 1] ? D.W.finale : D.W.next;
     else if (i === S.length - 1) { label = "Game over 🎉"; dis = true; }
     $("#next").textContent = label; $("#next").disabled = dis;
     $("#back").disabled = s.phase === "lobby";

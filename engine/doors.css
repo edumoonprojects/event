@@ -9,7 +9,7 @@
 html,body{height:100%}
 html{background:var(--bg)}
 #live,#ansarea{display:flex;flex-direction:column;gap:16px}
-#live:empty{display:none}
+#live:empty,#live p:empty{display:none}
 body{margin:0;background:radial-gradient(circle at 80% 0%,#1B2563 0%,var(--bg) 55%) fixed;color:var(--ink);font-family:var(--body);font-size:16px;-webkit-text-size-adjust:100%}
 button{font:inherit;color:inherit;border:0;cursor:pointer}
 button:disabled{cursor:default;opacity:.45}
@@ -77,6 +77,8 @@ label.lbl{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:upp
 /* answers on phones */
 .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:10px}
 .opt{border-radius:16px;min-height:72px;background:var(--panel2);border:2px solid var(--line);font-family:var(--display);font-weight:700;font-size:28px}
+.opts.long{grid-template-columns:1fr}
+.opts.long .opt{font-family:var(--mono);font-size:20px;min-height:58px;text-align:left;padding:0 18px}
 .opt.pick{background:var(--amber);border-color:var(--amber);color:#1C1300}
 .lockbtn{font-size:22px}
 .hintbox{background:#2A2208;border:1px solid #6B5310;border-radius:14px;padding:14px 16px;font-weight:700;line-height:1.4}
@@ -107,6 +109,16 @@ label.lbl{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:upp
 .brow .sc{font-family:var(--display);font-size:clamp(20px,2.2vw,28px);font-weight:700;font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
 .fast{display:flex;align-items:center;gap:12px;background:#2A230E;border:1px solid #6B5310;border-radius:16px;padding:14px 18px;font-weight:800}
 .fast .icon{font-size:28px}
+
+/* offer letters */
+.offer{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px;animation:rise .45s backwards}
+.offer .icon{font-size:40px}
+.offer .ot{display:flex;flex-direction:column;gap:2px;min-width:0}
+.offer small{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
+.offer b{font-family:var(--display);font-size:clamp(20px,2.4vw,30px)}
+.offer .sc{font-family:var(--display);font-weight:700;font-size:24px}
+.offer.mine{background:linear-gradient(135deg,#FFB830,#FFD27A);color:#1C1300;border:0}
+.offer.mine small{color:#4A3300} .offer.mine .muted{color:#4A3300}
 
 /* master key */
 .keyrow{display:flex;gap:clamp(8px,1.6vw,22px);justify-content:center;flex-wrap:wrap}

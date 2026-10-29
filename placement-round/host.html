@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Placement Round · Host</title>
+<link rel="icon" href="../engine/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Nunito+Sans:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="../engine/doors.css">
+</head>
+<body class="host">
+<div class="wrap">
+  <header class="top">
+    <img src="../engine/icon.png" alt="EduMoon">
+    <div class="brand"><small id="club">EduMoon</small><b id="title">Loading…</b></div>
+    <div class="right"><span id="key"></span><span class="tag" id="codepill"></span><span class="tag" id="conn">…</span></div>
+  </header>
+  <main id="main" aria-live="polite"></main>
+</div>
+<nav class="bar" id="bar" hidden aria-label="Host controls">
+  <div class="in">
+    <button class="btn ghost small" id="back" aria-label="Back">◀</button>
+    <button class="btn ghost small" id="more" hidden>+30s</button>
+    <button class="btn main" id="next">Next ▶</button>
+    <span class="pos" id="pos"></span>
+    <button class="btn ghost small" id="menu" aria-label="New game">⟲</button>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="../engine/firebase-config.js"></script>
+<script src="../engine/db.js"></script>
+<script src="content.js"></script>
+<script src="../engine/doors.js"></script>
+<script src="../engine/host.js"></script>
+</body>
+</html>

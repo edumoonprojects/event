@@ -1,0 +1,40 @@
+/* EduMoon Game Zone pages (home + club pages). Uses the colours from doors.css. */
+.zone .wrap{max-width:1180px;padding-bottom:48px}
+.hero{display:flex;flex-direction:column;gap:12px;padding:12px 0 4px}
+.zt{font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em}
+.zt span{background:linear-gradient(90deg,#FFB830,#FF7A8A 45%,#4C9BFF 75%,#3DDC97);-webkit-background-clip:text;background-clip:text;color:transparent}
+.clubs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.ccard{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:24px;text-decoration:none;color:#fff;
+  background:linear-gradient(140deg,var(--c) 0%,var(--c2) 100%);min-height:220px;transition:transform .15s,box-shadow .15s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.ccard:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.ccard:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.ccard::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.14)}
+.ccard h2{font-size:clamp(26px,3vw,34px);color:#fff}
+.ccard p{font-size:17px;line-height:1.4;color:rgba(255,255,255,.92);text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.cicon{font-size:44px;line-height:1}
+.ccount{margin-top:auto;font-weight:800;background:rgba(10,14,39,.35);border-radius:99px;padding:8px 14px;width:fit-content}
+.block{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+.ggrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.gcard{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:20px;padding:22px}
+.gcard h3{font-size:26px}
+.ghead{display:flex;gap:8px;flex-wrap:wrap;min-height:0}
+.ghead:empty{display:none}
+.clubtag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.newtag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--amber);color:#1C1300;border-radius:99px;padding:3px 10px}
+.badges{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.badges li{background:var(--panel2);border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:14px;font-weight:700}
+.gbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.gbtns a{text-decoration:none;text-align:center}
+.vibe{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px;border-radius:24px;
+  background:linear-gradient(120deg,#3A1150 0%,#7A1E48 50%,#B4461E 100%);border:1px solid #B35A3A}
+.vibe h2{font-size:clamp(26px,3.4vw,40px)}
+.vibe .eyebrow{color:#FFD27A}
+.vibe a{text-decoration:none}
+.backlink{color:var(--soft);font-weight:800;text-decoration:none;width:fit-content}
+.backlink:hover{color:var(--ink)}
+.chero{display:flex;align-items:center;gap:20px;padding:28px;border-radius:24px;background:linear-gradient(140deg,var(--c) 0%,var(--c2) 100%);color:#fff}
+.chero .cicon{font-size:64px}
+.chero p{color:rgba(255,255,255,.92)}
+.steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:18px;line-height:1.4}
+.foot{color:var(--soft);font-size:14px;text-align:center;margin-top:24px}
+.foot a{color:var(--amber)}

@@ -107,6 +107,7 @@
     else if (step.type === "door" && s.phase === "reveal") M.innerHTML = `<div id="live"></div>` + D.vReveal(step, i);
     else if (step.type === "door" && s.phase === "board") M.innerHTML = `<div id="live"></div>`;
     else if (step.type === "key") M.innerHTML = D.vKey();
+    else if (step.type === "offer") M.innerHTML = `<div id="live"></div>`;
     else if (step.type === "end") M.innerHTML = `<div id="live"></div>`;
     if (step.type === "door" && s.phase === "open") answerArea();
     window.scrollTo(0, 0);
@@ -124,7 +125,7 @@
     } else {
       A.innerHTML = D.code(s.code) + (s.kind === "number"
         ? `<div class="card"><label class="lbl" for="num">Your answer</label><input class="field" id="num" inputmode="numeric" pattern="-?[0-9]*" autocomplete="off" placeholder="Type a number" style="font-family:var(--display);font-size:32px"></div>`
-        : `<div class="card"><p class="eyebrow">Your answer</p><div class="opts">${s.options.map((o, k) => `<button class="opt${pick === k ? " pick" : ""}" data-pick="${k}" aria-pressed="${pick === k}">${esc(o)}</button>`).join("")}</div></div>`);
+        : `<div class="card"><p class="eyebrow">Your answer</p><div class="opts${s.options.some(o => String(o).length > 5) ? " long" : ""}">${s.options.map((o, k) => `<button class="opt${pick === k ? " pick" : ""}" data-pick="${k}" aria-pressed="${pick === k}">${esc(o)}</button>`).join("")}</div></div>`);
     }
     A.querySelectorAll("[data-pick]").forEach(b => (b.onclick = () => { pick = +b.dataset.pick; answerArea(); }));
     A.querySelectorAll("[data-line]").forEach(b => { const f = () => { pickLine = +b.dataset.line; answerArea(); }; b.onclick = f; b.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); f(); } }; });
@@ -161,9 +162,14 @@
       L.innerHTML = (row ? `<div class="card amber center"><p class="eyebrow" style="color:#4A3300">Your ${w}</p><p class="answer" style="color:#1C1300">#${row.rank}</p><p class="big">${row.total} points</p></div>` : "") + D.vBoard(room, i, pid);
       return;
     }
+    if (step.type === "offer") {
+      const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]), row = rows.find(r => r.pid === pid);
+      L.innerHTML = (row ? D.offerCard(row, true) : "") + `<p class="eyebrow">Everyone’s offers</p><div class="board">${rows.filter(r => r.pid !== pid).map(r => D.offerCard(r)).join("")}</div>`;
+      return;
+    }
     if (step.type === "end") {
       const rows = D.table(room, D.doorSteps[D.doorSteps.length - 1]), row = rows.find(r => r.pid === pid);
-      L.innerHTML = `<div class="card amber center"><p class="eyebrow" style="color:#4A3300">You finished</p><p class="answer" style="color:#1C1300">#${row ? row.rank : "–"}</p><p class="big">${row ? row.total : 0} points · You escaped the lab! 🔓</p></div>
+      L.innerHTML = `<div class="card amber center"><p class="eyebrow" style="color:#4A3300">You finished</p><p class="answer" style="color:#1C1300">#${row ? row.rank : "–"}</p><p class="big">${row ? row.total : 0} points · ${esc(D.W.endLine)}</p></div>
         ${D.vPodium(rows)}
         <a class="btn wide green" style="text-align:center;text-decoration:none;display:block" href="${esc(step.joinUrl)}" target="_blank" rel="noopener">${esc(step.joinButton)}</a>
         <p class="muted center">${esc(step.joinText)}</p>`;
