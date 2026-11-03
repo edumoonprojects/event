@@ -1,0 +1,16 @@
+/* Placement Round 2: DSA: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#070B1C; --panel:#111A36; --panel2:#111A36; --line:#25345F;
+  --ink:#F3F5FB; --soft:#AEBBDD; --amber:#FFC857; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#1C2E66 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFC857,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#7CA8FF,#3E6BEA);color:#04102B}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#FFC857}
+.brow:first-child{border-color:#FFC857}
+.word b{color:#FFC857;font-family:var(--body);font-size:18px}

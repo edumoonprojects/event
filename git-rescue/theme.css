@@ -1,0 +1,16 @@
+/* Git Rescue: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#120806; --panel:#24120D; --panel2:#24120D; --line:#4C2A20;
+  --ink:#F3F5FB; --soft:#E3BFB3; --amber:#FFC857; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#4A1D12 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFC857,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#FF8A5B,#E0552E);color:#2B0B00}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#FFC857}
+.brow:first-child{border-color:#FFC857}
+.word b{color:#FFC857;font-family:var(--body);font-size:18px}

@@ -1,0 +1,16 @@
+/* Python Escape: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#0A0F1A; --panel:#141E33; --panel2:#141E33; --line:#28395E;
+  --ink:#F3F5FB; --soft:#B5C3DE; --amber:#FFD43B; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#1B3366 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFD43B,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#FFD43B,#E8B30A);color:#241A00}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#FFD43B}
+.brow:first-child{border-color:#FFD43B}
+.word b{color:#FFD43B;font-family:var(--body);font-size:18px}

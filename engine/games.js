@@ -19,6 +19,54 @@ window.ZONE = {
 
   games: [
     {
+      club: "coding", icon: "chart-column", title: "Placement Round 2: DSA", added: "2026-11-04",
+      desc: "The advanced sequel. Product-company style questions on arrays, strings, binary search, sorting and Big O, then interview-style thinking. Every team gets an offer letter.",
+      years: "Final year", level: "advanced", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "placement-round-2/host.html", player: "placement-round-2/"
+    },
+    {
+      club: "skills", icon: "rocket", title: "Startup Tycoon", added: "2026-11-04",
+      desc: "Run CampusEats, a hostel food delivery startup, for 6 months. Pick the problem, find customers, price, market, choose a co-founder and face an investor. Then pitch your own idea.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "startup-tycoon/host.html", player: "startup-tycoon/"
+    },
+    {
+      club: "english", icon: "mail", title: "Email Doctor", added: "2026-11-04",
+      desc: "Diagnose and fix real student emails to professors and HR: subject lines, openings, asking for extensions, follow-ups and tone traps. Leave with reusable templates.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "email-doctor/host.html", player: "email-doctor/"
+    },
+    {
+      club: "skills", icon: "landmark", title: "Money 101", added: "2026-11-04",
+      desc: "Ravi got his first salary. CTC vs in-hand, a simple budget, emergency funds, compounding, credit card and EMI traps, and spotting money scams.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "money-101/host.html", player: "money-101/"
+    },
+    {
+      club: "skills", icon: "user", title: "LinkedIn Glow-Up", added: "2026-11-04",
+      desc: "The third Ravi game. Fix his photo, headline, About section and projects, write a real first post, and learn to message seniors so they reply.",
+      years: "2nd year onwards", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "linkedin-glow-up/host.html", player: "linkedin-glow-up/"
+    },
+    {
+      club: "english", icon: "mic", title: "Interview English Pro", added: "2026-11-04",
+      desc: "The English of the technical round: explain your project in 60 seconds, say “I don’t know” like a pro, structure answers and drop filler words. Ends with a 90-second pitch.",
+      years: "Final year", level: "advanced", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "interview-english-pro/host.html", player: "interview-english-pro/"
+    },
+    {
+      club: "coding", icon: "route", title: "Git Rescue", added: "2026-11-04",
+      desc: "11:40 PM, the night before submission, and a teammate overwrote the project. Commits, undo, branches, merge conflicts and GitHub, to save it in time.",
+      years: "2nd & 3rd year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "git-rescue/host.html", player: "git-rescue/"
+    },
+    {
+      club: "coding", icon: "key", title: "Python Escape", added: "2026-11-04",
+      desc: "Escape the Lab, in Python. 5 locked doors: variables, if/elif, loops with range, lists and a bug door. Crack them all to spell the master key.",
+      years: "1st & 2nd year", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "python-escape/host.html", player: "python-escape/"
+    },
+    {
       club: "skills", icon: "file-user", title: "HR Round", added: "2026-11-03",
       desc: "The Resume Rescue sequel: Ravi got the interview call. Teams pick his best answers to real HR questions, from “Tell me about yourself” to bonds and relocation, and win an offer letter.",
       years: "Final year", level: "advanced", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
