@@ -1,0 +1,16 @@
+/* Bug Hunt: dark terminal green theme for the Coding Club (overrides the engine colours). */
+:root{
+  --bg:#06120D; --panel:#0E241A; --panel2:#0A1C14; --line:#1F4532;
+  --ink:#ECFAF2; --soft:#A3CDB6; --amber:#FFD166; --green:#4BE39A; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#123B2A 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFD166,#FFE6A3)}
+.btn{background:linear-gradient(135deg,#4BE39A,#1FA866);color:#03200F}
+.code{background:#030A07}
+.letter{background:linear-gradient(135deg,#FFD166,#F4A93B);color:#2A1A00}
+.letter small,.letter b{color:#2A1A00}
+.icon{color:var(--green)}
+.brow:first-child{border-color:var(--green)}
+.word b{color:var(--green);font-family:var(--mono);font-size:17px}
