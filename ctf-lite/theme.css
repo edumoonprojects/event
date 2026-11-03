@@ -1,0 +1,16 @@
+/* Capture the Flag Lite: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#050D08; --panel:#0C1A11; --panel2:#0C1A11; --line:#1C3626;
+  --ink:#F3F5FB; --soft:#A8D8B9; --amber:#7CFFB2; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#0F3A20 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#7CFFB2,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#4ADE80,#16A34A);color:#032112}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#7CFFB2}
+.brow:first-child{border-color:#7CFFB2}
+.word b{color:#7CFFB2;font-family:var(--body);font-size:18px}

@@ -1,0 +1,18 @@
+/* SQL Detective: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#0B0F1A; --panel:#141B2B; --panel2:#141B2B; --line:#263149;
+  --ink:#F3F5FB; --soft:#B8C4DE; --amber:#FFD166; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#16304D 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFD166,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#7DD3FC,#0EA5E9);color:#04172A}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#FFD166}
+.brow:first-child{border-color:#FFD166}
+.word b{color:#FFD166;font-family:var(--body);font-size:18px}
+/* Phones: wrap the long table lines instead of scrolling sideways. */
+@media (max-width:700px){.code{white-space:pre-wrap;overflow-wrap:anywhere}.code .ln{padding-left:28px;text-indent:-14px}}

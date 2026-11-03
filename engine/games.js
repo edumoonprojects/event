@@ -6,7 +6,8 @@ window.ZONE = {
   clubs: [
     { id: "coding", name: "Coding Club", icon: "code", color: "#4C9BFF", color2: "#1E4FD8", tagline: "Escape rooms, quizzes and placement rounds", about: "Learn real coding by playing. No laptop needed: every game runs on phones." },
     { id: "english", name: "English Club", icon: "message-circle", color: "#FF7A8A", color2: "#D6336C", tagline: "Speaking games, stories and debates", about: "Games where everyone talks in English, with no fear of mistakes." },
-    { id: "skills", name: "Skills Club", icon: "rocket", color: "#3DDC97", color2: "#11A36A", tagline: "Careers, resumes and startup games", about: "Careers after BTech, interviews, resumes and building your own startup." }
+    { id: "skills", name: "Skills Club", icon: "rocket", color: "#3DDC97", color2: "#11A36A", tagline: "Careers, resumes and startup games", about: "Careers after BTech, interviews, resumes and building your own startup." },
+    { id: "fun", name: "Fun Zone", icon: "party-popper", color: "#FFB020", color2: "#E8590C", tagline: "Quizzes, brain teasers and party games", about: "Pure fun for any crowd. Great as an opener or a break between sessions." }
   ],
 
   banner: {
@@ -18,6 +19,90 @@ window.ZONE = {
   },
 
   games: [
+    {
+      club: "fun", icon: "map", title: "Vizag Quiz", added: "2026-11-05",
+      desc: "How well do you know the City of Destiny? Landmarks, the city’s names, its hills of faith, Araku and Borra, the port and the Navy. Every fact checked.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "vizag-quiz/host.html", player: "vizag-quiz/"
+    },
+    {
+      club: "fun", icon: "globe", title: "India Quiz", added: "2026-11-05",
+      desc: "States, the freedom struggle, the Constitution, rivers, ISRO and culture, with plenty of Andhra Pradesh links. Core GK for aptitude tests, learned through play.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "india-quiz/host.html", player: "india-quiz/"
+    },
+    {
+      club: "fun", icon: "chart-column", title: "Higher or Lower", added: "2026-11-05",
+      desc: "One number on the screen. Is the real answer higher or lower? 18 fast calls on your body, animals, space, tech, India and sports.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "higher-or-lower/host.html", player: "higher-or-lower/"
+    },
+    {
+      club: "fun", icon: "lightbulb", title: "Brain Teasers", added: "2026-11-05",
+      desc: "Riddles, number puzzles, patterns, lateral thinking and logic traps. Each round teaches one thinking trick that helps in puzzle interview rounds.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "brain-teasers/host.html", player: "brain-teasers/"
+    },
+    {
+      club: "fun", icon: "message-circle", title: "Tech Taboo", added: "2026-11-05",
+      desc: "Guess the tech word from a Taboo-style clue, then play live Taboo: describe a word without the banned ones. Everyday tech, coding, AI, security and startups.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "tech-taboo/host.html", player: "tech-taboo/"
+    },
+    {
+      club: "fun", icon: "users", title: "Icebreaker Bingo", added: "2026-11-05",
+      desc: "A mingle game for a room of strangers. Find people for 18 bingo squares, and learn how to start, keep and end a conversation with anyone.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "icebreaker-bingo/host.html", player: "icebreaker-bingo/"
+    },
+    {
+      club: "skills", icon: "chart-column", title: "Aptitude Arena", added: "2026-11-05",
+      desc: "The quant and reasoning questions from placement aptitude tests: percentages, averages, speed and work, profit, reasoning and a mock test. A shortcut every round.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "aptitude-arena/host.html", player: "aptitude-arena/"
+    },
+    {
+      club: "skills", icon: "timer", title: "Time Boss", added: "2026-11-05",
+      desc: "Priya has exams, a hackathon and an internship in the same fortnight. Urgent vs important, planning, procrastination, phones and crunch week. Then plan your own tomorrow.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "time-boss/host.html", player: "time-boss/"
+    },
+    {
+      club: "coding", icon: "search", title: "SQL Detective", added: "2026-11-05",
+      desc: "The Hostel A laptop vanished. Query the hostel database with SELECT, WHERE, ORDER BY, GROUP BY and JOIN, fix broken queries, and crack the case.",
+      years: "2nd year+", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "sql-detective/host.html", player: "sql-detective/"
+    },
+    {
+      club: "coding", icon: "shield", title: "Capture the Flag Lite", added: "2026-11-05",
+      desc: "Your first CTF. Find flags in page source, decode Base64 and hex, break Caesar and ROT13, learn how passwords are stored and spot fake links. Ethics first.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ctf-lite/host.html", player: "ctf-lite/"
+    },
+    {
+      club: "coding", icon: "globe", title: "Web Basics", added: "2026-11-05",
+      desc: "How the web works, then HTML, CSS and JavaScript. Fix broken pages and put together the CampusFest site. No coding experience needed.",
+      years: "1st and 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "web-basics/host.html", player: "web-basics/"
+    },
+    {
+      club: "english", icon: "swords", title: "Debate Duel", added: "2026-11-05",
+      desc: "Claim, reason, example. Strong vs weak arguments, polite rebuttals, fallacies, evidence and closings. Then live 1-vs-1 debates.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "debate-duel/host.html", player: "debate-duel/"
+    },
+    {
+      club: "english", icon: "book-a", title: "Word Power", added: "2026-11-05",
+      desc: "Confused pairs, stronger words, phrases that confuse people outside India, idioms, formal vs casual English and placement vocabulary.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "word-power/host.html", player: "word-power/"
+    },
+    {
+      club: "english", icon: "mic", title: "Public Speaking 101", added: "2026-11-05",
+      desc: "Beat nerves, open with a hook, structure with PREP, use your voice and body, recover from blanking out and close strong. Then your first 1-minute talk.",
+      years: "All years", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "public-speaking-101/host.html", player: "public-speaking-101/"
+    },
     {
       club: "coding", icon: "chart-column", title: "Placement Round 2: DSA", added: "2026-11-04",
       desc: "The advanced sequel. Product-company style questions on arrays, strings, binary search, sorting and Big O, then interview-style thinking. Every team gets an offer letter.",
