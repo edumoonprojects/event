@@ -64,7 +64,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Round 1: your own body.",
       points: [["Think before you tap", "Picture it. Count what you can"], ["Start from what you know", "A small fact can lead to a big answer"], ["Your body is full of surprises", "Some answers will sound wrong but are true"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "How to guess", items: [["user", "Count on yourself", "Teeth, bones, heartbeats"], ["timer", "20 seconds", "Fast calls score more"], ["target", "Two choices", "Higher or lower, that’s it"]] }
     },
     HL(1, "Your Body", {
       prompt: "An adult human body has 300 bones. Higher or lower?",
@@ -91,7 +92,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "Round 2: animals.",
       points: [["Animals break the rules", "Some have extra organs, some have fewer than you think"], ["Don’t trust size", "A long neck doesn’t mean more neck bones"], ["Count the legs", "Insects and spiders are not the same"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "How to guess", items: [["search", "Picture the animal", "Count what you can see"], ["lightbulb", "Use what you know", "Insects have 6 legs"], ["sparkles", "Expect surprises", "Nature breaks the rules"]] }
     },
     HL(2, "Animals", {
       prompt: "An octopus has 2 hearts. Higher or lower?",
@@ -118,7 +120,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "Round 3: space. The numbers get huge.",
       points: [["Space is bigger than you think", "Distances are in lakhs and crores of km"], ["Light is fast, but not instant", "Even sunlight takes time to reach us"], ["Planets change", "Some lists you learned in school have been updated"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "How to guess", items: [["rocket", "Light is fast", "About 3 lakh km every second"], ["star", "Planets", "Count them out from the Sun"], ["compass", "Distances", "Think in lakhs of km"]] }
     },
     HL(3, "Space", {
       prompt: "The Moon is 1,00,000 km away from the Earth. Higher or lower?",
@@ -146,7 +149,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Round 4: tech. Younger than you think, or older?",
       points: [["Your phone’s apps", "Some are younger than you"], ["Code is old", "Some languages are older than your teachers’ careers"], ["Computers count in 2s", "Bits, bytes and powers of two"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "How to guess", items: [["code", "Bits and bytes", "Powers of 2"], ["film", "App birthdays", "Older or younger than you?"], ["smartphone", "Your phone", "Full of tech from the 1990s and 2000s"]] }
     },
     HL(4, "Tech", {
       prompt: "A byte has 10 bits. Higher or lower?",
@@ -173,7 +177,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Round 5: India in numbers.",
       points: [["A country of languages", "The Constitution lists the major ones"], ["A huge parliament", "Lok Sabha members are elected from constituencies"], ["Symbols have numbers too", "Look closely at the flag"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "How to guess", items: [["languages", "Languages", "Telugu is one of many"], ["landmark", "Parliament", "Lok Sabha and Rajya Sabha"], ["sparkles", "The flag", "Look closely at the wheel"]] }
     },
     HL(5, "India", {
       prompt: "The Eighth Schedule of the Constitution lists 15 languages. Higher or lower?",
@@ -200,7 +205,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Final round: sports. Double points.",
       points: [["Fields and distances", "Pitches, tracks and races have fixed sizes"], ["Records", "Some numbers are almost impossible to believe"], ["Double points", "Anyone can still win"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Final round", items: [["zap", "Double points", "Every answer counts twice"], ["trophy", "Anyone can still win", "Check the scoreboard"], ["mic", "Then the final challenge", "Get ready to speak"]] }
     },
     HL(6, "Sports", {
       double: true,

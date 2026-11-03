@@ -62,7 +62,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "India is a union of states, each with its own capital.",
       points: [["Big and small", "Some states are bigger than whole countries, some smaller than a city"], ["Hill capitals", "Many northeast capitals sit high in the hills"], ["Know your neighbours", "Andhra Pradesh shares borders with five states"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Think of the map", items: [["map", "Picture India", "North to south, east to west"], ["compass", "The northeast", "Seven sister states, plus Sikkim"], ["landmark", "Capitals", "Not always the biggest city"]] }
     },
     IQ(1, "States", {
       prompt: "Which is the largest state in India by area?",
@@ -89,7 +90,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "Freedom came step by step, over decades.",
       points: [["Salt March", "Gandhi walked about 385 km to make salt and break an unfair law"], ["Quit India", "A call to the British to leave India, during the Second World War"], ["The flag", "Designed by a freedom fighter from Andhra Pradesh"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Milestones", items: [["route", "1919", "Jallianwala Bagh"], ["flame", "1920", "The Non-Cooperation Movement"], ["star", "15 August 1947", "Independence"]] }
     },
     IN(2, "Freedom Struggle", {
       prompt: "In which year did Gandhi lead the Salt March to Dandi? Type the year.",
@@ -116,7 +118,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "The Constitution is India’s rulebook.",
       points: [["Two dates", "Adopted on 26 November 1949, in force from 26 January 1950"], ["The drafting committee", "Led by one of India’s greatest scholars"], ["Your right to vote", "Every adult citizen gets one vote, equal for all"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Know your Constitution", items: [["scroll", "Constitution Day", "26 November"], ["badge-check", "Fundamental Rights", "Like equality and free speech"], ["users", "Fundamental Duties", "There are 11 of them"]] }
     },
     IQ(3, "The Constitution", {
       prompt: "Who chaired the drafting committee of the Indian Constitution?",
@@ -144,7 +147,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Rivers shaped where Indians live and farm.",
       points: [["Most rivers flow east", "Into the Bay of Bengal, like the Godavari and Krishna"], ["A few flow west", "Into the Arabian Sea, through a long valley"], ["The edges of India", "The southernmost point is not on the mainland"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Rivers of Andhra Pradesh", items: [["waves", "Godavari", "Flows past Rajahmundry"], ["waves", "Krishna", "Flows past Vijayawada"], ["compass", "Both", "End in the Bay of Bengal"]] }
     },
     IQ(4, "Rivers and Geography", {
       prompt: "Which river is called the “Dakshina Ganga” (Ganga of the South)?",
@@ -171,7 +175,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "India’s science story spans from Nobel Prizes to the Moon.",
       points: [["Space from Andhra", "ISRO launches its rockets from the Satish Dhawan Space Centre at Sriharikota"], ["A first in the world", "Chandrayaan-3 landed where no country had landed before"], ["A Nobel for light", "An Indian physicist won it for how light scatters"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Days to remember", items: [["rocket", "National Space Day", "23 August"], ["lightbulb", "National Science Day", "28 February"], ["star", "ISRO", "Founded in 1969"]] }
     },
     IQ(5, "Science and Space", {
       prompt: "Where on the Moon did Chandrayaan-3 land in 2023?",
@@ -198,7 +203,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Final round. Double points.",
       points: [["Culture and sports", "Dance, animals and the big wins"], ["Double points", "Anyone can still win"], ["Trust your gut", "Fast answers score more"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Final round", items: [["zap", "Double points", "Every answer counts twice"], ["trophy", "Anyone can still win", "Check the scoreboard"], ["mic", "Then the final challenge", "Get ready to speak"]] }
     },
     IQ(6, "Culture and Sports", {
       double: true,

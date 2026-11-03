@@ -63,7 +63,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Every strong argument has three parts.",
       points: [["Claim", "What you believe: “College should start at 10 am.”"], ["Reason", "Why: “Students who sleep enough learn better.”"], ["Example", "Proof: “In our hostel, most students sleep after midnight and doze in 9 am classes.”"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Example", items: [["target", "Claim", "Every college should have a coding club"], ["lightbulb", "Reason", "Students learn faster together"], ["badge-check", "Example", "Our club built 5 apps for the college last year"]] }
     },
     DQ(1, "Claim, Reason, Example", {
       prompt: "Topic: “Phones should be allowed in classrooms.” Which argument is built best?",
@@ -90,7 +91,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "Not all reasons are equal.",
       points: [["Weak: “everyone”, “always”, “never”", "One counter-example breaks them"], ["Weak: feelings as facts", "“I feel it’s bad” is not a reason"], ["Strong: specific and checkable", "Numbers, real examples, clear cause and effect"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Weak or strong?", items: [["x", "Weak", "“Everyone hates Mondays.”"], ["x", "Weak", "“I feel uniforms are bad.”"], ["check", "Strong", "“Uniforms add a cost for every family each year.”"]] }
     },
     DQ(2, "Strong vs Weak", {
       prompt: "Topic: “Exams should be open book.” Which reason is strongest?",
@@ -119,7 +121,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "A rebuttal attacks the idea, not the person.",
       points: [["Repeat their point fairly", "“My opponent says phones distract students.”"], ["Show what it misses", "“But phones can be on silent and used only for class work.”"], ["Concede small, win big", "“That’s true sometimes, and yet…” sounds confident and fair"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "A rebuttal in 3 steps", items: [["ear", "1. Repeat", "“My opponent says…”"], ["search", "2. Show the gap", "“But that ignores…”"], ["swords", "3. Your point", "“So in fact…”"]] }
     },
     DQ(3, "Rebuttals", {
       prompt: "Your opponent says: “Phones distract students.” Best rebuttal?",
@@ -147,7 +150,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Fallacies are arguments that sound right but aren’t.",
       points: [["Bandwagon", "“Everyone does it, so it must be right”"], ["False choice", "“Either we ban phones or students will fail.” As if there are only two options"], ["Slippery slope", "“If we allow this, next thing you know, total chaos”"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Also watch for", items: [["user", "Personal attack", "Attacking the person, not the idea"], ["route", "Going in a circle", "“It’s true because it’s true”"], ["search", "Cherry picking", "One example, ignoring the rest"]] }
     },
     DQ(4, "Spot the Fallacy", {
       prompt: "“Every college in the city has made attendance compulsory, so it must be the right thing.” Which fallacy is this?",
@@ -174,7 +178,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Evidence wins debates. Made-up evidence loses them.",
       points: [["Fact or opinion?", "A fact can be checked. An opinion is what someone thinks"], ["Good evidence is specific", "Who said it, when, and how they know"], ["Never invent numbers", "“90% of students…” Says who? One question and you’re caught"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Evidence checklist", items: [["user", "Who said it?", "A named source"], ["clock", "When?", "Recent is better"], ["chart-column", "How do they know?", "A survey, a study, a record"]] }
     },
     DQ(5, "Facts and Evidence", {
       prompt: "Which of these is a fact, not an opinion?",
@@ -201,7 +206,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "The closing is what the audience remembers.",
       points: [["Summarise in threes", "“We’ve seen three things: one…, two…, three…”"], ["No new points", "The closing is not the time for a surprise argument"], ["End with a clear ask", "“So I urge you to agree that…”"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "The closing formula", items: [["list-checks", "Summarise", "Your three points"], ["target", "Ask", "What should they agree with?"], ["heart", "Thank them", "Then stop"]] }
     },
     DQ(6, "Closing Strong", {
       double: true,

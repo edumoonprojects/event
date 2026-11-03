@@ -62,7 +62,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Percentages: build from 10%.",
       points: [["10% is easy", "Move the decimal one place: 10% of 640 = 64"], ["Build the rest", "5% is half of 10%. 15% = 10% + 5%. 1% = move two places"], ["Percent change", "Change ÷ original × 100. Divide by where you STARTED"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Worked example", items: [["target", "10% of 820", "82"], ["target", "5% of 820", "41, half of 10%"], ["target", "15% of 820", "82 + 41 = 123"]] }
     },
     AN(1, "Percentages", {
       prompt: "What is 15% of 640? Type the number.",
@@ -89,7 +90,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "Averages and ratios: think in totals.",
       points: [["Average × count = total", "5 numbers with average 20 have a total of 100"], ["Ratio 3 : 5 means 8 parts", "Divide the total by 8, then multiply"], ["Work with totals", "Most average questions get easy once you find the totals"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Worked example", items: [["search", "4 numbers, average 30", "Total = 120"], ["landmark", "₹500 in the ratio 2 : 3", "5 parts of ₹100"], ["users", "So the shares are", "₹200 and ₹300"]] }
     },
     AN(2, "Ratios and Averages", {
       prompt: "The average of 5 numbers is 20. One number is removed, and the average of the rest is 18. What number was removed?",
@@ -116,7 +118,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "Speed and work: two formulas cover most questions.",
       points: [["Distance = speed × time", "And km/h to m/s: multiply by 5/18"], ["Work together", "A in a days, B in b days: together ab ÷ (a + b)"], ["Check units first", "Metres or km? Seconds or hours?"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Worked example", items: [["route", "40 km/h for 3 hours", "120 km"], ["zap", "36 km/h in m/s", "36 × 5/18 = 10"], ["users", "4 days and 12 days", "48 ÷ 16 = 3 days together"]] }
     },
     AN(3, "Speed and Work", {
       prompt: "A bus travels at 60 km/h for 2.5 hours. How many km does it cover?",
@@ -144,7 +147,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Profit, loss and interest.",
       points: [["Profit % is on the cost price", "Profit ÷ cost price × 100"], ["Discount is on the marked price", "Marked ₹1,000, 10% off: you sell at ₹900"], ["Simple interest", "P × R × T ÷ 100"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Worked example", items: [["briefcase", "Cost ₹200, sold ₹250", "Profit 50 ÷ 200 = 25%"], ["landmark", "₹2,000 at 5% for 2 years", "SI = ₹200"], ["target", "Marked ₹500, 20% off", "Sells at ₹400"]] }
     },
     AN(4, "Profit and Interest", {
       prompt: "A shopkeeper buys a pair of shoes for ₹500 and sells them for ₹600. What is the profit percent? Type the number.",
@@ -171,7 +175,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Reasoning: find the rule, then apply it.",
       points: [["Coding-decoding", "Write the alphabet positions: A=1, B=2… and look for the shift"], ["Blood relations", "Draw a small family tree. Never solve it in your head"], ["Series", "Check differences, then ratios"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Worked example", items: [["key", "ABC → BCD", "Each letter moves +1"], ["users", "Family trees", "Draw siblings on one line"], ["chart-column", "2, 4, 8, 16", "× 2 each time, so 32"]] }
     },
     AQ(5, "Reasoning", {
       prompt: "In a code, CAT is written as DBU. How is DOG written?",
@@ -198,7 +203,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Final round: the mock test. Double points.",
       points: [["Mixed questions", "Like the real test: you won’t know the topic in advance"], ["Clock angle", "|30H − 5.5M| degrees"], ["Skip, then return", "In a real test, never get stuck on one question"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Worked example", items: [["clock", "At 6:00", "|180 − 0| = 180 degrees"], ["route", "Passing a pole", "The train covers its own length"], ["target", "Probability", "Good outcomes ÷ all outcomes"]] }
     },
     AN(6, "Mock Test", {
       double: true,

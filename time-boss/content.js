@@ -61,7 +61,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "You can’t manage time you can’t see.",
       points: [["We guess badly", "Most people underestimate time on their phone by a lot"], ["Small things add up", "“Just 2 minutes” 30 times is an hour"], ["Track one honest day", "Write what you did every hour. No judging, just noting"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Priya’s day, her guess", items: [["clock", "Sleep", "About 7 hours"], ["book-open", "College", "About 7 hours"], ["smartphone", "Phone", "She thinks 1 hour. Is it?"]] }
     },
     TN(1, "Where Time Goes", {
       prompt: "Priya checks her phone “for just 2 minutes” 30 times a day. How many minutes is that? Type the number.",
@@ -116,7 +117,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "A plan you can see is a plan you’ll follow.",
       points: [["Top 3, every night", "Write tomorrow’s 3 most important tasks before you sleep"], ["Block the time", "Give each big task a fixed slot, like a class"], ["Break it down", "“Study DBMS” becomes “Revise normalisation, 30 min”"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Priya’s Monday plan", items: [["list-checks", "7 to 8 pm", "Solve 5 DBMS questions"], ["code", "8 to 9 pm", "Hackathon: build the login page"], ["mail", "9:30 pm", "Reply to messages"]] }
     },
     TB(3, "Planning the Week", {
       prompt: "Which to-do item is Priya most likely to actually start?",
@@ -144,7 +146,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Procrastination isn’t laziness. It’s avoiding a feeling.",
       points: [["We delay what feels big or unclear", "Not what’s hard to do"], ["The 2-minute rule", "Less than 2 minutes? Do it now"], ["Just start for 5 minutes", "Starting is the hardest part. Momentum does the rest"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Quick fixes", items: [["timer", "2-minute rule", "Tiny task? Do it now"], ["flame", "5-minute start", "Just begin"], ["pen-tool", "Break it down", "Find the smallest first step"]] }
     },
     TB(4, "Procrastination", {
       prompt: "Priya keeps saying “I’ll start revising when I feel motivated.” What usually happens?",
@@ -171,7 +174,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Your phone is designed to win. Change the game.",
       points: [["Focus sprints", "25 minutes of deep work, 5 minutes off. Repeat 4 times, then a long break"], ["Out of sight, out of mind", "A phone in your pocket still pulls your attention"], ["Multitasking is a myth", "You’re switching, and every switch costs time"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "One focus sprint", items: [["timer", "25 minutes", "One task, no phone"], ["heart", "5 minutes", "Stretch, water, walk"], ["trophy", "After 4 sprints", "A longer 20 to 30 minute break"]] }
     },
     TN(5, "Focus and Phones", {
       prompt: "In the Pomodoro method, how many minutes is one focus sprint? Type the number.",
@@ -198,7 +202,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Crunch week: when everything happens at once.",
       points: [["Talk early", "Tell people about a clash before it becomes a problem"], ["Say no politely", "Saying no to one thing is saying yes to another"], ["Protect your sleep", "A tired brain makes slow, bad decisions"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Priya’s crunch week", items: [["users", "Saturday", "Hackathon final"], ["book-open", "Monday", "First exam"], ["heart", "Every night", "7 hours of sleep"]] }
     },
     TB(6, "Crunch Week", {
       double: true,

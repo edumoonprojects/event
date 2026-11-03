@@ -63,7 +63,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Nerves are normal. They mean you care.",
       points: [["Your body is getting ready", "A racing heart is energy, the same feeling as before a match"], ["Breathe out longer than in", "In for 4, out for 6. It tells your body to calm down"], ["Practise aloud, not in your head", "Saying it 3 times out loud beats reading it 10 times"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "60 seconds before you speak", items: [["heart", "Breathe", "In for 4, out for 6, twice"], ["user", "Stand tall", "Feet planted, shoulders down"], ["message-circle", "First line ready", "Know exactly how you’ll start"]] }
     },
     PS(1, "Beating Nerves", {
       prompt: "Kiran’s heart is racing before his seminar. What’s the best thing he can do right now?",
@@ -90,7 +91,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "You have 10 seconds to get their attention.",
       points: [["Skip the boring start", "“Good morning, today I am going to talk about…” loses the room"], ["Open with a hook", "A question, a short story or a surprising fact"], ["Never apologise", "“Sorry, I’m not a good speaker” makes everyone believe it"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Three hooks", items: [["message-circle", "A question", "“Who here has…?”"], ["book-open", "A short story", "“Last week, I…”"], ["chart-column", "A surprising fact", "A real number"]] }
     },
     PS(2, "Strong Openings", {
       prompt: "Topic: “Why every student should learn to swim.” Best opening line?",
@@ -148,7 +150,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "How you say it matters as much as what you say.",
       points: [["Pause instead of “umm”", "A 2-second pause sounds confident. “Umm” sounds unsure"], ["Look at people, not the floor", "Pick 3 friendly faces in different parts of the room"], ["Hands open, feet still", "No pockets, no swaying, no folded arms"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Quick checks", items: [["timer", "Pause", "At every full stop"], ["users", "Eyes", "Three friendly faces"], ["hand", "Hands", "Open, out of your pockets"]] }
     },
     PS(4, "Voice and Body", {
       prompt: "Ravi says “umm” every few words. What’s the best fix?",
@@ -175,7 +178,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Everyone blanks out sometimes. Have a plan.",
       points: [["Pause and breathe", "The audience doesn’t know what you planned to say next"], ["Repeat your last line", "It often brings the next one back"], ["Don’t know an answer? Say so", "“Good question. I’m not sure, but I’ll find out and tell you.”"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "If you blank out", items: [["heart", "Breathe", "Nobody knows your script"], ["route", "Repeat", "Say your last line again"], ["file-text", "Glance", "A small card with 3 keywords"]] }
     },
     PS(5, "Blanking Out and Q&A", {
       prompt: "In the middle of her seminar, Priya’s mind goes completely blank. Best move?",
@@ -202,7 +206,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "End strong. People remember the last line.",
       points: [["Never end with “That’s it”", "Or “I think I’m done”"], ["Repeat your point and give an ask", "“So this week, try one thing: …”"], ["Then say “Thank you” and pause", "Smile, wait for the applause, then walk off"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Close strong", items: [["target", "Point", "Your main idea, one last time"], ["rocket", "Ask", "One clear thing to do"], ["heart", "Thank you", "Then smile and pause"]] }
     },
     PS(6, "Strong Closings", {
       double: true,

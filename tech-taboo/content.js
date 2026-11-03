@@ -63,7 +63,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "How Taboo clues work.",
       points: [["Every word has banned words", "The most obvious words you’d use to describe it"], ["So the clue goes around them", "Describe what it does, where you see it, how it feels"], ["Your job now: guess", "Later, you’ll be the one giving clues"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "This round", items: [["smartphone", "Everyday tech", "Things in your bag and pocket"], ["x", "Banned words", "Shown at the start of each clue"], ["timer", "30 seconds", "Read, guess, lock in"]] }
     },
     TT(1, "Everyday Tech", {
       prompt: "Banned: internet, wireless, router. The clue: “It’s invisible. At home or in college, you ask for its name and its secret code before anything else.”",
@@ -90,7 +91,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "Coding words, explained without code.",
       points: [["Think of real-life versions", "A recipe, a box, a mistake, a repeat"], ["Interviewers love this", "“Explain a loop to your grandmother”"], ["Simple beats smart", "The best clue is the one anyone understands"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "This round", items: [["code", "Coding words", "From your first programming class"], ["lightbulb", "Real-life versions", "Recipes, labels, repeats"], ["message-circle", "Explain simply", "Like you would to a 10-year-old"]] }
     },
     TT(2, "Coding Words", {
       prompt: "Banned: error, mistake, insect. The clue: “It’s why your program works on Monday and breaks on Tuesday. You spend hours hunting it.”",
@@ -117,7 +119,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "Internet words you use every day.",
       points: [["You know them all", "But can you explain them?"], ["Describe the habit", "What people do with it, where it appears"], ["Watch for the trap", "Two words can sound very close"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "This round", items: [["globe", "Internet words", "Browsers, memes, hashtags"], ["search", "Close cousins", "Some words sound alike"], ["mic", "After this round", "Live Taboo for +100"]] }
     },
     TT(3, "Internet and Social", {
       prompt: "Banned: Chrome, website, app. The clue: “The window you open to visit any page on the internet.”",
@@ -145,7 +148,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "AI words: new, everywhere, often misused.",
       points: [["AI is in your phone already", "Face unlock, keyboard suggestions, chat apps"], ["Know the real meaning", "Interviewers check if you understand, not if you can say the word"], ["Some AI words are warnings", "Not every AI use is a good one"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "This round", items: [["sparkles", "AI words", "Prompts, chatbots, deepfakes"], ["shield", "Use AI well", "Check before you forward"], ["lightbulb", "Know the meaning", "Not just the buzzword"]] }
     },
     TT(4, "AI Words", {
       prompt: "Banned: question, ask, command. The clue: “What you type into an AI tool to tell it what you want. Better ones get better answers.”",
@@ -172,7 +176,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Cybersecurity words that keep you safe.",
       points: [["Attacks have names", "Knowing the name helps you spot it"], ["Defences have names too", "Some sit between you and the internet"], ["Never share these", "OTPs and passwords, with anyone, ever"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "This round", items: [["shield", "Security words", "Attacks and defences"], ["lock", "Never share", "Your OTP or password"], ["search", "Names help", "Knowing the name helps you notice"]] }
     },
     TT(5, "Cybersecurity", {
       prompt: "Banned: fish, scam, email, fake. The clue: “A message that pretends to be your bank so you’ll type your password into the wrong page.”",
@@ -199,7 +204,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Final round: startups and jobs. Double points.",
       points: [["Words from the job market", "You’ll hear them in every placement talk"], ["Double points", "Anyone can still win"], ["Then the big one", "Live Taboo for +200"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Final round", items: [["rocket", "Startup words", "Founders, investors, interns"], ["zap", "Double points", "Every answer counts twice"], ["mic", "Then live Taboo", "The +200 final"]] }
     },
     TT(6, "Startups and Jobs", {
       double: true,

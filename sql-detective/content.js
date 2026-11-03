@@ -239,7 +239,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "The final clue: the laptop was last seen at 22:00 and gone by 22:20.",
       points: [["BETWEEN", "Includes both ends: BETWEEN '22:00' AND '22:20'"], ["Join to get names", "IDs alone don’t tell the warden much"], ["Data shows what, not why", "A good detective checks before accusing"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "The case so far", items: [["clock", "22:00", "Laptop last seen"], ["search", "22:20", "Laptop gone"], ["key", "The question", "Who went through the gate in between?"]] }
     },
     SN(6, "Solve the Case", {
       double: true,

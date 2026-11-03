@@ -60,7 +60,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Trick 1: read every word.",
       points: [["Riddles play with meaning", "A word can mean two things at once"], ["Say it aloud", "Hearing a riddle often shows the double meaning"], ["Think simple", "The answer is usually an everyday object"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Try it", items: [["key", "Double meanings", "Keys, bark, ring"], ["mic", "Say it aloud", "You’ll hear the trick"], ["lightbulb", "Everyday objects", "Look around the room"]] }
     },
     BQ(1, "Riddles", {
       prompt: "What has keys but can’t open a single lock?",
@@ -87,7 +88,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "Trick 2: don’t trust your first number.",
       points: [["Your brain loves shortcuts", "The number that jumps out first is often the trap"], ["Put it back in", "Check your answer against every line of the question"], ["Read the question twice", "Small words like “more than” change everything"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Try it", items: [["pen-tool", "Write it down", "Rough paper helps"], ["check", "Check the answer", "Does it fit every line?"], ["clock", "Slow down", "Speed is the trap here"]] }
     },
     BN(2, "Number Puzzles", {
       prompt: "A bat and a ball cost ₹1,100 together. The bat costs ₹1,000 more than the ball. How much is the ball? Type the number.",
@@ -114,7 +116,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "Trick 3: look at the gaps.",
       points: [["Write the differences", "2, 5, 9, 14: the gaps are 3, 4, 5. Next gap is 6, so 20"], ["Try adding the last two", "Some patterns build on the numbers before"], ["Letters can be patterns too", "Think of things that come in order: days, months"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Try it", items: [["chart-column", "Differences", "Subtract each pair"], ["sparkles", "Add the last two", "A famous series does this"], ["list-checks", "Letters", "Days, months, the alphabet"]] }
     },
     BN(3, "Patterns", {
       prompt: "What comes next? 2, 6, 12, 20, 30, ?",
@@ -142,7 +145,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Trick 4: question the picture in your head.",
       points: [["You assume things without noticing", "Who, where, what kind of animal…"], ["Ask: what am I assuming?", "Then try the opposite"], ["The silly answer can be right", "Lateral puzzles reward a fresh look"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Try it", items: [["search", "Spot the assumption", "What did you picture?"], ["sparkles", "Flip it", "Try the opposite"], ["lightbulb", "Simple is fine", "Silly answers can win"]] }
     },
     BQ(4, "Lateral Thinking", {
       prompt: "Some months have 30 days and some have 31. How many have 28 days?",
@@ -169,7 +173,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Trick 5: test one case.",
       points: [["Assume someone is telling the truth", "Follow what that means for everyone else"], ["Look for a contradiction", "If it breaks, your assumption was wrong"], ["Try the next case", "There are only a few options. Test them one by one"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Try it", items: [["user", "Pick one person", "Assume they tell the truth"], ["x", "Find the clash", "Does it contradict?"], ["check", "Next case", "Repeat until one works"]] }
     },
     BQ(5, "Logic", {
       prompt: "Priya says: “Rahul is lying.” Rahul says: “Kiran is lying.” Kiran says: “Priya and Rahul are both lying.” Who is telling the truth?",
@@ -196,7 +201,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Trick 6: draw it.",
       points: [["Clocks, seats and family trees", "A 5-second sketch beats a minute of thinking"], ["Use the trick you need", "Read every word, check, find the gap, question, test, draw"], ["Double points", "Anyone can still win"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Final round", items: [["pen-tool", "Sketch it", "Clocks, seats and family trees"], ["zap", "Double points", "Every answer counts twice"], ["trophy", "Then make your own", "Invent a teaser for the room"]] }
     },
     BN(6, "Mega Mix", {
       double: true,

@@ -62,7 +62,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Vizag’s Beach Road is a museum in the open air.",
       points: [["RK Beach", "Short for Ramakrishna Beach, after the Ramakrishna Mission nearby"], ["Real machines, not models", "A Navy submarine and a Navy aircraft both sit on Beach Road"], ["Kailasagiri", "A hilltop park with a ropeway and a giant statue"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "On Beach Road", items: [["waves", "Submarine Museum", "Walk inside a real Navy submarine"], ["compass", "Aircraft Museum", "A Navy patrol plane, across the road"], ["map", "Kailasagiri", "Take the ropeway for the best view"]] }
     },
     VQ(1, "Landmarks", {
       prompt: "Which real Navy submarine is now a museum on RK Beach?",
@@ -89,7 +90,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "One city, many names.",
       points: [["Visakhapatnam", "The official name"], ["Vizag", "The short name everyone uses"], ["An old British-era name", "Still used today for one area and for the railway"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Say it like a local", items: [["map", "Visakhapatnam", "On official papers and signboards"], ["message-circle", "Vizag", "What everyone says"], ["route", "Waltair", "The old name, still on the railway"]] }
     },
     VQ(2, "Names and History", {
       prompt: "What is Vizag’s famous nickname?",
@@ -116,7 +118,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "Vizag lives together, on its hills and at its tables.",
       points: [["Simhachalam", "A hilltop temple north of the city, visited by lakhs during Chandanotsavam"], ["Three neighbouring hills", "A church, a temple and a dargah, side by side"], ["Araku’s kitchen", "A famous dish is cooked in an unusual way"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Places to visit", items: [["sparkles", "Simhachalam", "About 16 km north of the city"], ["heart", "The three hills", "Ross Hill, Sringamani, Dargah Konda"], ["flame", "Araku food", "Try it when you visit the valley"]] }
     },
     VQ(3, "Faith and Food", {
       prompt: "Which deity is worshipped at the Simhachalam temple?",
@@ -144,7 +147,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "An hour from the beach, you’re in the hills.",
       points: [["Araku Valley", "A hill station in the Eastern Ghats, famous for coffee"], ["Borra Caves", "Giant limestone caves in the Ananthagiri hills"], ["Dolphin’s Nose", "A rocky hill shaped like a dolphin’s nose, with a lighthouse on top"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "A day trip", items: [["route", "Araku Valley", "Up in the Eastern Ghats"], ["search", "Borra Caves", "On the way to Araku"], ["lightbulb", "Dolphin’s Nose", "Right by the port, in the city"]] }
     },
     VQ(4, "Nature", {
       prompt: "What does “Borra” mean in Telugu?",
@@ -171,7 +175,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Vizag works hard: ships, steel and the Navy.",
       points: [["The port", "One of India’s 12 major ports, older than independence"], ["The steel plant", "Built right next to the sea, a first for India"], ["The Navy", "Vizag is home to one of the Navy’s main commands"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Vizag at work", items: [["map", "The port", "Ships from around the world"], ["landmark", "The steel plant", "Right next to the sea"], ["shield", "The Navy", "Ships, submarines and fleet reviews"]] }
     },
     VQ(5, "Port, Steel and Navy", {
       prompt: "Which Indian Navy command has its headquarters in Vizag?",
@@ -198,7 +203,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Lightning round. Double points.",
       points: [["3 quick questions", "Mixed from everything today"], ["Double points", "Anyone can still win"], ["Trust your gut", "Fast answers score more"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Final round", items: [["zap", "Double points", "Every answer counts twice"], ["timer", "30 seconds each", "Fast answers score more"], ["trophy", "Then the final challenge", "Plan a day in Vizag for a visitor"]] }
     },
     VQ(6, "Lightning Round", {
       double: true,

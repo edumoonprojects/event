@@ -64,7 +64,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "First: the rules. Then: view the source.",
       points: [["Only hack with permission", "Testing a system you don’t own is a crime under India’s IT Act. CTFs are legal practice"], ["Every page has source code", "Ctrl+U shows it. Developers sometimes leave secrets there"], ["The browser is not a safe", "Anything sent to your browser, a user can read and change"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Golden rules", items: [["shield", "Permission first", "Only test what you own or are allowed to test"], ["key", "Practise legally", "picoCTF and OverTheWire"], ["search", "Report, don’t exploit", "Found a bug? Tell the owner"]] }
     },
     CQ(1, "Hidden in the Source", Object.assign({}, SPOT, {
       prompt: "The login page of CampusPortal (a practice site). What’s hiding here, and which line has the flag?",
@@ -161,7 +162,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Passwords: long beats clever.",
       points: [["Length wins", "Every extra character multiplies the guesses an attacker needs"], ["Sites store a hash", "A one-way scramble. They check your password by hashing it again"], ["Limits stop guessing", "Lockouts and OTPs slow down attackers"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Password strength", items: [["x", "Weak", "ravi2005 (a name and a year)"], ["lock", "Better", "A long random phrase"], ["shield", "Best", "A long phrase + a password manager + OTP"]] }
     },
     CQ(4, "Passwords", {
       prompt: "Which password is the hardest to crack?",
@@ -220,7 +222,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Final capture: real CTFs stack tricks. Double points.",
       points: [["Ask: what format is this?", "Base64, binary, hex, a cipher?"], ["Peel one layer at a time", "Decode, look again, decode again"], ["Think like a defender", "Every trick today has a fix"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Your toolkit", items: [["search", "View source", "Ctrl+U"], ["code", "Decode", "Base64, hex, binary"], ["key", "Shift letters", "Caesar and ROT13"]] }
     },
     CQ(6, "Final Capture", {
       double: true,

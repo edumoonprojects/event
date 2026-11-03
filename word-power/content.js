@@ -62,7 +62,8 @@ window.GAME = {
       type: "learn", door: 1,
       title: "Words that sound alike but mean different things.",
       points: [["affect / effect", "Affect is usually the action. Effect is usually the result"], ["lose / loose", "Lose your keys. Loose is the opposite of tight"], ["their / there / they’re", "Belongs to them · a place · they are"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "In a sentence", items: [["spell-check", "affect", "The rain affected the match."], ["spell-check", "effect", "The rain had a big effect."], ["spell-check", "loose", "This shirt is loose."]] }
     },
     WP(1, "Confused Pairs", {
       prompt: "“The new timetable will ___ everyone in 2nd year.”",
@@ -89,7 +90,8 @@ window.GAME = {
       type: "learn", door: 2,
       title: "“Very” is often a sign you need a stronger word.",
       points: [["very tired → exhausted", "very good → excellent, very big → huge"], ["Action words win resumes", "“Built, launched, organised” beat “did, made, helped”"], ["Specific beats general", "“Helpful” tells more than “nice”"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Swap it", items: [["zap", "very angry", "furious"], ["zap", "very small", "tiny"], ["zap", "very scared", "terrified"]] }
     },
     WP(2, "Stronger Words", {
       prompt: "Which word is the strongest replacement for “very tired” after a 24-hour hackathon?",
@@ -116,7 +118,8 @@ window.GAME = {
       type: "learn", door: 3,
       title: "Some phrases are normal in India but confuse people elsewhere.",
       points: [["This isn’t about “wrong” English", "Indian English is real English"], ["It’s about being understood", "Your future manager or client may be in another country"], ["When in doubt, be plain and specific", "“Please reply by Friday” works everywhere"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "More examples", items: [["globe", "“Out of station”", "Say “travelling” or “away”"], ["globe", "“Passed out of college”", "Say “graduated”. Abroad, pass out means faint"], ["globe", "“Cousin brother”", "Just say “cousin”"]] }
     },
     WP(3, "Clear Everywhere", {
       prompt: "Writing to a company in the UK. Which line is clearest?",
@@ -144,7 +147,8 @@ window.GAME = {
       type: "learn", door: 4,
       title: "Idioms: the meaning isn’t in the words.",
       points: [["Break the ice", "Start a conversation when people feel awkward"], ["Hit the books", "Start studying seriously"], ["Use them lightly", "One idiom sounds natural. Five sounds forced"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "More idioms", items: [["clock", "Once in a blue moon", "Very rarely"], ["target", "Hit the nail on the head", "Say exactly the right thing"], ["thumbs-up", "Bite the bullet", "Do something hard you’ve been avoiding"]] }
     },
     WP(4, "Idioms", {
       prompt: "“The aptitude test was a piece of cake.” What does it mean?",
@@ -171,7 +175,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "Same message, different clothes.",
       points: [["Friends: casual", "“Hey, wanna grab chai?”"], ["Professors, HR, clients: formal", "“Dear Professor Rao, I would like to request…”"], ["Shortcuts can sound rude", "“ASAP” and “pls” look lazy in a formal email"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Casual → formal", items: [["mail", "Thanks a lot!", "Thank you for your help."], ["mail", "Got it.", "Thank you, I understand."], ["mail", "Pls check", "Could you please review…"]] }
     },
     WP(5, "Formal vs Casual", {
       prompt: "Best way to start an email to your professor?",
@@ -198,7 +203,8 @@ window.GAME = {
       type: "learn", door: 6,
       title: "Final round: words you’ll hear at work. Double points.",
       points: [["Interviewers use them", "Knowing them helps you understand the question"], ["You can use them too", "Correctly, in the right place"], ["Double points", "Anyone can still win"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Say it at work", items: [["rocket", "initiative", "Starting something without being asked"], ["users", "stakeholder", "Anyone affected by the project"], ["target", "milestone", "An important checkpoint in a project"]] }
     },
     WP(6, "Placement Vocabulary", {
       double: true,

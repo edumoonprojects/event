@@ -186,7 +186,8 @@ window.GAME = {
       type: "learn", door: 5,
       title: "When a page breaks, read it like the browser does.",
       points: [["Browsers don’t crash on HTML mistakes", "They guess, and you get a weird page instead"], ["CSS skips what it can’t read", "One missing ; can break more than one line"], ["JavaScript is case-sensitive", "likeBtn and likebtn are different names"]],
-      highlightLast: true
+      highlightLast: true,
+      side: { label: "Where to look", items: [["file-text", "HTML", "Spelling of file names and tags"], ["palette", "CSS", "A missing ; or :"], ["code", "JavaScript", "Names must match exactly"]] }
     },
     WQ(5, "Find the Bug", Object.assign({}, WBUG, {
       prompt: "The photo is saved as photo.jpg. What happens, and which line has the bug?",
