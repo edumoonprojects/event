@@ -44,3 +44,30 @@
 .chero .cicon .ic{width:64px;height:64px}
 .gicon .ic{width:1em;height:1em;color:var(--c)}
 .badges .ic{width:15px;height:15px;opacity:.85}
+
+/* Search, filters and sort (club pages with 6+ games, and the All games page) */
+.allgames{display:flex;align-items:center;gap:10px;width:fit-content;max-width:100%;margin-top:4px;padding:12px 18px;border-radius:99px;background:var(--panel);border:1px solid var(--line);color:var(--ink);font-weight:800;text-decoration:none}
+.allgames:hover{border-color:var(--amber)}
+.allgames .ic{width:18px;height:18px;color:var(--amber)}
+.filters{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px;min-width:0}
+.fsearch{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:0 14px}
+.fsearch:focus-within{border-color:var(--amber)}
+.fsearch .ic{width:18px;height:18px;opacity:.7;flex:none}
+.fsearch input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--ink);font:inherit;font-size:17px;padding:13px 0}
+.frow{display:flex;align-items:center;gap:10px;min-width:0}
+.flabel{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);width:44px;flex:none}
+.fchips{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;min-width:0;scrollbar-width:none;padding:2px}
+.fchips::-webkit-scrollbar{display:none}
+.fchip{flex:none;font:inherit;font-size:15px;font-weight:800;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:99px;padding:8px 14px;cursor:pointer;min-height:40px}
+.fchip:hover{border-color:var(--soft)}
+.fchip.on{background:var(--amber);border-color:var(--amber);color:#1C1300}
+.fchip:focus-visible,.fclear:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.fend{justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fswitch{display:flex;align-items:center;gap:8px;font-weight:800;cursor:pointer}
+.fswitch input{width:20px;height:20px;accent-color:var(--amber)}
+.fsort{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--soft)}
+.fsort select{font:inherit;font-weight:800;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-height:40px}
+.fcount{display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:800;color:var(--soft);font-size:15px}
+.fclear{font:inherit;font-weight:800;color:var(--amber);background:none;border:0;cursor:pointer;padding:6px 0;text-decoration:underline}
+#fgrid{min-width:0}
+.nomatch{display:flex;flex-direction:column;gap:10px;align-items:flex-start}

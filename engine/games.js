@@ -20,19 +20,19 @@ window.ZONE = {
 
   games: [
     {
-      club: "coding", icon: "zap", title: "AI Agents and Automation", added: "2026-11-06",
+      club: "coding", icon: "zap", title: "AI Agents and Automation", nocode: true, added: "2026-11-06",
       desc: "Chatbots answer, agents act. Design ClubBot to run boring club work: tools, steps, what to automate, what goes wrong (including hidden instructions in emails), and keeping humans in charge.",
-      years: "2nd year+", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      years: "2nd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "ai-agents/host.html", player: "ai-agents/"
     },
     {
-      club: "coding", icon: "sparkles", title: "How ChatGPT Works", added: "2026-11-06",
+      club: "coding", icon: "sparkles", title: "How ChatGPT Works", nocode: true, added: "2026-11-06",
       desc: "What really happens when you type a prompt: AI vs machine learning, training, tokens and next-word prediction, why AI makes things up, context windows, and using it well and safely.",
       years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "how-chatgpt-works/host.html", player: "how-chatgpt-works/"
     },
     {
-      club: "coding", icon: "chart-column", title: "Machine Learning 101", added: "2026-11-06",
+      club: "coding", icon: "chart-column", title: "Machine Learning 101", nocode: true, added: "2026-11-06",
       desc: "The hostel mess wastes food every night. Build a model to predict plates eaten: features and labels, supervised vs unsupervised, training and test data, overfitting, accuracy traps and bias. No maths needed.",
       years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "machine-learning-101/host.html", player: "machine-learning-101/"
@@ -94,7 +94,7 @@ window.ZONE = {
     {
       club: "coding", icon: "search", title: "SQL Detective", added: "2026-11-05",
       desc: "The Hostel A laptop vanished. Query the hostel database with SELECT, WHERE, ORDER BY, GROUP BY and JOIN, fix broken queries, and crack the case.",
-      years: "2nd year+", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      years: "2nd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "sql-detective/host.html", player: "sql-detective/"
     },
     {
@@ -106,7 +106,7 @@ window.ZONE = {
     {
       club: "coding", icon: "globe", title: "Web Basics", added: "2026-11-05",
       desc: "How the web works, then HTML, CSS and JavaScript. Fix broken pages and put together the CampusFest site. No coding experience needed.",
-      years: "1st and 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      years: "1st & 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "web-basics/host.html", player: "web-basics/"
     },
     {
@@ -196,19 +196,19 @@ window.ZONE = {
     {
       club: "english", icon: "users", title: "GD Arena", added: "2026-11-03",
       desc: "Learn the group discussion moves evaluators score: starting, disagreeing politely, handling a dominator, bringing people in and summarising. Then play a live GD.",
-      years: "3rd & final year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      years: "3rd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "gd-arena/host.html", player: "gd-arena/"
     },
     {
-      club: "coding", icon: "sparkles", title: "Spot the AI", added: "2026-11-03",
+      club: "coding", icon: "sparkles", title: "Spot the AI", nocode: true, added: "2026-11-03",
       desc: "Human or AI? Then the twist: guessing isn’t reliable. Catch AI giving confident wrong answers, write better prompts, and learn when AI helps and when it doesn’t.",
-      years: "All years · no coding needed", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "spot-the-ai/host.html", player: "spot-the-ai/"
     },
     {
       club: "skills", icon: "file-text", title: "Resume Rescue", added: "2026-10-29",
       desc: "Ravi sent 50 applications and got 0 replies. Teams find the red flags, rewrite weak lines and fix his resume in 6 rounds. Then every student scores their own resume.",
-      years: "2nd, 3rd & final year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones only",
+      years: "2nd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones only",
       host: "resume-rescue/host.html", player: "resume-rescue/"
     },
     {
@@ -232,7 +232,7 @@ window.ZONE = {
     {
       club: "coding", icon: "briefcase", title: "Placement Round", added: "2026-10-29",
       desc: "5 rounds of real placement-style questions: /, %, patterns, functions, strings and an interview question. Every team gets an offer letter.",
-      years: "2nd, 3rd & final year", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones only",
+      years: "2nd year onwards", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones only",
       host: "placement-round/host.html", player: "placement-round/"
     },
     {
@@ -242,9 +242,9 @@ window.ZONE = {
       host: "escape-the-lab/host.html", player: "escape-the-lab/"
     },
     {
-      club: "coding", icon: "globe", title: "What Happens When You Tap?", added: "2026-10-28",
+      club: "coding", icon: "globe", title: "What Happens When You Tap?", nocode: true, added: "2026-10-28",
       desc: "How the internet works, from a tap on Instagram to a data centre and back. Quiz rounds and word hunts.",
-      years: "Any year · no coding needed", level: "beginner", time: "25 min", group: "Any size · solo", needs: "Phones only",
+      years: "All years", level: "beginner", time: "25 min", group: "Any size · solo", needs: "Phones only",
       host: "edumoon-live/host.html", player: "edumoon-live/"
     }
   ]
