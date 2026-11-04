@@ -14,3 +14,5 @@ html{background:var(--bg)}
 .icon{color:#FFD166}
 .brow:first-child{border-color:#FFD166}
 .word b{color:#FFD166;font-family:var(--body);font-size:18px}
+/* Phones: let long codes and tags wrap instead of widening the page. */
+@media (max-width:700px){.title,.opt,.card{overflow-wrap:anywhere}}

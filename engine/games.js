@@ -20,6 +20,30 @@ window.ZONE = {
 
   games: [
     {
+      club: "coding", icon: "zap", title: "AI Agents and Automation", added: "2026-11-06",
+      desc: "Chatbots answer, agents act. Design ClubBot to run boring club work: tools, steps, what to automate, what goes wrong (including hidden instructions in emails), and keeping humans in charge.",
+      years: "2nd year+", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ai-agents/host.html", player: "ai-agents/"
+    },
+    {
+      club: "coding", icon: "sparkles", title: "How ChatGPT Works", added: "2026-11-06",
+      desc: "What really happens when you type a prompt: AI vs machine learning, training, tokens and next-word prediction, why AI makes things up, context windows, and using it well and safely.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "how-chatgpt-works/host.html", player: "how-chatgpt-works/"
+    },
+    {
+      club: "coding", icon: "chart-column", title: "Machine Learning 101", added: "2026-11-06",
+      desc: "The hostel mess wastes food every night. Build a model to predict plates eaten: features and labels, supervised vs unsupervised, training and test data, overfitting, accuracy traps and bias. No maths needed.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "machine-learning-101/host.html", player: "machine-learning-101/"
+    },
+    {
+      club: "skills", icon: "target", title: "Digital Marketing 101", added: "2026-11-06",
+      desc: "Brew Corner, a new café near campus, has 0 followers. Find the right customers, plan posts, write reel hooks, set up Google Maps, run a ₹1,000 ad and read the numbers that matter.",
+      years: "All years", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "digital-marketing-101/host.html", player: "digital-marketing-101/"
+    },
+    {
       club: "fun", icon: "map", title: "Vizag Quiz", added: "2026-11-05",
       desc: "How well do you know the City of Destiny? Landmarks, the city’s names, its hills of faith, Araku and Borra, the port and the Navy. Every fact checked.",
       years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",

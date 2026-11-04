@@ -101,7 +101,7 @@ window.GAME = {
       output: "Same message, different format"
     },
     CQ(2, "Encodings", {
-      prompt: "You find this string in a cookie: ZmxhZ3t5b3VfZm91bmRfbWV9. What is it most likely to be?",
+      prompt: "You find this string in a cookie. What is it most likely to be?",
       code: ["ZmxhZ3t5b3VfZm91bmRfbWV9"],
       options: ["A strong encrypted password", "Random noise", "Base64, which anyone can decode", "A virus"], answer: 2,
       hint: "Look at the characters it uses. Compare it with the example on the learn screen.",
