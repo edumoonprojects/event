@@ -1,0 +1,7 @@
+// Original artwork for hallucination-hunter.
+window.STORY_ART = `<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An AI answer card with one line circled by a magnifying glass">
+<defs><linearGradient id="hallucination-hunter-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E0920"/><stop offset=".6" stop-color="#2A1B5E"/><stop offset="1" stop-color="#5B3FB0"/></linearGradient></defs>
+<rect width="1200" height="300" fill="url(#hallucination-hunter-sky)"/>
+<g fill="#FFFFFF" opacity=".5"><circle cx="90" cy="50" r="2"/><circle cx="260" cy="230" r="1.6"/><circle cx="1110" cy="60" r="2"/><circle cx="980" cy="250" r="1.6"/><circle cx="620" cy="30" r="1.4"/></g>
+<rect x="380" y="60" width="440" height="190" rx="14" fill="#F5F1EA"/><rect x="410" y="90" width="380" height="9" rx="4" fill="#B9AFA0"/><rect x="410" y="112" width="340" height="9" rx="4" fill="#B9AFA0"/><rect x="410" y="134" width="380" height="9" rx="4" fill="#B9AFA0"/><rect x="410" y="156" width="340" height="9" rx="4" fill="#B9AFA0"/><rect x="410" y="178" width="380" height="9" rx="4" fill="#B9AFA0"/><rect x="410" y="200" width="340" height="9" rx="4" fill="#B9AFA0"/><rect x="405" y="148" width="330" height="22" rx="6" fill="#FF6B6B" opacity=".35"/><circle cx="760" cy="160" r="62" fill="none" stroke="#FFC857" stroke-width="12"/><path d="M805 205 L870 265" stroke="#FFC857" stroke-width="16" stroke-linecap="round"/>
+</svg>`;

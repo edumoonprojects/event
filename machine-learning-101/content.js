@@ -1,4 +1,4 @@
-// Machine Learning 101 (EduMoon Coding Club). For all years. No maths needed.
+// Machine Learning 101 (EduMoon AI Lab). For all years. No maths needed.
 // The hostel mess wastes food every night. Teams build a model to predict how many plates will be eaten.
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
 
@@ -20,7 +20,7 @@ const MLWORDS = [
 window.GAME = {
   id: "machine-learning-101",
   title: "Machine Learning 101",
-  club: "Coding Club",
+  club: "AI Lab",
   tagline: "The hostel mess throws away food every night. Can your team build a model that predicts how much to cook?",
   art: window.STORY_ART,
   guide: {
@@ -39,7 +39,7 @@ window.GAME = {
     nobody: "Nobody got this one. Real data scientists make this mistake too!", cracked: "got it right",
     next: "Next round →", finale: "Next →", winner: "are today’s top data scientists!", endLine: "The mess now cooks just enough. Zero waste!"
   },
-  offerEyebrow: "EduMoon Coding Club · ML results",
+  offerEyebrow: "EduMoon AI Lab · ML results",
   offerTitle: "Your data scientist rank",
   offers: [
     { min: 0.7, icon: "crown", title: "ML Engineer", text: "You think like a data scientist. Try a beginner ML course or a small project next." },
@@ -50,7 +50,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Coding Club · Machine Learning 101",
+      alert: "EduMoon AI Lab · Machine Learning 101",
       title: "Every night, the hostel mess cooks for 500 and throws away food for 100. The warden asks your team: can a machine learn to predict it?",
       cards: [["chart-column", "6 rounds of real ML ideas"], ["lightbulb", "No maths, just the hostel mess"], ["trophy", "Win the title of ML Engineer"]]
     },

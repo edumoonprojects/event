@@ -1,4 +1,4 @@
-// How ChatGPT Works (EduMoon Coding Club). For all years.
+// How ChatGPT Works (EduMoon AI Lab). For all years.
 // What really happens when you type a prompt: AI vs ML, training, tokens, why AI makes things up, context and using it well.
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
 
@@ -19,7 +19,7 @@ const CHATFACTS = [
 window.GAME = {
   id: "how-chatgpt-works",
   title: "How ChatGPT Works",
-  club: "Coding Club",
+  club: "AI Lab",
   tagline: "Millions of students use AI chatbots every day. Very few know what’s really happening inside. Find out.",
   art: window.STORY_ART,
   guide: {
@@ -38,7 +38,7 @@ window.GAME = {
     nobody: "Nobody got this one. Most AI users don’t know this either!", cracked: "got it right",
     next: "Next round →", finale: "Next →", winner: "understand AI best!", endLine: "Now you know what’s behind the chat box."
   },
-  offerEyebrow: "EduMoon Coding Club · AI results",
+  offerEyebrow: "EduMoon AI Lab · AI results",
   offerTitle: "Your AI understanding rank",
   offers: [
     { min: 0.7, icon: "crown", title: "AI Insider", text: "You know how chatbots really work. Explain it to a friend this week." },
@@ -49,7 +49,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Coding Club · How ChatGPT Works",
+      alert: "EduMoon AI Lab · How ChatGPT Works",
       title: "You type a question. Two seconds later, a full answer appears. What actually happened in those two seconds?",
       cards: [["sparkles", "6 rounds inside the chatbot"], ["lightbulb", "Learn why AI sometimes makes things up"], ["trophy", "Win the title of AI Insider"]]
     },

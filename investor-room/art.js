@@ -1,0 +1,7 @@
+// Original artwork for investor-room.
+window.STORY_ART = `<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A pitch stage with a speaker and three investor chairs">
+<defs><linearGradient id="investor-room-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A0D06"/><stop offset=".6" stop-color="#5A2A0C"/><stop offset="1" stop-color="#D9480F"/></linearGradient></defs>
+<rect width="1200" height="300" fill="url(#investor-room-sky)"/>
+<g fill="#FFFFFF" opacity=".5"><circle cx="90" cy="50" r="2"/><circle cx="260" cy="230" r="1.6"/><circle cx="1110" cy="60" r="2"/><circle cx="980" cy="250" r="1.6"/><circle cx="620" cy="30" r="1.4"/></g>
+<rect x="0" y="230" width="1200" height="70" fill="#2E190D"/><circle cx="380" cy="120" r="30" fill="#F5F1EA"/><rect x="350" y="152" width="60" height="80" rx="20" fill="#F5F1EA"/><rect x="430" y="90" width="160" height="100" rx="10" fill="#FFD166"/><path d="M450 170 L490 140 L520 155 L570 110" stroke="#5A2A0C" stroke-width="8" fill="none" stroke-linecap="round"/><rect x="720" y="150" width="90" height="80" rx="14" fill="#FFA94D"/><rect x="730" y="110" width="70" height="50" rx="12" fill="#D9480F"/><rect x="850" y="150" width="90" height="80" rx="14" fill="#FFA94D"/><rect x="860" y="110" width="70" height="50" rx="12" fill="#D9480F"/><rect x="980" y="150" width="90" height="80" rx="14" fill="#FFA94D"/><rect x="990" y="110" width="70" height="50" rx="12" fill="#D9480F"/>
+</svg>`;

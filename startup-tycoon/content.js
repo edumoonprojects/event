@@ -1,4 +1,4 @@
-// Startup Tycoon (EduMoon Skills Club). For all years.
+// Startup Tycoon (EduMoon Entrepreneurship). For all years.
 // Teams run CampusEats, a food delivery startup inside college hostels, for 6 "months".
 // Each question is a decision with one best choice; the reveal explains why.
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
@@ -20,7 +20,7 @@ const CHECKLIST = [
 window.GAME = {
   id: "startup-tycoon",
   title: "Startup Tycoon",
-  club: "Skills Club",
+  club: "Entrepreneurship",
   tagline: "Run a campus startup for 6 months. Every decision changes your valuation.",
   art: window.STORY_ART,
   guide: {
@@ -50,7 +50,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Skills Club · Startup Tycoon",
+      alert: "EduMoon Entrepreneurship · Startup Tycoon",
       title: "You and your friends just started CampusEats: food delivery inside college hostels. You have 6 months and ₹10,000. Can your team build something valuable?",
       cards: [["rocket", "6 months, 18 real founder decisions"], ["lightbulb", "Each decision has a best move, explained"], ["chart-column", "Your score decides your valuation"]]
     },

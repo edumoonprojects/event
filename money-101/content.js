@@ -1,4 +1,4 @@
-// Money 101 (EduMoon Skills Club). For all years.
+// Money 101 (EduMoon Entrepreneurship). For all years.
 // Ravi got his first job. Teams help him understand his salary, budget, save, avoid debt traps and start investing.
 // General money education with simple example numbers. Not personal financial advice.
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
@@ -20,7 +20,7 @@ const PLAN = [
 window.GAME = {
   id: "money-101",
   title: "Money 101",
-  club: "Skills Club",
+  club: "Entrepreneurship",
   tagline: "Ravi got his first salary. Help him not waste it.",
   art: window.STORY_ART,
   guide: {
@@ -39,7 +39,7 @@ window.GAME = {
     nobody: "Nobody got this one. Lots of people learn it the hard way!", cracked: "got it right",
     next: "Next round →", finale: "Next →", winner: "are today’s money masters!", endLine: "Ravi’s first salary is in safe hands!"
   },
-  offerEyebrow: "EduMoon Skills Club · Money check",
+  offerEyebrow: "EduMoon Entrepreneurship · Money check",
   offerTitle: "Your money personality",
   offers: [
     { min: 0.7, icon: "landmark", title: "The Planner", text: "You’d make your first salary work hard. Share the card with a friend." },
@@ -50,7 +50,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Skills Club · Money 101",
+      alert: "EduMoon Entrepreneurship · Money 101",
       title: "Ravi cracked the HR round. His offer letter says ₹6 LPA. His first salary arrives next week. Can your team help him not waste it?",
       cards: [["file-text", "CTC, budgets, savings and debt traps"], ["lightbulb", "Choose the smartest money move"], ["landmark", "Leave with a first salary plan"]]
     },

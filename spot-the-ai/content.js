@@ -1,4 +1,4 @@
-// Spot the AI (EduMoon Coding Club). For all years.
+// Spot the AI (EduMoon AI Lab). For all years.
 // Human or AI? Then the real lesson: guessing isn't reliable, so the real skill is checking AI's work and using it well.
 // NOTE: the "human" writing samples in Rounds 1 and 2 were written as examples for this game.
 // Swap them for real student writing (with permission) to make the game even better.
@@ -23,7 +23,7 @@ const RULES = [
 window.GAME = {
   id: "spot-the-ai",
   title: "Spot the AI",
-  club: "Coding Club",
+  club: "AI Lab",
   tagline: "Human or AI? Then the real skill: catching AI when it’s wrong.",
   art: window.STORY_ART,
   guide: {
@@ -42,7 +42,7 @@ window.GAME = {
     nobody: "Nobody got this one. AI fools a lot of people this way!", cracked: "got it right",
     next: "Next round →", finale: "Next →", winner: "are today’s AI detectives!", endLine: "You now use AI smarter than most people!"
   },
-  offerEyebrow: "EduMoon Coding Club · AI skills check",
+  offerEyebrow: "EduMoon AI Lab · AI skills check",
   offerTitle: "Your AI skill level",
   offers: [
     { min: 0.7, icon: "sparkles", title: "AI Pro", text: "You use AI like a smart senior who is sometimes wrong. Exactly right." },
@@ -53,7 +53,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Coding Club · Spot the AI",
+      alert: "EduMoon AI Lab · Spot the AI",
       title: "Half the writing you read today might be AI. Can your team tell? And more importantly, can you tell when AI is wrong?",
       cards: [["search", "Human or AI? Guess the writer"], ["lightbulb", "Catch AI giving confident wrong answers"], ["sparkles", "Learn to use AI the smart way"]]
     },
