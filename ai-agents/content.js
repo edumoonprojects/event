@@ -1,4 +1,4 @@
-// AI Agents and Automation (EduMoon Coding Club). For 2nd year and above.
+// AI Agents and Automation (EduMoon AI Lab). For 2nd year and above.
 // The club secretary is drowning in registrations, reminders and certificates. Teams design ClubBot, an AI agent, to help, safely.
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
 
@@ -20,7 +20,7 @@ const AGENTCARD = [
 window.GAME = {
   id: "ai-agents",
   title: "AI Agents and Automation",
-  club: "Coding Club",
+  club: "AI Lab",
   tagline: "Chatbots answer. Agents act. Design ClubBot, an AI agent that runs the boring club work, without letting it go wrong.",
   art: window.STORY_ART,
   guide: {
@@ -39,7 +39,7 @@ window.GAME = {
     nobody: "Nobody got this one. Real AI teams debate this too!", cracked: "got it right",
     next: "Next round →", finale: "Next →", winner: "built the best ClubBot!", endLine: "ClubBot is live, and the secretary finally has free evenings."
   },
-  offerEyebrow: "EduMoon Coding Club · Agent results",
+  offerEyebrow: "EduMoon AI Lab · Agent results",
   offerTitle: "Your agent builder rank",
   offers: [
     { min: 0.7, icon: "crown", title: "Agent Architect", text: "You design agents that are useful and safe. Try building a small automation this week." },
@@ -50,7 +50,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Coding Club · AI Agents and Automation",
+      alert: "EduMoon AI Lab · AI Agents and Automation",
       title: "The club secretary sends 200 reminders, updates 3 sheets and makes 80 certificates every week, by hand. Your team’s job: design ClubBot to help, without it causing chaos.",
       cards: [["sparkles", "Chatbot vs agent"], ["list-checks", "Tools, steps and limits"], ["shield", "Keep humans in charge"]]
     },

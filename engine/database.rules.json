@@ -1,0 +1,33 @@
+{
+  "rules": {
+    "hostcodes": {
+      ".read": false,
+      ".write": false
+    },
+    "roomkeys": {
+      "$room": {
+        ".read": false,
+        ".write": "!data.exists() && newData.isString() && root.child('hostcodes').child(newData.val()).exists()"
+      }
+    },
+    "hostlog": {
+      "$code": {
+        "$room": {
+          ".read": false,
+          ".write": "!data.exists() && root.child('hostcodes').child($code).exists() && newData.parent().parent().parent().child('roomkeys').child($room).val() === $code"
+        }
+      }
+    },
+    "rooms": {
+      "$room": {
+        ".read": true,
+        "state": {
+          ".write": "newData.parent().parent().parent().child('roomkeys').child($room).exists()"
+        },
+        "$other": {
+          ".write": "root.child('roomkeys').child($room).exists()"
+        }
+      }
+    }
+  }
+}

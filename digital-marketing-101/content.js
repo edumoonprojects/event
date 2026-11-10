@@ -1,4 +1,4 @@
-// Digital Marketing 101 (EduMoon Skills Club). For all years.
+// Digital Marketing 101 (EduMoon Entrepreneurship). For all years.
 // Brew Corner, a new café near campus, has 0 followers and empty tables. Grow it to 1,000 followers and a full house.
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
 
@@ -20,7 +20,7 @@ const MKT = [
 window.GAME = {
   id: "digital-marketing-101",
   title: "Digital Marketing 101",
-  club: "Skills Club",
+  club: "Entrepreneurship",
   tagline: "Brew Corner opened near campus with 0 followers and empty tables. Can your team market it into the busiest café in town?",
   art: window.STORY_ART,
   guide: {
@@ -39,7 +39,7 @@ window.GAME = {
     nobody: "Nobody got this one. Many real businesses make this mistake!", cracked: "got it right",
     next: "Next round →", finale: "Next →", winner: "are today’s top marketers!", endLine: "Brew Corner has a queue outside. Great work!"
   },
-  offerEyebrow: "EduMoon Skills Club · Marketing results",
+  offerEyebrow: "EduMoon Entrepreneurship · Marketing results",
   offerTitle: "Your marketer rank",
   offers: [
     { min: 0.7, icon: "crown", title: "Growth Marketer", text: "You think like a pro. Offer to run a local shop’s Instagram for a month." },
@@ -50,7 +50,7 @@ window.GAME = {
   steps: [
     {
       type: "story", art: true,
-      alert: "EduMoon Skills Club · Digital Marketing 101",
+      alert: "EduMoon Entrepreneurship · Digital Marketing 101",
       title: "Brew Corner opened next to campus a month ago. Great coffee, 0 followers, half-empty tables. The owner hands your team the Instagram password. Go.",
       cards: [["target", "Find the right customers"], ["film", "Posts, reels, Google Maps and ads"], ["chart-column", "Read the numbers that matter"]]
     },

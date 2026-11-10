@@ -37,6 +37,7 @@
         <button class="mode${pickMode === "teams" ? " on" : ""}" role="radio" aria-checked="${pickMode === "teams"}" data-mode="teams"><b>${ic("users")} Teams</b><span class="muted">One phone per team of 3–4. Best for 8+ people.</span></button>
         <button class="mode${pickMode === "solo" ? " on" : ""}" role="radio" aria-checked="${pickMode === "solo"}" data-mode="solo"><b>${ic("user")} Solo</b><span class="muted">Everyone plays on their own phone. Best for small groups.</span></button>
       </div>
+      ${HostLock.field()}
       <button class="btn wide" id="create">Create game room</button>
       ${DB.mode === "demo" ? `<p class="muted">Demo mode: Firebase isn’t connected, so players can only join from other tabs on this device.</p>` : ""}`;
     $("#bar").hidden = true;
@@ -44,8 +45,9 @@
     $("#create").onclick = async () => {
       $("#create").disabled = true;
       let c; for (let i = 0; i < 5; i++) { c = H.code(); if (!(await DB.get(`rooms/${c}/state`))) break; }
+      const ok = await HostLock.create(c, { game: G.id, mode: pickMode, step: -1, phase: "lobby", created: DB.now() }, G.id);
+      if (!ok) { $("#create").disabled = false; return; }
       code = c; D.store.set(KEY, code);
-      await DB.set(base(), { state: { game: G.id, mode: pickMode, step: -1, phase: "lobby", created: DB.now() } });
       listen();
     };
   }

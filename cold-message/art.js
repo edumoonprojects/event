@@ -1,0 +1,7 @@
+// Original artwork for cold-message.
+window.STORY_ART = `<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A paper plane flying from a phone to an inbox">
+<defs><linearGradient id="cold-message-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A1220"/><stop offset=".6" stop-color="#203E70"/><stop offset="1" stop-color="#3463D6"/></linearGradient></defs>
+<rect width="1200" height="300" fill="url(#cold-message-sky)"/>
+<g fill="#FFFFFF" opacity=".5"><circle cx="90" cy="50" r="2"/><circle cx="260" cy="230" r="1.6"/><circle cx="1110" cy="60" r="2"/><circle cx="980" cy="250" r="1.6"/><circle cx="620" cy="30" r="1.4"/></g>
+<rect x="250" y="60" width="140" height="210" rx="22" fill="#F5F1EA"/><rect x="275" y="105" width="90" height="9" rx="4" fill="#9AB0C8"/><rect x="275" y="127" width="50" height="9" rx="4" fill="#9AB0C8"/><rect x="275" y="149" width="90" height="9" rx="4" fill="#9AB0C8"/><rect x="275" y="171" width="50" height="9" rx="4" fill="#9AB0C8"/><rect x="275" y="193" width="90" height="9" rx="4" fill="#9AB0C8"/><path d="M480 170 L720 90 L640 220 L600 170 Z" fill="#FFD166"/><path d="M420 200 Q520 230 600 180" stroke="#FFD166" stroke-width="4" stroke-dasharray="10 10" fill="none"/><rect x="800" y="90" width="220" height="140" rx="14" fill="#F5F1EA"/><path d="M800 100 L910 170 L1020 100" stroke="#6BA8FF" stroke-width="8" fill="none"/>
+</svg>`;

@@ -131,7 +131,7 @@
         ${F ? F.html : list.length ? `<div class="ggrid">${list.map(g => gameCard(g, false)).join("")}</div>` : `<div class="card"><h3>New games are on the way</h3><p class="muted">Check back soon. Meanwhile, try a game from another club.</p></div>`}
       </section>
       <section class="block"><p class="eyebrow">How to host</p>
-        <ol class="steps"><li>Tap <b>Host this game</b> on your phone or laptop</li><li>Pick <b>Teams</b> or <b>Solo</b>, then create the room</li><li>Share the QR code or link with your students</li><li>Tap <b>Next</b> to move through the game. You’re in control</li></ol>
+        <ol class="steps"><li>Tap <b>Host this game</b> on your phone or laptop</li><li>Pick <b>Teams</b> or <b>Solo</b>, type your <b>host code</b> and create the room</li><li>Share the QR code or link with your students</li><li>Tap <b>Next</b> to move through the game. You’re in control</li></ol>
       </section>
       ${banner()}`;
     if (F) F.wire();

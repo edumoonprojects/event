@@ -85,6 +85,7 @@
 <script src="firebase-config.js"></script>
 <script src="questions.js"></script>
 <script src="game.js"></script>
+<script src="../engine/hostlock.js"></script>
 <script>
 const R = SESSION.rounds, N = R.length;
 let code, base, players = {}, answers = {}, hang = {}, phase = "lobby", qi = -1, endsAt = 0, finalized = {}, view = {}, unsub = [];
@@ -105,7 +106,7 @@ async function boot() {
   $("#title").textContent = SESSION.title;
   code = H.ss("edumoon-host-code");
   const existing = code ? await DB.get(`rooms/${code}/state`) : null;
-  if (!existing) { code = H.code(); H.ss("edumoon-host-code", code); await DB.set(`rooms/${code}`, { state: { phase: "lobby", total: N, title: SESSION.title, club: SESSION.club, created: DB.now() } }); }
+  if (!existing) { code = H.code(); await HostLock.gate(code, { phase: "lobby", total: N, title: SESSION.title, club: SESSION.club, created: DB.now() }, "edumoon-live"); H.ss("edumoon-host-code", code); }
   else { phase = existing.phase; qi = existing.q ?? -1; endsAt = existing.endsAt || 0; if (phase === "question") listenRound(qi); }
   base = `rooms/${code}`;
   DB.on(`${base}/players`, v => { players = v || {}; onChange(); });
