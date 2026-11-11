@@ -66,13 +66,13 @@ window.GAME = {
     },
     EC(1, "The Assignment", {
       prompt: "Kiran’s teacher said “no AI”. Kiran asked AI to write the whole assignment and submitted it. Verdict?",
-      options: ["Fine, everyone does it", "Not fair: it breaks the rule and Kiran learned nothing", "Fine, if the answer was correct", "Fine, if the font was changed"], answer: 1,
+      options: ["Fine, everyone in class does it anyway", "Not fair: it breaks the rule and he learned nothing", "Fine, as long as the answers were correct", "Fine, if he changed the font and the wording"], answer: 1,
       hint: "Two problems: the rule, and the learning.",
       note: "Breaking a clear rule is dishonest, and the assignment existed so Kiran would learn.", badge: "file-text"
     }),
     EC(1, "The Assignment", {
       prompt: "Meera’s teacher allows AI. Meera wrote her essay, asked AI for feedback, and improved it herself. Verdict?",
-      options: ["Cheating, AI was involved", "Fair: allowed, her own work, and she learned from feedback", "She should hide it", "Only fair on weekends"], answer: 1,
+      options: ["Cheating, because AI was involved at some point", "Fair: allowed, her own work, she learned", "She should hide it from the teacher to be safe", "Only fair if she pays for the AI tool"], answer: 1,
       hint: "Rules allow it. Whose work is it?",
       note: "Using AI as a coach within the rules is exactly the smart use we want.", badge: "check"
     }),
@@ -96,19 +96,19 @@ window.GAME = {
     },
     EC(2, "Deepfakes", {
       prompt: "Someone makes an AI video of a classmate saying embarrassing things, “just for fun”, and posts it. Verdict?",
-      options: ["Harmful and wrong: it fakes a real person without consent and can hurt them badly", "Fine, it’s a joke", "Fine, if it gets many likes", "Fine, if it’s deleted after a day"], answer: 0,
+      options: ["Harmful: it fakes a real person without consent", "Fine, it’s just a joke between friends", "Fine, if it gets many likes and nobody complains", "Fine, if it’s deleted after a day or two"], answer: 0,
       hint: "How would the classmate feel?",
       note: "“Just a joke” doesn’t undo the harm. Faking real people can also break the law.", badge: "shield"
     }),
     EC(2, "Deepfakes", {
       prompt: "You receive a deepfake of a friend in a group chat. What’s the right move?",
-      options: ["Forward it to more groups", "Laugh and ignore", "Don’t share it. Tell your friend privately, and report it", "Make another one"], answer: 2,
+      options: ["Forward it to more groups so people know", "Laugh at it and ignore it, it’s not your problem", "Don’t share it, tell your friend, and report it", "Make another one to show it’s easy to fake"], answer: 2,
       hint: "What would you want if it were you?",
       note: "Every forward makes it worse. Support your friend and report it.", badge: "heart"
     }),
     EC(2, "Deepfakes", {
       prompt: "Your “uncle” calls with a slightly odd voice asking for urgent money on UPI. What should you do?",
-      options: ["Pay quickly, family comes first", "Send half", "Hang up and call him back on his saved number, or ask a family question only he’d know", "Share your OTP to verify"], answer: 2,
+      options: ["Pay quickly, family always comes first", "Send half the amount now and half later", "Hang up and call him back on his saved number", "Share your OTP so he can verify it’s really you"], answer: 2,
       hint: "AI can copy voices.",
       note: "AI voice scams are real. Call back on a number you know. Report fraud on 1930.", badge: "smartphone",
       board: true, boardLabel: "after Case 2"
@@ -124,7 +124,7 @@ window.GAME = {
     },
     EC(3, "Privacy", {
       prompt: "Ravi screenshots his friend’s private chat and asks AI “Is she angry with me?” Verdict?",
-      options: ["Totally fine", "Fine if Ravi deletes it later", "Not great: he shared private messages without her permission. Better to just ask her", "Fine if the AI is paid"], answer: 2,
+      options: ["Totally fine, AI is just helping him understand", "Fine, as long as Ravi deletes the screenshot later", "Not great: he shared her private chat without asking", "Fine, if he is using a paid AI app"], answer: 2,
       hint: "Did she agree to share her chat?",
       note: "Private messages belong to both people. Talking directly is better, and more honest.", badge: "message-circle"
     }),
@@ -138,7 +138,7 @@ window.GAME = {
     })),
     EC(3, "Privacy", {
       prompt: "A free AI app asks for access to all your contacts and photos to “improve your experience”. Best choice?",
-      options: ["Allow everything", "Allow, it’s free", "Deny what it doesn’t really need. Free apps can be paid for with your data", "Uninstall your phone"], answer: 2,
+      options: ["Allow everything so the app works properly", "Allow it, because the app is free to use", "Deny what it doesn’t really need", "Uninstall all your other apps to make space"], answer: 2,
       hint: "Does a chat app need all your photos?",
       note: "Give apps only the permissions they truly need. Read before you tap Allow.", badge: "smartphone",
       board: true, boardLabel: "after Case 3"
@@ -155,19 +155,19 @@ window.GAME = {
     },
     EC(4, "Bias", {
       prompt: "A company’s AI rejects most resumes from small-town colleges, because past hires were mostly from big cities. Verdict?",
-      options: ["Fair, the AI is just doing maths", "Unfair: it copies past bias and blocks good people. The company must fix it", "Fair, big-city students are better", "Not anyone’s problem"], answer: 1,
+      options: ["Fair, because the AI is just doing maths on data", "Unfair: it copies past bias and blocks good people", "Fair, because big-city students are usually better", "Not anyone’s problem, the AI decided on its own"], answer: 1,
       hint: "Did those students do anything wrong?",
       note: "AI that repeats past bias isn’t neutral. The company is responsible for testing and fixing it.", badge: "scale"
     }),
     EC(4, "Bias", {
       prompt: "You ask an AI image tool for “a software engineer”, and it shows only one kind of person. What does that show?",
-      options: ["Only one kind of person can be an engineer", "The AI is broken forever", "Nothing important", "AI can reflect stereotypes from the data it learned from"], answer: 3,
+      options: ["Only one kind of person can really be an engineer", "The AI is broken forever and can never be fixed", "Nothing important, it’s just a random picture", "AI can reflect stereotypes from its data"], answer: 3,
       hint: "Where did the AI learn what an engineer looks like?",
       note: "Notice the pattern, then prompt for variety. Anyone can be an engineer.", badge: "eye"
     }),
     EC(4, "Bias", {
       prompt: "Your club builds an AI tool to pick event winners. What’s the fairest setup?",
-      options: ["AI decides alone, no appeals", "Only the founder can see results", "Let AI pick randomly and hide how", "AI suggests, a human team reviews, and the rules are shared openly"], answer: 3,
+      options: ["AI decides alone, and nobody can appeal the result", "Only the founder can see the results and the scores", "Let AI pick randomly and don’t explain how", "AI suggests, humans review, rules are open"], answer: 3,
       hint: "Who can check it’s fair?",
       note: "Open rules and human review make AI decisions trustworthy.", badge: "users",
       board: true, boardLabel: "after Case 4"
@@ -183,7 +183,7 @@ window.GAME = {
     },
     EC(5, "Responsibility", {
       prompt: "A student copies AI facts into a report without checking. Some are wrong. Who is responsible?",
-      options: ["The student who submitted it", "The AI", "The internet", "Nobody"], answer: 0,
+      options: ["The student who submitted it", "The AI tool that wrote the facts", "The internet, where the AI learned them", "Nobody, mistakes happen with AI"], answer: 0,
       hint: "Whose name is on the report?",
       note: "Your name, your responsibility. AI is a tool; you are the author.", badge: "file-text"
     }),
@@ -197,7 +197,7 @@ window.GAME = {
     })),
     EC(5, "Responsibility", {
       prompt: "Your friend says, “AI will take all jobs, so why study?” What’s the best reply?",
-      options: ["“True, stop studying”", "“AI changes many tasks. People with real skills who use AI well will be in demand. So learn both.”", "“AI is useless”", "“Only study AI, nothing else”"], answer: 1,
+      options: ["“True, there’s no point studying anymore”", "“Learn real skills and learn to use AI well.”", "“AI is useless and will never take any job”", "“Only study AI, nothing else matters now”"], answer: 1,
       hint: "Who gets hired: someone with skills, or someone without?",
       note: "Strong basics + smart AI use is the combination employers look for.", badge: "briefcase",
       board: true, boardLabel: "after Case 5"
@@ -214,21 +214,21 @@ window.GAME = {
     EC(6, "Final Verdicts", {
       double: true,
       prompt: "An influencer uses AI to make a fake “before and after” photo to sell a product. Verdict?",
-      options: ["Fine, it’s marketing", "Fine if the product is good", "Misleading and unfair to buyers. Ads must not use fake results", "Fine if the photo looks real"], answer: 2,
+      options: ["Fine, it’s just normal marketing", "Fine, as long as the product is actually good", "Misleading: ads must not use fake results", "Fine, if the photo looks real enough"], answer: 2,
       hint: "Would buyers feel cheated?",
       note: "Fake proof to sell something is misleading. Honest ads build lasting trust.", badge: "store"
     }),
     EC(6, "Final Verdicts", {
       double: true,
       prompt: "You use AI to make your club’s poster design. Someone asks if AI helped. Best answer?",
-      options: ["“No, I did everything by hand”", "“Yes, AI helped with the design, and I checked and edited it.”", "Ignore the question", "“What is AI?”"], answer: 1,
+      options: ["“No, I did everything by hand myself”", "“Yes, AI helped, and I checked and edited it.”", "Ignore the question and change the topic", "“What is AI? I just used a design app”"], answer: 1,
       hint: "Is there anything to hide?",
       note: "Using AI isn’t shameful. Being honest about it is simply good practice.", badge: "palette"
     }),
     EC(6, "Final Verdicts", {
       double: true,
       prompt: "Which one question should you ask before EVERY AI use?",
-      options: ["“Is it fast?”", "“Is it free?”", "“Will it go viral?”", "“Is this honest, fair, and safe for everyone involved?”"], answer: 3,
+      options: ["“Is it fast enough to finish before the deadline?”", "“Is it free, or will it cost me money later?”", "“Will it go viral and get me followers?”", "“Is this honest, fair and safe for everyone?”"], answer: 3,
       hint: "Think about all six cases.",
       note: "Honest, fair, safe. If the answer is yes, go ahead. If not, stop and rethink.", badge: "badge-check",
       board: true, boardLabel: "after Case 6"

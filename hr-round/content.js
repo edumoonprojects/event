@@ -67,7 +67,7 @@ window.GAME = {
     },
     R(1, "Tell Me About Yourself", {
       prompt: "“Tell me about yourself.” Which opening is best?",
-      options: ["“Myself Ravi. My father is a government employee and my mother is a homemaker. I have one sister.”", "“I am a hardworking, honest and dedicated person with a positive attitude.”", "“I’m Ravi, a final year CSE student. I built a college events website that 300+ students used, and I want to start my career as a web developer.”", "“As you can see in my resume, I did BTech in CSE.”"], answer: 2,
+      options: ["“Myself Ravi. My father is a government employee and my mother is a homemaker. I have one sister.”", "“I am a hardworking, honest and dedicated person with a positive attitude.”", "“I’m Ravi, final-year CSE. I built an events site 300+ students used.”", "“As you can see in my resume, I did BTech in CSE.”"], answer: 2,
       hint: "Which one tells the interviewer who Ravi is, what he’s done and what he wants?",
       note: "Present (final year CSE), past (a site 300 students used), future (web developer). Under 20 seconds, and the interviewer already has a follow-up question.", badge: "user"
     }),
@@ -97,19 +97,19 @@ window.GAME = {
     },
     R(2, "Why Should We Hire You?", {
       prompt: "“Why should we hire you?” Which answer is best?",
-      options: ["“Because I need this job very badly.”", "“You need people who can build and fix web pages. I’ve done that: a site 300 students used, and 12 bug fixes in my internship. I’ll bring the same effort here.”", "“Because I am the best candidate you will meet today.”", "“Because I am a quick learner and a team player.”"], answer: 1,
+      options: ["“Because I really need this job, my family is depending on me and I will work very hard.”", "“I build and fix web pages: a site 300 used, 12 bug fixes in my internship.”", "“Because I am the best candidate you will meet today.”", "“Because I am a quick learner and a team player.”"], answer: 1,
       hint: "Which answer has their need, real proof, and what he’ll do?",
       note: "Need, proof, contribution. The others are either about Ravi’s needs or claims anyone can make.", badge: "briefcase"
     }),
     R(2, "Why Should We Hire You?", {
       prompt: "Which of these is PROOF, not just a claim?",
-      options: ["“I am very passionate about coding.”", "“I am a good team player.”", "“I am a quick learner.”", "“I learned React in 3 weeks and used it to build the login page in my internship.”"], answer: 3,
+      options: ["“I am very passionate about coding and technology.”", "“I am a good team player in every project.”", "“I am a quick learner who adapts fast.”", "“I learned React in 3 weeks for my internship.”"], answer: 3,
       hint: "Which one could the interviewer actually check?",
       note: "Proof has a what, a how, and often a number. Turn every claim on your resume into a proof sentence.", badge: "badge-check"
     }),
     R(2, "Why Should We Hire You?", {
       prompt: "“We have 200 candidates for this role. What makes you different?” Ravi should…",
-      options: ["Say he is better than everyone else", "Point to one specific thing he built and what it shows about him", "Say his college is better than other colleges", "Smile and say “You’ll see after you hire me”"], answer: 1,
+      options: ["Say he is better than everyone else in the room", "Point to one thing he built and what it shows", "Say his college is better than other colleges", "Smile and say “You’ll see after you hire me”"], answer: 1,
       hint: "Different means specific, not louder.",
       note: "One real story beats any big claim. “I built X, and it taught me Y” is memorable.", badge: "star",
       board: true, boardLabel: "after Round 2"
@@ -125,13 +125,13 @@ window.GAME = {
     },
     R(3, "Your Weakness", {
       prompt: "“What’s your biggest weakness?” Which answer is best?",
-      options: ["“I am a perfectionist.”", "“I don’t have any weaknesses.”", "“I get angry quickly and fight with teammates.”", "“I used to hesitate to speak in team meetings, so I joined our college English Club. Now I present in every project review.”"], answer: 3,
+      options: ["“I am a perfectionist, I work too hard.”", "“I don’t have any weaknesses at all.”", "“I get angry quickly and fight with teammates.”", "“I was shy in meetings, so I joined English Club.”"], answer: 3,
       hint: "Which one is real, shows action and shows progress?",
       note: "Real + action + progress. It shows you can learn, which is what every company wants from a fresher.", badge: "lightbulb"
     }),
     R(3, "Your Weakness", {
       prompt: "Why is “I am a perfectionist” a weak answer?",
-      options: ["Interviewers hear it all the time, and it sounds like you’re hiding a real weakness", "It’s too honest", "It’s too long", "Perfectionists don’t get hired"], answer: 0,
+      options: ["It’s overused and sounds like hiding", "It’s too honest for an interview", "It’s too long to say in an interview", "Perfectionists never get hired anywhere"], answer: 0,
       hint: "Think about how many times HR hears it in one day.",
       note: "It’s a cliché. Pick a real, fixable weakness instead.", badge: "x"
     }),
@@ -154,7 +154,7 @@ window.GAME = {
     },
     R(4, "Your Project", {
       prompt: "“What was YOUR part in the hackathon project?” Best answer?",
-      options: ["“We all did everything together.”", "“My team leader did most of it, I helped.”", "“I built the attendance screen and the database. When two people marked attendance at once, I fixed the duplicate entries.”", "“It was a very good project and we won 2nd prize.”"], answer: 2,
+      options: ["“We all did everything together as one team.”", "“My team leader did most of it, I helped a little.”", "“I built the attendance screen and fixed duplicates.”", "“It was a very good project and we won 2nd prize.”"], answer: 2,
       hint: "Which answer says exactly what Ravi did?",
       note: "Specific work + a real problem he solved. Now the interviewer can ask good follow-up questions, and Ravi knows the answers.", badge: "code"
     }),
@@ -168,7 +168,7 @@ window.GAME = {
     })),
     R(4, "Your Project", {
       prompt: "“What was the hardest problem in your project?” Ravi can’t think of a big one. Best move?",
-      options: ["Make up a dramatic story", "Say “There were no problems, everything went smoothly”", "Change the topic to his marks", "Pick a real small problem, like a bug or a deadline, and explain how he solved it"], answer: 3,
+      options: ["Make up a dramatic story to impress them", "Say “No problems, everything went smoothly”", "Change the topic to his marks and rank", "Pick a real small problem he solved"], answer: 3,
       hint: "Small and true beats big and made up.",
       note: "A small real problem, explained well, shows how you think. Made-up stories fall apart in the next question.", badge: "lightbulb",
       board: true, boardLabel: "after Round 4"
@@ -184,19 +184,19 @@ window.GAME = {
     },
     R(5, "What Would You Do?", {
       prompt: "“A teammate isn’t doing their part, and the deadline is in 2 days. What do you do?”",
-      options: ["“I’d talk to them privately, find out what’s blocking them, split the remaining work, and tell our lead if we might still miss the deadline.”", "“I’d complain to the manager immediately.”", "“I’d quietly do all their work myself.”", "“I’d ignore it. It’s not my problem.”"], answer: 0,
+      options: ["“I’d talk to them, split the work, and tell our lead early.”", "“I’d complain to the manager immediately about them.”", "“I’d quietly do all their work myself without telling anyone.”", "“I’d ignore it. It’s not my problem.”"], answer: 0,
       hint: "Talk first, solve together, tell the lead early.",
       note: "It shows you can work with people and still protect the deadline.", badge: "users"
     }),
     R(5, "What Would You Do?", {
       prompt: "“Your manager gives you a task you don’t know how to do. What do you do?”",
-      options: ["Say yes and hope for the best", "Say no, it’s outside your skills", "Say yes, ask 1 or 2 clarifying questions, try it first, and ask for help early if you’re stuck", "Copy someone else’s work"], answer: 2,
+      options: ["Say yes and hope for the best without asking anything", "Say no, it’s outside your skills and training", "Say yes, ask questions, try, ask help early", "Copy someone else’s work from an old project"], answer: 2,
       hint: "Companies expect freshers not to know everything. What do they want to see?",
       note: "Freshers aren’t expected to know everything. They’re expected to try, ask good questions, and not hide when stuck.", badge: "hand"
     }),
     R(5, "What Would You Do?", {
       prompt: "“You made a mistake that broke something at work. What do you do?”",
-      options: ["Hide it and hope nobody notices", "Tell your lead quickly, explain what happened, help fix it, and share how you’ll avoid it next time", "Blame the tester for not catching it", "Wait to see if it fixes itself"], answer: 1,
+      options: ["Hide it and hope nobody notices", "Tell your lead quickly and help fix it", "Blame the tester for not catching it earlier", "Wait to see if it fixes itself"], answer: 1,
       hint: "Which answer shows you can be trusted?",
       note: "Everyone makes mistakes. Owning them quickly is what builds trust.", badge: "heart",
       board: true, boardLabel: "after Round 5"
@@ -213,21 +213,21 @@ window.GAME = {
     R(6, "The Final Questions", {
       double: true,
       prompt: "“Are you willing to relocate to Bengaluru or Hyderabad?” Ravi prefers Vizag but would move. Best answer?",
-      options: ["“No, only Vizag.”", "“I’ll ask my parents and let you know.”", "“Yes. I’d prefer Vizag if there’s a choice, but I’m open to relocating for the right role.”", "“Yes, anywhere at all, I don’t mind anything.”"], answer: 2,
+      options: ["“No, only Vizag, I can’t move anywhere else.”", "“I’ll ask my parents and let you know.”", "“Yes. I prefer Vizag, but I’m open to moving.”", "“Yes, anywhere at all, I don’t mind anything.”"], answer: 2,
       hint: "Honest about his preference, and still flexible.",
       note: "Honest and flexible. Saying “anywhere, I don’t mind anything” can sound desperate; a flat “no” can end the interview.", badge: "map"
     }),
     R(6, "The Final Questions", {
       double: true,
       prompt: "“This role has a 2-year service agreement.” What should Ravi do?",
-      options: ["Sign immediately without reading it", "Refuse and walk out", "Say yes now and plan to break it later", "Ask what it covers (training, notice period, the penalty amount) and read it before signing"], answer: 3,
+      options: ["Sign immediately without reading it", "Refuse and walk out of the interview", "Say yes now and plan to break it later", "Ask what it covers, read before signing"], answer: 3,
       hint: "What would you want to know before signing anything?",
       note: "Bonds are common for freshers in India. Asking about them is normal and professional. Never sign what you haven’t read.", badge: "scroll"
     }),
     R(6, "The Final Questions", {
       double: true,
       prompt: "“Do you have any questions for us?” Which question is best?",
-      options: ["“No, nothing.”", "“What would a new joiner on this team work on in the first 3 months?”", "“How many leaves do I get?”", "“Did I get the job?”"], answer: 1,
+      options: ["“No, nothing, everything is clear.”", "“What would a new joiner work on first?”", "“How many leaves do I get in a year?”", "“Did I get the job? When will I know?”"], answer: 1,
       hint: "Which question shows he’s thinking about the work?",
       note: "Ask about the work, the team or how to succeed. Leave leaves and salary for HR after the offer.", badge: "message-circle",
       board: true, boardLabel: "after Round 6"

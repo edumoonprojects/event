@@ -65,7 +65,7 @@ window.GAME = {
     },
     DS(1, "Arrays", {
       prompt: "Which real-life thing is most like an array?",
-      options: ["A pile of plates", "A family tree", "A row of numbered lockers", "A road map"], answer: 2,
+      options: ["A pile of plates in the canteen", "A family tree", "A row of numbered lockers", "A road map of the city"], answer: 2,
       hint: "Numbered slots.",
       note: "Numbered slots you can reach directly by position. That’s an array.", badge: "list-checks"
     }),
@@ -78,7 +78,7 @@ window.GAME = {
     }),
     DS(1, "Arrays", {
       prompt: "Why is inserting a new student in the MIDDLE of a long array slow?",
-      options: ["Arrays can’t hold students", "Every item after that spot has to shift one place", "It’s always fast", "It deletes the array"], answer: 1,
+      options: ["Arrays can’t hold student records", "Everything after it shifts one place", "It’s always fast in every language", "It deletes the array"], answer: 1,
       hint: "Think of squeezing into a full row of lockers.",
       note: "Inserting in the middle means moving everything after it. Other structures handle this better.", badge: "route",
       board: true, boardLabel: "after Round 1"
@@ -100,7 +100,7 @@ window.GAME = {
     }),
     DS(2, "Stacks", {
       prompt: "Which everyday feature works like a stack?",
-      options: ["A canteen line", "A train route map", "Ctrl + Z (undo) in a document", "A phone’s contact search"], answer: 2,
+      options: ["A canteen line at lunchtime", "A train route map", "Ctrl + Z (undo)", "A phone’s contact search"], answer: 2,
       hint: "Which undoes the LAST thing first?",
       note: "Undo reverses your most recent action first. Last in, first out.", badge: "pen-tool"
     }),
@@ -122,7 +122,7 @@ window.GAME = {
     },
     DS(3, "Queues", {
       prompt: "Which real-life thing is a queue?",
-      options: ["The line at the canteen counter", "A pile of books", "A road map", "Folders on a laptop"], answer: 0,
+      options: ["The canteen counter line", "A pile of books on a desk", "A road map of Vizag", "Folders on a laptop"], answer: 0,
       hint: "First come, first served.",
       note: "The first person in line is served first. That’s FIFO: first in, first out.", badge: "users"
     }),
@@ -134,7 +134,7 @@ window.GAME = {
     }),
     DS(3, "Queues", {
       prompt: "What’s the key difference between a stack and a queue?",
-      options: ["Stack removes the newest item first; queue removes the oldest first", "Queues are always faster", "Stacks only store numbers", "No difference"], answer: 0,
+      options: ["Stack: newest out first; queue: oldest", "Queues are always faster than stacks", "Stacks can only store numbers", "There’s no real difference between them"], answer: 0,
       hint: "Plates vs canteen line.",
       note: "Stack: last in, first out. Queue: first in, first out.", badge: "brain",
       board: true, boardLabel: "after Round 3"
@@ -157,13 +157,13 @@ window.GAME = {
     }),
     DS(4, "Lists and Maps", {
       prompt: "You type a friend’s name and their number appears instantly. Which structure fits best?",
-      options: ["Queue", "Hash map (key → value)", "Stack", "Tree"], answer: 1,
+      options: ["Queue", "Hash map", "Stack", "Tree"], answer: 1,
       hint: "Look up by a key.",
       note: "Hash maps find a value by its key almost instantly, even with thousands of contacts.", badge: "search"
     }),
     DS(4, "Lists and Maps", {
       prompt: "You need to find any student’s details from their roll number, among 5,000 students, very fast. Best choice?",
-      options: ["A queue", "A hash map with roll number as the key", "Search a list one by one every time", "A stack"], answer: 1,
+      options: ["A queue of students in roll order", "A hash map keyed by roll number", "Search a list one by one every time", "A stack of student records"], answer: 1,
       hint: "Key → value.",
       note: "Checking 5,000 one by one is slow. A hash map jumps straight to the key.", badge: "users",
       board: true, boardLabel: "after Round 4"
@@ -191,7 +191,7 @@ window.GAME = {
     }),
     DS(5, "Trees", {
       prompt: "Guessing a number from 1 to 100 by asking “higher or lower?” and halving each time is like searching a…",
-      options: ["Queue", "Stack", "Linked list", "Sorted (binary search) tree"], answer: 3,
+      options: ["Queue", "Stack", "Linked list", "Binary search tree"], answer: 3,
       hint: "Halving each time.",
       note: "Each question cuts the options in half. That’s why sorted trees and binary search are so fast.", badge: "brain",
       board: true, boardLabel: "after Round 5"
@@ -208,7 +208,7 @@ window.GAME = {
     DS(6, "Graphs and Picking", {
       double: true,
       prompt: "Google Maps finding the shortest route from your college to RK Beach. Which structure is underneath?",
-      options: ["Queue only", "Graph: places are nodes, roads are edges", "Array of 4 items", "Stack"], answer: 1,
+      options: ["A queue of directions", "A graph of places and roads", "An array of 4 items", "A stack of turns"], answer: 1,
       hint: "Places connected by roads.",
       note: "Maps are graphs. Shortest-path algorithms search through them.", badge: "map"
     }),

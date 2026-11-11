@@ -74,7 +74,7 @@ window.GAME = {
     }),
     EX(1, "Basics", {
       prompt: "Which formula finds the average marks in cells C2 to C41?",
-      options: ["=SUM(C2:C41)", "=AVG(C2,C41)", "=AVERAGE(C2:C41)", "=MEAN C2-C41"], answer: 2,
+      options: ["=SUM(C2:C41)", "=AVG(C2,C41)", "=AVERAGE(C2:C41)", "=MEAN(C2 TO C41)"], answer: 2,
       hint: "The full word, and a colon for the range.",
       note: "=AVERAGE(C2:C41). The colon means “from C2 to C41”.", badge: "chart-column"
     }),
@@ -96,7 +96,7 @@ window.GAME = {
     },
     EX(2, "Conditions", {
       prompt: "Column C has “Present” or “Absent” for 40 members. Which formula counts how many were present?",
-      options: ["=IF(C2:C41)", "=COUNTIF(C2:C41, \"Present\")", "=COUNT(Present)", "=SUM(C2:C41)"], answer: 1,
+      options: ["=IF(C2:C41)", "=COUNTIF(C2:C41, \"Present\")", "=COUNT(Present)", "=SUM(C2:C41, \"Present\")"], answer: 1,
       hint: "Count, with a condition.",
       note: "COUNTIF counts cells that match. Perfect for attendance.", badge: "users"
     }),
@@ -108,7 +108,7 @@ window.GAME = {
     }),
     EX(2, "Conditions", {
       prompt: "You want “Pass” if marks in D2 are 40 or more, else “Fail”. Which formula?",
-      options: ["=IF(D2, Pass, Fail)", "=PASS(D2>40)", "=IF(\"Pass\">=40)", "=IF(D2>=40, \"Pass\", \"Fail\")"], answer: 3,
+      options: ["=IF(D2, \"Pass\", \"Fail\")", "=PASS(D2>40)", "=IF(\"Pass\">=40, D2)", "=IF(D2>=40, \"Pass\", \"Fail\")"], answer: 3,
       hint: "Test, then yes, then no.",
       note: "IF(test, value if true, value if false). Text needs quotes.", badge: "graduation-cap",
       board: true, boardLabel: "after Round 2"
@@ -130,7 +130,7 @@ window.GAME = {
     }),
     EX(3, "Tidy Data", {
       prompt: "You sort only the Marks column, but not the Names column. What happens?",
-      options: ["It sorts faster", "Marks get mixed up with the wrong names", "Names sort automatically always", "Nothing"], answer: 1,
+      options: ["It sorts faster", "Marks get matched to the wrong names", "Names always sort automatically with it", "Nothing happens to the data"], answer: 1,
       hint: "Rows must move together.",
       note: "Always select the whole table (or use the full sort option) so each row stays together.", badge: "shield"
     }),
@@ -153,19 +153,19 @@ window.GAME = {
     },
     EX(4, "Lookups", {
       prompt: "You have roll numbers in one sheet and want to bring in each student’s phone number from the main list. Which function?",
-      options: ["=XLOOKUP (or VLOOKUP)", "=SUM", "=MAX", "=COUNTIF"], answer: 0,
+      options: ["=XLOOKUP or =VLOOKUP", "=SUM of the phone column", "=MAX of the phone column", "=COUNTIF on roll numbers"], answer: 0,
       hint: "Look up by a key.",
       note: "Lookups match a key (the roll number) and return a value from another table.", badge: "search"
     }),
     EX(4, "Lookups", {
       prompt: "In =VLOOKUP(A2, Members!A:D, 3, FALSE), what does the 3 mean?",
-      options: ["Return the value from the 3rd column of the table", "Round to 3 decimals", "Look up 3 times", "Return 3 rows"], answer: 0,
+      options: ["Return the 3rd column’s value", "Round the result to 3 decimal places", "Look up the value 3 times", "Return 3 rows of results"], answer: 0,
       hint: "Which column to bring back.",
       note: "3 means the 3rd column of the lookup table. FALSE asks for an exact match.", badge: "list-checks"
     }),
     EX(4, "Lookups", {
       prompt: "Your lookup shows #N/A for one roll number. Most likely reason?",
-      options: ["That roll number isn’t in the lookup table, or has an extra space or typo", "Excel is out of date", "The computer is broken", "The formula is too long"], answer: 0,
+      options: ["It’s missing from the table, or has a typo", "Excel is out of date and needs an update now", "The computer is broken", "The formula is too long"], answer: 0,
       hint: "It couldn’t find the key.",
       note: "#N/A means “not found”. Check spelling and spaces. Clean data, happy lookups.", badge: "search",
       board: true, boardLabel: "after Round 4"
@@ -181,7 +181,7 @@ window.GAME = {
     },
     EX(5, "Locking Cells", {
       prompt: "Ticket price is in B1. You write =A2*B1 and copy it down. Row 3 shows wrong values. Why?",
-      options: ["The price changed", "Copying is not allowed", "B1 shifted to B2, B3… when copied. Use $B$1 to lock it", "A2 is wrong"], answer: 2,
+      options: ["The price changed in between rows", "Copying formulas is not allowed in Excel", "B1 shifted when copied; use $B$1", "A2 has the wrong value"], answer: 2,
       hint: "What happens to B1 when copied down?",
       note: "References move when copied. $ locks them in place.", badge: "lock"
     }),

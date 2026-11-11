@@ -120,7 +120,7 @@ window.GAME = {
     }),
     R(3, "Skill Match", {
       prompt: "Most government job exams (SSC, banking, railways) mainly test…",
-      options: ["Coding in C", "Aptitude, reasoning, English and general awareness", "Drawing and design", "Only your CGPA"], answer: 1,
+      options: ["Coding in C and data structures", "Aptitude, reasoning and English", "Drawing, design and art", "Only your CGPA from college"], answer: 1,
       hint: "These exams are taken by students from every degree, not just engineering.",
       note: "Most of these exams test aptitude, reasoning, English and general awareness. Practice tests help a lot.", badge: "landmark",
       board: true, boardLabel: "after Round 3"

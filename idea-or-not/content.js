@@ -4,7 +4,7 @@
 // Step types used: story · rules · learn · door · speak · offer · wordlist · end
 
 const IN = (round, name, extra) => Object.assign({ type: "door", kind: "choice", time: 40, board: false, eyebrow: `Round ${round} · ${name}` }, extra);
-const RF = ["Real startup story", "Made up"];
+const RF = ["Real story", "Made up"];
 
 const TESTS = [
   ["Is the problem real?", "Do people complain about it or pay to fix it today?"],
@@ -52,7 +52,7 @@ window.GAME = {
       type: "story", art: true,
       alert: "EduMoon Entrepreneurship · Idea or Not",
       title: "Some of India’s biggest startups began in ways that sound made up. Some ideas that sound great would never work. Can your team tell?",
-      cards: [["lightbulb", "Real startup story or made up?"], ["route", "How big startups really began"], ["target", "Judge campus startup ideas"]]
+      cards: [["lightbulb", "Real story or made up?"], ["route", "How big startups really began"], ["target", "Judge campus startup ideas"]]
     },
     { type: "rules" },
 
@@ -122,19 +122,19 @@ window.GAME = {
     },
     IN(3, "Start Small", {
       prompt: "Why did many successful startups begin with just ONE product or city?",
-      options: ["They had no ambition", "Investors made them", "It’s easier to make a few customers very happy and learn fast", "Big cities were closed"], answer: 2,
+      options: ["They had no ambition to grow bigger", "Investors forced them to stay small", "It’s easier to make a few customers happy", "Big cities were closed to new startups"], answer: 2,
       hint: "What’s easier: 100 happy users or 1 lakh confused ones?",
       note: "Focus lets you learn quickly and get it right before spending big.", badge: "target"
     }),
     IN(3, "Start Small", {
       prompt: "You want to start a campus notes-printing service. What’s the smartest first step?",
-      options: ["Buy 10 printers", "Take orders on WhatsApp in your own hostel for one week", "Build an app for 6 months", "Open in 10 colleges at once"], answer: 1,
+      options: ["Buy 10 printers and set up a shop", "Take orders on WhatsApp in your hostel", "Build an app for 6 months, then launch", "Open in 10 colleges at once to grow fast"], answer: 1,
       hint: "Cheapest way to learn if people want it.",
       note: "One hostel, one week, zero cost. You learn more than from months of planning.", badge: "smartphone"
     }),
     IN(3, "Start Small", {
       prompt: "“PhysicsWallah started as a YouTube channel.” What’s the lesson for students?",
-      options: ["Only teachers can start companies", "You need lakhs to start", "YouTube is the only way", "You can start with free tools and build trust before building a company"], answer: 3,
+      options: ["Only teachers can start education companies", "You need lakhs of rupees to start anything", "YouTube is the only way to start a company", "Start with free tools and build trust first"], answer: 3,
       hint: "What did it cost to start?",
       note: "Free platforms let you test, build an audience and prove demand before you spend.", badge: "film",
       board: true, boardLabel: "after Round 3"
@@ -151,19 +151,19 @@ window.GAME = {
     },
     IN(4, "Strong or Weak?", {
       prompt: "Which campus idea is the STRONGEST?",
-      options: ["A social network only for left-handed people", "A service that collects and returns hostel laundry twice a week for a small fee", "An app that tells you the time", "A new messaging app to replace WhatsApp"], answer: 1,
+      options: ["A social network only for left-handed people", "Hostel laundry pickup twice a week", "An app that tells you the current time", "A new messaging app to replace WhatsApp"], answer: 1,
       hint: "Real, frequent, and someone pays.",
       note: "Laundry is a real weekly pain, and students already pay for it. Strong start.", badge: "badge-check"
     }),
     IN(4, "Strong or Weak?", {
       prompt: "“A new app exactly like WhatsApp, but for students.” What’s the biggest problem?",
-      options: ["Students don’t use phones", "The name is too long", "Students already use WhatsApp for free, so there’s no reason to switch", "Apps are illegal"], answer: 2,
+      options: ["Students don’t use phones that much", "The name is too long to remember", "WhatsApp is free; no reason to switch", "Making new apps is illegal in India"], answer: 2,
       hint: "Why would anyone switch?",
       note: "Copies with no clear advantage fail. Ask: what problem does WhatsApp NOT solve for students?", badge: "message-circle"
     }),
     IN(4, "Strong or Weak?", {
       prompt: "Which question best tests if your idea is strong?",
-      options: ["“Do you like my idea?”", "“How do you solve this problem today, and what does it cost you?”", "“Will you be my friend?”", "“Is my logo nice?”"], answer: 1,
+      options: ["“Do you like my idea? Be honest please”", "“How do you solve this today, at what cost?”", "“Will you be my friend and share it?”", "“Is my logo nice enough to post?”"], answer: 1,
       hint: "Which question gets an honest answer?",
       note: "People say “nice idea” to be polite. Asking about what they do today reveals the truth.", badge: "search",
       board: true, boardLabel: "after Round 4"
@@ -185,13 +185,13 @@ window.GAME = {
     }),
     IN(5, "Pivots", {
       prompt: "Your campus tiffin service gets few orders, but many students ask for late-night snacks. Best move?",
-      options: ["Ignore them, stick to the plan", "Shut down", "Test a small late-night snack menu for one week", "Raise tiffin prices"], answer: 2,
+      options: ["Ignore them and stick to the original plan", "Shut down, the idea clearly failed", "Test a late-night snack menu for a week", "Raise tiffin prices to earn more per order"], answer: 2,
       hint: "Customers are telling you something.",
       note: "Listen and test. That’s how pivots start: small experiments based on real demand.", badge: "route"
     }),
     IN(5, "Pivots", {
       prompt: "When should a founder think about pivoting?",
-      options: ["After one bad day", "Never, never change", "When the cat looks sad", "When tests keep showing people don’t want it, but want something nearby"], answer: 3,
+      options: ["After one bad day of low sales", "Never, real founders never change the idea", "When the office cat looks sad", "When people want something nearby instead"], answer: 3,
       hint: "Look for a pattern, not one bad day.",
       note: "Pivot on evidence, not on mood. Give each test a fair chance first.", badge: "chart-column",
       board: true, boardLabel: "after Round 5"
@@ -222,7 +222,7 @@ window.GAME = {
     IN(6, "Final Calls", {
       double: true,
       prompt: "You have a startup idea and ₹0. What do you do this week?",
-      options: ["Wait until you have money", "Talk to 10 people who have the problem and test the idea with free tools", "Quit college immediately", "Tell nobody so they can’t copy it"], answer: 1,
+      options: ["Wait until you have money to start", "Talk to 10 people and test it for free", "Quit college immediately to focus on it", "Tell nobody so they can’t copy it"], answer: 1,
       hint: "What did today’s real stories do?",
       note: "Ideas are cheap to test today. Talking to people and testing for free is how most founders begin.", badge: "lightbulb",
       board: true, boardLabel: "after Round 6"

@@ -66,7 +66,7 @@ window.GAME = {
     },
     MQ(1, "CTC vs In-Hand", {
       prompt: "Ravi’s offer says “CTC: ₹6 LPA”. What will his monthly in-hand salary be?",
-      options: ["More than ₹50,000", "₹6 lakh every month", "Exactly ₹50,000", "Less than ₹50,000, after PF, tax and other deductions"], answer: 3,
+      options: ["More than ₹50,000, because of bonuses", "₹6 lakh every month", "Exactly ₹50,000, which is 6 lakh ÷ 12", "Less than ₹50,000"], answer: 3,
       hint: "₹6 lakh ÷ 12 is ₹50,000. Then what gets taken out?",
       note: "Less than ₹50,000. The exact amount depends on the company’s salary structure and tax. The payslip shows it clearly.", badge: "file-text"
     }),
@@ -78,7 +78,7 @@ window.GAME = {
     }),
     MQ(1, "CTC vs In-Hand", {
       prompt: "Two offers: the first says ₹7 LPA with ₹1.5 lakh of “variable bonus”, the second says ₹6.5 LPA, all fixed. What should Ravi check?",
-      options: ["The fixed part of each, and how the bonus is decided", "Only the company logo", "Which one his friend took", "Nothing, A is bigger"], answer: 0,
+      options: ["The fixed part, and how the bonus works", "Only the company logo and the office", "Which one his friend from college took", "Nothing, the first one is bigger anyway"], answer: 0,
       hint: "Is the bonus guaranteed?",
       note: "The first offer’s fixed pay is ₹5.5 lakh, less than the second’s ₹6.5 lakh. Variable pay may not come in full. Compare the fixed parts.", badge: "search",
       board: true, boardLabel: "after Round 1"
@@ -108,7 +108,7 @@ window.GAME = {
     }),
     MQ(2, "Budgeting", {
       prompt: "Which of these is a WANT, not a need?",
-      options: ["Rent", "Monthly bus pass to work", "A third streaming subscription", "Groceries"], answer: 2,
+      options: ["Rent for the room near the office", "Monthly bus pass to work", "A third streaming subscription", "Groceries for the month"], answer: 2,
       hint: "Which one could he skip without any real problem?",
       note: "Subscriptions add up quietly. Check them every few months and cancel the ones you don’t use.", badge: "film",
       board: true, boardLabel: "after Round 2"
@@ -124,7 +124,7 @@ window.GAME = {
     },
     MQ(3, "Saving", {
       prompt: "What is an emergency fund for?",
-      options: ["A holiday", "Surprises like a medical bill or losing a job, so you don’t have to borrow", "Investing in shares", "A new phone"], answer: 1,
+      options: ["A holiday trip with friends every year", "Surprises like a medical bill", "Investing in shares when prices fall", "A new phone when the old one gets slow"], answer: 1,
       hint: "Think “emergency”.",
       note: "It’s a cushion so a bad month doesn’t turn into debt. Keep it somewhere safe and easy to reach.", badge: "shield"
     }),
@@ -138,7 +138,7 @@ window.GAME = {
     }),
     MQ(3, "Saving", {
       prompt: "Priya starts saving ₹2,000 a month at 22. Arjun starts the same amount at 32. Same returns. At 60, who has more?",
-      options: ["Priya, by a lot, because her money had 10 more years to compound", "Same amount", "Neither", "Arjun, he’s older"], answer: 0,
+      options: ["Priya, by a lot: 10 more years to compound", "Both have the same amount at 60", "Neither, saving doesn’t grow money", "Arjun, because he earns more when older"], answer: 0,
       hint: "Who gave compounding more time?",
       note: "Priya, by far. The extra 10 years at the start make the biggest difference of all.", badge: "clock",
       board: true, boardLabel: "after Round 3"
@@ -155,19 +155,19 @@ window.GAME = {
     },
     MQ(4, "Cards and EMIs", {
       prompt: "Ravi’s card bill is ₹20,000. The “minimum due” is ₹1,000. What should he pay?",
-      options: ["₹1,000, the bank said that’s enough", "The full ₹20,000 by the due date, if he can", "Nothing this month", "₹500"], answer: 1,
+      options: ["₹1,000, because the bank said that’s enough", "The full ₹20,000 by the due date", "Nothing this month, pay double next month", "₹500 now and the rest when he can"], answer: 1,
       hint: "What happens to the ₹19,000 he doesn’t pay?",
       note: "Paying only the minimum keeps him out of late fees, but the rest gets very high interest. Pay in full whenever possible.", badge: "file-text"
     }),
     MQ(4, "Cards and EMIs", {
       prompt: "A ₹60,000 phone is on “No-cost EMI, 12 months”. What should Ravi check first?",
-      options: ["How many likes the phone has", "Only the colour", "The total he’ll pay, including any processing fee, and whether a discount is lost by choosing EMI", "Nothing, no-cost means free"], answer: 2,
+      options: ["How many likes the phone has online", "Only the colour and the storage size", "The total cost, fees and lost discounts", "Nothing, no-cost means it’s free money"], answer: 2,
       hint: "Is “no-cost” always completely free?",
       note: "Some no-cost EMIs add a processing fee or remove a cash discount. Always compare the total amount.", badge: "search"
     }),
     MQ(4, "Cards and EMIs", {
       prompt: "Which is the biggest warning sign of a debt problem?",
-      options: ["Having an emergency fund", "Using a budget app", "Paying the full card bill every month", "Using one credit card to pay another card’s bill"], answer: 3,
+      options: ["Having an emergency fund in the bank", "Using a budget app every month", "Paying the full card bill every month", "Paying one card with another"], answer: 3,
       hint: "Which one means the debt is growing, not shrinking?",
       note: "Paying debt with more debt makes it grow fast. That’s the moment to stop, cut spending and ask for help.", badge: "alarm-clock",
       board: true, boardLabel: "after Round 4"
@@ -183,19 +183,19 @@ window.GAME = {
     },
     MQ(5, "Investing Basics", {
       prompt: "What is a SIP?",
-      options: ["A type of loan", "A Systematic Investment Plan: investing a fixed amount regularly, usually monthly, in a mutual fund", "A government tax", "A savings account"], answer: 1,
+      options: ["A type of loan for students and new employees", "Investing a fixed amount every month", "A government tax on monthly salaries", "A savings account with a higher interest rate"], answer: 1,
       hint: "Think “a fixed amount, every month”.",
       note: "A SIP builds the habit of investing small amounts regularly. The value can go up and down with the market.", badge: "chart-column"
     }),
     MQ(5, "Investing Basics", {
       prompt: "A Telegram group promises: “Invest ₹10,000, get ₹20,000 in 30 days. Guaranteed.” What is it?",
-      options: ["A government scheme", "A normal bank FD", "A great opportunity", "Almost certainly a scam"], answer: 3,
+      options: ["A government scheme for young investors", "A normal bank fixed deposit", "A great opportunity, if you act fast", "Almost certainly a scam"], answer: 3,
       hint: "Remember Scam or Safe.",
       note: "Nobody can guarantee to double your money in a month. Early “profits” are bait to make you invest more.", badge: "shield"
     }),
     MQ(5, "Investing Basics", {
       prompt: "Which statement about risk and return is true?",
-      options: ["Higher possible returns usually come with higher risk", "Investments with high returns have no risk", "FDs are riskier than shares", "Risk doesn’t matter if you’re young"], answer: 0,
+      options: ["Higher returns usually mean higher risk", "Investments with high returns have no risk", "FDs are riskier than shares", "Risk doesn’t matter if you’re young"], answer: 0,
       hint: "Why does an FD pay less than what shares can earn?",
       note: "There’s no high return without risk. Anyone who says otherwise is selling something.", badge: "lightbulb",
       board: true, boardLabel: "after Round 5"
@@ -212,21 +212,21 @@ window.GAME = {
     MQ(6, "First Salary", {
       double: true,
       prompt: "Ravi’s first ₹40,000 arrives. Which plan is smartest?",
-      options: ["Lend it all to a friend", "Leave it all in the account and see what happens", "Buy a new phone on EMI the same day", "Pay needs, move ₹8,000 to savings on day one, spend some on a treat for family, track the rest"], answer: 3,
+      options: ["Lend it all to a friend who needs it", "Leave it all in the account and see", "Buy a new phone on EMI the same day", "Needs first, ₹8,000 to savings, track the rest"], answer: 3,
       hint: "Needs, savings first, then some fun.",
       note: "A plan with needs, savings and a little joy is one he can actually follow every month.", badge: "check"
     }),
     MQ(6, "First Salary", {
       double: true,
       prompt: "Ravi has no emergency fund yet and wants to start a SIP. What should he do first?",
-      options: ["Do neither", "Put everything in the SIP", "Build the emergency fund first, then start a small SIP", "Borrow money to invest more"], answer: 2,
+      options: ["Do neither until his salary increases", "Put everything into the SIP right away", "Emergency fund first, then a small SIP", "Borrow money to invest more each month"], answer: 2,
       hint: "What happens if he has a medical bill next month?",
       note: "Safety first. With an emergency fund, he won’t have to break his investments or borrow when something goes wrong.", badge: "shield"
     }),
     MQ(6, "First Salary", {
       double: true,
       prompt: "A colleague says: “Take a personal loan and invest it in this stock, it will surely go up.” Ravi should…",
-      options: ["Say no. Borrowing to invest in something “sure” is very risky, and nothing in markets is sure", "Take a bigger loan", "Ask for a credit card instead", "Take the loan quickly"], answer: 0,
+      options: ["Say no, borrowing to invest is risky", "Take a bigger loan to earn more profit", "Ask for a credit card instead of a loan", "Take the loan quickly before the price rises"], answer: 0,
       hint: "What if the stock goes down? He still owes the loan.",
       note: "Loans must be repaid with interest no matter what the stock does. Never borrow to bet on “sure things”.", badge: "alarm-clock",
       board: true, boardLabel: "after Round 6"

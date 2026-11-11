@@ -67,19 +67,19 @@ window.GAME = {
     },
     BB(1, "The Promise", {
       prompt: "Which brand promise is strongest for Midnight Bites?",
-      options: ["“The best food in the universe.”", "“Hot snacks at your hostel gate in 20 minutes, until 2 AM.”", "“We are passionate about food.”", "“Quality and excellence.”"], answer: 1,
+      options: ["“The best food in the whole universe, every time.”", "“Hot snacks at your gate in 20 min, till 2 AM.”", "“We are passionate about food.”", "“Quality and excellence.”"], answer: 1,
       hint: "Specific, believable, useful.",
       note: "Specific and checkable. Customers know exactly what to expect.", badge: "target"
     }),
     BB(1, "The Promise", {
       prompt: "What IS a brand, really?",
-      options: ["Just the logo", "Just the colours", "What people think and feel about you, built by your promise and how you keep it", "The company’s registration number"], answer: 2,
+      options: ["Just the logo on the packaging", "Just the colours used everywhere", "What people think and feel about you", "The company’s registration number"], answer: 2,
       hint: "What do people say about you when you’re not there?",
       note: "Logos and colours help people recognise you. Trust comes from keeping the promise.", badge: "heart"
     }),
     BB(1, "The Promise", {
       prompt: "Midnight Bites promises 20 minutes, but orders often take an hour. What happens to the brand?",
-      options: ["People stop trusting it, however good the logo looks", "Nothing, the logo is good", "It gets famous", "Prices go up"], answer: 0,
+      options: ["People stop trusting it", "Nothing changes, the logo is still good", "It gets famous for being slow", "Prices automatically go up"], answer: 0,
       hint: "Broken promises.",
       note: "Fix the promise or fix the delivery. A great logo can’t cover a broken promise.", badge: "clock",
       board: true, boardLabel: "after Round 1"
@@ -101,13 +101,13 @@ window.GAME = {
     }),
     BB(2, "The Name", {
       prompt: "Why is naming your startup “Swiggy 2” a bad idea?",
-      options: ["It’s too short", "It copies another company’s brand name, which is confusing and can cause legal trouble", "Numbers are illegal", "It’s a great idea"], answer: 1,
+      options: ["It’s too short to remember", "It copies another brand: confusing and risky", "Numbers in names are illegal", "It’s a great idea, people already know it"], answer: 1,
       hint: "Whose name is it?",
       note: "Using another company’s brand name can break trademark law. Build your own identity.", badge: "shield"
     }),
     BB(2, "The Name", {
       prompt: "You picked a name. What should you check BEFORE printing anything?",
-      options: ["Nothing", "That the Instagram handle and domain are free, and no similar business uses it", "Your horoscope", "That it’s very long"], answer: 1,
+      options: ["Nothing, just print it", "The handle and domain are free", "Your horoscope and lucky numbers", "That it’s very long and unique"], answer: 1,
       hint: "Is it really available?",
       note: "Five minutes of searching can save you from reprinting everything later.", badge: "search",
       board: true, boardLabel: "after Round 2"
@@ -123,7 +123,7 @@ window.GAME = {
     },
     BB(3, "The Story", {
       prompt: "Which brand story connects best with hostel students?",
-      options: ["“We are a leading provider of food solutions.”", "“During exams, we were always hungry at 1 AM and everything was closed. So we started cooking for our wing. Now we deliver to 4 hostels.”", "“Founded in 2026.”", "“We have big dreams.”"], answer: 1,
+      options: ["“We are a leading provider of food solutions for students across the city.”", "“In exams we were hungry at 1 AM, so we cooked for our wing.”", "“Founded in 2026.”", "“We have big dreams.”"], answer: 1,
       hint: "Which one feels like a real person?",
       note: "A real, relatable moment makes people feel “that’s me”.", badge: "heart"
     }),
@@ -137,7 +137,7 @@ window.GAME = {
     })),
     BB(3, "The Story", {
       prompt: "Where should the founders’ story show up?",
-      options: ["Nowhere, it’s private", "Only in a PDF nobody opens", "Instagram bio, pinned post, packaging card and when you talk to customers", "Only on the bill"], answer: 2,
+      options: ["Nowhere, it’s private to the founders", "Only in a PDF nobody ever opens", "Bio, pinned post, packaging, chats", "Only printed at the bottom of the bill"], answer: 2,
       hint: "Where do customers see you?",
       note: "Tell the same short story everywhere people meet your brand.", badge: "message-circle",
       board: true, boardLabel: "after Round 3"
@@ -154,7 +154,7 @@ window.GAME = {
     },
     BB(4, "Look and Feel", {
       prompt: "Which colour choice fits Midnight Bites best?",
-      options: ["Night blue with a warm yellow, like a moon and a lamp", "12 random bright colours", "A different colour every post", "Only grey"], answer: 0,
+      options: ["Night blue and warm yellow", "12 random bright colours mixed together", "A different colour scheme every post", "Only grey, to look serious"], answer: 0,
       hint: "Midnight + warm food.",
       note: "Colours that match the name and feeling make the brand instantly recognisable.", badge: "palette"
     }),
@@ -168,7 +168,7 @@ window.GAME = {
     })),
     BB(4, "Look and Feel", {
       prompt: "For the logo, which idea is best?",
-      options: ["Use a famous cartoon character holding a burger", "Copy a big food brand’s logo and change the colour", "A simple original mark, like a crescent moon with a bite taken out", "A free logo found on Google Images"], answer: 2,
+      options: ["A famous cartoon character holding a burger", "A big food brand’s logo in a new colour", "A crescent moon with a bite out", "A free logo found on Google Images"], answer: 2,
       hint: "Original and simple.",
       note: "Original and simple works small (on a sticker) and big. Copying others’ characters or logos can get you taken down.", badge: "star",
       board: true, boardLabel: "after Round 4"
@@ -190,13 +190,13 @@ window.GAME = {
     }),
     BB(5, "Voice", {
       prompt: "A customer posts: “Order came 40 minutes late, food was cold.” Best on-brand reply?",
-      options: ["“Not our problem.”", "Delete the comment", "“Sorry, that’s not the Midnight Bites promise. We’ve DM’d you a replacement. Thank you for telling us.”", "Ignore it"], answer: 2,
+      options: ["“Not our problem, the traffic was bad that night.”", "Delete the comment", "“Sorry, not our promise. Replacement sent by DM.”", "Ignore it"], answer: 2,
       hint: "Kind, own it, fix it.",
       note: "How you handle a mistake shows your brand more than any post.", badge: "handshake"
     }),
     BB(5, "Voice", {
       prompt: "Why should the voice stay the same across Instagram, WhatsApp and the menu?",
-      options: ["It doesn’t matter", "It feels like one real personality, which builds trust", "To save ink", "WhatsApp requires it"], answer: 1,
+      options: ["It doesn’t matter at all", "It feels like one real personality", "To save ink when printing menus", "WhatsApp requires the same voice"], answer: 1,
       hint: "Would you trust a friend who changes personality every day?",
       note: "A consistent voice feels like a real, reliable personality.", badge: "users",
       board: true, boardLabel: "after Round 5"
@@ -213,7 +213,7 @@ window.GAME = {
     BB(6, "Launch", {
       double: true,
       prompt: "Which first Instagram post should Midnight Bites launch with?",
-      options: ["A copied stock photo of fancy food from another country", "A photo of the two founders with their first batch, the story in 2 lines, the promise and “DM to order”", "Just the logo, no text", "A meme with no link to the brand"], answer: 1,
+      options: ["A copied stock photo of fancy food from another country", "The founders with their first batch, the story and “DM to order”", "Just the logo, no text", "A meme with no link to the brand"], answer: 1,
       hint: "Real, story, promise, action.",
       note: "Real people, a real story and a clear action make a strong first impression.", badge: "rocket"
     }),
@@ -229,7 +229,7 @@ window.GAME = {
     BB(6, "Launch", {
       double: true,
       prompt: "6 months later, what will matter MOST for Midnight Bites’ brand?",
-      options: ["How many times they changed the logo", "Whether they kept the promise every night, and how people talk about them", "How many colours they used", "A longer name"], answer: 1,
+      options: ["How many times they changed the logo", "Whether they kept the promise every night", "How many colours they used in posts", "A longer, more professional name"], answer: 1,
       hint: "Back to Round 1.",
       note: "The promise, kept every day, is the brand. Everything else helps people remember it.", badge: "trending-up",
       board: true, boardLabel: "after Round 6"

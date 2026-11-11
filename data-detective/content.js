@@ -81,7 +81,7 @@ window.GAME = {
     }),
     DD(1, "Messy Data", {
       prompt: "Best first step with a new dataset for your project?",
-      options: ["Train an AI on it immediately", "Open it and read through rows, checking blanks and odd values", "Make a chart only", "Delete half randomly"], answer: 1,
+      options: ["Train an AI model on all of it immediately", "Read the rows, check blanks and odd values", "Make a chart only and present it", "Delete half the rows randomly"], answer: 1,
       hint: "Look before you train.",
       note: "Five minutes of looking can save days of confusing results.", badge: "eye",
       board: true, boardLabel: "after Round 1"
@@ -113,7 +113,7 @@ window.GAME = {
     })),
     DD(2, "Duplicates and Units", {
       prompt: "A sales sheet mixes “₹50,000” and “0.5 lakh”. What should you do?",
-      options: ["Convert everything to one unit, like rupees, before any analysis", "Delete the lakh rows", "Leave it", "Average them as they are"], answer: 0,
+      options: ["Convert everything to one unit", "Delete the rows that say lakh", "Leave it as it is", "Average them as they are"], answer: 0,
       hint: "Same unit everywhere.",
       note: "0.5 lakh = ₹50,000. Mixed units give nonsense totals.", badge: "indian-rupee",
       board: true, boardLabel: "after Round 2"
@@ -137,13 +137,13 @@ window.GAME = {
     })),
     DD(3, "Outliers", {
       prompt: "A UPI dataset shows one ₹2 lakh payment among thousands of ₹100 payments. What should a fraud-detection team do?",
-      options: ["Delete it, it’s an outlier", "Look into it carefully. It might be real and exactly what they want to catch", "Change it to ₹100", "Ignore all big payments"], answer: 1,
+      options: ["Delete it, it’s just an outlier", "Look into it, it may be fraud", "Change it to ₹100 to match the rest", "Ignore all big payments from now on"], answer: 1,
       hint: "Sometimes the outlier is the story.",
       note: "Not every outlier is a mistake. In fraud detection, unusual values are the whole point.", badge: "shield"
     }),
     DD(3, "Outliers", {
       prompt: "One student’s attendance is recorded as 0% but she topped the class. Most likely?",
-      options: ["She studied from home", "Attendance doesn’t matter", "Probably a data entry error. Check with the department", "Delete her from the data"], answer: 2,
+      options: ["She studied from home all semester", "Attendance doesn’t matter for marks", "Likely a data entry error, check it", "Delete her from the data"], answer: 2,
       hint: "Does it make sense?",
       note: "When a value doesn’t make sense, check it before using it.", badge: "search",
       board: true, boardLabel: "after Round 3"
@@ -160,19 +160,19 @@ window.GAME = {
     },
     DD(4, "Bias", {
       prompt: "A voice assistant is trained only on recordings from a few big cities. What could go wrong?",
-      options: ["Nothing", "It may struggle with other accents and languages across India", "It speaks more languages", "It becomes faster"], answer: 1,
+      options: ["Nothing, cities have all kinds of people", "It may struggle with other accents", "It learns to speak more languages", "It becomes faster at answering"], answer: 1,
       hint: "Who wasn’t in the data?",
       note: "If people aren’t in the training data, the AI often works worse for them.", badge: "languages"
     }),
     DD(4, "Bias", {
       prompt: "A survey on “What students want from the canteen” only asks hostel students at 9 PM. Problem?",
-      options: ["The survey is too short", "9 PM is too early", "Day scholars and others are missing, so the result is biased", "No problem"], answer: 2,
+      options: ["The survey is too short to be useful", "9 PM is too early to ask students", "Day scholars are missing, so it’s biased", "No problem, hostel students eat there most"], answer: 2,
       hint: "Who wasn’t asked?",
       note: "A sample from one group can’t speak for everyone. Ask a fair mix.", badge: "users"
     }),
     DD(4, "Bias", {
       prompt: "An AI to shortlist resumes learned from 10 years of past hires, mostly from 3 colleges. Likely result?",
-      options: ["Perfectly fair choices", "It refuses to work", "It may unfairly favour those 3 colleges, repeating past bias", "It picks randomly"], answer: 2,
+      options: ["Perfectly fair choices for every college", "It refuses to work on old data", "It favours those 3 colleges", "It picks resumes randomly"], answer: 2,
       hint: "AI copies patterns in history.",
       note: "AI repeats past bias unless people test for it and fix it.", badge: "scale",
       board: true, boardLabel: "after Round 4"
@@ -188,7 +188,7 @@ window.GAME = {
     },
     DD(5, "Cause or Not", {
       prompt: "Data shows students who carry water bottles get better marks. Does carrying a bottle CAUSE better marks?",
-      options: ["Yes, buy bottles", "Yes, water is magic", "Marks cause bottles", "Not proven. Something else, like overall health or study habits, may explain both"], answer: 3,
+      options: ["Yes, every student should buy a bottle", "Yes, water is magic for the brain", "Marks cause students to buy bottles", "Not proven, something else may explain it"], answer: 3,
       hint: "Correlation or cause?",
       note: "Two things moving together doesn’t prove one causes the other.", badge: "brain"
     }),
@@ -200,7 +200,7 @@ window.GAME = {
     }),
     DD(5, "Cause or Not", {
       prompt: "How do scientists check if something truly causes an effect?",
-      options: ["A fair experiment where only that one thing is changed between groups", "One survey", "Counting likes", "Asking AI"], answer: 0,
+      options: ["A fair test that changes one thing", "One online survey of 50 students", "Counting likes on a post about it", "Asking AI for the answer"], answer: 0,
       hint: "Change one thing, keep the rest the same.",
       note: "Controlled experiments (like A/B tests) are how cause is tested.", badge: "list-checks",
       board: true, boardLabel: "after Round 5"
@@ -226,14 +226,14 @@ window.GAME = {
     DD(6, "Final Case", {
       double: true,
       prompt: "You trained an AI and tested it on the SAME data it learned from. It scored 100%. What’s wrong?",
-      options: ["It may have just memorised. Test on new data it has never seen", "Nothing, it’s perfect", "100% is too low", "The AI is cheating on purpose"], answer: 0,
+      options: ["It may have memorised; test on new data", "Nothing, 100% means the model is perfect", "100% is too low for real AI projects", "The AI is cheating on purpose"], answer: 0,
       hint: "Like seeing the exam paper before the exam.",
       note: "Always keep some data aside for testing. That shows how it works on new cases.", badge: "graduation-cap"
     }),
     DD(6, "Final Case", {
       double: true,
       prompt: "In real AI projects, where does a lot of the time usually go?",
-      options: ["Collecting, cleaning and checking data", "Making slides", "Choosing a logo", "Naming the model"], answer: 0,
+      options: ["Collecting and cleaning data", "Making slides for presentations", "Choosing a logo for the project", "Naming the model something catchy"], answer: 0,
       hint: "Today’s whole game.",
       note: "Data work is a big part of AI work, and the part that most decides how good the AI is.", badge: "chart-column",
       board: true, boardLabel: "after Round 6"

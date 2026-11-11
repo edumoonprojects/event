@@ -67,19 +67,19 @@ window.GAME = {
     },
     GQ(1, "What Gets Scored", {
       prompt: "Four students in a GD. Who usually scores the highest?",
-      options: ["Arjun, who spoke for 8 of the 15 minutes", "Meena, who made 3 clear points, built on others’ ideas and summarised at the end", "Kiran, who used the most difficult English words", "Ravi, who agreed with everyone"], answer: 1,
+      options: ["Arjun, who spoke for 8 of the 15 minutes", "Meena: 3 clear points, built on others, summarised", "Kiran, who used the most difficult English words", "Ravi, who agreed with everyone who spoke"], answer: 1,
       hint: "Think about content, communication AND teamwork.",
       note: "Quality, teamwork and a summary beat talking the most. Evaluators notice who makes the GROUP better.", badge: "award"
     }),
     GQ(1, "What Gets Scored", {
       prompt: "In a 15-minute GD with 8 people, how many times should you aim to speak?",
-      options: ["3 to 5 times, with a real point each time", "Every minute", "Only at the end", "Once, perfectly"], answer: 0,
+      options: ["3 to 5 times, with a real point each time", "Every minute, so the evaluator remembers you", "Only at the end, when everyone is tired", "Once, with one perfect long speech"], answer: 0,
       hint: "Enough to be noticed, not so much that you block others.",
       note: "3 to 5 meaningful entries is a good target. One perfect point is not enough to be noticed.", badge: "target"
     }),
     GQ(1, "What Gets Scored", {
       prompt: "Your English isn’t perfect. What should you do in a GD?",
-      options: ["Memorise long sentences and say them", "Speak very fast so nobody notices mistakes", "Stay silent to avoid mistakes", "Speak in simple, clear sentences. Ideas and teamwork matter more than fancy grammar"], answer: 3,
+      options: ["Memorise long sentences beforehand and say them", "Speak very fast so nobody notices mistakes", "Stay silent the whole time to avoid mistakes", "Speak in simple, clear sentences"], answer: 3,
       hint: "What are evaluators really scoring?",
       note: "Simple and clear wins. Many students who get selected speak simple English with good ideas.", badge: "message-circle",
       board: true, boardLabel: "after Round 1"
@@ -95,7 +95,7 @@ window.GAME = {
     },
     GQ(2, "Starting the GD", {
       prompt: "Topic: “Should colleges allow AI tools in exams?” Which opening is best?",
-      options: ["“Good morning everyone, myself Kiran, I will start the GD.”", "“AI is very bad. It should be banned everywhere.”", "“Before we take sides, let’s be clear on what we mean: open-book exams, coding tests, or all exams? The answer may be different for each.”", "“I don’t know much about AI, but I think yes.”"], answer: 2,
+      options: ["“Good morning everyone, myself Kiran, I will start the GD and give my opinion on this topic.”", "“AI is very bad. It should be banned everywhere.”", "“Let’s first be clear: open-book exams, coding tests, or all exams? It may differ.”", "“I don’t know much about AI, but I think yes.”"], answer: 2,
       hint: "Which one gives the whole group something to discuss?",
       note: "Defining the topic is a smart, safe start. It shows clear thinking and opens the floor for everyone.", badge: "flame"
     }),
@@ -109,7 +109,7 @@ window.GAME = {
     })),
     GQ(2, "Starting the GD", {
       prompt: "The topic is announced and you have no clear idea. What should you do?",
-      options: ["Listen to the first 2 or 3 speakers, then enter with a strong point", "Stay silent the whole GD", "Ask the evaluator to change the topic", "Start anyway, to show confidence"], answer: 0,
+      options: ["Listen to 2 or 3 speakers, then enter with a point", "Stay silent the whole GD and only nod", "Ask the evaluator to change the topic", "Start first anyway, to show confidence"], answer: 0,
       hint: "Is starting the only way to score?",
       note: "A strong second or third entry scores well. Listening first is a skill, not a weakness.", badge: "ear",
       board: true, boardLabel: "after Round 2"
@@ -125,7 +125,7 @@ window.GAME = {
     },
     GQ(3, "Agree and Disagree", {
       prompt: "Priya says: “Online classes are better than offline classes.” You disagree. Best response?",
-      options: ["“No, you are completely wrong.”", "“I see it differently, Priya. Online classes save travel time, but labs and doubt-clearing work much better in person.”", "“Whatever. Offline is better.”", "Stay silent and shake your head"], answer: 1,
+      options: ["“No, you are completely wrong, Priya, everyone knows offline classes are much better.”", "“I see it differently, Priya. Labs and doubts work better in person.”", "“Whatever. Offline is better.”", "Stay silent and shake your head"], answer: 1,
       hint: "Which one respects Priya AND gives a reason?",
       note: "Name + “I see it differently” + a reason. It even admits what’s good about her point, which makes it more convincing.", badge: "hand"
     }),
@@ -139,7 +139,7 @@ window.GAME = {
     })),
     GQ(3, "Agree and Disagree", {
       prompt: "You agree with Rahul’s point. What’s the best way to say it?",
-      options: ["“I agree.”", "“Same as Rahul.”", "“I totally, totally agree with everything.”", "“Building on Rahul’s point, our college fest is a good example: most registrations came through the app.”"], answer: 3,
+      options: ["“I agree with what Rahul just said.”", "“Same as Rahul, nothing more to add from my side.”", "“I totally, totally agree with everything he said.”", "“Building on Rahul’s point, our college fest is an example.”"], answer: 3,
       hint: "How do you agree AND add something new?",
       note: "Agreeing only scores when you add something: an example, a fact or a new angle.", badge: "thumbs-up",
       board: true, boardLabel: "after Round 3"
@@ -156,19 +156,19 @@ window.GAME = {
     },
     GQ(4, "Getting a Word In", {
       prompt: "Rahul has been talking for 3 minutes. He pauses for a breath. What do you say?",
-      options: ["“That’s a good point, Rahul. If I could add one thing here…”", "Nothing. Wait for him to finish completely", "Start talking louder than him", "“Rahul, you’ve talked enough, stop now.”"], answer: 0,
+      options: ["“Good point, Rahul. If I could add one thing…”", "Nothing. Wait for him to finish completely", "Start talking louder than him so you’re heard", "“Rahul, you’ve talked enough now, please stop.”"], answer: 0,
       hint: "Polite AND firm.",
       note: "Acknowledge, then add. You get in without a fight, and the evaluator sees maturity.", badge: "mic"
     }),
     GQ(4, "Getting a Word In", {
       prompt: "Two members start arguing loudly with each other. Best move?",
-      options: ["Join the argument on one side", "Wait for it to end", "“Both of you make strong points. Can we hear what others think, so we cover the whole topic?”", "Ask the evaluator to stop them"], answer: 2,
+      options: ["Join the argument and support the side you agree with", "Wait quietly for it to end on its own", "“Both make strong points. Can we hear from others?”", "Ask the evaluator to stop them both"], answer: 2,
       hint: "What would a good team leader do?",
       note: "Calming the group and bringing it back to the topic is one of the strongest leadership signals in a GD.", badge: "crown"
     }),
     GQ(4, "Getting a Word In", {
       prompt: "You started to speak at the same time as someone else. What should you do?",
-      options: ["Leave the GD", "Repeat your point twice", "Keep talking louder until they stop", "Stop, say “Please go ahead”, then speak right after them"], answer: 3,
+      options: ["Leave the GD and wait for the next round", "Repeat your point twice so it’s clear", "Keep talking louder until they stop", "Stop and say “Please go ahead”"], answer: 3,
       hint: "Which one makes you look like the most mature person in the room?",
       note: "Letting them go first costs you 20 seconds and earns you teamwork marks. Then make sure you DO speak next.", badge: "users",
       board: true, boardLabel: "after Round 4"
@@ -184,19 +184,19 @@ window.GAME = {
     },
     GQ(5, "Bring Someone In", {
       prompt: "Sneha hasn’t spoken in 8 minutes. Which line is best?",
-      options: ["“Sneha, why aren’t you talking? Say something.”", "“Sneha, we haven’t heard from you yet. What do you think about this?”", "Ignore it. It’s her problem", "“Some people here are not participating at all.”"], answer: 1,
+      options: ["“Sneha, why aren’t you talking? Say something now.”", "“Sneha, we haven’t heard from you. What do you think?”", "Ignore it. It’s her problem, not yours", "“Some people here are not participating at all.”"], answer: 1,
       hint: "Kind, by name, with an easy question.",
       note: "Warm and specific. Two of the other options put her on the spot or embarrass her.", badge: "heart"
     }),
     GQ(5, "Bring Someone In", {
       prompt: "Why does bringing a quiet member in help YOUR score?",
-      options: ["It shows leadership and teamwork, which evaluators are scoring", "It gives you a rest", "Evaluators give a fixed bonus for it", "It doesn’t, it only helps them"], answer: 0,
+      options: ["It shows leadership and teamwork", "It gives you a short rest from speaking", "Evaluators give a fixed bonus point for it", "It doesn’t, it only helps the quiet member"], answer: 0,
       hint: "Think back to what evaluators score.",
       note: "A GD tests how you’d work in a team at the company. Including people is exactly what good teammates do.", badge: "users"
     }),
     GQ(5, "Bring Someone In", {
       prompt: "Kavya starts speaking for the first time, and someone cuts her off. Best move?",
-      options: ["Let it go", "Start your own point", "“I think Kavya was about to say something. Kavya, please go on.”", "Tell the person who interrupted that they’re rude"], answer: 2,
+      options: ["Let it go, she can try again later", "Use the chance to start your own point", "“I think Kavya was about to say something.”", "Tell the person who interrupted that they’re rude"], answer: 2,
       hint: "Help Kavya without attacking anyone.",
       note: "Giving the floor back is respectful and noticed. No need to blame the person who interrupted.", badge: "hand",
       board: true, boardLabel: "after Round 5"
@@ -213,7 +213,7 @@ window.GAME = {
     GQ(6, "The Summary", {
       double: true,
       prompt: "Topic: AI tools in exams. Which summary is best?",
-      options: ["“We discussed many things. Thank you.”", "“To sum up, AI will also take all our jobs in the future.”", "“To sum up, I was right: AI should be banned.”", "“To sum up, most of us felt AI shouldn’t be allowed in tests of basic skills like coding, but some felt it could work in open-book exams if rules are clear.”"], answer: 3,
+      options: ["“We discussed many things today. Thank you everyone for participating.”", "“To sum up, AI will also take all our jobs in the future.”", "“To sum up, I was right from the start: AI should be banned.”", "“To sum up: most said no AI in basic skill tests, some said yes for open-book.”"], answer: 3,
       hint: "Balanced, only what the group said, and short.",
       note: "It covers both views and the group’s main conclusion. The one about jobs adds a new point, which a summary should never do.", badge: "scroll"
     }),
@@ -229,7 +229,7 @@ window.GAME = {
     GQ(6, "The Summary", {
       double: true,
       prompt: "Nobody has summarised and the evaluator says “One minute left.” What should you do?",
-      options: ["Make your strongest new point", "Offer to summarise: “If I may, let me sum up what we discussed…”", "Stay quiet until time is up", "Ask the evaluator who won"], answer: 1,
+      options: ["Make your strongest new point quickly", "Offer to summarise what the group discussed", "Stay quiet until the time is up", "Ask the evaluator who won the GD"], answer: 1,
       hint: "What’s the last thing the evaluator will remember?",
       note: "Offering to summarise in the last minute is one of the smartest moves in a GD. The group usually lets you.", badge: "crown",
       board: true, boardLabel: "after Round 6"

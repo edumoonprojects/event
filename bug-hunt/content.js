@@ -188,7 +188,7 @@ window.GAME = {
     }),
     Q(4, "Missing break", {
       prompt: "When is it okay to leave out break on purpose?",
-      options: ["Never, it’s always a bug", "Only in the default case", "When two cases should run the same code, like case 'a': case 'A':", "When the program is short"], answer: 2,
+      options: ["Never, it’s always a bug in every language", "Only in the default case at the end", "When two cases share code: case 'a': case 'A':", "When the program is short and simple"], answer: 2,
       hint: "Think of a menu where both small and capital letters do the same thing.",
       note: "Stacking cases is a real, useful trick: case 'a': case 'A': printf(\"Add\"); break;", badge: "lightbulb",
       board: true, boardLabel: "after Round 4"
@@ -214,7 +214,7 @@ window.GAME = {
     Q(5, "Never-Ending Loops", {
       prompt: "What does this do?",
       code: ["int i = 0;", "while (i < 3);", "{", "    printf(\"Hi \");", "    i++;", "}"],
-      options: ["Prints Hi Hi Hi", "Prints Hi once", "Gets stuck and prints nothing", "Compile error"], answer: 2,
+      options: ["Prints Hi Hi Hi on one line", "Prints Hi once and stops", "Gets stuck, prints nothing", "Gives a compile error"], answer: 2,
       hint: "Look at the very end of line 2.",
       note: "The ; makes an empty loop: “while i < 3, do nothing”. i never changes, so it’s stuck forever before reaching the block.", badge: "alarm-clock"
     }),

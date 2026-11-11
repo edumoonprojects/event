@@ -67,19 +67,19 @@ window.GAME = {
     },
     IR(1, "The Problem", {
       prompt: "Which pitch starts with the strongest problem?",
-      options: ["“We want to change the world with technology.”", "“Hostel students in Vizag wait 40 minutes every night for the mess queue, and many skip dinner.”", "“Everyone loves apps.”", "“We have a cool idea for blockchain.”"], answer: 1,
+      options: ["“We want to change the world with technology and make everyone’s life easier and better.”", "“Hostel students in Vizag wait 40 minutes for dinner, and many skip it.”", "“Everyone loves apps.”", "“We have a cool idea for blockchain.”"], answer: 1,
       hint: "Which one names who suffers and how?",
       note: "Specific people, a real pain, a number. Investors lean forward for that.", badge: "target"
     }),
     IR(1, "The Problem", {
       prompt: "A founder says, “Our customers are everyone aged 1 to 100.” What’s the investor’s worry?",
-      options: ["Too many customers to count", "Nothing, that’s great", "No clear first customer, so marketing will be hard and expensive", "The age range is too small"], answer: 2,
+      options: ["There will be too many customers to count", "Nothing, a big market is always great news", "No clear first customer to start with", "The age range is too small for investors"], answer: 2,
       hint: "Can you market to everyone at once?",
       note: "Great startups start with one specific group, win them, then grow.", badge: "users"
     }),
     IR(1, "The Problem", {
       prompt: "How can a student founder PROVE a problem is real, before building anything?",
-      options: ["Talk to 30 real students and record what they say and do today", "Ask their mother", "Assume it", "Search for a nice logo"], answer: 0,
+      options: ["Talk to 30 real students about the problem", "Ask their mother if it’s a good idea", "Assume it’s real because they feel it too", "Design a nice logo and see who likes it"], answer: 0,
       hint: "Who actually has the problem?",
       note: "Real conversations are free and powerful proof. Ask what they do today, not “would you use my app?”", badge: "message-circle",
       board: true, boardLabel: "after Round 1"
@@ -95,7 +95,7 @@ window.GAME = {
     },
     IR(2, "Solution", {
       prompt: "Which one-line solution is clearest?",
-      options: ["“A synergistic AI-powered ecosystem for holistic wellness.”", "“We let hostel students pre-book a mess slot, so they skip the 40-minute queue.”", "“A platform for everything food.”", "“Next-gen disruptive innovation.”"], answer: 1,
+      options: ["“A synergistic AI-powered ecosystem for holistic student wellness.”", "“Students pre-book a mess slot and skip the queue.”", "“A platform for everything food, for everyone.”", "“Next-gen disruptive innovation for colleges.”"], answer: 1,
       hint: "Who, what, and which pain?",
       note: "Simple beats impressive. If people can’t repeat it, they can’t share it.", badge: "lightbulb"
     }),
@@ -109,7 +109,7 @@ window.GAME = {
     })),
     IR(2, "Solution", {
       prompt: "What’s the smartest “version 1” for a campus food-delivery idea?",
-      options: ["Build a full app for 6 months first", "Hire 20 people", "Run it on WhatsApp for one hostel for 2 weeks and see if people order", "Buy delivery bikes"], answer: 2,
+      options: ["Build a full app for 6 months, then launch it", "Hire 20 people so it can grow quickly", "Run it on WhatsApp for one hostel for 2 weeks", "Buy delivery bikes before the first order"], answer: 2,
       hint: "What’s the cheapest way to test if people want it?",
       note: "Test cheaply first. If one hostel loves it, build more. If not, you saved months.", badge: "smartphone",
       board: true, boardLabel: "after Round 2"
@@ -125,13 +125,13 @@ window.GAME = {
     },
     IR(3, "Proof", {
       prompt: "Which proof would impress an investor MOST?",
-      options: ["“My friends liked the idea”", "“We have a great logo”", "“2,000 Instagram likes on our poster”", "“120 students paid ₹49 each in our first month, and 70 paid again”"], answer: 3,
+      options: ["“All my friends and family liked the idea a lot”", "“We have a great logo and a nice website”", "“2,000 Instagram likes on our launch poster”", "“120 students paid ₹49, and 70 paid again”"], answer: 3,
       hint: "Which one shows people pay AND come back?",
       note: "Payment plus repeat customers is the strongest early proof there is.", badge: "indian-rupee"
     }),
     IR(3, "Proof", {
       prompt: "A founder says, “1,000 people downloaded our app.” What should the investor ask next?",
-      options: ["“What colour is the app?”", "“How many still use it every week?”", "“Who designed the icon?”", "“Is it on the Play Store?”"], answer: 1,
+      options: ["“What colour scheme does the app use?”", "“How many still use it every week?”", "“Who designed the icon for the app?”", "“Is it on the Play Store or only on iPhone?”"], answer: 1,
       hint: "Downloads are easy. What’s harder?",
       note: "Many downloads with no repeat use means the product isn’t solving the problem yet.", badge: "chart-column"
     }),
@@ -156,19 +156,19 @@ window.GAME = {
     },
     IR(4, "Money", {
       prompt: "A founder says, “It’s free for everyone, forever, and we’ll figure out money later.” Investor reaction?",
-      options: ["“Perfect!”", "Worried: no plan for who pays means the business may never survive", "“Please make it more free”", "No reaction"], answer: 1,
+      options: ["“Perfect! Free is what every investor wants.”", "Worried: nobody pays, so it may not survive", "“Please make it even more free for users”", "No reaction, money doesn’t matter early on"], answer: 1,
       hint: "Who pays the bills?",
       note: "Free can work, but only with a clear plan for who pays. “Later” isn’t a plan.", badge: "landmark"
     }),
     IR(4, "Money", {
       prompt: "Each campus delivery costs the startup ₹35. They charge ₹25. What happens as they grow?",
-      options: ["They lose ₹10 on every order, so growing makes the loss bigger", "They become rich faster", "Nothing changes", "They earn ₹10 per order"], answer: 0,
+      options: ["They lose ₹10 on every order", "They become rich faster as they grow", "Nothing changes, the numbers stay the same", "They earn ₹10 on every single order"], answer: 0,
       hint: "25 minus 35.",
       note: "If each sale loses money, more sales means more loss. Fix the price or the cost first.", badge: "chart-column"
     }),
     IR(4, "Money", {
       prompt: "For a free study app used by students, which money plan is most realistic?",
-      options: ["Charge students ₹5,000 a month", "Sell students’ phone numbers", "Hope someone donates", "Free basics, a small paid plan for extras, and coaching centres paying to list"], answer: 3,
+      options: ["Charge every student ₹5,000 a month to use it", "Sell students’ phone numbers to companies", "Hope a big company donates money someday", "Free basics, a small paid plan, paid listings"], answer: 3,
       hint: "Which one is fair and affordable?",
       note: "Mix free value with small paid extras. And never sell users’ data.", badge: "graduation-cap",
       board: true, boardLabel: "after Round 4"
@@ -184,13 +184,13 @@ window.GAME = {
     },
     IR(5, "Competition", {
       prompt: "A founder says, “We have zero competition.” What does the investor think?",
-      options: ["“Amazing, invest now”", "“They haven’t researched what people use today”", "“Competition doesn’t matter”", "“Let’s celebrate”"], answer: 1,
+      options: ["“Amazing, no competition, let’s invest now”", "“They haven’t researched what people use”", "“Competition doesn’t matter for students”", "“Let’s celebrate, this idea is totally new”"], answer: 1,
       hint: "How do people solve the problem today?",
       note: "Your real competition might be a notebook, a WhatsApp group, or people just living with it.", badge: "search"
     }),
     IR(5, "Competition", {
       prompt: "Which is the strongest “why us” for a campus event-ticketing startup?",
-      options: ["“We are very passionate”", "“We have a nice office”", "“We run 3 college clubs, already sold 600 tickets on Google Forms, and one of us can code”", "“We watched many startup videos”"], answer: 2,
+      options: ["“We are very passionate and we never give up”", "“We have a nice office near the college”", "“We run 3 clubs and already sold 600 tickets”", "“We watched many startup videos on YouTube”"], answer: 2,
       hint: "Which one shows real access and proof?",
       note: "Access to users + proof + skills. Passion matters, but proof convinces.", badge: "badge-check"
     }),
@@ -215,21 +215,21 @@ window.GAME = {
     IR(6, "Final Decision", {
       double: true,
       prompt: "Which “ask” is the clearest?",
-      options: ["“Give us money.”", "“We need lots of support.”", "“₹3 lakh to launch in 5 more hostels in 6 months, aiming for 1,000 paying users.”", "“Whatever you can give.”"], answer: 2,
+      options: ["“Give us money and we will grow the business fast.”", "“We need lots of support from investors like you.”", "“₹3 lakh to reach 5 more hostels and 1,000 paying users.”", "“Whatever you can give, we are happy to take it.”"], answer: 2,
       hint: "How much, for what, by when?",
       note: "Amount, plan, time and a target. Investors can say yes to that.", badge: "target"
     }),
     IR(6, "Final Decision", {
       double: true,
       prompt: "Two startups. Which one deserves the money?",
-      options: ["A: amazing slides, no users, “will launch someday”", "B: simple slides, 200 paying users, clear plan to reach 5 more colleges", "Neither, ever", "Whichever has the bigger logo"], answer: 1,
+      options: ["A: amazing slides, no users, “will launch someday”", "B: simple slides, 200 paying users, a clear plan", "Neither of them, startups always fail anyway", "Whichever startup has the bigger, brighter logo"], answer: 1,
       hint: "Slides vs proof.",
       note: "Proof and a clear plan beat beautiful slides every time.", badge: "trending-up"
     }),
     IR(6, "Final Decision", {
       double: true,
       prompt: "An investor says no to your pitch. What’s the best response?",
-      options: ["Argue and get angry", "Give up on startups forever", "Post about it angrily online", "Thank them, ask what would change their mind, and use the feedback"], answer: 3,
+      options: ["Argue with them and show them they’re wrong", "Give up on startups forever after one no", "Post about it angrily online and tag them", "Thank them and ask what would change their mind"], answer: 3,
       hint: "What helps your next pitch?",
       note: "Most founders hear many no’s before a yes. Each no can teach you something.", badge: "handshake",
       board: true, boardLabel: "after Round 6"

@@ -106,13 +106,13 @@ window.GAME = {
     }),
     R(2, "Classroom English", {
       prompt: "You didn’t hear what the professor said. Best way to ask?",
-      options: ["Please repeat once again.", "Repeat it again, sir.", "Could you repeat that, please?", "Once more tell."], answer: 2,
+      options: ["Please repeat once again, sir.", "Repeat it again, sir.", "Could you repeat that, please?", "Once more tell."], answer: 2,
       hint: "“Repeat” already means “say again”.",
       note: "“Repeat once again” says “again” twice. “Could you repeat that, please?” is polite and clear.", badge: "ear"
     }),
     R(2, "Classroom English", {
       prompt: "Your friend asks how you feel before the exam. Which is clearest?",
-      options: ["I am in tension.", "I am taking tension.", "Tension is there.", "I’m stressed about the exam."], answer: 3,
+      options: ["I am in tension about it.", "I am taking tension.", "Tension is there for exam.", "I’m stressed about the exam."], answer: 3,
       hint: "Which word names the feeling directly?",
       note: "“In tension” is understood only in India. Say “stressed”, “nervous” or “worried”.", badge: "heart",
       board: true, boardLabel: "after Round 2"
@@ -128,19 +128,19 @@ window.GAME = {
     },
     R(3, "Email English", {
       prompt: "You need your college to send a bonafide certificate. Best line?",
-      options: ["Kindly do the needful.", "Do the needful at the earliest.", "Could you please send my bonafide certificate by Friday?", "Needful may kindly be done."], answer: 2,
+      options: ["Kindly do the needful.", "Do the needful at the earliest, sir.", "Please send my bonafide by Friday.", "Needful may kindly be done."], answer: 2,
       hint: "Does “the needful” tell them what to do?",
       note: "“Do the needful” doesn’t say what you need. Ask for the exact thing, and when.", badge: "mail"
     }),
     R(3, "Email English", {
       prompt: "You want HR to reply to your email. Which line is best?",
-      options: ["Please revert back.", "Revert back ASAP.", "Kindly revert.", "Please reply when you can."], answer: 3,
+      options: ["Please revert back to me soon.", "Revert back ASAP.", "Kindly revert.", "Please reply when you can."], answer: 3,
       hint: "In the UK and US, “revert” means “go back to an old state”.",
       note: "Outside India, “revert” means “go back to an earlier state”, and “back” is extra. Just say “reply”.", badge: "mail"
     }),
     R(3, "Email English", {
       prompt: "You’re sending your resume to a company. Best line?",
-      options: ["PFA my resume.", "I have attached my resume for the Junior Developer role.", "Resume is attached herewith.", "Pls find attached resume."], answer: 1,
+      options: ["PFA my resume for your kind consideration.", "I’ve attached my resume for this role.", "Resume is attached herewith.", "Pls find attached resume."], answer: 1,
       hint: "Would a recruiter in another country know what “PFA” means?",
       note: "Write it in full and name the role: “I have attached my resume for the Junior Developer role.”", badge: "file-text",
       board: true, boardLabel: "after Round 3"
@@ -214,14 +214,14 @@ window.GAME = {
     R(6, "Interview English", {
       double: true, time: 45,
       prompt: "“Tell me about yourself.” Which opening is best?",
-      options: ["Myself Ravi. My father is a farmer and my mother is a homemaker.", "I’m Ravi, a final year CSE student. I’ve built two web apps, and I’m looking for a developer role.", "What do you want to know, sir?", "I am hardworking, honest and punctual."], answer: 1,
+      options: ["“Myself Ravi. My father is a farmer and my mother is a homemaker.”", "“I’m Ravi, final-year CSE. I’ve built two web apps.”", "“What do you want to know, sir?”", "“I am hardworking, honest and punctual.”"], answer: 1,
       hint: "The interviewer wants to know about YOU: your study, your work, your goal.",
       note: "Who you are, what you’ve built, what you want. Family details can come later, if they ask.", badge: "user"
     }),
     R(6, "Interview English", {
       double: true, time: 45,
       prompt: "“What is your biggest weakness?” Which answer is best?",
-      options: ["I have no weaknesses.", "I’m a perfectionist. I work too hard.", "I used to get nervous speaking in groups, so I joined the English club. Now I present every week.", "I get angry very easily."], answer: 2,
+      options: ["“I have no weaknesses.”", "“I’m a perfectionist. I work too hard.”", "“I was nervous in groups, so I joined English club.”", "“I get angry very easily.”"], answer: 2,
       hint: "A good answer is honest AND shows you’re working on it.",
       note: "A real weakness plus what you did about it. “Perfectionist” is a very common answer, and it rarely sounds honest.", badge: "target"
     }),

@@ -65,19 +65,19 @@ window.GAME = {
     },
     AB(1, "The Big Idea", {
       prompt: "Why would a company want a Mechanical engineer who knows AI, not just an AI expert?",
-      options: ["Mechanical engineers are cheaper", "AI experts don’t exist", "No reason", "They understand the machines, so they know what the data means and what really matters"], answer: 3,
+      options: ["Mechanical engineers are cheaper to hire than AI experts", "AI experts don’t exist outside big cities", "There’s no real reason, it’s just a trend", "They know what the machine data really means"], answer: 3,
       hint: "Who understands the problem?",
       note: "AI is a tool. The person who understands the machine, building or market uses it best.", badge: "users"
     }),
     AB(1, "The Big Idea", {
       prompt: "What does almost every AI use have in common?",
-      options: ["It needs no humans", "It only works in English", "It only works in IT companies", "It needs data from the real world, and people who understand that data"], answer: 3,
+      options: ["It needs no humans once it is switched on", "It only works in English, not other languages", "It only works inside IT companies", "Real-world data and people who understand it"], answer: 3,
       hint: "What does AI learn from?",
       note: "Data comes from every field: factories, farms, hospitals, banks. So does AI.", badge: "chart-column"
     }),
     AB(1, "The Big Idea", {
       prompt: "A Civil student says, “AI will never matter in my field.” Best reply?",
-      options: ["“Switch to CSE”", "“AI will replace all engineers”", "“AI is already used in planning, monitoring structures and traffic. Your civil knowledge plus AI is a strong mix.”", "“True, ignore AI”"], answer: 2,
+      options: ["“Switch to CSE, that’s the only safe branch now”", "“AI will replace all engineers soon anyway”", "“AI is used in planning and traffic. Civil plus AI is strong.”", "“True, just ignore AI completely”"], answer: 2,
       hint: "Neither ignore it, nor fear it.",
       note: "Every field is adding AI. Those who understand both sides stand out.", badge: "landmark",
       board: true, boardLabel: "after Round 1"
@@ -99,13 +99,13 @@ window.GAME = {
     }),
     AB(2, "ECE and EEE", {
       prompt: "An electricity company wants to predict tomorrow’s power demand in Vizag. What could AI use?",
-      options: ["Old demand data, weather and the day of the week", "Instagram likes", "Only the CEO’s guess", "Random numbers"], answer: 0,
+      options: ["Old demand data, weather and the day", "Instagram likes on the company’s page", "Only the CEO’s guess for the day", "Random numbers that look realistic"], answer: 0,
       hint: "What affects how much power people use?",
       note: "Hot days, festivals and weekdays change demand. AI learns these patterns from past data.", badge: "zap"
     }),
     AB(2, "ECE and EEE", {
       prompt: "Which topic from ECE helps most when working with AI on audio or sensor data?",
-      options: ["None", "Only accounting", "Signals and systems", "Only drawing"], answer: 2,
+      options: ["None, ECE has nothing to do with AI", "Only accounting and finance basics", "Signals and systems", "Only engineering drawing"], answer: 2,
       hint: "Audio and sensors produce…",
       note: "Signal processing ideas (noise, filters, frequency) are directly useful for AI on real sensor data.", badge: "chart-column",
       board: true, boardLabel: "after Round 2"
@@ -121,19 +121,19 @@ window.GAME = {
     },
     AB(3, "Mechanical", {
       prompt: "A factory’s machine starts vibrating slightly more each day. How can AI help?",
-      options: ["It can’t", "By switching off the factory", "By painting the machine", "By learning normal vibration patterns and warning before the machine breaks"], answer: 3,
+      options: ["It can’t, machines are too complex for AI", "By switching off the whole factory every day", "By painting the machine to reduce vibration", "By learning normal patterns and warning early"], answer: 3,
       hint: "Fix before failure.",
       note: "That’s predictive maintenance: fewer breakdowns, less downtime, lower cost.", badge: "wrench"
     }),
     AB(3, "Mechanical", {
       prompt: "A car parts factory wants to catch scratches and cracks on every part. Best AI use?",
-      options: ["AI-written emails", "A music app", "Cameras with AI that spot defects on the production line", "A chatbot"], answer: 2,
+      options: ["AI-written emails to the quality team", "A music app to keep workers focused", "Cameras with AI that spot defects", "A chatbot that answers questions about parts"], answer: 2,
       hint: "Look at every part.",
       note: "Computer vision checks parts faster and more consistently than tired eyes.", badge: "eye"
     }),
     AB(3, "Mechanical", {
       prompt: "AI suggests a lighter design for a bracket. What must a Mechanical engineer still do?",
-      options: ["Ask AI if it’s sure", "Nothing, AI is always right", "Just print it", "Check strength, safety, cost and whether it can actually be manufactured"], answer: 3,
+      options: ["Ask AI again if it’s really sure about it", "Nothing, AI designs are always correct", "Just 3D print it and send it to the client", "Check strength, safety, cost and manufacturing"], answer: 3,
       hint: "Who is responsible if it breaks?",
       note: "AI suggests; engineers verify. Safety and manufacturability need human expertise.", badge: "shield",
       board: true, boardLabel: "after Round 3"
@@ -150,19 +150,19 @@ window.GAME = {
     },
     AB(4, "Civil", {
       prompt: "Sensors on a bridge send strain readings every minute. What can AI do with them?",
-      options: ["Paint it", "Spot unusual patterns early, so engineers can inspect before damage grows", "Nothing", "Repair the bridge itself"], answer: 1,
+      options: ["Paint the bridge in warning colours", "Spot unusual patterns early for inspection", "Nothing, sensors are only for record keeping", "Repair the bridge by itself with robots"], answer: 1,
       hint: "Early warning.",
       note: "AI flags unusual readings. Civil engineers decide what they mean and what to do.", badge: "landmark"
     }),
     AB(4, "Civil", {
       prompt: "A city wants fewer traffic jams at busy junctions. Possible AI use?",
-      options: ["Signals that adjust timing based on live traffic", "More honking", "Banning all cars", "Closing roads randomly"], answer: 0,
+      options: ["Signals that adjust to live traffic", "More honking at every busy junction", "Banning all cars from the city centre", "Closing different roads randomly each day"], answer: 0,
       hint: "Use live data.",
       note: "Adaptive signals use camera and sensor data to change green-light timing.", badge: "route"
     }),
     AB(4, "Civil", {
       prompt: "Which data could help AI predict flood-prone areas in a coastal city like Vizag?",
-      options: ["None", "Only movie ratings", "Rainfall history, land height, drainage maps and satellite images", "Phone wallpapers"], answer: 2,
+      options: ["None, floods can’t be predicted at all", "Only movie ratings from the city", "Rainfall, land height, drains and satellite images", "Phone wallpapers people post online"], answer: 2,
       hint: "What causes flooding?",
       note: "Combining these with civil knowledge helps plan drains and safer construction.", badge: "globe",
       board: true, boardLabel: "after Round 4"
@@ -178,19 +178,19 @@ window.GAME = {
     },
     AB(5, "Commerce and Health", {
       prompt: "A bank sees a card used in Vizag and, 5 minutes later, in another country. How does AI help?",
-      options: ["It closes the bank", "It ignores it", "It flags the unusual pattern as possible fraud for checking", "It approves everything"], answer: 2,
+      options: ["It closes the bank branch immediately", "It ignores it, people travel a lot", "It flags the pattern as possible fraud", "It approves everything to keep customers happy"], answer: 2,
       hint: "Unusual pattern.",
       note: "Fraud detection is one of the oldest and most common uses of AI in finance.", badge: "shield"
     }),
     AB(5, "Commerce and Health", {
       prompt: "A supermarket chain wants to stop running out of popular items during festivals. AI can…",
-      options: ["Forecast demand from past sales, festivals and seasons", "Hide the items", "Guess randomly", "Raise prices only"], answer: 0,
+      options: ["Forecast demand from past sales and festivals", "Hide the popular items from customers", "Guess randomly how much stock to order", "Only raise prices during festivals"], answer: 0,
       hint: "Use past patterns.",
       note: "Demand forecasting is a core skill in management and commerce, and AI makes it sharper.", badge: "chart-column"
     }),
     AB(5, "Commerce and Health", {
       prompt: "AI suggests possible new drug molecules. What still has to happen before any medicine reaches patients?",
-      options: ["Lab experiments, safety testing and clinical trials checked by experts", "A social media vote", "Only packaging", "Nothing, AI is enough"], answer: 0,
+      options: ["Lab tests, safety checks and clinical trials", "A social media vote on the best molecule", "Only packaging and a good brand name", "Nothing, AI results are enough"], answer: 0,
       hint: "Health and safety.",
       note: "AI can speed up early research. Proof of safety still needs science, testing and regulators.", badge: "heart",
       board: true, boardLabel: "after Round 5"
@@ -207,21 +207,21 @@ window.GAME = {
     AB(6, "Start Here", {
       double: true,
       prompt: "A 2nd-year Mechanical student wants to start with AI. Best first step?",
-      options: ["Wait until final year", "Buy an expensive course without checking", "Quit Mechanical", "Learn basic Python and analyse a small dataset from a mechanical topic"], answer: 3,
+      options: ["Wait until final year to start anything", "Buy an expensive course without checking it", "Quit Mechanical and switch to CSE", "Learn basic Python, analyse a small dataset"], answer: 3,
       hint: "Small, real, from your branch.",
       note: "Python + one branch-related dataset is a great start, and a strong project for your resume.", badge: "code"
     }),
     AB(6, "Start Here", {
       double: true,
       prompt: "Which project would impress an interviewer most for an EEE student?",
-      options: ["A copied chatbot tutorial", "A list of AI tools", "A logo design", "A project that predicts electricity usage in their hostel from real meter readings"], answer: 3,
+      options: ["A chatbot copied from a YouTube tutorial", "A long list of popular AI tools", "A logo design for an AI startup", "Predicting hostel power use from meters"], answer: 3,
       hint: "Branch + AI + real data.",
       note: "It shows branch knowledge, AI skills and real data. That combination stands out.", badge: "zap"
     }),
     AB(6, "Start Here", {
       double: true,
       prompt: "Will AI make your branch knowledge useless?",
-      options: ["No. AI needs experts who understand the field, check results and take responsibility", "Only on weekends", "Yes, completely", "Only for Commerce"], answer: 0,
+      options: ["No. AI needs experts to check it", "Only on weekends and holidays", "Yes, completely, within a few years", "Only for Commerce and Arts students"], answer: 0,
       hint: "Who checks AI’s work?",
       note: "AI changes how work is done. People who combine their field with AI become more valuable.", badge: "badge-check",
       board: true, boardLabel: "after Round 6"

@@ -59,19 +59,19 @@ window.GAME = {
     },
     EQ(1, "Subject Lines", {
       prompt: "You’re asking Prof. Rao for one day of leave. Best subject line?",
-      options: ["Hi mam", "Leave", "Leave request for 12 Nov: Ravi Kumar, CSE-B", "URGENT PLEASE READ"], answer: 2,
+      options: ["Hi mam, small request about tomorrow", "Leave", "Leave request, 12 Nov: Ravi, CSE-B", "URGENT PLEASE READ BEFORE CLASS"], answer: 2,
       hint: "Which one tells her what, who and when before she opens it?",
       note: "What + who + when. She can find, read and reply to it in seconds.", badge: "mail"
     }),
     EQ(1, "Subject Lines", {
       prompt: "You’re applying for an internship. Best subject line?",
-      options: ["Job", "Please give me internship", "(no subject)", "Application for Web Development Intern: Ravi Kumar, final year CSE"], answer: 3,
+      options: ["Job", "Please give me internship in your company", "(no subject)", "Web Development Intern application: Ravi"], answer: 3,
       hint: "Recruiters search their inbox by role name.",
       note: "The exact role + your name. Some companies ask for a specific format in the posting; always follow it.", badge: "briefcase"
     }),
     EQ(1, "Subject Lines", {
       prompt: "What’s wrong with the subject line “URGENT!!! Please reply”?",
-      options: ["It sounds like panic or spam and doesn’t say what the email is about", "It’s too long", "It should be in lowercase", "Nothing, it gets attention"], answer: 0,
+      options: ["It sounds like spam and doesn’t say the topic", "It’s too long for a subject line", "It should be written in lowercase", "Nothing, it gets attention quickly"], answer: 0,
       hint: "Can Prof. Rao tell what it’s about?",
       note: "Real urgency is shown with a clear detail: “Exam hall ticket missing: exam tomorrow, 10 AM”.", badge: "alarm-clock",
       board: true, boardLabel: "after Round 1"
@@ -87,7 +87,7 @@ window.GAME = {
     },
     EQ(2, "Openings", {
       prompt: "Which opening line is best?",
-      options: ["“Respected sir/madam, myself Ravi, I want to inform that…”", "“Dear Prof. Rao, I’m writing to request a one-day extension for Assignment 3.”", "“Hiiii mam!!”", "“As you know, I am a student of your class and I have been very sincere…”"], answer: 1,
+      options: ["“Respected sir/madam, myself Ravi, I want to inform that I am not well and…”", "“Dear Prof. Rao, I’m writing to request a one-day extension for Assignment 3.”", "“Hiiii mam!!”", "“As you know, I am a student of your class and I have always been very sincere…”"], answer: 1,
       hint: "Which one tells her who it’s for and why, in one line?",
       note: "Her name, then the purpose. Short and clear.", badge: "check"
     }),
@@ -117,7 +117,7 @@ window.GAME = {
     },
     EQ(3, "Asking a Professor", {
       prompt: "You need a 2-day extension for an assignment because you were ill. Best middle part?",
-      options: ["“Please sir please give extension, I will be very thankful forever.”", "“I didn’t do it, so I need more time.”", "“Kindly do the needful.”", "“I was unwell from Monday to Wednesday (medical note attached), so I couldn’t finish Assignment 3. Could I submit it by Friday, 15 Nov?”"], answer: 3,
+      options: ["“Please sir please give extension, I will be very thankful to you forever and ever.”", "“I didn’t do it, so I need more time.”", "“Kindly do the needful.”", "“I was unwell (note attached). Could I submit Assignment 3 by Friday?”"], answer: 3,
       hint: "Clear reason, clear ask, a specific new date.",
       note: "A specific reason, proof if you have it, and an exact new date. Easy to say yes to.", badge: "file-text"
     }),
@@ -131,7 +131,7 @@ window.GAME = {
     })),
     EQ(3, "Asking a Professor", {
       prompt: "Best closing for an email to a professor?",
-      options: ["“Bye”", "“Thank you for your time. Best regards, Ravi Kumar, CSE-B, Roll No. 21”", "“Waiting for your reply ASAP”", "No closing, just your phone number"], answer: 1,
+      options: ["“Bye, see you in class tomorrow”", "“Thank you. Best regards, Ravi Kumar, CSE-B”", "“Waiting for your reply ASAP, it is urgent”", "No closing, just your phone number"], answer: 1,
       hint: "Polite, and makes it easy to know who you are.",
       note: "A thank-you, a sign-off, and your full name with class and roll number so she can find you quickly.", badge: "thumbs-up",
       board: true, boardLabel: "after Round 3"
@@ -148,13 +148,13 @@ window.GAME = {
     },
     EQ(4, "Following Up", {
       prompt: "You had an interview on Monday. When should you follow up if you hear nothing?",
-      options: ["After 3 to 5 working days, unless they gave you a date", "Never", "Monday evening", "Tuesday morning"], answer: 0,
+      options: ["After 3 to 5 working days", "Never, they will contact you if needed", "Monday evening, the same day", "Tuesday morning, first thing"], answer: 0,
       hint: "Give them time, but not forever.",
       note: "If they said “we’ll reply by Friday”, wait until Monday. Otherwise 3 to 5 working days is polite.", badge: "clock"
     }),
     EQ(4, "Following Up", {
       prompt: "Best follow-up message?",
-      options: ["“Why haven’t you replied? It’s been 2 days.”", "“Dear Ms. Priya, thank you again for the interview on 10 Nov for the Junior Developer role. I’m still very interested and wanted to ask if there’s any update. Best regards, Ravi Kumar”", "“Hello?? Any update??”", "“Please select me, I really need this job.”"], answer: 1,
+      options: ["“Why haven’t you replied yet? It’s been 2 days since my interview.”", "“Dear Ms. Priya, thank you for the 10 Nov interview. Is there any update?”", "“Hello?? Any update??”", "“Please select me, I really need this job, my family is depending on me.”"], answer: 1,
       hint: "Polite, specific and short.",
       note: "Thank, remind them which role and date, show interest, ask politely. Done.", badge: "mail"
     }),
@@ -178,19 +178,19 @@ window.GAME = {
     },
     EQ(5, "Tone Traps", {
       prompt: "Which line sounds the most professional?",
-      options: ["“Could you please share the notes from Monday’s class by Thursday, if possible?”", "“u have the notes? send”", "“pls send the notes asap”", "“SEND THE NOTES TODAY.”"], answer: 0,
+      options: ["“Could you please share Monday’s notes by Thursday?”", "“u have the notes? send”", "“pls send the notes asap, exam is near, very urgent”", "“SEND THE NOTES TODAY.”"], answer: 0,
       hint: "Polite, complete words, a clear date.",
       note: "Polite words, the exact notes, a reasonable deadline. Nobody minds replying to that.", badge: "message-circle"
     }),
     EQ(5, "Tone Traps", {
       prompt: "Why should you avoid writing whole sentences in CAPITAL LETTERS?",
-      options: ["Computers can’t read it", "It’s against the law", "It’s harder to type", "In email, it reads like shouting"], answer: 3,
+      options: ["Computers can’t read capital letters properly", "It’s against the law in official emails", "It’s harder and slower to type that way", "It reads like shouting"], answer: 3,
       hint: "How does “PLEASE REPLY” feel to read?",
       note: "Capitals feel like shouting. Use one bold word or a clear date if something is important.", badge: "alarm-clock"
     }),
     EQ(5, "Tone Traps", {
       prompt: "Your marks were entered wrongly. Best way to raise it?",
-      options: ["Don’t mention it", "“You made a mistake in my marks. Fix it.”", "“Dear Prof. Rao, I think there may be an error in my internal marks for Unit 2: the portal shows 12, but my answer sheet shows 18. Could you please check? Thank you.”", "Post about it in the class group"], answer: 2,
+      options: ["Don’t mention it, it might annoy the professor and affect future marks", "“You made a mistake in my marks. Fix it.”", "“Dear Prof. Rao, Unit 2 shows 12 on the portal but 18 on my sheet. Could you check?”", "Post about it in the class group"], answer: 2,
       hint: "Specific facts, no blame.",
       note: "Say “there may be an error”, give the exact facts, and ask politely. You’ll get it fixed faster.", badge: "shield",
       board: true, boardLabel: "after Round 5"
@@ -225,7 +225,7 @@ window.GAME = {
     EQ(6, "Full Rewrite", {
       double: true,
       prompt: "What should you check right before you hit Send?",
-      options: ["That it’s the right person, the attachment is there, and it reads well aloud", "That it’s longer than 500 words", "That it has emojis", "Nothing, just send it"], answer: 0,
+      options: ["Right person, attachment there, reads well", "That it’s longer than 500 words", "That it has a few emojis to sound friendly", "Nothing, just send it quickly"], answer: 0,
       hint: "Three quick checks save you from the most embarrassing mistakes.",
       note: "Right person, attachment, read it once aloud. 30 seconds that save you from most email disasters.", badge: "check",
       board: true, boardLabel: "after Round 6"

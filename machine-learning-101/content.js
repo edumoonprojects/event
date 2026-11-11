@@ -66,7 +66,7 @@ window.GAME = {
     },
     ML(1, "Features and Labels", {
       prompt: "In the mess model, what is the label?",
-      options: ["The day of the week", "The number of plates eaten", "The menu", "The weather"], answer: 1,
+      options: ["The day of the week", "The number of plates eaten", "The menu for that day", "The weather that evening"], answer: 1,
       hint: "What does the warden want to predict?",
       note: "Plates eaten is the label: the answer. Day, menu and weather are features: the clues.", badge: "target"
     }),
@@ -100,7 +100,7 @@ window.GAME = {
     }),
     ML(2, "Supervised or Not", {
       prompt: "The warden wants to find groups of students with similar eating habits, but nobody has labelled any groups. What kind of learning fits?",
-      options: ["Unsupervised learning, like clustering", "Supervised learning", "Regression", "Classification"], answer: 0,
+      options: ["Unsupervised learning (clustering)", "Supervised learning with labels", "Regression on the eating data", "Classification into known groups"], answer: 0,
       hint: "There are no answers to learn from.",
       note: "Unsupervised. The model finds groups on its own, like “late eaters” and “skip-breakfast” students.", badge: "users"
     }),
@@ -128,7 +128,7 @@ window.GAME = {
     }),
     ML(3, "Training and Test", {
       prompt: "Why is it a mistake to test a model on the same data it trained on?",
-      options: ["It takes too long", "It’s against the law", "The score looks much better than how it will really do on new data", "Computers can’t read the same data twice"], answer: 2,
+      options: ["It takes too long to run twice", "It’s against the rules of AI", "The score looks better than reality", "Computers can’t read the same data twice"], answer: 2,
       hint: "Think of memorising the practice paper.",
       note: "The model has already seen those answers. Only new, unseen data shows its real performance.", badge: "search"
     }),
@@ -151,19 +151,19 @@ window.GAME = {
     },
     ML(4, "Overfitting", {
       prompt: "The mess model scores 99% on training data and 60% on test data. What’s happening?",
-      options: ["It’s perfect", "Overfitting: it memorised the training data", "The test data is broken", "It needs a faster computer"], answer: 1,
+      options: ["It’s perfect and ready to use", "Overfitting: it memorised", "The test data is broken", "It needs a faster computer"], answer: 1,
       hint: "Look at the gap between the two scores.",
       note: "A big gap between training and test scores is the classic sign of overfitting.", badge: "search"
     }),
     ML(4, "Overfitting", {
       prompt: "Which student is “overfitting”?",
-      options: ["One who learned the concepts and solves new problems", "One who asks lots of questions in class", "One who studies a little every day", "One who memorised last year’s answers word for word and fails when the questions change"], answer: 3,
+      options: ["One who learned the concepts and solves new problems", "One who asks lots of questions in class", "One who studies a little every day", "One who memorised last year’s answers"], answer: 3,
       hint: "Great on practice, poor on anything new.",
       note: "Memorising answers works only for the exact same questions. Models do the same thing when they overfit.", badge: "graduation-cap"
     }),
     ML(4, "Overfitting", {
       prompt: "How can the warden reduce overfitting?",
-      options: ["Collect more varied data and keep the model simpler", "Test on the training data instead", "Remove all the features", "Use only one week of data"], answer: 0,
+      options: ["More varied data and a simpler model", "Test on the training data instead", "Remove all the features", "Use only one week of data"], answer: 0,
       hint: "More examples, less memorising.",
       note: "More varied data and simpler models help the model learn the real pattern instead of the noise.", badge: "check",
       board: true, boardLabel: "after Round 4"
@@ -185,7 +185,7 @@ window.GAME = {
     }),
     ML(5, "Accuracy Traps", {
       prompt: "Why is that 99% spam model useless?",
-      options: ["99% is too low", "It never catches a single spam email, which is its whole job", "It uses too much memory", "Spam isn’t real"], answer: 1,
+      options: ["99% is too low for a spam filter", "It never catches a single spam email", "It uses too much memory to run", "Spam isn’t real anymore"], answer: 1,
       hint: "What was the model built to do?",
       note: "High accuracy, zero usefulness. For rare cases, you also check how many of the important cases it actually catches.", badge: "x"
     }),
@@ -208,21 +208,21 @@ window.GAME = {
     ML(6, "Bias", {
       double: true,
       prompt: "A company trains a hiring model on 10 years of past hires, mostly men. What is likely to happen?",
-      options: ["It will favour candidates who look like past hires, mostly men", "It will be perfectly fair", "It will hire only women", "It will refuse to work"], answer: 0,
+      options: ["It will favour people like past hires", "It will be perfectly fair to everyone", "It will hire only women from now on", "It will refuse to work on that data"], answer: 0,
       hint: "Models copy patterns in their data.",
       note: "The model learns the old pattern and repeats it. Real companies have had to scrap hiring tools for exactly this reason.", badge: "users"
     }),
     ML(6, "Bias", {
       double: true,
       prompt: "The mess model was trained only on the boys’ hostel. The warden wants to use it for the girls’ hostel. What’s the risk?",
-      options: ["No risk; food is food", "It may predict badly, because it never learned from the girls’ hostel data", "It will run slower", "It will only work on weekends"], answer: 1,
+      options: ["No risk, because food is food everywhere", "It may predict badly; it never saw that data", "It will run slower on new data", "It will only work on weekends"], answer: 1,
       hint: "Did the model ever see this group?",
       note: "Different groups can have different patterns. Collect data from the girls’ hostel and test there before trusting it.", badge: "search"
     }),
     ML(6, "Bias", {
       double: true,
       prompt: "What’s the best way to build fairer models?",
-      options: ["Use as little data as possible", "Never test the model", "Let the model make all big decisions alone", "Use data that represents everyone, test on different groups, and keep people reviewing important decisions"], answer: 3,
+      options: ["Use as little data as possible", "Never test the model on anything", "Let the model decide alone", "Data for everyone, test groups, human review"], answer: 3,
       hint: "Data, testing and humans.",
       note: "Fairer data, testing across groups and human review together make models safer to use.", badge: "shield",
       board: true, boardLabel: "after Round 6"

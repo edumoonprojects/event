@@ -65,19 +65,19 @@ window.GAME = {
     },
     CS(1, "First Week", {
       prompt: "First day. You don’t know anyone in class. Smartest move?",
-      options: ["Wait for someone to talk to you", "Sit alone and scroll your phone", "Say hi to the people next to you and ask where they’re from", "Skip class"], answer: 2,
+      options: ["Wait for someone else to talk to you first", "Sit alone and scroll your phone until class", "Say hi to the people next to you", "Skip class until you know some people"], answer: 2,
       hint: "Everyone is nervous.",
       note: "One “hi” is all it takes. Most people are relieved when someone starts.", badge: "users"
     }),
     CS(1, "First Week", {
       prompt: "You can’t find the lab and class starts in 5 minutes. Best move?",
-      options: ["Go back to the hostel", "Cry", "Ask a senior or the staff nearby", "Walk around for 30 minutes"], answer: 2,
+      options: ["Go back to the hostel and come next class", "Wait outside until someone finds you", "Ask a senior or staff nearby", "Walk around the campus for 30 minutes"], answer: 2,
       hint: "People know.",
       note: "Seniors and staff love helping lost freshers. Just ask.", badge: "map"
     }),
     CS(1, "First Week", {
       prompt: "Someone adds you to 15 WhatsApp groups in week 1. Which one do you mute LAST?",
-      options: ["The cricket group", "Your official class group with notices", "The random “friendship” group", "The meme group"], answer: 1,
+      options: ["The cricket discussion group", "Your official class group", "The random “friendship forever” group", "The meme group with 300 messages a day"], answer: 1,
       hint: "Which one has exam dates?",
       note: "Keep official class groups unmuted. Missing one notice can cost you.", badge: "message-circle",
       board: true, boardLabel: "after Round 1"
@@ -93,19 +93,19 @@ window.GAME = {
     },
     CS(2, "Roommates", {
       prompt: "Your roommate plays music loudly at 1 AM every night. Best move?",
-      options: ["Talk calmly, and suggest earphones after 11 PM", "Play your music louder", "Complain to everyone except them", "Post an angry story about it"], answer: 0,
+      options: ["Talk calmly and suggest earphones after 11", "Play your own music even louder", "Complain to everyone except your roommate", "Post an angry story about it on Instagram"], answer: 0,
       hint: "Direct and kind.",
       note: "A calm talk usually fixes it. Most people don’t realise they’re disturbing others.", badge: "message-circle"
     }),
     CS(2, "Roommates", {
       prompt: "Your snacks keep disappearing from your shelf. Smartest first step?",
-      options: ["Hide them in your shoes", "Accuse the whole floor", "Never buy snacks again", "Calmly ask your roommates and agree what’s shared and what’s not"], answer: 3,
+      options: ["Hide them inside your shoes", "Accuse everyone on the floor in the group chat", "Never buy snacks again for the whole year", "Calmly agree on what’s shared"], answer: 3,
       hint: "Clear rules prevent fights.",
       note: "Agreeing what’s shared early avoids awkward fights later.", badge: "store"
     }),
     CS(2, "Roommates", {
       prompt: "You and your roommate disagree on everything. What’s the most mature approach?",
-      options: ["Move out on day 3", "Stop talking forever", "Fight daily", "Agree on 3 simple room rules together and respect each other’s space"], answer: 3,
+      options: ["Move out to another room on day 3", "Stop talking to each other for the year", "Fight about every small thing daily", "Agree on 3 simple room rules"], answer: 3,
       hint: "You don’t need to be best friends.",
       note: "You don’t have to be best friends, just good roommates. Simple rules help.", badge: "handshake",
       board: true, boardLabel: "after Round 2"
@@ -121,7 +121,7 @@ window.GAME = {
     },
     CS(3, "Money", {
       prompt: "You get ₹6,000 a month. It’s the 20th and you have ₹400 left. What would have helped most?",
-      options: ["Not eating", "Spending faster", "A simple plan at the start: fixed costs first, then a daily limit", "Borrowing from everyone"], answer: 2,
+      options: ["Not eating properly for the rest of the month", "Spending faster before the money runs out", "A plan: fixed costs first, then a daily limit", "Borrowing small amounts from everyone"], answer: 2,
       hint: "Plan before you spend.",
       note: "A 5-minute plan on the 1st saves a hungry 20th.", badge: "indian-rupee"
     }),
@@ -133,7 +133,7 @@ window.GAME = {
     }),
     CS(3, "Money", {
       prompt: "A message says: “Earn ₹5,000 a day from your hostel room. Just pay ₹999 to join.” Smartest move?",
-      options: ["Share it with your batch", "Pay half", "Pay quickly before the offer ends", "Ignore it. Real jobs don’t ask you to pay to join"], answer: 3,
+      options: ["Share it with your batch so everyone earns", "Pay half and see if it works first", "Pay quickly before the offer ends tonight", "Ignore it, real jobs never ask you to pay"], answer: 3,
       hint: "Who pays whom?",
       note: "Paying to get a “job” is a classic scam. Report fraud on 1930.", badge: "shield",
       board: true, boardLabel: "after Round 3"
@@ -150,19 +150,19 @@ window.GAME = {
     },
     CS(4, "Exam Chaos", {
       prompt: "A WhatsApp forward says tomorrow’s exam is postponed. Smartest move?",
-      options: ["Stop studying and sleep", "Check the official college notice or ask a faculty member", "Celebrate", "Forward it to everyone"], answer: 1,
+      options: ["Stop studying and sleep early", "Check the official notice", "Celebrate with your friends tonight", "Forward it to everyone in your class"], answer: 1,
       hint: "Who decides exam dates?",
       note: "Fake postponement forwards are common. Official sources only.", badge: "file-text"
     }),
     CS(4, "Exam Chaos", {
       prompt: "It’s 7 AM, your exam is at 10 AM, and you can’t find your hall ticket. Best move?",
-      options: ["Panic and skip the exam", "Go back to sleep", "Hope nobody checks", "Check your phone photo or email copy, and contact the exam section right away"], answer: 3,
+      options: ["Panic and decide to skip the exam", "Go back to sleep and deal with it later", "Go anyway and hope nobody checks it", "Find the copy on your phone, call the exam cell"], answer: 3,
       hint: "Digital copy + ask early.",
       note: "Keep phone copies of important documents. Exam sections often help if you ask early.", badge: "smartphone"
     }),
     CS(4, "Exam Chaos", {
       prompt: "Night before the exam, your friends plan a movie till 3 AM. Smartest move?",
-      options: ["Join and sleep 3 hours", "Study the whole night instead", "Watch it twice", "Revise, then sleep on time. Celebrate together after the exam"], answer: 3,
+      options: ["Join them and sleep for just 3 hours", "Study the whole night instead of sleeping", "Watch the movie twice to relax completely", "Revise, then sleep on time"], answer: 3,
       hint: "Sleep is part of revision.",
       note: "Movies can wait one day. Your exam can’t.", badge: "clock",
       board: true, boardLabel: "after Round 4"
@@ -178,19 +178,19 @@ window.GAME = {
     },
     CS(5, "Lost and Found", {
       prompt: "You lost your college ID card. Best move?",
-      options: ["Use a friend’s", "Make a fake one", "Report it to the college office and ask how to get a duplicate", "Never enter college again"], answer: 2,
+      options: ["Use a friend’s card until you find yours", "Make a fake one at a print shop", "Report it and ask for a duplicate", "Never enter college again without it"], answer: 2,
       hint: "The official way.",
       note: "Report it quickly. Fake or borrowed IDs can get you in real trouble.", badge: "user"
     }),
     CS(5, "Lost and Found", {
       prompt: "Your phone is stolen. What should you do FIRST?",
-      options: ["Wait a week", "Post about it", "Buy a new phone and forget it", "Block your SIM and UPI and bank access, change key passwords, and report the loss"], answer: 3,
+      options: ["Wait a week to see if someone returns it", "Post about it on Instagram and WhatsApp", "Buy a new phone and forget the old one", "Block SIM, UPI and bank, change passwords"], answer: 3,
       hint: "Protect your money and accounts.",
       note: "Block the SIM and payment apps first. Also report it officially; India’s CEIR portal can block a stolen phone.", badge: "shield"
     }),
     CS(5, "Lost and Found", {
       prompt: "Scholarship deadline is tomorrow and you haven’t started. Smartest move?",
-      options: ["Skip it", "Wait for next year", "Ask someone to fill it with fake details", "Start now, read the official instructions, and ask the scholarship cell or a senior who applied"], answer: 3,
+      options: ["Skip it this year, there’s always next time", "Wait for next year when you have more time", "Ask someone to fill it with fake details", "Start now and ask someone who applied"], answer: 3,
       hint: "Start now, ask for help.",
       note: "Many forms take less time than you fear. Official instructions + a helpful senior.", badge: "file-text",
       board: true, boardLabel: "after Round 5"
@@ -207,21 +207,21 @@ window.GAME = {
     CS(6, "Wellbeing", {
       double: true,
       prompt: "A month in, you feel homesick and low. What helps?",
-      options: ["Pretend you’re fine forever", "Hide it from everyone", "Call home, talk to a friend or senior, and keep a simple routine. It’s very common", "Stay in your room all weekend"], answer: 2,
+      options: ["Pretend you’re fine for the whole year", "Hide it from everyone so nobody worries", "Call home, talk to a friend, keep a routine", "Stay in your room every weekend alone"], answer: 2,
       hint: "You’re not the only one.",
       note: "Many students feel this in the first months. Talking to people really helps.", badge: "heart"
     }),
     CS(6, "Wellbeing", {
       double: true,
       prompt: "Your friend has stopped eating with the group and seems very stressed. Best move?",
-      options: ["Tell them to cheer up", "Gossip about it", "Check in privately and kindly, listen, and help them reach someone if needed", "Ignore it"], answer: 2,
+      options: ["Tell them to cheer up and stop being sad", "Discuss it with others behind their back", "Check in privately and listen", "Ignore it, they’ll be fine on their own"], answer: 2,
       hint: "Be the friend you’d want.",
       note: "A kind check-in matters. If it seems serious, help them talk to a counsellor or trusted adult.", badge: "users"
     }),
     CS(6, "Wellbeing", {
       double: true,
       prompt: "Which daily habit helps you survive college best?",
-      options: ["Regular sleep, real meals and some movement every day", "Skipping breakfast always", "Sleeping at 4 AM daily", "Only energy drinks"], answer: 0,
+      options: ["Regular sleep, real meals and some movement", "Skipping breakfast every day to save time", "Sleeping at 4 AM daily to study more", "Only energy drinks instead of meals"], answer: 0,
       hint: "Basics win.",
       note: "Simple basics keep your energy, mood and marks steady.", badge: "star",
       board: true, boardLabel: "after Round 6"

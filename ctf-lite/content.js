@@ -167,7 +167,7 @@ window.GAME = {
     },
     CQ(4, "Passwords", {
       prompt: "Which password is the hardest to crack?",
-      options: ["P@ssw0rd!", "Ravi@2005", "auto-mango-river-violet-42", "Qx7!"], answer: 2,
+      options: ["P@ssw0rd!2024", "Ravi@2005#AU", "auto-mango-river-violet-42", "Qx7!kL"], answer: 2,
       hint: "Count the characters.",
       note: "A long passphrase of random words. P@ssw0rd! and name-plus-year are the first things attackers try, and 4 characters is far too short.", badge: "lock"
     }),
@@ -237,7 +237,7 @@ window.GAME = {
       double: true,
       prompt: "A developer “protected” the admin password like this. What’s wrong?",
       code: ["// TODO remove before launch", "const adminPass = atob(\"c3VwZXJzZWNyZXQ=\");", "if (typed === adminPass) showAdmin();"],
-      options: ["Nothing, it’s encrypted", "The password check should use = instead of ===", "Nothing, users can’t see JavaScript", "The password is only Base64 encoded in code anyone can read, and the check runs in the browser"], answer: 3,
+      options: ["Nothing, it’s encrypted and safe from attackers", "The check should use = instead of ===", "Nothing, users can’t see the JavaScript", "Base64 isn’t secret, and the check runs in the browser"], answer: 3,
       hint: "Can a user read this JavaScript? Is Base64 protection?",
       note: "Two mistakes: JavaScript is sent to every browser, and atob() just decodes Base64 (it says “supersecret”). Password checks belong on the server.", badge: "shield"
     }),

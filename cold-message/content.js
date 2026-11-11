@@ -67,19 +67,19 @@ window.GAME = {
     },
     CM(1, "First Line", {
       prompt: "Messaging an alumna who works at a fintech startup. Best first line?",
-      options: ["“Hi sir/madam.”", "“Hello, I need a job.”", "“Hi Priya, I’m a 3rd-year CSE student at your college. Your post about debugging payments on your first week was really useful.”", "“Please help me urgently.”"], answer: 2,
+      options: ["“Hi sir/madam, I am a student and I want to talk to you.”", "“Hello, I need a job, please tell me about openings at your company.”", "“Hi Priya, I’m a 3rd-year CSE student. Your post on debugging payments helped me.”", "“Please help me urgently, it is very important.”"], answer: 2,
       hint: "Personal, specific, shows homework.",
       note: "Name + shared link + something specific about them. That earns the next line a read.", badge: "user"
     }),
     CM(1, "First Line", {
       prompt: "Why do messages like “Hi” or “Hello sir” alone usually get no reply?",
-      options: ["People are rude", "They give nothing to reply to, and look like spam", "LinkedIn blocks them", "They’re too formal"], answer: 1,
+      options: ["People on LinkedIn are rude to students", "They give nothing to reply to", "LinkedIn automatically blocks short messages", "They are too formal for a chat app"], answer: 1,
       hint: "What would you reply to “Hi”?",
       note: "Busy people won’t chat to find out what you want. Say it in the first message.", badge: "message-circle"
     }),
     CM(1, "First Line", {
       prompt: "What should you do BEFORE messaging someone?",
-      options: ["Read their profile, recent posts or company page", "Nothing, just send", "Send the same text to 100 people", "Ask your friend to message instead"], answer: 0,
+      options: ["Read their profile and recent posts", "Nothing, just send the message quickly", "Send the same text to 100 people at once", "Ask your friend to message them instead"], answer: 0,
       hint: "Where does a personal first line come from?",
       note: "Two minutes of research makes the message personal and shows respect for their time.", badge: "search",
       board: true, boardLabel: "after Round 1"
@@ -95,7 +95,7 @@ window.GAME = {
     },
     CM(2, "Who You Are", {
       prompt: "Which self-introduction is strongest?",
-      options: ["“I am a hardworking, passionate, dedicated student.”", "“I am a 3rd-year CSE student at Andhra University. I built an attendance tracker used by 200 classmates (link).”", "“I am a student.”", "“I have many skills.”"], answer: 1,
+      options: ["“I am a hardworking, passionate, dedicated and sincere student who is eager to learn.”", "“3rd-year CSE at AU. I built an attendance tracker used by 200 classmates (link).”", "“I am a student looking for opportunities.”", "“I have many skills in many technologies.”"], answer: 1,
       hint: "Which one has proof?",
       note: "Adjectives are free. Real work with a link is proof.", badge: "badge-check"
     }),
@@ -109,7 +109,7 @@ window.GAME = {
     })),
     CM(2, "Who You Are", {
       prompt: "You have no projects yet. What can you honestly show?",
-      options: ["Make up a project", "Copy a friend’s GitHub", "Say nothing about yourself", "A course you’re doing, a small thing you’ve tried, or what you’re learning right now"], answer: 3,
+      options: ["Make up a small project that sounds real", "Copy a friend’s GitHub and say it is yours", "Say nothing about yourself, only ask for help", "What you’re learning right now"], answer: 3,
       hint: "Honest and specific.",
       note: "“I’m learning Python and finished 30 LeetCode easy problems” is honest and specific. Never fake it.", badge: "book-open",
       board: true, boardLabel: "after Round 2"
@@ -125,13 +125,13 @@ window.GAME = {
     },
     CM(3, "The Ask", {
       prompt: "Which first-message ask is most likely to get a yes?",
-      options: ["“Please get me a job at your company.”", "“Can you be my mentor for the next 2 years?”", "“Could I ask you 2 quick questions about how you prepared for your first internship?”", "“Call me now.”"], answer: 2,
+      options: ["“Please get me a job at your company, I will work very hard.”", "“Can you be my mentor for the next 2 years and guide me?”", "“Could I ask you 2 quick questions about your first internship?”", "“Call me now, here is my number.”"], answer: 2,
       hint: "Small and easy.",
       note: "Small asks are easy to say yes to. Bigger help often follows naturally.", badge: "handshake"
     }),
     CM(3, "The Ask", {
       prompt: "Asking a senior for a referral. What should you include?",
-      options: ["The exact job link, your resume, and why you fit the role, then ask if they’re comfortable referring you", "Only “refer me pls”", "Your marks memo from school", "Nothing, they’ll figure it out"], answer: 0,
+      options: ["The job link, your resume and why you fit", "Only “refer me pls” and your phone number", "Your marks memo from school and college", "Nothing, they will figure out the rest"], answer: 0,
       hint: "Make it easy for them.",
       note: "And respect a no. Referring someone puts their name on the line.", badge: "file-user"
     }),
@@ -156,19 +156,19 @@ window.GAME = {
     },
     CM(4, "Short and Easy", {
       prompt: "A 400-word first message, full of details. Most likely result?",
-      options: ["A long reply", "Left unread for “later”, then forgotten", "Instant job offer", "They print it"], answer: 1,
+      options: ["A long reply with lots of advice", "Left unread, then forgotten", "An instant job offer for being detailed", "They print it and share it with the team"], answer: 1,
       hint: "How do you treat long messages?",
       note: "Long messages feel like work. Cut to what they need to say yes.", badge: "timer"
     }),
     CM(4, "Short and Easy", {
       prompt: "Which closing line makes it easiest to reply?",
-      options: ["“Let me know.”", "“Whenever you are free, please do the needful.”", "“Would Thursday 6 PM or Saturday 11 AM work for a 15-minute call?”", "“Waiting for your reply.”"], answer: 2,
+      options: ["“Let me know whenever you are free.”", "“Whenever you are free, please do the needful.”", "“Would Thursday 6 PM work for a 15-minute call?”", "“Waiting for your reply, please respond.”"], answer: 2,
       hint: "Can they reply in one word?",
       note: "Two clear options means they can reply in seconds.", badge: "clock"
     }),
     CM(4, "Short and Easy", {
       prompt: "Your message has 3 spelling mistakes and no punctuation. What does it signal?",
-      options: ["Nothing", "That you’re cool", "That you’re busy", "That you didn’t take care. Spend 1 minute checking"], answer: 3,
+      options: ["Nothing, nobody notices spelling on LinkedIn", "That you’re cool and don’t care about rules", "That you’re very busy with important work", "That you didn’t take care"], answer: 3,
       hint: "First impressions.",
       note: "Read it once aloud before sending. Small care makes a big impression.", badge: "spell-check",
       board: true, boardLabel: "after Round 4"
@@ -184,7 +184,7 @@ window.GAME = {
     },
     CM(5, "Follow-Up", {
       prompt: "No reply after 2 days. Best move?",
-      options: ["Send 5 more messages today", "Wait, then send one short polite follow-up after about a week", "Post about it publicly", "Message their manager"], answer: 1,
+      options: ["Send 5 more messages today so they notice", "Wait, then send one polite follow-up", "Post about it publicly and tag them", "Message their manager about it"], answer: 1,
       hint: "Give them time.",
       note: "One kind nudge after a week. Pushing harder only makes it worse.", badge: "clock"
     }),
@@ -198,7 +198,7 @@ window.GAME = {
     })),
     CM(5, "Follow-Up", {
       prompt: "A senior gave you 15 minutes of advice. What should you do after?",
-      options: ["Nothing", "Ask for a job immediately", "Thank them the same day, and update them later on what you did with the advice", "Forward their number to friends"], answer: 2,
+      options: ["Nothing, they have already helped enough", "Ask for a job immediately while they remember you", "Thank them, and later share what you did", "Forward their number to all your friends"], answer: 2,
       hint: "How do you build a relationship?",
       note: "A thank you and an update months later turns a one-time chat into a real connection.", badge: "heart",
       board: true, boardLabel: "after Round 5"
@@ -215,21 +215,21 @@ window.GAME = {
     CM(6, "Full Message", {
       double: true,
       prompt: "Which LinkedIn message to a startup founder is best?",
-      options: ["“Sir pls give internship, I am very hardworking.”", "“Hi Meera, loved your post on how Kitchenly reached its first 100 restaurants. I’m a 3rd-year CSE student and built a restaurant menu site (link). Could I help with frontend this summer, even as a short trial?”", "“Hello. Any vacancies?”", "“I want to join your company. Reply.”"], answer: 1,
+      options: ["“Sir pls give internship, I am very hardworking, sincere, and I will do any work you give me, sir.”", "“Hi Meera, loved your Kitchenly post. I built a menu site (link). Could I help with frontend?”", "“Hello. Any vacancies for freshers?”", "“I want to join your company. Please reply soon.”"], answer: 1,
       hint: "Hook, proof, small clear ask.",
       note: "Specific hook, relevant proof and a low-risk offer (a short trial). Founders reply to that.", badge: "rocket"
     }),
     CM(6, "Full Message", {
       double: true,
       prompt: "An HR replies: “We don’t have openings right now.” Best response?",
-      options: ["“Okay.”", "Argue that they should create one", "Don’t reply", "“Thank you for letting me know! Could I stay in touch, in case something opens up later?”"], answer: 3,
+      options: ["“Okay.”", "Argue politely that they should create one for you", "Don’t reply at all, it’s a no", "“Thank you! Could I stay in touch?”"], answer: 3,
       hint: "Leave the door open.",
       note: "A gracious reply often leads to the next opening. Many hires happen months later.", badge: "handshake"
     }),
     CM(6, "Full Message", {
       double: true,
       prompt: "Which habit gets you the most opportunities over a year?",
-      options: ["One perfect message, once a year", "Copy-paste 500 messages a week", "A few thoughtful, personal messages every week, with polite follow-ups", "Waiting for people to message you"], answer: 2,
+      options: ["One perfect message, sent once a year", "Copy-pasting 500 messages to strangers a week", "A few personal messages every week", "Waiting for people to message you first"], answer: 2,
       hint: "Quality, often.",
       note: "Consistency plus quality builds a network. Small weekly effort adds up.", badge: "trending-up",
       board: true, boardLabel: "after Round 6"

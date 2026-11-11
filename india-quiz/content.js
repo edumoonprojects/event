@@ -135,7 +135,7 @@ window.GAME = {
     }),
     IQ(3, "The Constitution", {
       prompt: "Why do we celebrate Republic Day on 26 January?",
-      options: ["It’s the day India became independent", "It’s the day the Constitution came into force", "It’s Gandhi’s birthday", "It’s the day the first election was held"], answer: 1,
+      options: ["It’s the day India became independent", "The Constitution came into force", "It’s Mahatma Gandhi’s birthday", "It’s the day the first election was held"], answer: 1,
       hint: "Independence Day is 15 August. This is something else.",
       note: "On 26 January 1950, the Constitution came into force and India became a republic.", badge: "landmark",
       board: true, boardLabel: "after Round 3"
@@ -216,7 +216,7 @@ window.GAME = {
     IQ(6, "Culture and Sports", {
       double: true,
       prompt: "What is India’s national aquatic animal?",
-      options: ["Ganges river dolphin", "Olive ridley turtle", "Blue whale", "Mahseer fish"], answer: 0,
+      options: ["Ganges river dolphin", "Olive ridley sea turtle", "Blue whale", "Mahseer fish"], answer: 0,
       hint: "It lives in rivers, not the sea, and is almost blind.",
       note: "The Ganges river dolphin, declared in 2009. It finds food using sound.", badge: "waves"
     }),

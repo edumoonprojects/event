@@ -40,6 +40,18 @@ window.ZONE = {
       host: "why-startups-fail/host.html", player: "why-startups-fail/"
     },
     {
+      club: "entrepreneurship", icon: "store", title: "Copycat or Original?", added: "2026-11-11",
+      desc: "Flipkart, Ola, Swiggy, Meesho, Dream11: match Indian startups to the global models they resemble, guess what they changed to win in India, and adapt a global idea for your own campus.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "copycat-or-original/host.html", player: "copycat-or-original/"
+    },
+    {
+      club: "entrepreneurship", icon: "lightbulb", title: "Vizag Problems, Startup Ideas", added: "2026-11-11",
+      desc: "Late-night food, bus timings, PG rooms, beach litter: turn everyday Vizag and campus problems into startup ideas, find the first customer, test it in a week and pitch it in 3 lines.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "vizag-startup-ideas/host.html", player: "vizag-startup-ideas/"
+    },
+    {
       club: "entrepreneurship", icon: "briefcase", title: "Freelancing 101", added: "2026-11-10",
       desc: "Your first paying client as a student: pick a service, show samples, find clients, price the project, write the scope, take an advance, deliver on time and spot scam offers.",
       years: "2nd year onwards", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
@@ -202,6 +214,18 @@ window.ZONE = {
       host: "ai-agents/host.html", player: "ai-agents/"
     },
     {
+      club: "ai-lab", icon: "bot", title: "AI Agents 2: Automate Your Club", nocode: true, added: "2026-11-11",
+      desc: "Part 2 of AI Agents. Build FlowBot, a real automation for club registrations, block by block: triggers, steps, if/else conditions, data, testing and what’s worth automating.",
+      years: "2nd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ai-agents-2/host.html", player: "ai-agents-2/"
+    },
+    {
+      club: "ai-lab", icon: "brain", title: "AI for Exams, the Right Way", nocode: true, added: "2026-11-11",
+      desc: "Use AI to understand and remember, not to copy: prompts that explain, checking AI’s facts, making AI quiz you, planning revision, and the rules for assignments and exams.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ai-for-exams/host.html", player: "ai-for-exams/"
+    },
+    {
       club: "ai-lab", icon: "sparkles", title: "How ChatGPT Works", nocode: true, added: "2026-11-06",
       desc: "What really happens when you type a prompt: AI vs machine learning, training, tokens and next-word prediction, why AI makes things up, context windows, and using it well and safely.",
       years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
@@ -224,6 +248,12 @@ window.ZONE = {
       desc: "How well do you know the City of Destiny? Landmarks, the city’s names, its hills of faith, Araku and Borra, the port and the Navy. Every fact checked.",
       years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "vizag-quiz/host.html", player: "vizag-quiz/"
+    },
+    {
+      club: "fun", icon: "film", title: "Guess the Movie from the Plot", added: "2026-11-11",
+      desc: "One funny line, four movies, 25 seconds. Telugu blockbusters, India’s biggest hits and a hard round for true fans.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–40 · teams or solo", needs: "Phones or Screen Deck",
+      host: "guess-the-movie/host.html", player: "guess-the-movie/"
     },
     {
       club: "fun", icon: "globe", title: "India Quiz", added: "2026-11-05",
@@ -284,6 +314,12 @@ window.ZONE = {
       desc: "How the web works, then HTML, CSS and JavaScript. Fix broken pages and put together the CampusFest site. No coding experience needed.",
       years: "1st & 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
       host: "web-basics/host.html", player: "web-basics/"
+    },
+    {
+      club: "coding", icon: "globe", title: "Build Your Portfolio Website", added: "2026-11-11",
+      desc: "Plan a portfolio that gets replies: the 5 sections, project cards that impress, simple design rules, and how to publish it free on GitHub Pages.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "portfolio-website/host.html", player: "portfolio-website/"
     },
     {
       club: "english", icon: "swords", title: "Debate Duel", added: "2026-11-05",
@@ -388,6 +424,12 @@ window.ZONE = {
       host: "resume-rescue/host.html", player: "resume-rescue/"
     },
     {
+      club: "skills", icon: "search", title: "Internship Hunt", added: "2026-11-11",
+      desc: "Help Kavya land her first internship: where real internships are posted, what to send, how to write to a startup, how to spot fake pay-to-join offers, and how to make the internship count.",
+      years: "2nd year onwards", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "internship-hunt/host.html", player: "internship-hunt/"
+    },
+    {
       club: "english", icon: "spell-check", title: "Desi English Fixer", added: "2026-10-29",
       desc: "“Myself Ravi”, “I am having one doubt”, “Kindly do the needful”. Fix 18 everyday English habits for interviews and emails, then get your own fix list.",
       years: "All years", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones only",
@@ -404,6 +446,18 @@ window.ZONE = {
       desc: "Hear the Baahubali story in simple English, learn 20 power words like usurp, clandestine and magnanimous, guess what happens next, and speak if you dare.",
       years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones only",
       host: "movie-story-time/host.html", player: "movie-story-time/"
+    },
+    {
+      club: "english", icon: "film", title: "Movie Story Time: RRR", added: "2026-11-11",
+      desc: "Hear the RRR story in simple English, learn 20 power words like infiltrate, dilemma and unyielding, guess what happens next, and speak if you dare.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones only",
+      host: "movie-story-rrr/host.html", player: "movie-story-rrr/"
+    },
+    {
+      club: "english", icon: "zap", title: "Telugu to English Rapid Fire", added: "2026-11-11",
+      desc: "Everyday Telugu lines from the hostel, class, WhatsApp and interviews: pick the natural English in 25 seconds. Learn to think in meaning, not word by word.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "telugu-rapid-fire/host.html", player: "telugu-rapid-fire/"
     },
     {
       club: "coding", icon: "briefcase", title: "Placement Round", added: "2026-10-29",

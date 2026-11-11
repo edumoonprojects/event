@@ -71,13 +71,13 @@ window.GAME = {
     }),
     CW(1, "AI, ML, Generative AI", {
       prompt: "Which statement is true?",
-      options: ["Every AI uses machine learning", "Machine learning is a part of AI, but not all AI uses machine learning", "AI and machine learning are completely separate", "Generative AI is bigger than AI"], answer: 1,
+      options: ["Every AI system uses machine learning", "ML is part of AI, but not all AI uses it", "AI and machine learning are completely separate", "Generative AI is bigger than all of AI"], answer: 1,
       hint: "Think of the circles inside circles.",
       note: "Machine learning sits inside AI. Older AI, like a chess program with hand-written rules, can be AI without learning from data.", badge: "chart-column"
     }),
     CW(1, "AI, ML, Generative AI", {
       prompt: "A traffic light switches every 60 seconds because an engineer set that rule. Is that machine learning?",
-      options: ["No. It follows a fixed rule written by a person; it doesn’t learn from data", "Yes, all automatic things are machine learning", "Yes, because it uses electricity", "Only at night"], answer: 0,
+      options: ["No. It follows a fixed rule, it doesn’t learn", "Yes, all automatic things are machine learning", "Yes, because it uses electricity and sensors", "Only at night, when traffic is less"], answer: 0,
       hint: "Does it learn anything from what happens on the road?",
       note: "Fixed rules aren’t learning. A traffic light that studied traffic data and changed its own timing would be machine learning.", badge: "route",
       board: true, boardLabel: "after Round 1"
@@ -93,19 +93,19 @@ window.GAME = {
     },
     CW(2, "Training", {
       prompt: "Where does a chatbot learn language from?",
-      options: ["A human types every answer in advance", "Huge amounts of text such as books, websites and code", "It listens to phone calls", "It is born knowing language"], answer: 1,
+      options: ["A human types every answer in advance", "Huge amounts of text: books, websites, code", "It listens to people’s phone calls", "It is born already knowing language"], answer: 1,
       hint: "Look at the learn screen.",
       note: "It learns patterns from huge amounts of text. No one writes its answers in advance.", badge: "book-open"
     }),
     CW(2, "Training", {
       prompt: "When a chatbot answers you, is it looking up an exact web page and copying it?",
-      options: ["Yes, always", "Yes, but only for long answers", "Only on Sundays", "No. It writes new text from patterns it learned, unless the app connects it to search"], answer: 3,
+      options: ["Yes, always, it copies the best web page", "Yes, but only for long answers", "Only when you ask about the news", "No. It writes new text from patterns"], answer: 3,
       hint: "Did it learn a database, or patterns?",
       note: "It generates text from learned patterns. Some apps add a search tool, and then it can read pages, but the model itself isn’t a search engine.", badge: "search"
     }),
     CW(2, "Training", {
       prompt: "After the first training, why do companies have people rate the chatbot’s answers?",
-      options: ["To make the chatbot more helpful, honest and safe", "To make it slower", "To give it a personality on purpose", "There’s no reason"], answer: 0,
+      options: ["To make it more helpful, honest and safe", "To make it slower so people read carefully", "To give it a funny personality on purpose", "There’s no reason, it’s only for marketing"], answer: 0,
       hint: "Think of a teacher giving feedback.",
       note: "Human feedback teaches it which answers people find helpful and which are harmful or wrong.", badge: "thumbs-up",
       board: true, boardLabel: "after Round 2"
@@ -121,13 +121,13 @@ window.GAME = {
     },
     CW(3, "Tokens", {
       prompt: "At its core, what is a chatbot doing while it writes an answer?",
-      options: ["Thinking exactly like a human", "Copying from a single website", "Predicting the most likely next token, again and again", "Reading your mind"], answer: 2,
+      options: ["Thinking exactly like a human being does", "Copying from one website it trusts", "Predicting the next token, again and again", "Reading your mind through your typing"], answer: 2,
       hint: "Look at the learn screen.",
       note: "Next-token prediction, repeated very fast. It’s simple to describe, but at huge scale it produces remarkably good text.", badge: "zap"
     }),
     CW(3, "Tokens", {
       prompt: "What are tokens?",
-      options: ["Coins you pay to use AI", "Passwords", "Images", "Small pieces of text, often words or parts of words"], answer: 3,
+      options: ["Coins you pay to use the AI app", "Passwords that unlock the chatbot", "Small images the AI draws with", "Small pieces of text"], answer: 3,
       hint: "The model splits your text into these.",
       note: "Tokens are pieces of text. Long or rare words are often split into several tokens.", badge: "code"
     }),
@@ -152,19 +152,19 @@ window.GAME = {
     },
     CW(4, "Making Things Up", {
       prompt: "You ask a chatbot for a book on cloud computing, and it names a title and author that don’t exist. Why?",
-      options: ["It is lying on purpose", "It produced text that sounds right, without knowing it’s false", "The book was deleted", "Your phone was offline"], answer: 1,
+      options: ["It is lying to you on purpose", "It wrote text that sounds right, but isn’t", "The book was deleted from the internet", "Your phone was offline when you asked"], answer: 1,
       hint: "Does it check facts, or predict likely text?",
       note: "It isn’t lying; it doesn’t know. It produced a plausible title and author. That’s a hallucination.", badge: "lightbulb"
     }),
     CW(4, "Making Things Up", {
       prompt: "You’re using an AI answer for an assignment fact. What should you do?",
-      options: ["Copy it; AI is always right", "Ask the AI if it’s sure, and trust its reply", "Check it in a reliable source like your textbook or an official site", "Change a few words so no one notices"], answer: 2,
+      options: ["Copy it, AI is always right about facts", "Ask the AI if it’s sure, and trust its reply", "Check it in your textbook or an official site", "Change a few words so no one notices"], answer: 2,
       hint: "Asking the AI to check itself isn’t enough.",
       note: "Verify with a reliable source. The AI can say “yes, I’m sure” and still be wrong.", badge: "badge-check"
     }),
     CW(4, "Making Things Up", {
       prompt: "Without a search tool, which question is a chatbot most likely to get wrong?",
-      options: ["“What is the score in today’s cricket match?”", "“What is photosynthesis?”", "“Explain a for loop.”", "“Give me 3 tips for a resume.”"], answer: 0,
+      options: ["“What is the score in today’s match?”", "“What is photosynthesis?”", "“Explain a for loop with one simple example.”", "“Give me 3 tips for a resume.”"], answer: 0,
       hint: "Which one changes every minute?",
       note: "Live information. Without search, the model only knows what it learned during training, so it can’t know today’s score.", badge: "clock",
       board: true, boardLabel: "after Round 4"
@@ -180,19 +180,19 @@ window.GAME = {
     },
     CW(5, "Context and Memory", {
       prompt: "In a very long chat, the AI stops following a rule you gave at the very start. What’s the likely reason?",
-      options: ["It got angry", "It deleted your account", "It needs a software update", "The early instruction got lost in a long context"], answer: 3,
+      options: ["It got angry about something you typed", "It deleted your account in the middle", "It needs a software update to remember", "The early rule got lost in a long chat"], answer: 3,
       hint: "Think of the whiteboard.",
       note: "Long chats can push early details out of focus. Repeating key rules, or starting fresh, fixes it.", badge: "list-checks"
     }),
     CW(5, "Context and Memory", {
       prompt: "You open a brand new chat. Does the chatbot remember yesterday’s conversation?",
-      options: ["Yes, always, everything", "Usually not, unless the app has a memory feature that’s turned on", "Only if you type in capital letters", "Only on the same phone"], answer: 1,
+      options: ["Yes, it always remembers everything you said", "Usually not, unless memory is turned on", "Only if you type in capital letters", "Only if you use the same phone"], answer: 1,
       hint: "A new chat is a fresh whiteboard.",
       note: "By default, each chat starts fresh. Some apps add memory features, and you can usually see and control them in settings.", badge: "user"
     }),
     CW(5, "Context and Memory", {
       prompt: "A long chat has become confusing and the AI keeps mixing things up. Best fix?",
-      options: ["Start a new chat with a short summary of what matters", "Type faster", "Keep repeating “wrong” until it gets it", "Give up on AI forever"], answer: 0,
+      options: ["Start a new chat with a short summary", "Type faster so it keeps up with you", "Keep typing “wrong” until it understands", "Give up on AI forever and use books"], answer: 0,
       hint: "Clean whiteboard, key points only.",
       note: "A fresh chat with a clear summary usually works better than fighting a messy long chat.", badge: "check",
       board: true, boardLabel: "after Round 5"
@@ -209,21 +209,21 @@ window.GAME = {
     CW(6, "Using AI Well", {
       double: true,
       prompt: "Which prompt will get the most useful answer?",
-      options: ["“recursion”", "“Explain recursion to a first-year student using a real-life example, in 5 short lines.”", "“Tell me everything about programming.”", "“Help.”"], answer: 1,
+      options: ["“recursion explain all types and examples and uses in detail please”", "“Explain recursion to a 1st-year with a real example.”", "“Tell me everything about programming.”", "“Help.”"], answer: 1,
       hint: "Who, what and format.",
       note: "Specific prompts get specific answers. The others leave the AI guessing what you want.", badge: "pen-tool"
     }),
     CW(6, "Using AI Well", {
       double: true,
       prompt: "Which of these should you NEVER paste into an AI chatbot?",
-      options: ["Your class notes", "A paragraph you want to improve", "Your bank password or Aadhaar number", "A coding error message"], answer: 2,
+      options: ["Your class notes for a summary", "A paragraph you want to improve", "Your bank password", "A coding error message you don’t understand"], answer: 2,
       hint: "Which one could cause real harm if it leaked?",
       note: "Passwords, ID numbers and other people’s private information should never go into any chatbot.", badge: "shield"
     }),
     CW(6, "Using AI Well", {
       double: true,
       prompt: "What’s the right way to use AI for an assignment?",
-      options: ["Copy the full answer and submit it", "Use it to understand and improve your work, check what it says, follow your college’s rules, and be open about using it", "Never use it for anything", "Use it but hide that you did"], answer: 1,
+      options: ["Copy the full answer and submit it as your own", "Understand and improve your work, follow the rules", "Never use it for anything related to college", "Use it, but hide that you used it from teachers"], answer: 1,
       hint: "Learning, checking and honesty.",
       note: "AI is a great tutor and editor. The learning and the responsibility stay with you.", badge: "graduation-cap",
       board: true, boardLabel: "after Round 6"

@@ -67,7 +67,7 @@ window.GAME = {
     },
     IQ(1, "Your Project", {
       prompt: "“Tell me about your project.” Best opening?",
-      options: ["“My team did it, I can show you the code.”", "“Sir, it is a website project using HTML, CSS, JS, React, Node, MongoDB, Firebase…”", "“Students had to register for our college fest on paper, and it took hours. So I built a website for it.”", "“It is a very good project, sir.”"], answer: 2,
+      options: ["“My team did it, I can show you the code.”", "“Sir, it is a website using HTML, CSS, JS, React, Node, MongoDB, Firebase…”", "“Fest registration was on paper and slow, so I built a website.”", "“It is a very good project, sir.”"], answer: 2,
       hint: "What should come before the technology?",
       note: "Start with the problem. It gives the interviewer a reason to care about everything that follows.", badge: "lightbulb"
     }),
@@ -81,7 +81,7 @@ window.GAME = {
     })),
     IQ(1, "Your Project", {
       prompt: "After your 60-second explanation, what’s a strong way to finish?",
-      options: ["“That’s it.”", "“So in short, it replaced paper registration for 300+ students. Would you like me to go deeper into any part?”", "Keep talking until they stop you", "Stop suddenly and stay quiet"], answer: 1,
+      options: ["“That’s it.”", "“In short, it replaced paper for 300+ students. Shall I go deeper?”", "Keep talking until they stop you, there’s more to say", "Stop suddenly and stay quiet"], answer: 1,
       hint: "Summarise, then hand control back.",
       note: "A one-line summary and an offer to go deeper. It shows confidence and lets them steer.", badge: "check",
       board: true, boardLabel: "after Round 1"
@@ -97,19 +97,19 @@ window.GAME = {
     },
     IQ(2, "Saying I Don’t Know", {
       prompt: "“What is a deadlock?” You’ve heard the word but aren’t sure. Best answer?",
-      options: ["“I’m not fully sure, but I think it’s when two processes each wait for something the other has, so neither can continue. Is that right?”", "“That’s not in our syllabus.”", "“I don’t know.” and wait", "Make up a confident definition"], answer: 0,
+      options: ["“Not fully sure: two processes wait on each other, so neither continues?”", "“That’s not in our syllabus, sir, we didn’t cover it in class.”", "“I don’t know.” and wait", "Make up a confident definition"], answer: 0,
       hint: "Honest, with your best thinking.",
       note: "Honest + your reasoning + a check. That’s actually the right idea, and interviewers respect the honesty.", badge: "lightbulb"
     }),
     IQ(2, "Saying I Don’t Know", {
       prompt: "“Have you worked with Docker?” You haven’t. Best answer?",
-      options: ["“Yes, a lot.”", "“No.” and nothing else", "“Not yet. I know it packages apps so they run the same everywhere. I’d start with the official getting-started guide and containerise my events site.”", "“What is Docker?”"], answer: 2,
+      options: ["“Yes, a lot.”", "“No.” and nothing else", "“Not yet. I know it packages apps; I’d try it on my site.”", "“What is Docker? I haven’t heard of it in college.”"], answer: 2,
       hint: "Honest, plus what you know, plus how you’d learn.",
       note: "Saying “not yet” with a plan shows you can learn, which is what they’re really testing for freshers.", badge: "rocket"
     }),
     IQ(2, "Saying I Don’t Know", {
       prompt: "Why is bluffing worse than saying “I don’t know”?",
-      options: ["Interviewers usually ask a follow-up, and the bluff falls apart, hurting your trust for every other answer", "It takes more time", "It’s too polite", "It isn’t, bluffing always works"], answer: 0,
+      options: ["A follow-up exposes it, and trust drops", "It takes more time than just answering", "It’s too polite for an interview", "It isn’t, bluffing always works"], answer: 0,
       hint: "What happens after a bluff?",
       note: "One caught bluff makes them doubt everything else you said. Honesty is the safer strategy.", badge: "shield",
       board: true, boardLabel: "after Round 2"
@@ -140,7 +140,7 @@ window.GAME = {
     })),
     IQ(3, "Structure", {
       prompt: "You realise you said something wrong in the middle of your answer. Best move?",
-      options: ["Stop talking completely", "Laugh and change the subject", "Ignore it and hope they didn’t notice", "“Sorry, let me correct that. I meant a linked list, not an array.”"], answer: 3,
+      options: ["Stop talking completely", "Laugh and change the subject", "Ignore it and hope they didn’t notice", "“Sorry, I meant a linked list.”"], answer: 3,
       hint: "What would a confident professional do?",
       note: "Correcting yourself calmly shows you’re paying attention. It’s a strength, not a weakness.", badge: "pen-tool",
       board: true, boardLabel: "after Round 3"
@@ -156,19 +156,19 @@ window.GAME = {
     },
     IQ(4, "Clarifying", {
       prompt: "The interviewer asks a long question and you’re not sure what they want. Best response?",
-      options: ["“Just to make sure I understand, are you asking how I’d store the data, or how I’d display it?”", "“Your question is confusing.”", "Stay silent", "Start answering anything, quickly"], answer: 0,
+      options: ["“Just to check: store the data, or display it?”", "“Your question is confusing, please ask it again simply.”", "Stay silent and wait", "Start answering anything, quickly"], answer: 0,
       hint: "Check before you answer.",
       note: "Confirming shows care and saves you from a long answer to the wrong question.", badge: "ear"
     }),
     IQ(4, "Clarifying", {
       prompt: "A tough question and your mind goes blank for a second. What do you say?",
-      options: ["“I don’t like this question.”", "“Umm… umm… umm…”", "“Let me take a few seconds to think about that.”", "“Next question please.”"], answer: 2,
+      options: ["“I don’t like this question.”", "“Umm… umm… umm…”", "“Let me think for a few seconds.”", "“Next question please, I will come back to this one later.”"], answer: 2,
       hint: "How do you buy time like a pro?",
       note: "A calm pause sounds thoughtful. Filling the silence with “umm” sounds nervous.", badge: "clock"
     }),
     IQ(4, "Clarifying", {
       prompt: "The interviewer speaks fast and you missed a word. Best response?",
-      options: ["“Sorry, could you repeat the last part of the question?”", "“Speak slowly.”", "Nod and smile", "Guess what they said"], answer: 0,
+      options: ["“Sorry, could you repeat the last part?”", "“Speak slowly.”", "Nod and smile as if you understood", "Guess what they said and answer that"], answer: 0,
       hint: "Polite and specific.",
       note: "Asking politely is completely normal. Guessing and answering the wrong thing isn’t.", badge: "message-circle",
       board: true, boardLabel: "after Round 4"
@@ -191,13 +191,13 @@ window.GAME = {
     }),
     IQ(5, "Filler Words", {
       prompt: "What’s the best replacement for “umm” while you think?",
-      options: ["Talking faster", "“Basically”", "A short, calm pause", "“You know”"], answer: 2,
+      options: ["Talking faster so there’s no gap", "Saying “basically” instead", "A short, calm pause", "Saying “you know” instead"], answer: 2,
       hint: "Sometimes the best word is no word.",
       note: "A pause feels long to you but natural to the listener. Use it.", badge: "clock"
     }),
     IQ(5, "Filler Words", {
       prompt: "What’s the fastest way to find your own filler words?",
-      options: ["Read a grammar book", "Ignore them", "Ask the interviewer", "Record yourself answering one question on your phone and listen back"], answer: 3,
+      options: ["Read a grammar book on spoken English", "Ignore them, everyone uses fillers", "Ask the interviewer to point them out", "Record yourself and listen back"], answer: 3,
       hint: "You can’t fix what you can’t hear.",
       note: "Most people are shocked the first time. One recording is enough to start fixing it.", badge: "smartphone",
       board: true, boardLabel: "after Round 5"
@@ -214,7 +214,7 @@ window.GAME = {
     IQ(6, "The Tricky Question", {
       double: true,
       prompt: "“Your project would crash with 1 million users. How would you fix it?” You’ve never scaled anything. Best answer?",
-      options: ["“It won’t crash.”", "“I haven’t scaled an app that big yet, but I’d first find the bottleneck, probably the database. Then I’d look at caching and spreading the load across servers. I’d want to measure before changing anything.”", "“I don’t know about servers.”", "“My friend handled the backend.”"], answer: 1,
+      options: ["“It won’t crash, my code is very efficient and well tested.”", "“I haven’t scaled that big, but I’d find the bottleneck, then cache and spread the load.”", "“I don’t know about servers.”", "“My friend handled the backend, so I’m not sure about that part.”"], answer: 1,
       hint: "Honest, structured, and shows thinking.",
       note: "Honest about experience, then a clear thinking process. That’s exactly what interviewers look for in freshers.", badge: "rocket"
     }),
@@ -230,7 +230,7 @@ window.GAME = {
     IQ(6, "The Tricky Question", {
       double: true,
       prompt: "At the end, the interviewer says: “You seemed nervous.” Best response?",
-      options: ["Apologise five times", "“Your questions were too hard.”", "“No, I wasn’t.”", "“A little, yes. Interviews matter to me. But I enjoyed explaining my project, and I’d love to show more of what I can do.”"], answer: 3,
+      options: ["Apologise five times and explain why you were nervous", "“Your questions were too hard.”", "“No, I wasn’t.”", "“A little. It matters to me, and I enjoyed it.”"], answer: 3,
       hint: "Honest, positive and calm.",
       note: "Admitting it calmly and turning to the positive is mature. Arguing or over-apologising isn’t.", badge: "heart",
       board: true, boardLabel: "after Round 6"

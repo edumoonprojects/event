@@ -68,7 +68,7 @@ window.GAME = {
     },
     DQ(1, "Claim, Reason, Example", {
       prompt: "Topic: “Phones should be allowed in classrooms.” Which argument is built best?",
-      options: ["“Phones are good. Everyone uses them. So yes.”", "“Phones help learning because students can look things up instantly. For example, in our DBMS class, we checked a query live and the whole class understood it.”", "“I love my phone.”", "“Phones should be allowed because they should be allowed.”"], answer: 1,
+      options: ["“Phones are good. Everyone uses them. So yes, they should be allowed in every class.”", "“Phones help learning: in DBMS we checked a query live and all understood.”", "“I love my phone.”", "“Phones should be allowed because they should be allowed.”"], answer: 1,
       hint: "Find the one with a claim, a reason AND an example.",
       note: "Claim, reason, example. The others are opinions, feelings or going in a circle.", badge: "badge-check"
     }),
@@ -96,7 +96,7 @@ window.GAME = {
     },
     DQ(2, "Strong vs Weak", {
       prompt: "Topic: “Exams should be open book.” Which reason is strongest?",
-      options: ["“Everyone hates exams.”", "“My friends agree with me.”", "“Closed book exams are always unfair.”", "“Open book exams test understanding and application, which is what jobs need, instead of memory.”"], answer: 3,
+      options: ["“Everyone hates exams, so open book is better.”", "“My friends all agree with me on this.”", "“Closed book exams are always unfair.”", "“They test understanding, which jobs need.”"], answer: 3,
       hint: "Which one could the other side not easily break?",
       note: "It gives a clear reason tied to a real goal. “Everyone” and “always” are easy to break with one example.", badge: "target"
     }),
@@ -110,7 +110,7 @@ window.GAME = {
     })),
     DQ(2, "Strong vs Weak", {
       prompt: "Ravi says: “Online classes are bad because I don’t like them.” What’s the problem?",
-      options: ["It’s too long", "He used a personal feeling as if it were a reason", "He should have said it louder", "There’s no problem"], answer: 1,
+      options: ["It’s too long for a debate point", "A feeling used as if it were a reason", "He should have said it louder", "There’s no problem with it"], answer: 1,
       hint: "Does it convince someone who does like online classes?",
       note: "Feelings are valid, but they don’t convince others. Ask “why don’t I like them?” and the answer is the real reason.", badge: "heart",
       board: true, boardLabel: "after Round 2"
@@ -126,7 +126,7 @@ window.GAME = {
     },
     DQ(3, "Rebuttals", {
       prompt: "Your opponent says: “Phones distract students.” Best rebuttal?",
-      options: ["“That’s a fair concern. But a simple rule, phones on silent and only for class work, keeps the benefits without the distraction.”", "“You’re just old-fashioned.”", "“That’s wrong.”", "“You also use your phone in class!”"], answer: 0,
+      options: ["“Fair point. A phones-for-class-work rule fixes it.”", "“You’re just old-fashioned about phones in class.”", "“That’s wrong.”", "“You also use your phone in class!”"], answer: 0,
       hint: "Which one deals with the idea?",
       note: "Concede the fair part, then offer a solution. The others attack the person or just say “wrong” with no reason.", badge: "swords"
     }),
@@ -138,7 +138,7 @@ window.GAME = {
     }),
     DQ(3, "Rebuttals", {
       prompt: "Your opponent makes a point you genuinely agree with. What’s the smartest move?",
-      options: ["Agree, and show why your side still wins overall", "Pretend you didn’t hear it", "Argue against it anyway", "Change the topic"], answer: 0,
+      options: ["Agree, then show your side still wins", "Pretend you didn’t hear it at all", "Argue against it anyway, to be safe", "Change the topic quickly"], answer: 0,
       hint: "Admitting a fair point makes you look stronger, not weaker.",
       note: "“I agree with that, and it actually supports my point because…” Judges and audiences trust debaters who are fair.", badge: "thumbs-up",
       board: true, boardLabel: "after Round 3"
@@ -189,13 +189,13 @@ window.GAME = {
     }),
     DQ(5, "Facts and Evidence", {
       prompt: "Which piece of evidence is strongest?",
-      options: ["“Everyone knows this.”", "“My uncle said so.”", "“I read it somewhere.”", "“In our class survey last week, 41 of 60 students said they’d prefer a 10 am start.”"], answer: 3,
+      options: ["“Everyone knows this already.”", "“My uncle said so, and he’s a teacher.”", "“I read it somewhere online last year.”", "“41 of 60 in our survey prefer 10 am.”"], answer: 3,
       hint: "Which one tells you who, when and how many?",
       note: "Specific, recent and checkable. “I read it somewhere” falls apart the moment someone asks “where?”.", badge: "chart-column"
     }),
     DQ(5, "Facts and Evidence", {
       prompt: "Your opponent says: “95% of employers don’t care about marks.” Best response?",
-      options: ["“Where does that number come from?”", "“That’s a lie!”", "Accept it and give up", "“Well, 99% of employers do care!”"], answer: 0,
+      options: ["“Where does that number come from?”", "“That’s a lie!”", "Accept it and give up the point", "“Well, 99% of employers do care!”"], answer: 0,
       hint: "Ask, don’t accuse.",
       note: "Asking for the source is polite and powerful. Answering with your own made-up number makes you just as wrong.", badge: "search",
       board: true, boardLabel: "after Round 5"
@@ -212,21 +212,21 @@ window.GAME = {
     DQ(6, "Closing Strong", {
       double: true,
       prompt: "Which is the strongest closing line?",
-      options: ["“So yeah, that’s it.”", "“Sorry, I couldn’t say much.”", "“Students learn better when they sleep enough, they use mornings for self-study, and they attend more when classes start later. So I urge you: start college at 10 am.”", "“Thank you, any questions?”"], answer: 2,
+      options: ["“So yeah, that’s it from my side, thank you.”", "“Sorry, I couldn’t say much.”", "“Better sleep, mornings, attendance: start at 10 am.”", "“Thank you, any questions?”"], answer: 2,
       hint: "Summary + a clear ask.",
       note: "It sums up the three reasons and ends with a clear ask. Never end with “that’s it” or an apology.", badge: "flame"
     }),
     DQ(6, "Closing Strong", {
       double: true,
       prompt: "You have 30 seconds left and you just thought of a brand new argument. What should you do?",
-      options: ["Rush through the new point and skip your summary", "Stop talking and sit down", "Use the time to summarise your main points clearly instead", "Ask the judge for 2 more minutes"], answer: 2,
+      options: ["Rush through the new point and skip your summary", "Stop talking and sit down", "Summarise your main points", "Ask the judge for 2 more minutes"], answer: 2,
       hint: "What does the audience need to remember?",
       note: "A clear summary beats a rushed new point. Save new ideas for your next debate.", badge: "timer"
     }),
     DQ(6, "Closing Strong", {
       double: true,
       prompt: "Your opponent becomes angry and starts shouting. What should you do?",
-      options: ["Shout back louder", "Walk off the stage", "Mock them in front of the audience", "Stay calm, lower your voice slightly and keep making your points"], answer: 3,
+      options: ["Shout back louder", "Walk off the stage", "Mock them in front of everyone", "Stay calm and keep making points"], answer: 3,
       hint: "Who does the audience trust more: the calm one or the loud one?",
       note: "Calm wins. When the other side gets loud, a steady voice makes you look confident and in control.", badge: "heart",
       board: true, boardLabel: "after Round 6"

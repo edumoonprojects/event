@@ -70,19 +70,19 @@ window.GAME = {
     },
     GR(1, "Commits", {
       prompt: "What is a Git commit?",
-      options: ["A file upload to Google Drive", "A saved snapshot of your project, with a message, that you can return to later", "A promise to finish the project", "A way to delete files"], answer: 1,
+      options: ["A file upload to Google Drive", "A saved snapshot you can return to", "A promise to finish the project", "A way to delete old files safely"], answer: 1,
       hint: "Think “save point” in a game.",
       note: "Like a save point in a game. Commit often, and you can always go back.", badge: "check"
     }),
     GR(1, "Commits", {
       prompt: "Which commit message is best?",
-      options: ["git commit -m \"Add email check to registration form\"", "git commit -m \"final final FINAL\"", "git commit -m \"changes\"", "git commit -m \"asdfgh\""], answer: 0,
+      options: ["git commit -m \"Add email check to form\"", "git commit -m \"final final FINAL version, done\"", "git commit -m \"changes made to some files today\"", "git commit -m \"asdfgh\""], answer: 0,
       hint: "Which one would help you at midnight, searching the history?",
       note: "Say what the commit does. Future you, at 11:40 PM, will thank you.", badge: "file-text"
     }),
     GR(1, "Commits", {
       prompt: "How often should you commit?",
-      options: ["Only when the teacher asks", "Once, at the end of the project", "After each small piece of work that works, like a finished form or a fixed bug", "Every 10 seconds"], answer: 2,
+      options: ["Only when the teacher asks for it", "Once, at the end of the project", "After each small piece that works", "Every 10 seconds, just in case"], answer: 2,
       hint: "Small save points or one big one?",
       note: "Small, working steps. The more save points you have, the less you can lose.", badge: "clock",
       board: true, boardLabel: "after Round 1"
@@ -127,7 +127,7 @@ window.GAME = {
     },
     GR(3, "Branches", {
       prompt: "Why use branches in a team project?",
-      options: ["GitHub charges less", "They delete old code", "They make the project bigger", "Each person can build their feature separately without breaking the working version in main"], answer: 3,
+      options: ["GitHub charges less for projects with branches", "They automatically delete old code", "They make the project look bigger", "Each person builds without breaking main"], answer: 3,
       hint: "What did the teammate do to the project tonight?",
       note: "If your teammate had worked on a branch, main would still be safe tonight.", badge: "route"
     }),
@@ -139,7 +139,7 @@ window.GAME = {
     }),
     GR(3, "Branches", {
       prompt: "What should be on the main branch?",
-      options: ["Only the README", "Everyone’s work in progress", "Half-finished experiments", "Code that works and has been tested"], answer: 3,
+      options: ["Only the README and the licence", "Everyone’s work in progress", "Half-finished experiments", "Code that works and is tested"], answer: 3,
       hint: "What should you be able to submit at any moment?",
       note: "Keep main always working. Then a late-night mistake on a branch can never ruin the submission.", badge: "check",
       board: true, boardLabel: "after Round 3"
@@ -164,7 +164,7 @@ window.GAME = {
     }),
     GR(4, "Merge Conflicts", {
       prompt: "How do you resolve a merge conflict?",
-      options: ["Run git push again until it works", "Restart your laptop", "Delete the file", "Edit the file to keep the right code, remove all the markers, then git add and git commit"], answer: 3,
+      options: ["Run git push again until it works", "Restart your laptop and try again", "Delete the file and make it again", "Keep the right code, then add and commit"], answer: 3,
       hint: "You make the decision, then tell Git it’s done.",
       note: "Choose the final code, delete the markers, then add and commit. That’s it.", badge: "check"
     }),
@@ -188,7 +188,7 @@ window.GAME = {
     },
     GR(5, "GitHub", {
       prompt: "git push fails: “Updates were rejected because the remote contains work that you do not have.” What do you do?",
-      options: ["Force push to overwrite it", "git pull, fix any conflicts, then git push", "Delete the repository", "Email the files instead"], answer: 1,
+      options: ["Force push to overwrite their work", "git pull, fix conflicts, then push", "Delete the repository and start again", "Email the files to your teammates"], answer: 1,
       hint: "Someone pushed before you.",
       note: "Pull first to combine their work with yours, then push. Force pushing here would delete their work, which is how tonight’s disaster happens.", badge: "route"
     }),
@@ -200,7 +200,7 @@ window.GAME = {
     }),
     GR(5, "GitHub", {
       prompt: "What is a pull request?",
-      options: ["A request to merge your branch into main, so teammates can review it first", "Another name for git pull", "A bug report", "Asking GitHub for more storage"], answer: 0,
+      options: ["A request to merge your branch after review", "Another name for the git pull command", "A bug report for the project", "Asking GitHub for more storage"], answer: 0,
       hint: "It’s a request, and someone else looks at it.",
       note: "Pull requests let a teammate check your code before it reaches main. Real companies use them every day.", badge: "users",
       board: true, boardLabel: "after Round 5"
@@ -217,7 +217,7 @@ window.GAME = {
     GR(6, "The Rescue", {
       double: true,
       prompt: "The teammate’s overwrite is commit a1b2c3, already pushed. The commit before it was the working version. Best rescue?",
-      options: ["Submit the broken version", "Start the whole project again from scratch", "git revert a1b2c3, check the app works, then push", "Delete the repository and make a new one"], answer: 2,
+      options: ["Submit the broken version and explain later", "Start the whole project again from scratch", "git revert a1b2c3, test, then push", "Delete the repository and make a new one"], answer: 2,
       hint: "Undo one shared commit safely.",
       note: "One command undoes the overwrite, keeps all history, and your teammates’ copies stay in sync. Submission saved.", badge: "trophy"
     }),
@@ -233,7 +233,7 @@ window.GAME = {
     GR(6, "The Rescue", {
       double: true,
       prompt: "Which daily routine would have prevented tonight’s disaster?",
-      options: ["git pull → work on your own branch → add and commit often → push → open a pull request to merge into main", "Only one person ever touches the code", "Force push every evening", "Work on main, never commit, email files at the end"], answer: 0,
+      options: ["Pull, own branch, commit often, push, pull request", "Only one person ever touches the code", "Force push every evening", "Work on main, never commit, email files at the end"], answer: 0,
       hint: "Every command from today, in order.",
       note: "Pull, branch, commit often, push, pull request. With this routine, a teammate can’t overwrite main by accident.", badge: "route",
       board: true, boardLabel: "after Round 6"

@@ -65,7 +65,7 @@ window.GAME = {
     },
     TM(1, "Chat Assistants", {
       prompt: "You didn’t understand recursion in class. Which tool type helps most right now?",
-      options: ["An AI chat assistant: ask it to explain simply, with one example, then quiz you", "A poster design tool", "A translation app", "A calculator"], answer: 0,
+      options: ["An AI chat that explains it simply and quizzes you", "A poster design tool with recursion templates", "A translation app to read it in Telugu", "A calculator to work out each recursive step"], answer: 0,
       hint: "You need explaining and practice.",
       note: "Explain, then quiz yourself. That’s the chat assistant’s sweet spot.", badge: "lightbulb"
     }),
@@ -77,7 +77,7 @@ window.GAME = {
     }),
     TM(1, "Chat Assistants", {
       prompt: "What should you NOT rely on a chat assistant’s memory for?",
-      options: ["Explaining a concept", "Today’s exam timetable and last dates", "Brainstorming names", "Rewriting your paragraph"], answer: 1,
+      options: ["Explaining a concept you missed in class", "Today’s exam timetable and last dates", "Brainstorming names for your club or project", "Rewriting your paragraph in simpler English"], answer: 1,
       hint: "Which one changes and has an official source?",
       note: "Live dates and schedules come from official notices, not AI memory.", badge: "clock",
       board: true, boardLabel: "after Round 1"
@@ -93,19 +93,19 @@ window.GAME = {
     },
     TM(2, "Search with Sources", {
       prompt: "You need 3 real statistics with sources for a project report. Best tool type?",
-      options: ["A poster maker", "An AI search tool that shows clickable sources, then you open each one", "An AI chat with no sources", "A voice recorder"], answer: 1,
+      options: ["A poster maker with built-in charts", "AI search that shows clickable sources", "An AI chat that answers from memory with no sources", "A voice recorder to note what your friends say"], answer: 1,
       hint: "Your teacher will ask: where is this from?",
       note: "Sources you can open and check are the whole point. Never cite a number you can’t trace.", badge: "search"
     }),
     TM(2, "Search with Sources", {
       prompt: "An AI search tool gives an answer with 3 links. What should you do before using it?",
-      options: ["Nothing, links mean it’s true", "Open the links and check they actually say that", "Count the links", "Share it immediately"], answer: 1,
+      options: ["Nothing, links mean the answer is true", "Open the links and check them", "Count the links, more links means more reliable", "Share it immediately with your project team"], answer: 1,
       hint: "Do the sources really support the answer?",
       note: "Sometimes the source says something different. Read it yourself.", badge: "link-2"
     }),
     TM(2, "Search with Sources", {
       prompt: "You want the latest news about a new government internship scheme. Best first stop?",
-      options: ["A poster tool", "An AI chat from memory", "The official government website, or AI search linking to it", "A friend’s WhatsApp status"], answer: 2,
+      options: ["A poster tool with a news template", "An AI chat answering from its memory", "The official government website", "A friend’s WhatsApp status about the scheme"], answer: 2,
       hint: "Who announced the scheme?",
       note: "For official schemes, the official site is the truth. AI search helps you find it.", badge: "landmark",
       board: true, boardLabel: "after Round 2"
@@ -121,19 +121,19 @@ window.GAME = {
     },
     TM(3, "Your Own Notes", {
       prompt: "You have 80 pages of class notes and an exam in 2 days. Best tool type?",
-      options: ["A tool where you upload your notes and ask it to summarise and quiz you from them", "A poster design tool", "A random YouTube video", "A translation app"], answer: 0,
+      options: ["Upload your notes and ask it to quiz you", "A poster design tool to make notes look nice", "A random YouTube video on the whole subject", "A translation app to read the notes faster"], answer: 0,
       hint: "Which tool uses YOUR material?",
       note: "Answers from your own notes match your syllabus far better than a general AI.", badge: "book-open"
     }),
     TM(3, "Your Own Notes", {
       prompt: "Why is an answer-from-your-files tool safer for exam prep?",
-      options: ["It’s always free", "It writes longer answers", "It sticks closer to your material, so it invents less", "It never makes mistakes"], answer: 2,
+      options: ["It’s always free, so you can use it more", "It writes longer answers with more detail", "It sticks to your notes, so it invents less", "It never makes any mistakes at all"], answer: 2,
       hint: "It can still be wrong, but less often. Why?",
       note: "Grounded in your files means fewer hallucinations. Still check anything that looks odd.", badge: "shield"
     }),
     TM(3, "Your Own Notes", {
       prompt: "Which file should you NOT upload to any AI tool?",
-      options: ["Your class notes", "A public textbook chapter you’re allowed to use", "Your own essay draft", "A document with your Aadhaar number and bank details"], answer: 3,
+      options: ["Your class notes from this semester", "A public textbook chapter you can use", "Your own essay draft for feedback", "Anything with your Aadhaar or bank details"], answer: 3,
       hint: "Private data stays private.",
       note: "Remove private details first, or don’t upload it at all.", badge: "lock",
       board: true, boardLabel: "after Round 3"
@@ -150,19 +150,19 @@ window.GAME = {
     },
     TM(4, "Design", {
       prompt: "You need a poster for your club event in 15 minutes. Best tool type?",
-      options: ["A design tool with templates and AI features", "An AI chat that only writes text", "A spreadsheet", "A coding editor"], answer: 0,
+      options: ["A design tool with templates", "An AI chat that only writes the poster text", "A spreadsheet with a big title row", "A coding editor to build a poster page"], answer: 0,
       hint: "You need a visual, fast.",
       note: "Chat can write the poster text; a design tool makes it look good. Use both.", badge: "palette"
     }),
     TM(4, "Design", {
       prompt: "An AI image tool made your poster, but the text reads “WORSHOP” and “SATRDAY”. What now?",
-      options: ["Post it, nobody reads", "Fix the text yourself in the design tool before posting", "Make the text smaller", "Add more images"], answer: 1,
+      options: ["Post it anyway, nobody reads the small text", "Fix the text yourself before posting", "Make the text smaller so mistakes are hidden", "Add more images to distract from the text"], answer: 1,
       hint: "Whose name is on the poster?",
       note: "AI images often misspell words. Always type the text yourself and check it.", badge: "spell-check"
     }),
     TM(4, "Design", {
       prompt: "AI slide makers can build a deck in a minute. What’s still YOUR job?",
-      options: ["Nothing", "Choosing the font only", "Checking every fact, cutting extra text, and practising what you’ll say", "Adding more slides"], answer: 2,
+      options: ["Nothing, the AI already did everything", "Choosing the font and colours only", "Check facts, cut text, practise speaking", "Adding more slides so it looks complete"], answer: 2,
       hint: "Who presents it?",
       note: "AI gives a first draft. The facts, the story and the delivery are yours.", badge: "mic",
       board: true, boardLabel: "after Round 4"
@@ -178,19 +178,19 @@ window.GAME = {
     },
     TM(5, "Code and English", {
       prompt: "Your code shows an error you don’t understand. Best first step with AI?",
-      options: ["Paste the error and ask AI to explain what it means and why it happened", "Ask AI to rewrite your whole project", "Delete the code", "Copy random code from the internet"], answer: 0,
+      options: ["Paste the error and ask AI to explain it", "Ask AI to rewrite your whole project from scratch", "Delete the code and start again tomorrow", "Copy random code from the internet until it works"], answer: 0,
       hint: "Understand first, fix second.",
       note: "Explaining the error teaches you to fix it next time on your own.", badge: "code"
     }),
     TM(5, "Code and English", {
       prompt: "You want your English email to sound professional AND improve your English. Best ask?",
-      options: ["“Fix it” and send", "“Fix my email and list the mistakes you corrected, with why”", "“Make it longer”", "“Write a new one”"], answer: 1,
+      options: ["“Fix it” and send it without reading", "“Fix it and list what you corrected, and why”", "“Make it longer so it sounds professional”", "“Write a completely new one for me”"], answer: 1,
       hint: "Which one teaches you something?",
       note: "Seeing your mistakes explained is how your own English improves.", badge: "mail"
     }),
     TM(5, "Code and English", {
       prompt: "You’re in a lab exam where AI isn’t allowed. Best tool?",
-      options: ["A hidden AI app", "Your friend’s phone", "Your own brain and practice", "A smartwatch"], answer: 2,
+      options: ["A hidden AI app on your phone under the desk", "Your friend’s phone, passed under the table", "Your own brain and practice", "A smartwatch with notes saved on it"], answer: 2,
       hint: "Read the question again.",
       note: "Rules are rules. Practise with AI before the exam so you can do it without AI during it.", badge: "graduation-cap",
       board: true, boardLabel: "after Round 5"
@@ -207,21 +207,21 @@ window.GAME = {
     TM(6, "Mixed Match", {
       double: true,
       prompt: "You want to check your semester results. Best tool?",
-      options: ["An AI chat", "An AI image tool", "An AI slide maker", "Your university’s official results website"], answer: 3,
+      options: ["An AI chat that guesses your results", "An AI image tool to make a results card", "An AI slide maker for a results summary", "The official results website"], answer: 3,
       hint: "Who has your actual marks?",
       note: "AI doesn’t know your marks. Official websites only.", badge: "landmark"
     }),
     TM(6, "Mixed Match", {
       double: true,
       prompt: "You’re preparing for a placement interview next week. Best combination?",
-      options: ["AI chat for mock interview questions and feedback, plus the company’s official careers page for the role details", "Only a poster tool", "Only AI memory for company details", "No preparation"], answer: 0,
+      options: ["AI mock interviews plus the official careers page", "Only a poster tool to design your resume", "Only AI memory for the company details and salary", "No preparation, just be confident on the day"], answer: 0,
       hint: "Practice + real facts.",
       note: "Use AI for practice, official sources for facts. That combo wins.", badge: "briefcase"
     }),
     TM(6, "Mixed Match", {
       double: true,
       prompt: "A website says “Give us your email password and our AI will sort your inbox.” Best choice?",
-      options: ["Give it, it’s AI", "Give it, but change the password later", "Don’t. Never type your password into an unknown site, AI or not", "Ask a friend to give theirs instead"], answer: 2,
+      options: ["Give it, it’s AI, so it’s safe to use", "Give it, but change the password later", "Don’t. Never share your password", "Ask a friend to give their password instead"], answer: 2,
       hint: "Would you give your house key to a stranger?",
       note: "“AI” doesn’t make a website safe. Official apps and permissions only, never your password.", badge: "shield",
       board: true, boardLabel: "after Round 6"

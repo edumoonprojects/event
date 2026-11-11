@@ -67,19 +67,19 @@ window.GAME = {
     },
     CH(1, "Right Customer", {
       prompt: "“HomeBox” sells home-style lunch boxes near a college. Who’s the BEST first customer?",
-      options: ["Everyone in the city", "Hostel students who miss home food and eat out daily", "Families who cook at home", "Restaurant owners"], answer: 1,
+      options: ["Everyone in the city who eats lunch", "Hostel students who miss home food", "Families who already cook at home", "Restaurant owners near the college"], answer: 1,
       hint: "Who has the problem most, and most often?",
       note: "They have the pain every day and already spend on food. Perfect first customers.", badge: "users"
     }),
     CH(1, "Right Customer", {
       prompt: "“ResumeFix” offers ₹199 resume reviews. Who’s most likely to pay right now?",
-      options: ["1st-year students in their first week", "Professors", "Final-year students with placements next month", "School students"], answer: 2,
+      options: ["1st-year students in their very first week", "Professors who already have jobs", "Final-years with placements next month", "School students preparing for exams"], answer: 2,
       hint: "Who needs a resume urgently?",
       note: "Urgency matters. Final years facing placements need it now.", badge: "file-user"
     }),
     CH(1, "Right Customer", {
       prompt: "Why is “our customer is everyone” a problem?",
-      options: ["You can’t write a message that speaks to everyone, so it speaks to no one", "Everyone is too few people", "It’s against the law", "It’s too specific"], answer: 0,
+      options: ["A message for everyone speaks to no one", "Everyone is too few people to sell to", "It’s against the law to target everyone", "It’s too specific for a new startup"], answer: 0,
       hint: "Try writing one post for a 1st-year AND a grandmother.",
       note: "Specific customers get specific messages, and specific messages get replies.", badge: "target",
       board: true, boardLabel: "after Round 1"
@@ -95,13 +95,13 @@ window.GAME = {
     },
     CH(2, "Right Place", {
       prompt: "HomeBox wants hostel students. Best FIRST channel?",
-      options: ["A TV ad", "A newspaper ad in another city", "LinkedIn posts", "Hostel WhatsApp groups (with the admin’s OK) and a stall near the hostel at lunchtime"], answer: 3,
+      options: ["A TV ad on a regional channel", "A newspaper ad in another city", "LinkedIn posts about home-style food", "Hostel WhatsApp groups and a lunch stall"], answer: 3,
       hint: "Where do hostel students spend time?",
       note: "Free, direct, and exactly where they are. Always ask group admins before posting.", badge: "message-circle"
     }),
     CH(2, "Right Place", {
       prompt: "ResumeFix wants final-year students. Best time to promote?",
-      options: ["The month before placement drives start", "During summer holidays", "Right after placements end", "Diwali night"], answer: 0,
+      options: ["The month before placement drives", "During summer holidays when students relax", "Right after placements end for the year", "Diwali night, when everyone is online"], answer: 0,
       hint: "When do they feel the need?",
       note: "Same message, better timing, many more customers.", badge: "clock"
     }),
@@ -125,7 +125,7 @@ window.GAME = {
     },
     CH(3, "Right Words", {
       prompt: "Which message would make a hostel student order HomeBox?",
-      options: ["“HomeBox: a premium culinary experience.”", "“We are a startup founded in 2026.”", "“Missing amma’s food? Home-style lunch at your hostel gate by 1 PM, ₹80. Order on WhatsApp.”", "“Food available.”"], answer: 2,
+      options: ["“HomeBox: a premium culinary experience for discerning students.”", "“We are a startup founded in 2026.”", "“Missing amma’s food? Lunch at your gate by 1 PM, ₹80.”", "“Food available.”"], answer: 2,
       hint: "Problem, benefit, price, action.",
       note: "It speaks their feeling, gives the benefit and makes ordering easy.", badge: "heart"
     }),
@@ -139,7 +139,7 @@ window.GAME = {
     })),
     CH(3, "Right Words", {
       prompt: "A post ends with: “Call us, DM us, email us, visit our site, or fill the form.” What’s wrong?",
-      options: ["Too few options", "Too many options. One clear action gets more replies", "It needs more emojis", "Nothing"], answer: 1,
+      options: ["Too few options to choose from", "Too many options; one clear action works", "It needs more emojis to stand out", "Nothing, more options is always better"], answer: 1,
       hint: "What happens when people have to choose?",
       note: "One clear action. Confused people do nothing.", badge: "list-checks",
       board: true, boardLabel: "after Round 3"
@@ -156,13 +156,13 @@ window.GAME = {
     },
     CH(4, "First 10", {
       prompt: "StudyNest has ₹0 for marketing. Best way to get the first 10 customers?",
-      options: ["Wait for people to find it", "Spam every group 10 times a day", "Personally invite 30 students from your classes, give a free first hour, and ask for honest feedback", "Buy followers"], answer: 2,
+      options: ["Wait for people to find it on Google", "Spam every group 10 times a day", "Invite 30 classmates for a free first hour", "Buy 1,000 followers to look popular"], answer: 2,
       hint: "Free, personal, and you learn something.",
       note: "Personal invites + a reason to try + feedback. That’s how most first customers come.", badge: "handshake"
     }),
     CH(4, "First 10", {
       prompt: "A customer tried HomeBox once and didn’t order again. What should the founder do?",
-      options: ["Block them", "Ignore it", "Send them 20 ads", "Politely ask what could be better, and fix it if many say the same"], answer: 3,
+      options: ["Block them so they don’t leave bad reviews", "Ignore it, one customer doesn’t matter", "Send them 20 ads until they order again", "Ask what could be better"], answer: 3,
       hint: "What can you learn?",
       note: "Lost customers are free advice. Patterns in their answers show what to fix.", badge: "message-circle"
     }),
@@ -184,19 +184,19 @@ window.GAME = {
     },
     CH(5, "Offers and Trust", {
       prompt: "Which launch offer for ResumeFix is smartest?",
-      options: ["“First 30 students: ₹149 instead of ₹199, this week only.”", "“Everything free forever.”", "“90% off, always.”", "No offer, ever"], answer: 0,
+      options: ["“First 30 students: ₹149, this week only.”", "“Everything free forever, for every student.”", "“90% off, always, no conditions at all.”", "No offer, ever, the price is fixed"], answer: 0,
       hint: "A reason to act now, without destroying the price.",
       note: "Limited and time-bound creates urgency while protecting the real price.", badge: "tag"
     }),
     CH(5, "Offers and Trust", {
       prompt: "HomeBox is new and has no reviews. What’s the honest way to build trust?",
-      options: ["Write fake 5-star reviews", "Buy followers", "Say “10,000 happy customers” anyway", "Let 10 students try it, then share their real feedback with permission"], answer: 3,
+      options: ["Write a few fake 5-star reviews to get started", "Buy followers so the page looks popular", "Say “10,000 happy customers” anyway", "Share real feedback from 10 students"], answer: 3,
       hint: "Real, honest, with permission.",
       note: "Fake reviews are dishonest and can break platform rules and consumer laws. Real ones work better anyway.", badge: "badge-check"
     }),
     CH(5, "Offers and Trust", {
       prompt: "Best way to turn happy customers into new customers?",
-      options: ["Ask them to refer one friend, and give both a small reward", "Ask them to spam their groups", "Hope they talk about you", "Force them to post a story"], answer: 0,
+      options: ["Ask them to refer one friend, reward both", "Ask them to spam all their groups for you", "Hope they talk about you on their own", "Force them to post a story before ordering"], answer: 0,
       hint: "Make sharing easy and rewarding.",
       note: "Referral rewards turn happy customers into your best marketers.", badge: "users",
       board: true, boardLabel: "after Round 5"
@@ -213,7 +213,7 @@ window.GAME = {
     CH(6, "Full Plan", {
       double: true,
       prompt: "A senior starts “CodeBuddy”, ₹299 a month C-programming help for 1st-years. Best launch plan?",
-      options: ["A billboard on the highway", "Wait for final years to sign up", "A free 30-minute doubt session in the 1st-year block, then a ₹299 monthly offer for those who join", "A national TV ad"], answer: 2,
+      options: ["A billboard on the highway near the college", "Wait for final years to sign up first", "A free doubt session, then a ₹299 offer", "A national TV ad during a cricket match"], answer: 2,
       hint: "Right people, right place, try before you buy.",
       note: "Free value first builds trust, and it reaches exactly the right people.", badge: "code"
     }),
@@ -229,7 +229,7 @@ window.GAME = {
     CH(6, "Full Plan", {
       double: true,
       prompt: "After 1 month, your product has 40 customers. What’s the smartest next step?",
-      options: ["Stop marketing, you’re done", "Ask customers why they bought and what to improve, then double down on what worked", "Change everything at once", "Spend all your money on ads immediately"], answer: 1,
+      options: ["Stop marketing, the product is done", "Ask customers why they bought, do more of that", "Change everything at once to grow faster", "Spend all your money on ads immediately"], answer: 1,
       hint: "Learn, then grow.",
       note: "Your first customers tell you where the next ones are. Listen, improve, repeat.", badge: "trending-up",
       board: true, boardLabel: "after Round 6"

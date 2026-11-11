@@ -68,19 +68,19 @@ window.GAME = {
     },
     IB(1, "Saying Hello", {
       prompt: "You walk into a college event and don’t know anyone. Best first move?",
-      options: ["Stand in a corner with your phone until someone talks to you", "Find someone standing alone, smile and say “Hi, I’m new here too. What brought you?”", "Join the biggest group and start telling a joke", "Wait for the event to start, then leave early"], answer: 1,
+      options: ["Stand in a corner with your phone until someone talks to you", "Find someone alone: “Hi, I’m new too. What brought you here?”", "Join the biggest group and start telling a joke right away", "Wait for the event to start, then leave a bit early"], answer: 1,
       hint: "Who is easiest to talk to in a room?",
       note: "People standing alone are usually happy someone came over. A simple, open question does the rest.", badge: "hand"
     }),
     IB(1, "Saying Hello", {
       prompt: "Which opening line is most likely to start a real conversation?",
-      options: ["“Hi.”", "“Do you study here?”", "“Nice weather, no?”", "“Hi, I’m Sneha. I’m in 2nd year ECE. Which branch are you in?”"], answer: 3,
+      options: ["“Hi.”", "“Do you study here, or are you from another college?”", "“Nice weather today, no? Very hot outside.”", "“Hi, I’m Sneha, 2nd year ECE. Which branch?”"], answer: 3,
       hint: "Which one gives them something to answer?",
       note: "Your name, a little about you and an easy question. It invites them to share back.", badge: "message-circle"
     }),
     IB(1, "Saying Hello", {
       prompt: "What does your body language say when you talk with your arms crossed and eyes on your phone?",
-      options: ["“I’m not really interested in talking”", "“I’m very relaxed and friendly”", "“I’m listening carefully”", "Nothing, body language doesn’t matter"], answer: 0,
+      options: ["“I’m not interested in talking”", "“I’m very relaxed and friendly with everyone”", "“I’m listening carefully to every word”", "Nothing, body language doesn’t really matter"], answer: 0,
       hint: "What would you think if someone did that to you?",
       note: "People read your body before your words. Phone away, arms relaxed, face towards the person.", badge: "user",
       board: true, boardLabel: "after Round 1"
@@ -96,19 +96,19 @@ window.GAME = {
     },
     IB(2, "Names", {
       prompt: "What’s the easiest trick to remember a new person’s name?",
-      options: ["Write it on your hand", "Say it back right away: “Nice to meet you, Arjun”", "Ask them to spell it three times", "Don’t bother; you can ask later"], answer: 1,
+      options: ["Write it on your hand with a pen", "Say it back: “Nice to meet you, Arjun”", "Ask them to spell it three times slowly", "Don’t bother now, you can ask again later"], answer: 1,
       hint: "Hearing yourself say it helps your memory.",
       note: "Repeating a name once, naturally, makes it much easier to remember. Using it again when you leave helps too.", badge: "lightbulb"
     }),
     IB(2, "Names", {
       prompt: "You met Divya 10 minutes ago, but forgot her name. She’s walking towards you. Best move?",
-      options: ["Avoid her for the rest of the day", "Call her “bro” or “dear”", "Smile and say “I’m so sorry, tell me your name once more?”", "Pretend to take a phone call"], answer: 2,
+      options: ["Avoid her for the rest of the day", "Call her “bro” or “dear” so she doesn’t notice", "“Sorry, tell me your name once more?”", "Pretend to take a phone call and walk away"], answer: 2,
       hint: "Honesty is less awkward than you think.",
       note: "Everyone forgets names. Asking again shows you care about getting it right.", badge: "heart"
     }),
     IB(2, "Names", {
       prompt: "How should you introduce yourself to a senior or a speaker at an event?",
-      options: ["“Sir, myself Ravi.”", "Just start asking questions without introducing yourself", "Show them your college ID card", "“Hi, I’m Ravi, a 2nd year CSE student. I really liked your talk on startups.”"], answer: 3,
+      options: ["“Sir, myself Ravi, I want to ask something.”", "Start asking questions without introducing yourself", "Show them your college ID card first", "“Hi, I’m Ravi, 2nd year CSE. I liked your talk.”"], answer: 3,
       hint: "Name, who you are, and one genuine line.",
       note: "Name, year and branch, and one specific thing you liked. Short, confident, and they’ll remember you.", badge: "badge-check",
       board: true, boardLabel: "after Round 2"
@@ -124,13 +124,13 @@ window.GAME = {
     },
     IB(3, "Asking Questions", {
       prompt: "Which question keeps a conversation going best?",
-      options: ["“Do you like coding?”", "“Are you from Vizag?”", "“What got you interested in coding?”", "“Is this your first event?”"], answer: 2,
+      options: ["“Do you like coding, or is it just for marks?”", "“Are you from Vizag or from somewhere else?”", "“What got you into coding?”", "“Is this your first event at this college?”"], answer: 2,
       hint: "Which one can’t be answered with just yes or no?",
       note: "Open questions (what, how, why) invite a story. Yes/no questions often end the chat.", badge: "message-circle"
     }),
     IB(3, "Asking Questions", {
       prompt: "Someone says: “I play the guitar.” Best reply?",
-      options: ["“Oh, how long have you been playing? What do you like to play?”", "“Cool.”", "“My cousin plays the guitar better than anyone.”", "“I don’t like music much.”"], answer: 0,
+      options: ["“How long have you played? What do you play?”", "“Cool.”", "“My cousin plays the guitar better than anyone I know.”", "“I don’t like music much, to be honest.”"], answer: 0,
       hint: "Show interest in them.",
       note: "A follow-up question shows you were listening and you care. Turning it to yourself or your cousin ends their story.", badge: "ear"
     }),
@@ -153,19 +153,19 @@ window.GAME = {
     },
     IB(4, "Listening", {
       prompt: "While a friend tells you about their bad day, you keep checking your phone. What does it tell them?",
-      options: ["You’re a great multitasker", "Nothing, they won’t notice", "You’re listening even better", "Their story doesn’t matter to you"], answer: 3,
+      options: ["That you’re a great multitasker", "Nothing, they won’t notice at all", "That you’re listening even better", "Their story doesn’t matter to you"], answer: 3,
       hint: "How does it feel when it happens to you?",
       note: "Even a quick glance at the phone says “something else is more important”. Put it face down.", badge: "smartphone"
     }),
     IB(4, "Listening", {
       prompt: "Someone is telling a story and pauses to think. What should you do?",
-      options: ["Wait a moment and let them finish their thought", "Jump in with your own bigger story", "Finish their sentence for them", "Change the topic"], answer: 0,
+      options: ["Wait and let them finish", "Jump in with your own bigger story", "Finish their sentence for them quickly", "Change the topic to something easier"], answer: 0,
       hint: "Silence is not always an empty space to fill.",
       note: "A short pause often means they’re about to share the best part. Let it breathe.", badge: "clock"
     }),
     IB(4, "Listening", {
       prompt: "Which reply shows you really listened?",
-      options: ["“Okay okay.”", "“So you shifted to Vizag only last month, and the hostel food is the hardest part? That’s tough.”", "“Same.”", "“Anyway, did you see the match yesterday?”"], answer: 1,
+      options: ["“Okay okay, I understand what you mean.”", "“So you moved last month and hostel food is hardest?”", "“Same.”", "“Anyway, did you see the match yesterday?”"], answer: 1,
       hint: "Which one repeats what they said?",
       note: "Repeating back a detail shows you heard them. It’s called active listening, and people love it.", badge: "ear",
       board: true, boardLabel: "after Round 4"
@@ -181,19 +181,19 @@ window.GAME = {
     },
     IB(5, "Common Ground", {
       prompt: "You notice someone has a hackathon sticker on their laptop. Best opener?",
-      options: ["Ignore it and talk about the weather", "“Is that laptop expensive?”", "“Nice sticker! Which hackathon was that? What did you build?”", "“Stickers make laptops look childish.”"], answer: 2,
+      options: ["Ignore it and talk about the weather instead", "“Is that laptop expensive? Which model is it?”", "“Nice sticker! Which hackathon was that?”", "“Stickers make laptops look childish.”"], answer: 2,
       hint: "The sticker is an invitation.",
       note: "People show what they care about: stickers, T-shirts, wallpapers. Noticing it is the easiest opener there is.", badge: "search"
     }),
     IB(5, "Common Ground", {
       prompt: "You find out you’re both from the same district. What’s the best next step?",
-      options: ["Say “Oh nice” and stop there", "Ask what they miss most from home, or their favourite place there", "Ask which caste or community they’re from", "Tell them your whole family history"], answer: 1,
+      options: ["Say “Oh nice” and stop the conversation there", "Ask what they miss most from home", "Ask which caste or community they’re from", "Tell them your whole family history"], answer: 1,
       hint: "Build on it with something positive and open.",
       note: "Shared places are great: food, festivals and favourite spots. Stay away from personal questions about caste or community.", badge: "map"
     }),
     IB(5, "Common Ground", {
       prompt: "You and the other person have nothing in common at all. What now?",
-      options: ["Get curious: “I’ve never tried that. What do you like about it?”", "End the conversation immediately", "Argue that your hobby is better", "Pretend you like the same things"], answer: 0,
+      options: ["Get curious: “What do you like about it?”", "End the conversation immediately and walk off", "Argue that your hobby is much better than theirs", "Pretend you like the same things they do"], answer: 0,
       hint: "Different isn’t bad. It’s new.",
       note: "Curiosity works even when you share nothing. Asking someone to teach you about their world makes them feel valued.", badge: "lightbulb",
       board: true, boardLabel: "after Round 5"
@@ -210,21 +210,21 @@ window.GAME = {
     IB(6, "Ending Well", {
       double: true,
       prompt: "You’ve been talking for a while and want to move on. Best exit line?",
-      options: ["Walk away without saying anything", "“I’m bored, bye.”", "Say you have a phone call when you don’t", "“It was really nice talking to you, Rahul. I’ll let you meet a few more people. See you around!”"], answer: 3,
+      options: ["Walk away without saying anything at all", "“I’m bored, bye.”", "Say you have a call, even though you don’t", "“Nice talking, Rahul. See you around!”"], answer: 3,
       hint: "Warm, honest and uses their name.",
       note: "Thank them, use their name and give a kind reason. They’ll remember you well.", badge: "hand"
     }),
     IB(6, "Ending Well", {
       double: true,
       prompt: "You met a senior at a tech event who works at a startup. How should you stay in touch?",
-      options: ["Send a LinkedIn request with a short note: “Great meeting you at today’s event. I enjoyed your story about your first app.”", "Message them every day asking for a job", "Do nothing and hope you meet again", "Send a request with no note at all"], answer: 0,
+      options: ["A LinkedIn request with a short personal note", "Message them every day asking for a job", "Do nothing and hope you meet again someday", "Send a request with no note at all"], answer: 0,
       hint: "Remind them who you are, briefly.",
       note: "A short, specific note within a day is the best follow-up. It reminds them of the conversation, not just your name.", badge: "mail"
     }),
     IB(6, "Ending Well", {
       double: true,
       prompt: "Why is meeting new people in college worth the effort?",
-      options: ["It isn’t. Marks are all that matter", "Only for finding people to copy assignments from", "Friends, teammates, mentors and many future jobs come from people you know", "So you can have more followers"], answer: 2,
+      options: ["It isn’t, marks are all that matter in college", "Only for finding people to copy assignments from", "Friends, mentors and jobs come from people", "So you can have more followers on Instagram"], answer: 2,
       hint: "Think about how people find internships and teammates.",
       note: "Many internships, hackathon teams and jobs come through people. The person next to you today could be your co-founder.", badge: "users",
       board: true, boardLabel: "after Round 6"

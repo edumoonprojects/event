@@ -74,13 +74,13 @@ window.GAME = {
     })),
     HQ(1, "Spot the Fake", {
       prompt: "Why does AI sometimes make up facts?",
-      options: ["It wants to trick you", "It predicts words that sound right, and it can’t always tell true from likely", "It’s connected to a fake website", "Only free versions do it"], answer: 1,
+      options: ["It wants to trick you on purpose", "It predicts words that sound right", "It’s connected to a fake website", "Only free versions of AI do it"], answer: 1,
       hint: "Think about how AI builds a sentence.",
       note: "It isn’t lying on purpose. It’s predicting. That’s why checking is your job.", badge: "brain"
     }),
     HQ(1, "Spot the Fake", {
       prompt: "Which AI answer should you check MOST carefully?",
-      options: ["A poem about the rain", "Ideas for a club event name", "A rewrite of your own paragraph", "Exact statistics for your project report"], answer: 3,
+      options: ["A poem about the rain for a club post", "Ideas for a club event name", "A rewrite of your own paragraph", "Exact statistics for a report"], answer: 3,
       hint: "Which one has a fact that can be right or wrong?",
       note: "Creative tasks have no wrong answer. Facts, numbers and sources do. Check those every time.", badge: "chart-column",
       board: true, boardLabel: "after Round 1"
@@ -110,7 +110,7 @@ window.GAME = {
     }),
     HQ(2, "Numbers and Dates", {
       prompt: "AI writes: “Exactly 73.6% of Indian students use AI daily (EduSurvey 2024).” What should you do?",
-      options: ["Use it, it has a source", "Round it to 74% and use it", "Search for that survey yourself before using the number", "Ask AI if it’s sure"], answer: 2,
+      options: ["Use it, it has a source in brackets", "Round it to 74% and use it", "Search for that survey yourself", "Ask AI if it’s sure, then use it"], answer: 2,
       hint: "Does that survey actually exist?",
       note: "Exact numbers with a confident source name are a classic hallucination. If you can’t find the survey, don’t use the number.", badge: "search",
       board: true, boardLabel: "after Round 2"
@@ -126,19 +126,19 @@ window.GAME = {
     },
     HQ(3, "Fake Sources", {
       prompt: "AI gives you a paper to cite: “Kumar & Rao (2021), Journal of Student AI Studies”. You can’t find it anywhere online. What now?",
-      options: ["Cite it anyway, AI found it", "Change the year and cite it", "Cite it in small font", "Don’t cite it. It’s probably invented"], answer: 3,
+      options: ["Cite it anyway, AI found it somewhere", "Change the year slightly and cite it", "Cite it in a small font at the end", "Don’t cite it, it’s probably invented"], answer: 3,
       hint: "If nobody can find it, can your teacher?",
       note: "Made-up citations have embarrassed students, researchers and even lawyers in court. No source found means no citation.", badge: "book-open"
     }),
     HQ(3, "Fake Sources", {
       prompt: "AI says: “As Dr. A. P. J. Abdul Kalam said, ‘Use AI for every assignment.’” What’s the problem?",
-      options: ["Nothing, Kalam said lots of things", "It’s very likely a fake quote. Kalam passed away in 2015, before today’s AI chat tools", "The quote is too short", "It should be in Hindi"], answer: 1,
+      options: ["Nothing, Kalam said many wise things", "Likely fake: Kalam died before AI chat tools", "The quote is too short to be real", "It should be written in Hindi"], answer: 1,
       hint: "When did today’s AI chat tools become popular?",
       note: "AI often attaches famous names to sentences that sound wise. Always find the quote on a trusted site first.", badge: "message-circle"
     }),
     HQ(3, "Fake Sources", {
       prompt: "What’s the BEST way to check if an AI-given source is real?",
-      options: ["Ask the same AI again", "Search the exact title yourself and open the original", "Check if it sounds professional", "Count the authors"], answer: 1,
+      options: ["Ask the same AI again if it’s real", "Search the exact title and open it", "Check if it sounds professional enough", "Count the authors and the page numbers"], answer: 1,
       hint: "Don’t let AI check its own homework.",
       note: "AI checking itself can repeat the same mistake. Open the original source with your own eyes.", badge: "link-2",
       board: true, boardLabel: "after Round 3"
@@ -163,13 +163,13 @@ window.GAME = {
     })),
     HQ(4, "Code Check", {
       prompt: "AI writes code using a library called “easyfaceAI”. Your code shows “No module named easyfaceAI”. Most likely reason?",
-      options: ["Your laptop is broken", "Python is outdated", "AI may have invented the library. Search for it before installing anything", "You need to restart the internet"], answer: 2,
+      options: ["Your laptop is broken and needs repair", "Python is outdated and needs updating", "AI may have invented the library", "You need to restart the internet router"], answer: 2,
       hint: "Does that library really exist?",
       note: "AI sometimes invents package names. Attackers even publish fake packages with those names, so never blindly install what AI suggests.", badge: "shield"
     }),
     HQ(4, "Code Check", {
       prompt: "AI’s code passes your one test. What’s the smart next step?",
-      options: ["Test it with more inputs, including empty and very large ones", "Submit it immediately", "Ask AI to add more comments", "Change the variable names"], answer: 0,
+      options: ["Test it with more inputs, including edge cases", "Submit it immediately before the deadline", "Ask AI to add more comments to the code", "Change the variable names to make it yours"], answer: 0,
       hint: "Does one passing test prove it always works?",
       note: "Edge cases (empty input, zero, negatives, huge numbers) are where AI code breaks most.", badge: "list-checks",
       board: true, boardLabel: "after Round 4"
@@ -185,7 +185,7 @@ window.GAME = {
     },
     HQ(5, "High Stakes", {
       prompt: "Your friend has a fever. AI suggests a medicine dose. What should you do?",
-      options: ["Give that dose right away", "Double it to be safe", "Ask AI a second time", "Check the label and ask a doctor or pharmacist"], answer: 3,
+      options: ["Give that dose right away", "Double it to be safe and quick", "Ask AI a second time to confirm", "Check the label, ask a doctor"], answer: 3,
       hint: "Who should decide a medicine dose?",
       note: "Doses depend on age, weight and health. AI can be wrong, and here a mistake can hurt someone.", badge: "heart"
     }),
@@ -199,7 +199,7 @@ window.GAME = {
     })),
     HQ(5, "High Stakes", {
       prompt: "AI tells you the last date to apply for a government scholarship. What’s the smartest move?",
-      options: ["Trust it", "Confirm the date on the official scholarship website", "Ask a friend if AI is usually right", "Apply on the last day to be safe"], answer: 1,
+      options: ["Trust it, AI is usually right", "Check the official website", "Ask a friend if AI is usually right", "Apply on the last day to be safe"], answer: 1,
       hint: "Dates change every year.",
       note: "Deadlines and rules change. The official site is the only source that counts.", badge: "landmark",
       board: true, boardLabel: "after Round 5"
@@ -225,14 +225,14 @@ window.GAME = {
     HQ(6, "Final Hunt", {
       double: true,
       prompt: "A WhatsApp forward says: “AI confirmed: college exams cancelled next week.” What do you do?",
-      options: ["Forward it to all groups", "Celebrate and stop studying", "Check the official college notice before believing or sharing it", "Ask AI if it’s true"], answer: 2,
+      options: ["Forward it to all groups so people know", "Celebrate and stop studying for now", "Check the official notice first", "Ask AI if it’s true and believe it"], answer: 2,
       hint: "Who actually decides exam dates?",
       note: "“AI confirmed” isn’t proof of anything. Official sources first, always.", badge: "message-circle"
     }),
     HQ(6, "Final Hunt", {
       double: true,
       prompt: "Which habit protects you MOST from AI hallucinations?",
-      options: ["Using only paid AI tools", "Asking questions in English", "Never using AI", "Checking important facts in a second, trusted source"], answer: 3,
+      options: ["Using only paid AI tools, they don’t make mistakes", "Asking all your questions in English", "Never using AI for anything", "Checking facts in a trusted source"], answer: 3,
       hint: "Even the best AI makes mistakes.",
       note: "Every AI tool can hallucinate. A second trusted source is the habit that catches it.", badge: "badge-check",
       board: true, boardLabel: "after Round 6"

@@ -67,19 +67,19 @@ window.GAME = {
     },
     FL(1, "What to Offer", {
       prompt: "Kavya can edit reels, design posters, code a bit and sing. What should she offer first?",
-      options: ["Everything, as a “do anything” freelancer", "Nothing until she’s perfect", "Singing at cafés", "Reel editing, her strongest skill, with 3 sample reels"], answer: 3,
+      options: ["Everything, as a “do anything” freelancer", "Nothing until she’s perfect at all four", "Singing at cafés on weekends for tips", "Reel editing, with 3 sample reels"], answer: 3,
       hint: "One clear, strong service.",
       note: "Clients hire specialists. Start with your strongest skill and add more later.", badge: "film"
     }),
     FL(1, "What to Offer", {
       prompt: "Kavya has no paid work yet. What can she show as samples?",
-      options: ["A list of software names", "Nothing", "Reels she made for her college club or fest, and one made for practice for a local shop’s style", "Other people’s work"], answer: 2,
+      options: ["A list of all the software names she knows", "Nothing, she should wait for real clients", "Reels she made for her club and fest", "Other people’s work that she really likes"], answer: 2,
       hint: "Real samples, honestly labelled.",
       note: "Practice and club work are fine samples. Just never claim others’ work as yours.", badge: "star"
     }),
     FL(1, "What to Offer", {
       prompt: "Where should Kavya keep her samples so clients can see them easily?",
-      options: ["In a printed file at home", "Only on her phone gallery", "Nowhere", "One simple link: an Instagram page, a Drive folder or a portfolio site"], answer: 3,
+      options: ["In a printed file at home to show in person", "Only in her phone gallery, to show when asked", "Nowhere, clients don’t look at samples", "One simple link to all her samples"], answer: 3,
       hint: "One link to share.",
       note: "A single link makes it easy to share in every message.", badge: "link-2",
       board: true, boardLabel: "after Round 1"
@@ -95,13 +95,13 @@ window.GAME = {
     },
     FL(2, "Finding Clients", {
       prompt: "Best first move to land the café near campus?",
-      options: ["Spam their Instagram with 20 DMs", "Wait for them to find her", "Post “I am available” once", "Visit, show a short sample reel made in their style, and offer a small first project"], answer: 3,
+      options: ["Spam their Instagram with 20 DMs in a day", "Wait for them to notice her and get in touch", "Post “I am available for work” once", "Visit with a sample reel in their style"], answer: 3,
       hint: "Show value first.",
       note: "A sample made for THEM shows exactly what they’d get.", badge: "store"
     }),
     FL(2, "Finding Clients", {
       prompt: "Why are local businesses often easier first clients than big companies?",
-      options: ["They have no rules", "They’re easier to reach, need simple work, and value someone nearby", "They pay more", "They don’t care about quality"], answer: 1,
+      options: ["They have no rules about how work is done", "Easier to reach, and they need simple work", "They always pay more than big companies", "They don’t care much about quality"], answer: 1,
       hint: "Reach and need.",
       note: "Small local clients are perfect for building experience and reviews.", badge: "map"
     }),
@@ -131,13 +131,13 @@ window.GAME = {
     }),
     FL(3, "Pricing", {
       prompt: "The café wants 8 reels a month. What’s a smart way to price it?",
-      options: ["Charge per minute of watching", "A monthly package with a clear total, a small discount for the bulk, and a fixed number of changes", "Free, for exposure", "Whatever they want to pay"], answer: 1,
+      options: ["Charge per minute that people watch", "A monthly package with a clear total", "Free, for the exposure it brings", "Whatever they decide they want to pay"], answer: 1,
       hint: "Clear total, clear limits.",
       note: "Packages give the client clarity and you steady income. Limits protect your time.", badge: "tag"
     }),
     FL(3, "Pricing", {
       prompt: "A client says, “Do it free, it’s great exposure.” Best response?",
-      options: ["Politely share your price, or offer one small paid trial instead", "Agree to everything free forever", "Ignore all future messages", "Get angry"], answer: 0,
+      options: ["Share your price, or offer a small paid trial", "Agree to everything free, forever", "Ignore all their future messages", "Get angry and tell them off"], answer: 0,
       hint: "Your time has value.",
       note: "Exposure doesn’t pay bills. A small paid trial respects both sides.", badge: "handshake",
       board: true, boardLabel: "after Round 3"
@@ -154,7 +154,7 @@ window.GAME = {
     },
     FL(4, "Scope", {
       prompt: "Why write the scope down, even for a small café?",
-      options: ["It’s not needed", "To look fancy", "To confuse them", "So both sides agree what’s included, and “just one more change” doesn’t become 20"], answer: 3,
+      options: ["It’s not needed for small, friendly clients", "To look fancy and professional", "To confuse them with long documents", "So extra changes don’t pile up"], answer: 3,
       hint: "Avoid endless changes.",
       note: "A WhatsApp message or email with the scope is far better than nothing.", badge: "file-text"
     }),
@@ -168,7 +168,7 @@ window.GAME = {
     })),
     FL(4, "Scope", {
       prompt: "Why take an advance payment before starting?",
-      options: ["To be rude", "It’s illegal", "Clients prefer to pay later", "It shows the client is serious and protects you if they disappear"], answer: 3,
+      options: ["To be rude to the client from the start", "Because it’s illegal to work without one", "Because clients prefer to pay at the end", "It shows they’re serious and protects you"], answer: 3,
       hint: "Protection.",
       note: "An advance (often 30 to 50%) is common and fair, especially with new clients.", badge: "indian-rupee",
       board: true, boardLabel: "after Round 4"
@@ -184,19 +184,19 @@ window.GAME = {
     },
     FL(5, "Delivering", {
       prompt: "Kavya will be one day late because of exams. Best move?",
-      options: ["Tell the client early, apologise, and give a new exact time", "Deliver a rushed, poor reel on time", "Say nothing and deliver late", "Block the client"], answer: 0,
+      options: ["Tell the client early with a new exact time", "Deliver a rushed, poor reel on time anyway", "Say nothing and deliver it a day late", "Block the client until exams are over"], answer: 0,
       hint: "No surprises.",
       note: "Clients forgive delays they hear about early. They don’t forgive silence.", badge: "clock"
     }),
     FL(5, "Delivering", {
       prompt: "The client asks for 4 extra reels this month “at the same price”. Best reply?",
-      options: ["Refuse rudely", "Do them free, silently", "Ignore the message", "“Happy to! Our plan covers 8 reels, so the 4 extra would be ₹X. Shall I go ahead?”"], answer: 3,
+      options: ["Refuse rudely and stop working with them", "Do them free, silently, to keep them happy", "Ignore the message and hope they forget", "“Happy to! 4 extra reels would be ₹X.”"], answer: 3,
       hint: "Friendly, clear, back to the scope.",
       note: "Point to the agreement kindly. Most clients respect clear boundaries.", badge: "handshake"
     }),
     FL(5, "Delivering", {
       prompt: "A client hasn’t paid the balance 2 weeks after delivery. First step?",
-      options: ["Delete their reels from their page", "Post about them publicly", "Never mention it", "A polite reminder with the invoice and payment details"], answer: 3,
+      options: ["Delete their reels from their page", "Post about them publicly on Instagram", "Never mention it and hope they pay", "A polite reminder with the invoice"], answer: 3,
       hint: "Start polite and clear.",
       note: "Often it’s just forgotten. A clear invoice and a polite reminder usually work.", badge: "mail",
       board: true, boardLabel: "after Round 5"
@@ -213,14 +213,14 @@ window.GAME = {
     FL(6, "Growing", {
       double: true,
       prompt: "The café loves Kavya’s reels. Best next step?",
-      options: ["Ask for free food only", "Stop working with them", "Ask for a short review and if they know another business who needs reels", "Raise prices by 5× immediately"], answer: 2,
+      options: ["Ask for free food every day instead of money", "Stop working with them and find bigger clients", "Ask for a review and a referral", "Raise prices by 5× immediately"], answer: 2,
       hint: "Happy clients bring clients.",
       note: "Reviews and referrals are how most freelancers grow.", badge: "star"
     }),
     FL(6, "Growing", {
       double: true,
       prompt: "Kavya now earns regularly from freelancing. What should she start doing?",
-      options: ["Nothing", "Hide the income", "Keep a simple record of income and expenses, and learn the tax and college rules that apply to her", "Spend everything"], answer: 2,
+      options: ["Nothing, it’s just pocket money", "Hide the income from everyone", "Track income and learn the tax rules", "Spend everything she earns each month"], answer: 2,
       hint: "Grown-up money habits.",
       note: "Simple records now make things easy later. Ask a family member or professional about tax questions.", badge: "list-checks"
     }),

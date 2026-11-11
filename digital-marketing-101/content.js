@@ -66,19 +66,19 @@ window.GAME = {
     },
     DM(1, "The Customer", {
       prompt: "Who should Brew Corner mainly target first?",
-      options: ["Everyone in India", "Students and young staff from the college next door", "Tourists in Goa", "Only people over 60"], answer: 1,
+      options: ["Everyone in India who drinks coffee", "Students from the college next door", "Tourists who visit Goa every year", "Only people over 60 years old"], answer: 1,
       hint: "Who walks past the café every day?",
       note: "Start with the people closest and most likely to come: students and staff next door. Grow from there.", badge: "target"
     }),
     DM(1, "The Customer", {
       prompt: "What’s the best way to find out what students want from the café?",
-      options: ["Guess", "Copy a café in Mumbai", "Ask them: an Instagram poll, a quick chat at the counter, a feedback card", "Change the menu every day"], answer: 2,
+      options: ["Guess from what the owner likes", "Copy a famous café in Mumbai", "Ask them: a poll, a chat, a feedback card", "Change the menu every day and see"], answer: 2,
       hint: "The answer is with the customers.",
       note: "Polls and short chats are free and fast. Customers will tell you exactly what they want.", badge: "message-circle"
     }),
     DM(1, "The Customer", {
       prompt: "Which of these is a useful customer persona?",
-      options: ["“Young people.”", "“People who like coffee.”", "“Students.”", "“Priya, 19, 2nd year, studies in cafés after 5 pm, budget ₹150, loves cold coffee.”"], answer: 3,
+      options: ["“Young people who like going out with friends on weekends.”", "“People who like coffee and snacks in the evening.”", "“Students.”", "“Priya, 19, studies in cafés after 5, budget ₹150.”"], answer: 3,
       hint: "Which one could you picture as a real person?",
       note: "A specific persona tells you what to post, when, and what offer to make.", badge: "user",
       board: true, boardLabel: "after Round 1"
@@ -94,19 +94,19 @@ window.GAME = {
     },
     DM(2, "Instagram Content", {
       prompt: "Which post will most likely get more people engaging?",
-      options: ["A reel of the barista making the café’s famous cold coffee, with a smile at the end", "A plain photo of the café logo", "A long text post about the café’s history", "The same menu photo, posted again"], answer: 0,
+      options: ["A reel of the barista making the famous cold coffee", "A plain photo of the café logo", "A long text post about the café’s history", "The same menu photo, posted again"], answer: 0,
       hint: "People, action, something tasty.",
       note: "Real people and the product in action. Plain logos and repeated menus get scrolled past.", badge: "film"
     }),
     DM(2, "Instagram Content", {
       prompt: "How often should Brew Corner post?",
-      options: ["10 posts in one day, then nothing for a month", "Once a year", "A steady rhythm it can keep up, like 3 to 4 good posts a week", "Only when the owner remembers"], answer: 2,
+      options: ["10 posts in one day, then nothing for a month", "Once a year, on the café’s birthday", "3 to 4 good posts a week, steadily", "Only when the owner remembers to post"], answer: 2,
       hint: "Which one can they keep up for months?",
       note: "Consistency builds trust and keeps the café in people’s feeds. Bursts followed by silence don’t.", badge: "clock"
     }),
     DM(2, "Instagram Content", {
       prompt: "A student posts a story tagging Brew Corner with their coffee. What should the café do?",
-      options: ["Ignore it", "Ask them to delete it", "Report it", "Thank them and repost it to the café’s story"], answer: 3,
+      options: ["Ignore it, it’s just one student", "Ask them to delete it", "Report it to Instagram", "Thank them and repost it"], answer: 3,
       hint: "Free content from a happy customer.",
       note: "Customer posts are the most trusted marketing there is. Reposting also makes other customers want to be featured.", badge: "heart",
       board: true, boardLabel: "after Round 2"
@@ -122,19 +122,19 @@ window.GAME = {
     },
     DM(3, "Reels and Hooks", {
       prompt: "Which opening line makes the best hook for a Brew Corner reel?",
-      options: ["“Hello everyone, welcome to our café.”", "“This ₹99 cold coffee is better than the ₹300 ones. Here’s why.”", "“Please follow us.”", "“Today is Tuesday.”"], answer: 1,
+      options: ["“Hello everyone, welcome to our café, today we will show you around.”", "“This ₹99 cold coffee beats the ₹300 ones. Here’s why.”", "“Please follow us.”", "“Today is Tuesday.”"], answer: 1,
       hint: "Which one makes you want to keep watching?",
       note: "A surprising claim with a promise to explain. Greetings and “please follow” lose people in seconds.", badge: "zap"
     }),
     DM(3, "Reels and Hooks", {
       prompt: "Why should reels have captions on screen?",
-      options: ["Many people watch with the sound off", "Captions make videos longer", "Instagram requires it", "To hide the video"], answer: 0,
+      options: ["Many people watch with the sound off", "Captions make videos longer and better", "Instagram requires captions on every reel", "To hide parts of the video people shouldn’t see"], answer: 0,
       hint: "Think of people watching in class or on a bus.",
       note: "Many people scroll with sound off. On-screen captions keep them watching.", badge: "file-text"
     }),
     DM(3, "Reels and Hooks", {
       prompt: "The café’s reel is 90 seconds long and the drink appears only at the end. Best fix?",
-      options: ["Make it 3 minutes", "Add more slow shots of the door", "Show the drink in the first 2 seconds, then cut it down", "Post it without any changes"], answer: 2,
+      options: ["Make it 3 minutes long with more detail", "Add more slow shots of the café door", "Show the drink in the first 2 seconds", "Post it without any changes"], answer: 2,
       hint: "Hook first, then cut the fluff.",
       note: "Lead with the best shot and trim everything else. Short and tight keeps people to the end.", badge: "film",
       board: true, boardLabel: "after Round 3"
@@ -151,13 +151,13 @@ window.GAME = {
     },
     DM(4, "Google Maps and SEO", {
       prompt: "A student near campus searches “café near me”. What helps Brew Corner appear?",
-      options: ["Posting more memes on Instagram", "A complete Google Business Profile with hours, photos and good reviews", "Printing more menus", "A bigger signboard only"], answer: 1,
+      options: ["Posting more memes on Instagram every day", "A complete Google Business Profile", "Printing more menus for the counter", "Only putting up a bigger signboard"], answer: 1,
       hint: "Where do “near me” searches look?",
       note: "Google Search and Maps use the business profile. A complete profile with reviews helps the café show up and get chosen.", badge: "map"
     }),
     DM(4, "Google Maps and SEO", {
       prompt: "Someone leaves a 2-star review: “Coffee was cold and the Wi-Fi didn’t work.” Best response?",
-      options: ["Ignore it", "Argue that they’re lying", "Ask a friend to post 10 fake 5-star reviews", "Reply politely, apologise, say what you’ve fixed, and invite them back"], answer: 3,
+      options: ["Ignore it, one review doesn’t matter", "Argue in the reply that they’re lying", "Ask friends to post 10 fake 5-star reviews", "Reply politely, apologise, say what you fixed"], answer: 3,
       hint: "Other customers read your replies too.",
       note: "A calm, helpful reply turns a bad review into proof that you care. Fake reviews break platform rules and destroy trust.", badge: "heart"
     }),
@@ -179,13 +179,13 @@ window.GAME = {
     },
     DM(5, "Ads on ₹1,000", {
       prompt: "Brew Corner has ₹1,000 for its first ad. Who should it target?",
-      options: ["Everyone in India, all ages", "People 18 to 25 within a few km of the café", "People in another country", "Only people who already follow the café"], answer: 1,
+      options: ["Everyone in India, of all ages", "People aged 18 to 25 near the café", "People living in another country", "Only people who already follow the café"], answer: 1,
       hint: "Who can actually walk in this week?",
       note: "A small budget works best on a small, nearby, relevant audience.", badge: "map"
     }),
     DM(5, "Ads on ₹1,000", {
       prompt: "Which ad message will bring the most students in this week?",
-      options: ["“We are a café.”", "“Best café in the world!!!”", "“Follow us for updates.”", "“Show your college ID, get 20% off any drink this week.”"], answer: 3,
+      options: ["“We are a café near your college.”", "“Best café in the world!!! Come today!!!”", "“Follow us for updates and offers.”", "“Show your college ID, get 20% off.”"], answer: 3,
       hint: "A clear offer, a clear deadline.",
       note: "One clear reason to come, and a reason to come now. Vague claims don’t move people.", badge: "target"
     }),
@@ -208,7 +208,7 @@ window.GAME = {
     DM(6, "Reading the Numbers", {
       double: true,
       prompt: "What does “reach” mean?",
-      options: ["The number of different people who saw the post", "The number of likes", "How far the café is from campus", "How much the ad cost"], answer: 0,
+      options: ["How many different people saw the post", "The number of likes the post got", "How far the café is from campus", "How much the ad cost in total"], answer: 0,
       hint: "Look at the learn screen.",
       note: "Reach counts unique people who saw it. One person seeing it 3 times still counts once in reach.", badge: "users"
     }),
@@ -222,7 +222,7 @@ window.GAME = {
     DM(6, "Reading the Numbers", {
       double: true,
       prompt: "Which number matters most to the café owner?",
-      options: ["The number of likes", "The number of followers", "How many new customers actually came in and bought something", "The number of hashtags used"], answer: 2,
+      options: ["The number of likes on each post", "The number of followers on the page", "How many new customers came in", "The number of hashtags used per post"], answer: 2,
       hint: "Which one pays the rent?",
       note: "Likes and followers are useful signals, but customers through the door are the real goal. Ask new customers how they heard about you.", badge: "trophy",
       board: true, boardLabel: "after Round 6"

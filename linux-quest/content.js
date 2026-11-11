@@ -194,7 +194,7 @@ window.GAME = {
     }),
     LQ(5, "Permissions", {
       prompt: "What does putting sudo before a command do?",
-      options: ["Runs it as an administrator, with full power", "Runs it slower", "Undoes it", "Makes it silent"], answer: 0,
+      options: ["Runs it as an administrator", "Runs it slower, to be safe", "Undoes the last command", "Makes it run silently"], answer: 0,
       hint: "Super user do.",
       note: "sudo runs a command with admin rights. Great power, great responsibility: one wrong sudo can break the system.", badge: "shield"
     }),

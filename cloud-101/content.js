@@ -69,19 +69,19 @@ window.GAME = {
     },
     CL(1, "What Is the Cloud?", {
       prompt: "What is “the cloud”, really?",
-      options: ["Something in the sky that stores data", "Computers in data centres that you rent over the internet", "A special type of Wi-Fi", "Your phone’s gallery"], answer: 1,
+      options: ["Something in the sky that stores all data", "Computers in data centres you rent", "A special type of fast Wi-Fi connection", "Your phone’s gallery when it syncs photos"], answer: 1,
       hint: "Where do the computers physically sit?",
       note: "The cloud is real hardware in data centres. You just don’t own or maintain it.", badge: "globe"
     }),
     CL(1, "What Is the Cloud?", {
       prompt: "Your fest site’s visitors are mostly in Andhra Pradesh. Which region should you pick?",
-      options: ["A region in the USA", "A region in India, like Mumbai or Hyderabad", "Any random one", "Antarctica"], answer: 1,
+      options: ["A region in the USA, where it’s cheapest", "A region in India", "Any random region, it makes no difference", "Antarctica, because servers stay cool there"], answer: 1,
       hint: "Closer means faster.",
       note: "A nearby region means lower delay. Some data must also stay in India by law or policy.", badge: "map"
     }),
     CL(1, "What Is the Cloud?", {
       prompt: "Why would a startup use the cloud instead of buying its own servers?",
-      options: ["Cloud is always free", "Servers are illegal", "Start fast, pay for what you use, and grow without buying hardware", "The cloud never fails"], answer: 2,
+      options: ["Cloud is always free for startups", "Owning servers is illegal for small companies", "Start fast and pay only for what you use", "The cloud never fails or goes down"], answer: 2,
       hint: "Speed, cost and growth.",
       note: "No big upfront cost, quick to start, easy to grow. (It isn’t free, and it can fail, so plan for that.)", badge: "rocket",
       board: true, boardLabel: "after Round 1"
@@ -103,13 +103,13 @@ window.GAME = {
     }),
     CL(2, "Ways to Run Code", {
       prompt: "You need a small piece of code that sends a confirmation email when someone registers. Good fit?",
-      options: ["A serverless function that runs only when a registration happens", "A server running 24×7 for this one job", "Your laptop, always on", "Nothing, skip emails"], answer: 0,
+      options: ["A serverless function", "A server running 24×7 just for this one job", "Your own laptop, switched on all the time", "Nothing, skip confirmation emails completely"], answer: 0,
       hint: "It only needs to run sometimes.",
       note: "Serverless is ideal for small, occasional tasks. You don’t pay for idle time.", badge: "mail"
     }),
     CL(2, "Ways to Run Code", {
       prompt: "When does a virtual server make the most sense?",
-      options: ["For a single static page", "Never", "When you need full control: custom software, long-running programs or special setups", "For storing photos"], answer: 2,
+      options: ["For a single static page with no code", "Never, virtual servers are outdated", "When you need full control of the setup", "For storing thousands of event photos"], answer: 2,
       hint: "Full computer, full control.",
       note: "More control, more responsibility: you handle updates and security on it.", badge: "code",
       board: true, boardLabel: "after Round 2"
@@ -125,19 +125,19 @@ window.GAME = {
     },
     CL(3, "Storage", {
       prompt: "Where should the fest’s 2,000 event photos go?",
-      options: ["Inside the database as text", "In the website’s code folder on GitHub", "Object storage, with a link for each photo", "On one volunteer’s phone"], answer: 2,
+      options: ["Inside the database, saved as text", "In the website’s code folder on GitHub", "Object storage, with a link for each", "On one volunteer’s phone gallery"], answer: 2,
       hint: "Big files that need links.",
       note: "Object storage is made for files at scale. Keep big media out of your code repo.", badge: "star"
     }),
     CL(3, "Storage", {
       prompt: "Where should registrations (name, college, event, phone) be stored?",
-      options: ["A database with access controls", "A public text file", "In the website’s HTML", "An Instagram post"], answer: 0,
+      options: ["A database with access controls", "A public text file anyone can open", "Inside the website’s HTML code", "An Instagram post with all the details"], answer: 0,
       hint: "Structured and private.",
       note: "A database keeps structured data searchable, and access rules keep personal data private.", badge: "users"
     }),
     CL(3, "Storage", {
       prompt: "Why keep backups in a different place from the main data?",
-      options: ["To use more space", "So one failure or mistake doesn’t destroy both copies", "It’s required for websites", "To make it slower"], answer: 1,
+      options: ["To use more storage space in the account", "So one failure doesn’t destroy both copies", "It’s required by law for all websites", "To make the website load more slowly"], answer: 1,
       hint: "Don’t keep all eggs in one basket.",
       note: "A backup in the same place can be lost with the original.", badge: "shield",
       board: true, boardLabel: "after Round 3"
@@ -154,13 +154,13 @@ window.GAME = {
     },
     CL(4, "Scaling", {
       prompt: "Fest passes go on sale at 6 PM. Thousands will rush in at once. Best plan?",
-      options: ["One small server and hope", "Auto scaling and a load balancer, tested before 6 PM", "Tell students to visit one by one", "Turn off the site"], answer: 1,
+      options: ["One small server, and hope it survives", "Auto scaling and a load balancer, tested early", "Tell students to visit the site one by one", "Turn off the site until the rush is over"], answer: 1,
       hint: "More copies when needed.",
       note: "Auto scaling adds capacity during the rush. Test it with a fake rush first.", badge: "zap"
     }),
     CL(4, "Scaling", {
       prompt: "What does a CDN (content delivery network) do?",
-      options: ["Deletes old files", "Writes your code", "Stores copies of your images and files close to users, so pages load faster", "Sends SMS"], answer: 2,
+      options: ["Deletes old files to free up space", "Writes your website code for you", "Keeps copies of files close to users", "Sends SMS alerts to all your visitors"], answer: 2,
       hint: "Copies, closer to people.",
       note: "A student in Vizag gets files from a nearby location instead of across the world.", badge: "globe"
     }),
@@ -184,19 +184,19 @@ window.GAME = {
     },
     CL(5, "Costs", {
       prompt: "First thing to set up in a new cloud account, before building anything?",
-      options: ["A budget alert, so you’re warned before costs grow", "10 servers", "A logo", "Nothing"], answer: 0,
+      options: ["A budget alert", "10 servers, ready for future traffic", "A logo and name for the project", "Nothing, set up costs alerts later"], answer: 0,
       hint: "Avoid surprises.",
       note: "Many students get a shock bill from something left running. Alerts prevent that.", badge: "indian-rupee"
     }),
     CL(5, "Costs", {
       prompt: "The fest is over. The site gets almost no visitors. What should you do?",
-      options: ["Leave everything running forever", "Shut down or scale down servers you don’t need, and keep a backup", "Double the servers", "Delete everything without a backup"], answer: 1,
+      options: ["Leave everything running forever, just in case", "Scale down what you don’t need, keep a backup", "Double the servers for next year’s fest", "Delete everything right away, with no backup"], answer: 1,
       hint: "Don’t pay for idle.",
       note: "Scale down when traffic drops. Pay-as-you-go only saves money if you actually turn things off.", badge: "trending-up"
     }),
     CL(5, "Costs", {
       prompt: "Why is static hosting usually the cheapest way to run a simple site?",
-      options: ["It uses no internet", "There’s no server running your code all the time; it just serves files", "It’s illegal to charge", "It runs on your phone"], answer: 1,
+      options: ["It uses no internet connection at all", "No server runs your code all the time", "It’s illegal for cloud companies to charge for it", "It runs on your phone instead of a server"], answer: 1,
       hint: "What’s running between visits?",
       note: "Nothing to keep running means very little to pay for.", badge: "file-text",
       board: true, boardLabel: "after Round 5"
@@ -222,14 +222,14 @@ window.GAME = {
     CL(6, "Security", {
       double: true,
       prompt: "You accidentally pushed a secret key to GitHub. What should you do FIRST?",
-      options: ["Delete the repo and hope", "Disable or rotate the key in your cloud account immediately", "Wait and see", "Tell nobody"], answer: 1,
+      options: ["Delete the repo and hope nobody saw it", "Disable or rotate the key immediately", "Wait and see if anything bad happens", "Tell nobody and quietly push a new commit"], answer: 1,
       hint: "Deleting the file doesn’t remove it from history or from bots that already copied it.",
       note: "Kill the key first. Then clean the repo, and check your bill and activity.", badge: "shield"
     }),
     CL(6, "Security", {
       double: true,
       prompt: "In the cloud, who is responsible for your app’s settings, like who can access your data?",
-      options: ["The cloud company handles everything", "Nobody", "The government", "You. The provider secures the data centre; you secure your own setup"], answer: 3,
+      options: ["The cloud company handles everything for you", "Nobody, settings are automatic", "The government sets it for every app", "You. You secure your own setup"], answer: 3,
       hint: "Shared responsibility.",
       note: "Many data leaks happen because of wrong settings, like storage left open to the public.", badge: "users",
       board: true, boardLabel: "after Round 6"

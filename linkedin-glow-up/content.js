@@ -61,13 +61,13 @@ window.GAME = {
     },
     LQ(1, "Photo and Headline", {
       prompt: "Which profile photo is best?",
-      options: ["A group photo from a trip", "Ravi’s face, clearly visible, good light, plain background", "A photo of his bike", "No photo"], answer: 1,
+      options: ["A group photo from a college trip", "His face, good light, plain background", "A photo of his bike on a hill road", "No photo, to keep it private and professional"], answer: 1,
       hint: "What helps someone recognise and trust you?",
       note: "Profiles with a clear photo get noticed far more. It doesn’t need a studio, just a clear, friendly face.", badge: "user"
     }),
     LQ(1, "Photo and Headline", {
       prompt: "Best headline for Ravi?",
-      options: ["“Junior Web Developer | React, JavaScript | Built a college site used by 300+ students”", "“Open to work, please help”", "“Student at XYZ College”", "“Aspiring Software Engineer | Hardworking | Passionate”"], answer: 0,
+      options: ["“Junior Web Developer | React | Built a site used by 300+”", "“Open to work, please help me find a job”", "“Student at XYZ College”", "“Aspiring Software Engineer | Hardworking | Passionate”"], answer: 0,
       hint: "Role + skills + proof.",
       note: "Specific role, real skills and a number. Recruiters search by role and skill words, so this gets found.", badge: "target"
     }),
@@ -97,13 +97,13 @@ window.GAME = {
     })),
     LQ(2, "About Section", {
       prompt: "Best first line for Ravi’s About section?",
-      options: ["“I build web apps that students actually use.”", "“Welcome to my profile!!!”", "“I am currently pursuing B.Tech.”", "“Hi, I am Ravi Kumar, son of…”"], answer: 0,
+      options: ["“I build web apps that students use.”", "“Welcome to my profile!!! Thanks for visiting”", "“I am currently pursuing B.Tech.”", "“Hi, I am Ravi Kumar, son of…”"], answer: 0,
       hint: "Which line makes you want to read the next one?",
       note: "Only about two lines show before “see more”. Make them about what you do.", badge: "flame"
     }),
     LQ(2, "About Section", {
       prompt: "How long should a student’s About section be?",
-      options: ["As long as a full essay", "It doesn’t need one", "One word", "Around 3 to 6 short lines"], answer: 3,
+      options: ["As long as a full essay about his life", "It doesn’t need one at all", "One word that describes him", "About 3 to 6 short lines"], answer: 3,
       hint: "Long enough for hook, proof and goal.",
       note: "Short and clear. Hook, proof, goal. Recruiters skim.", badge: "file-text",
       board: true, boardLabel: "after Round 2"
@@ -119,19 +119,19 @@ window.GAME = {
     },
     LQ(3, "Projects", {
       prompt: "What should Ravi pin at the top of his Featured section?",
-      options: ["A photo of his college", "A motivational quote", "His college events site, with the live link and “used by 300+ students”", "A certificate for attending a 1-hour webinar"], answer: 2,
+      options: ["A photo of his college main building", "A motivational quote about success", "His events site, live, used by 300+", "A certificate for a 1-hour webinar"], answer: 2,
       hint: "What proves he can do the job?",
       note: "The strongest proof goes first. A live link lets a recruiter see it in one click.", badge: "star"
     }),
     LQ(3, "Projects", {
       prompt: "Which project description is strongest?",
-      options: ["“Website. HTML, CSS.”", "“Built a college events site (HTML, CSS, JS) that handled 300+ fest registrations. Live link + GitHub below.”", "“Very good project, please check.”", "“Did a website project.”"], answer: 1,
+      options: ["“Website. HTML, CSS, JavaScript, Bootstrap, GitHub, Netlify.”", "“Events site that handled 300+ fest registrations. Live link.”", "“Very good project, please check it out.”", "“Did a website project for the college.”"], answer: 1,
       hint: "Action + what + number + link.",
       note: "The same rule as your resume: action, what, a number, and proof.", badge: "code"
     }),
     LQ(3, "Projects", {
       prompt: "Ravi has 25 certificates. What should he do with them on LinkedIn?",
-      options: ["Add the 2 or 3 where he built something real, and skip the rest", "Add none", "Post each one as a separate post", "Add all 25"], answer: 0,
+      options: ["Add the 2 or 3 where he built something", "Add none, certificates don’t matter", "Post each one as a separate post", "Add all 25 to look hardworking"], answer: 0,
       hint: "Remember Resume Rescue.",
       note: "Quality over quantity. Too many certificates hide the ones that matter.", badge: "award",
       board: true, boardLabel: "after Round 3"
@@ -148,7 +148,7 @@ window.GAME = {
     },
     LQ(4, "The First Post", {
       prompt: "Ravi finished his internship. Which post opening is best?",
-      options: ["“Internship over. Bye.”", "A post with only 30 hashtags", "“I’m thrilled and humbled to announce that…”", "“8 weeks, 14 bugs fixed, and my first real code review. Here’s what my internship at TechNova taught me:”"], answer: 3,
+      options: ["“Internship over. Bye.”", "A post with only 30 hashtags and a photo", "“I’m thrilled and humbled to announce that…”", "“8 weeks, 14 bugs fixed. Here’s what I learned:”"], answer: 3,
       hint: "Which first line makes you want to read more?",
       note: "Specific numbers and a promise of a lesson. It sounds like a real person, not a template.", badge: "message-circle"
     }),
@@ -162,7 +162,7 @@ window.GAME = {
     })),
     LQ(4, "The First Post", {
       prompt: "How often should a student post on LinkedIn?",
-      options: ["Only on birthdays", "5 times a day", "When there’s something real to share, maybe once or twice a month", "Never"], answer: 2,
+      options: ["Only on birthdays and festivals", "5 times a day to stay visible to recruiters", "When there’s something real to share", "Never, students shouldn’t post"], answer: 2,
       hint: "Quality or quantity?",
       note: "Regular, real posts beat daily filler. A project, an event, a lesson: that’s plenty.", badge: "clock",
       board: true, boardLabel: "after Round 4"
@@ -178,19 +178,19 @@ window.GAME = {
     },
     LQ(5, "Messaging", {
       prompt: "Ravi wants advice from Sneha, a senior from his college now at a product company. Best message?",
-      options: ["“Hi Sneha, I’m Ravi, a final year CSE student from your college. I saw your post about moving from service to product companies. Could I ask you 2 or 3 questions about how you prepared? 10 minutes whenever suits you.”", "His resume, with no message", "“Hi”", "“Sir/madam please refer me in your company”"], answer: 0,
+      options: ["“Hi Sneha, final-year CSE from your college. Saw your post on product companies. Could I ask 2 questions?”", "His resume, with no message at all", "“Hi”", "“Sir/madam please refer me in your company, I am very hardworking and need this job urgently”"], answer: 0,
       hint: "Who he is, why her, a small ask.",
       note: "Specific, respectful and easy to say yes to. Advice first; referrals often come later, once she knows him.", badge: "message-circle"
     }),
     LQ(5, "Messaging", {
       prompt: "When sending a connection request to a recruiter, Ravi should…",
-      options: ["Send 10 requests to the same person", "Ask for a job in the first line", "Send it with no note", "Add a short note: who he is and why he wants to connect"], answer: 3,
+      options: ["Send 10 requests to the same person until one is accepted", "Ask for a job in the very first line", "Send it with no note at all", "Add a short note on who he is and why"], answer: 3,
       hint: "Would you accept a request from a stranger with no note?",
       note: "A one or two line note makes a real connection much more likely to be accepted.", badge: "users"
     }),
     LQ(5, "Messaging", {
       prompt: "Sneha replied and gave great advice. What should Ravi do next?",
-      options: ["Immediately ask for a referral", "Thank her, try the advice, and update her in a few weeks on how it went", "Ask her to do his assignment", "Nothing"], answer: 1,
+      options: ["Immediately ask her for a referral", "Thank her, try it, update her later", "Ask her to help with his assignment", "Nothing, the conversation is over"], answer: 1,
       hint: "How do you turn one message into a real connection?",
       note: "Thank, act, update. That’s how one message becomes a mentor.", badge: "heart",
       board: true, boardLabel: "after Round 5"
@@ -225,7 +225,7 @@ window.GAME = {
     LQ(6, "Final Check", {
       double: true,
       prompt: "How often should Ravi update his LinkedIn profile?",
-      options: ["Every day", "Once, when he creates it", "Every semester, or whenever he finishes a project, role or win", "Only when he’s looking for a job"], answer: 2,
+      options: ["Every day, even if nothing changed", "Once, when he creates the profile", "Every semester, or after a new win", "Only when he’s looking for a job"], answer: 2,
       hint: "Recruiters look at profiles even when you’re not looking.",
       note: "Keep it updated as you go. Opportunities come when you least expect them.", badge: "clock",
       board: true, boardLabel: "after Round 6"
