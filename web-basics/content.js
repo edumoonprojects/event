@@ -71,13 +71,13 @@ window.GAME = {
     WQ(1, "How the Web Works", {
       prompt: "In this URL, which part is the domain?",
       code: ["https://www.campusfest.in/events?day=2"],
-      options: ["https://", "www.campusfest.in", "/events", "?day=2"], answer: 1,
+      options: ["https://", "www.campusfest.in", "/events/2026/schedule", "?day=2&time=evening"], answer: 1,
       hint: "It’s the name you’d buy from a domain seller.",
       note: "www.campusfest.in. https:// is how to talk, /events is which page, and ?day=2 is extra information for that page.", badge: "globe"
     }),
     WQ(1, "How the Web Works", {
       prompt: "What does DNS do?",
-      options: ["Makes websites load faster", "Stores your passwords", "Turns a domain name into an IP address, like a phonebook", "Designs web pages"], answer: 2,
+      options: ["Makes websites load faster on slow internet", "Stores your passwords safely", "Turns names into IP addresses", "Designs web pages for you"], answer: 2,
       hint: "Computers find each other by numbers, not names.",
       note: "DNS is the internet’s phonebook. You remember names; computers need numbers.", badge: "search"
     }),
@@ -112,7 +112,7 @@ window.GAME = {
     }),
     WQ(2, "HTML", {
       prompt: "Why should every <img> have an alt attribute?",
-      options: ["It makes the image load faster", "It adds a border", "It’s read aloud by screen readers and shown if the image fails to load", "It sets the image size"], answer: 2,
+      options: ["It makes the image load much faster", "It adds a border around the image", "Screen readers read it; shows if broken", "It sets the image size automatically on phones"], answer: 2,
       hint: "Think about a person who can’t see the image.",
       note: "alt text describes the image for blind users and appears when the image breaks. Good alt text is part of a good website.", badge: "heart",
       board: true, boardLabel: "after Round 2"
@@ -227,21 +227,21 @@ window.GAME = {
     WQ(6, "Build the Page", {
       double: true,
       prompt: "Which line correctly connects style.css to your HTML page?",
-      options: ["<style src=\"style.css\">", "<script src=\"style.css\"></script>", "<css>style.css</css>", "<link rel=\"stylesheet\" href=\"style.css\">"], answer: 3,
+      options: ["<style src=\"style.css\">", "<script src=\"style.css\"></script>", "<css href=\"style.css\"></css>", "<link rel=\"stylesheet\" href=\"style.css\">"], answer: 3,
       hint: "Look at the learn screen.",
       note: "<link rel=\"stylesheet\" href=\"style.css\"> inside <head>. <script> is for JavaScript files.", badge: "route"
     }),
     WQ(6, "Build the Page", {
       double: true,
       prompt: "The CampusFest page looks tiny and zoomed out on phones. Which line fixes it?",
-      options: ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">", "<body zoom=\"phone\">", "<meta charset=\"utf-8\">", "<title>Mobile</title>"], answer: 0,
+      options: ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">", "<body zoom=\"phone\" scale=\"fit-to-screen\" width=\"auto\">", "<meta charset=\"utf-8\" lang=\"en\" mobile=\"true\">", "<title>Mobile</title>"], answer: 0,
       hint: "It tells the phone how wide the page should be.",
       note: "The viewport meta tag tells phones to use their real width. Without it, they pretend to be a desktop screen and shrink everything.", badge: "smartphone"
     }),
     WQ(6, "Build the Page", {
       double: true,
       prompt: "A website is like a person. Which match is right?",
-      options: ["HTML is the clothes, CSS is the skeleton, JS is the brain", "HTML is the skeleton, CSS is the clothes, JS is the movement", "HTML is the movement, CSS is the brain, JS is the clothes", "They all do the same thing"], answer: 1,
+      options: ["HTML clothes, CSS skeleton, JS brain", "HTML skeleton, CSS clothes, JS movement", "HTML movement, CSS brain, JS clothes", "They all do exactly the same job in a page"], answer: 1,
       hint: "What gives structure? What gives style? What makes it act?",
       note: "HTML gives the structure, CSS the look, JavaScript the actions. Learn them in that order.", badge: "user",
       board: true, boardLabel: "after Round 6"

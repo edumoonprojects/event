@@ -67,19 +67,19 @@ window.GAME = {
     },
     PS(1, "Less Text", {
       prompt: "Which slide will the audience understand fastest?",
-      options: ["A full paragraph copied from the report", "A screenshot of a long email", "12 bullet points in small font", "Title “Why our app?” with 3 short points and one image"], answer: 3,
+      options: ["A full paragraph copied straight from the report", "A screenshot of a long email from the guide", "12 bullet points in a very small font", "“Why our app?” with 3 short points and an image"], answer: 3,
       hint: "Less is more.",
       note: "Short, clear, visual. You explain the details while they look.", badge: "file-text"
     }),
     PS(1, "Less Text", {
       prompt: "A student reads every word from the slides, facing the screen. What’s the problem?",
-      options: ["Nothing", "The font is too big", "Too much eye contact", "The audience can read faster themselves, and loses connection with the speaker"], answer: 3,
+      options: ["Nothing, reading makes sure nothing is missed", "The font on the slides is too big", "There is too much eye contact with the audience", "The audience reads faster and loses interest"], answer: 3,
       hint: "Why do they need you?",
       note: "Face the audience and explain. The slide is the backup, you are the presentation.", badge: "users"
     }),
     PS(1, "Less Text", {
       prompt: "Your slide has two big ideas. Best fix?",
-      options: ["Remove the title", "Make the font smaller", "Add more animations", "Split it into two slides, one idea each"], answer: 3,
+      options: ["Remove the title to make space for both ideas", "Make the font smaller so everything fits", "Add more animations so it looks lively", "Split it into two slides"], answer: 3,
       hint: "One idea per slide.",
       note: "More slides with less on each is easier to follow than fewer crowded ones.", badge: "list-checks",
       board: true, boardLabel: "after Round 1"
@@ -95,13 +95,13 @@ window.GAME = {
     },
     PS(2, "Design", {
       prompt: "Which colour choice is easiest to read on a projector?",
-      options: ["Light yellow text on a white background", "Dark text on a light background, or white on dark", "Grey on grey", "Red text on green"], answer: 1,
+      options: ["Light yellow text on a white background", "Dark text on light, or white on dark", "Grey text on a slightly darker grey", "Red text on a bright green background"], answer: 1,
       hint: "Contrast.",
       note: "Projectors wash out colours. Strong contrast keeps text readable.", badge: "eye"
     }),
     PS(2, "Design", {
       prompt: "You want to show that app users grew from 50 to 500 in 5 months. Best way?",
-      options: ["A list of 5 bullet points", "A simple line chart with the 5 months", "Just say it, no slide", "A paragraph describing each month"], answer: 1,
+      options: ["A list of 5 bullet points, one for each month", "A simple line chart of the 5 months", "Just say it out loud, no slide needed", "A paragraph describing each month’s users"], answer: 1,
       hint: "Show the trend.",
       note: "A chart shows growth instantly. Words make people do the work.", badge: "trending-up"
     }),
@@ -125,13 +125,13 @@ window.GAME = {
     },
     PS(3, "Openings", {
       prompt: "Which opening grabs attention best for a project on campus water wastage?",
-      options: ["“Water is very important.”", "“Good morning, my name is… our topic is water wastage.”", "“Raise your hand if you’ve seen a tap running in the hostel with nobody near it.”", "Reading the abstract word by word"], answer: 2,
+      options: ["“Water is very important for all of us.”", "“Good morning, my name is… our topic is water wastage.”", "“Hands up if you’ve seen a hostel tap left running.”", "Reading the abstract word by word"], answer: 2,
       hint: "Involve the audience.",
       note: "A question that makes people think of their own experience pulls them in.", badge: "message-circle"
     }),
     PS(3, "Openings", {
       prompt: "A simple structure that works for most project presentations?",
-      options: ["Problem, your solution, proof it works, what’s next", "Only the code", "Random order", "Thank you slide first"], answer: 0,
+      options: ["Problem, solution, proof, what’s next", "Only the code, explained line by line", "Any random order, as long as it’s complete", "The thank-you slide first, then the rest"], answer: 0,
       hint: "Tell a story.",
       note: "Problem → solution → proof → next steps. Easy to follow, easy to remember.", badge: "route"
     }),
@@ -156,19 +156,19 @@ window.GAME = {
     },
     PS(4, "Delivery", {
       prompt: "Best way to prepare for a 5-minute seminar?",
-      options: ["Practise out loud, standing, with a timer, at least twice", "Don’t prepare, be natural", "Read the slides once in your head", "Memorise every word"], answer: 0,
+      options: ["Practise out loud with a timer, twice", "Don’t prepare at all, just be natural", "Read the slides once in your head the night before", "Memorise every single word of the script"], answer: 0,
       hint: "Practise like it’s real.",
       note: "Out-loud practice finds the awkward parts and fixes your timing.", badge: "timer"
     }),
     PS(4, "Delivery", {
       prompt: "When nervous, many people speak very fast. Best fix?",
-      options: ["Speak even faster to finish early", "Breathe, slow down, and pause after each key point", "Whisper", "Look only at the floor"], answer: 1,
+      options: ["Speak even faster so you finish early", "Breathe, slow down, pause after key points", "Whisper so mistakes are harder to hear", "Look only at the floor so you don’t panic"], answer: 1,
       hint: "Pauses are powerful.",
       note: "Slower feels strange to you but sounds confident to the audience.", badge: "heart"
     }),
     PS(4, "Delivery", {
       prompt: "Where should you look while presenting?",
-      options: ["At the ceiling", "At your phone", "At different people in the audience, a few seconds each", "At the screen the whole time"], answer: 2,
+      options: ["At the ceiling, so you don’t get nervous", "At your phone, where your notes are", "At different people, a few seconds each", "At the screen the whole time, to follow the slides"], answer: 2,
       hint: "Connect.",
       note: "Eye contact makes people feel you’re talking to them.", badge: "eye",
       board: true, boardLabel: "after Round 4"
@@ -184,19 +184,19 @@ window.GAME = {
     },
     PS(5, "Nerves and Questions", {
       prompt: "Your hands shake before a viva. What helps most?",
-      options: ["Drinking 3 coffees", "Not looking at the panel at all", "Slow breaths, and knowing your first two lines by heart", "Running away"], answer: 2,
+      options: ["Drinking 3 cups of coffee before going in", "Not looking at the panel at all during it", "Slow breaths, and know your first two lines", "Telling the panel you are very nervous"], answer: 2,
       hint: "Calm body, confident start.",
       note: "A strong start calms you down for the rest.", badge: "heart"
     }),
     PS(5, "Nerves and Questions", {
       prompt: "A judge asks a question you don’t know the answer to. Best reply?",
-      options: ["Stay silent", "Make up an answer confidently", "Argue with the judge", "“That’s a good question. I’m not sure, but I’ll find out.” Then mention what you do know"], answer: 3,
+      options: ["Stay silent until they ask the next question", "Make up an answer and say it confidently", "Argue with the judge about the question", "“Good question. I’m not sure, but I’ll find out.”"], answer: 3,
       hint: "Honest and calm.",
       note: "Made-up answers fall apart with one follow-up. Honesty earns respect.", badge: "check"
     }),
     PS(5, "Nerves and Questions", {
       prompt: "Someone asks a long, confusing question. First step?",
-      options: ["Repeat or rephrase it briefly to check you understood", "Ignore it", "Answer immediately anyway", "Ask them to sit down"], answer: 0,
+      options: ["Repeat it briefly to check you understood", "Ignore it and move to the next question", "Answer immediately with whatever you know", "Ask them politely to sit down"], answer: 0,
       hint: "Make sure you understood.",
       note: "Rephrasing gives you time to think, and makes sure you answer the right question.", badge: "message-circle",
       board: true, boardLabel: "after Round 5"
@@ -213,21 +213,21 @@ window.GAME = {
     PS(6, "Final", {
       double: true,
       prompt: "Best way to end a project presentation?",
-      options: ["Run out of time mid-slide", "A slide saying only “Any queries?”", "“That’s it.” and walk away", "A one-line summary of what you built and why it matters, then “Thank you, happy to take questions”"], answer: 3,
+      options: ["Run out of time in the middle of a slide", "A slide that says only “Any queries?”", "Say “That’s it.” and walk away", "A one-line summary, then “Thank you”"], answer: 3,
       hint: "Leave them with your main point.",
       note: "People remember the end. Make your main point the last thing they hear.", badge: "award"
     }),
     PS(6, "Final", {
       double: true,
       prompt: "You have 5 minutes but 25 slides. What should you do?",
-      options: ["Talk very fast", "Skip the demo", "Cut to the 6 to 8 slides that matter most", "Ask for 20 more minutes"], answer: 2,
+      options: ["Talk very fast to cover all 25 slides", "Skip the demo to save some time", "Cut to the 6 to 8 slides that matter", "Ask the panel for 20 more minutes"], answer: 2,
       hint: "Roughly a minute per slide.",
       note: "Fit the slides to the time, not the time to the slides.", badge: "timer"
     }),
     PS(6, "Final", {
       double: true,
       prompt: "What makes someone a confident presenter over time?",
-      options: ["Being born confident", "Presenting often and learning from each one", "Expensive slides", "Never presenting"], answer: 1,
+      options: ["Being born confident, it can’t be learned", "Presenting often and learning each time", "Expensive slides and a new laptop", "Never presenting until you feel ready"], answer: 1,
       hint: "Practice.",
       note: "Confidence is built. Volunteer to present whenever you can.", badge: "trending-up",
       board: true, boardLabel: "after Round 6"

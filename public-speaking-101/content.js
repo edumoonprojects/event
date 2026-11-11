@@ -68,13 +68,13 @@ window.GAME = {
     },
     PS(1, "Beating Nerves", {
       prompt: "Kiran’s heart is racing before his seminar. What’s the best thing he can do right now?",
-      options: ["Drink three cups of coffee", "Slowly breathe in for 4 counts and out for 6, a few times", "Tell himself “Don’t be nervous” again and again", "Run away"], answer: 1,
+      options: ["Drink three cups of coffee for energy", "Breathe in for 4, out for 6", "Keep telling himself “Don’t be nervous”", "Run away and say he’s sick"], answer: 1,
       hint: "Which one calms the body directly?",
       note: "A longer breath out slows the heart. Coffee speeds it up, and fighting the feeling usually makes it stronger.", badge: "heart"
     }),
     PS(1, "Beating Nerves", {
       prompt: "What’s the best way to prepare for a 3-minute talk?",
-      options: ["Memorise every word", "Read the slides silently many times", "Don’t prepare; just go with the flow", "Know your main points, then practise saying it out loud 3 times"], answer: 3,
+      options: ["Memorise every word of the talk", "Read the slides silently many times", "Don’t prepare, just go with the flow", "Know your points, practise aloud"], answer: 3,
       hint: "Memorised talks break when you forget one word.",
       note: "Know the points, not every word. Practising aloud is what makes it feel natural on stage.", badge: "mic"
     }),
@@ -96,7 +96,7 @@ window.GAME = {
     },
     PS(2, "Strong Openings", {
       prompt: "Topic: “Why every student should learn to swim.” Best opening line?",
-      options: ["“Good morning to all. Today my topic is swimming.”", "“Sorry, I didn’t prepare much.”", "“Put your hand up if you can’t swim. Now look around. That’s why I’m here.”", "“Swimming is a sport.”"], answer: 2,
+      options: ["“Good morning to all. Today my topic is swimming and why it matters.”", "“Sorry, I didn’t prepare much.”", "“Hands up if you can’t swim. Look around. That’s why I’m here.”", "“Swimming is a sport.”"], answer: 2,
       hint: "Which one makes the audience do something?",
       note: "It pulls the audience in straight away. A question they answer with their hand is one of the strongest hooks.", badge: "zap"
     }),
@@ -110,7 +110,7 @@ window.GAME = {
     })),
     PS(2, "Strong Openings", {
       prompt: "Which of these is a good hook to open a talk on saving money?",
-      options: ["“Money is important.”", "“If you save just ₹50 a day from college, you’ll have over ₹70,000 by the time you graduate.”", "“Today I will speak on saving.”", "“I don’t know much about money, but…”"], answer: 1,
+      options: ["“Money is very important in everyone’s life today.”", "“₹50 a day in college becomes ₹70,000 by graduation.”", "“Today I will speak on saving.”", "“I don’t know much about money, but I will try…”"], answer: 1,
       hint: "A surprising number.",
       note: "₹50 × 365 × 4 is ₹73,000. A specific, surprising number makes people sit up.", badge: "target",
       board: true, boardLabel: "after Round 2"
@@ -132,13 +132,13 @@ window.GAME = {
     }),
     PS(3, "Structure", {
       prompt: "Why do speakers often group their ideas in threes?",
-      options: ["It’s a rule in English grammar", "Three is easy for the audience to follow and remember", "Two is too long", "Teachers say so"], answer: 1,
+      options: ["It’s a rule in English grammar", "Three is easy to follow and remember", "Two is too long for most talks", "Teachers say so in every school"], answer: 1,
       hint: "Think “Ready, steady, go”.",
       note: "The rule of three: three points feel complete and are easy to remember. Many famous speeches use it.", badge: "chart-column"
     }),
     PS(3, "Structure", {
       prompt: "Which line is the best way to move from your first point to your second?",
-      options: ["“That was the first reason. The second reason is just as important: …”", "“Umm, okay, next…”", "Just start the next point with no link", "“Moving on, let me finish quickly.”"], answer: 0,
+      options: ["“That was the first reason. The second matters too…”", "“Umm, okay, next point, let me see what comes next…”", "Just start the next point with no link", "“Moving on, let me finish quickly.”"], answer: 0,
       hint: "Which one helps the audience follow along?",
       note: "Clear links (transitions) tell the audience where you are. “Let me finish quickly” tells them you don’t value your own talk.", badge: "route",
       board: true, boardLabel: "after Round 3"
@@ -155,19 +155,19 @@ window.GAME = {
     },
     PS(4, "Voice and Body", {
       prompt: "Ravi says “umm” every few words. What’s the best fix?",
-      options: ["Speak faster so there’s no time for “umm”", "Memorise the whole speech", "Use a fancier filler, like “basically”", "Pause silently instead. Silence feels long to you but confident to the audience"], answer: 3,
+      options: ["Speak faster so there’s no time for “umm”", "Memorise the whole speech word by word", "Use a fancier filler, like “basically”", "Pause silently instead"], answer: 3,
       hint: "What can replace a filler word?",
       note: "A pause. Swapping “umm” for “basically” or “like” is still a filler. Practise pausing at every full stop.", badge: "timer"
     }),
     PS(4, "Voice and Body", {
       prompt: "Where should you look while speaking to a room of 50 people?",
-      options: ["At your slides the whole time", "Only at the teacher", "At the ceiling", "At different people around the room, a few seconds each"], answer: 3,
+      options: ["At your slides the whole time, to stay on track", "Only at the teacher who is grading you", "At the ceiling, so you don’t get nervous", "At different people, a few seconds each"], answer: 3,
       hint: "Make everyone feel included.",
       note: "Eye contact with different people makes each one feel you’re talking to them. Find friendly faces first.", badge: "users"
     }),
     PS(4, "Voice and Body", {
       prompt: "Which body language says “I’m confident”?",
-      options: ["Standing still, shoulders relaxed, hands open at your sides or gesturing", "Hands in pockets, swaying side to side", "Arms folded across your chest", "Holding the mic stand tightly with both hands"], answer: 0,
+      options: ["Standing still, shoulders relaxed, hands open", "Hands in pockets, swaying side to side", "Arms folded across your chest", "Holding the mic stand tightly with both hands"], answer: 0,
       hint: "Open, steady and relaxed.",
       note: "Open hands and a steady stance. Pockets and swaying look nervous; folded arms look closed off.", badge: "user",
       board: true, boardLabel: "after Round 4"
@@ -183,19 +183,19 @@ window.GAME = {
     },
     PS(5, "Blanking Out and Q&A", {
       prompt: "In the middle of her seminar, Priya’s mind goes completely blank. Best move?",
-      options: ["Say “Sorry, I forgot” and walk off", "Laugh nervously and say “umm” until it comes back", "Pause, breathe, glance at her notes or repeat her last line, then continue", "Start the talk again from the beginning"], answer: 2,
+      options: ["Say “Sorry, I forgot” and walk off the stage", "Laugh nervously and say “umm” until it comes back", "Pause, breathe, check notes, continue", "Start the whole talk again from the beginning"], answer: 2,
       hint: "The audience doesn’t know her script.",
       note: "A calm pause looks planned. Repeating the last line or glancing at notes usually brings the next point back.", badge: "lightbulb"
     }),
     PS(5, "Blanking Out and Q&A", {
       prompt: "Someone asks a question you don’t know the answer to. What should you say?",
-      options: ["“That’s a great question. I’m not sure, but I’ll check and get back to you.”", "Make up an answer confidently", "“That’s not important.”", "“Ask someone else.”"], answer: 0,
+      options: ["“Great question. I’m not sure, but I’ll check.”", "Make up an answer and say it confidently", "“That’s not important for this topic.”", "“Ask someone else, I only know my part.”"], answer: 0,
       hint: "Honesty builds trust.",
       note: "Honest and helpful. Made-up answers get caught, and then people doubt everything else you said.", badge: "badge-check"
     }),
     PS(5, "Blanking Out and Q&A", {
       prompt: "Someone asks a long, confusing question. What’s the smartest first step?",
-      options: ["Answer whatever you think they meant", "Ignore it", "Say “Next question”", "Repeat it in your own words: “So you’re asking how the app handles…?”"], answer: 3,
+      options: ["Answer whatever you think they meant", "Ignore it and move to the next hand", "Say “Next question” and smile", "Repeat it in your own words first"], answer: 3,
       hint: "Make sure you understood before you answer.",
       note: "Repeating the question checks you understood, lets the whole room hear it, and gives you a few seconds to think.", badge: "ear",
       board: true, boardLabel: "after Round 5"
@@ -212,21 +212,21 @@ window.GAME = {
     PS(6, "Strong Closings", {
       double: true,
       prompt: "Which is the strongest last line for a talk on learning to swim?",
-      options: ["“So, that’s it from my side.”", "“Swimming could save your life one day. This summer, book just one lesson. Thank you.”", "“I think I’m done. Any questions? No? Okay.”", "“Sorry for taking your time.”"], answer: 1,
+      options: ["“So, that’s it from my side, thank you all for listening patiently.”", "“Swimming could save your life. Book one lesson this summer.”", "“I think I’m done. Any questions? No? Okay.”", "“Sorry for taking your time.”"], answer: 1,
       hint: "Main point + an ask + thank you.",
       note: "It repeats the point, gives one clear action and ends with thanks. The others fade out or apologise.", badge: "flame"
     }),
     PS(6, "Strong Closings", {
       double: true,
       prompt: "You’re running out of time with 2 points still left. What should you do?",
-      options: ["Speak twice as fast", "Ignore the time and keep going", "Skip to your closing: say your main point and your ask", "Stop mid-sentence"], answer: 2,
+      options: ["Speak twice as fast to fit everything in", "Ignore the time and keep going", "Skip to your closing and main point", "Stop in the middle of a sentence"], answer: 2,
       hint: "What should the audience leave with?",
       note: "Jump to the close. A strong ending matters more than covering everything. Respecting time is respecting your audience.", badge: "clock"
     }),
     PS(6, "Strong Closings", {
       double: true,
       prompt: "What’s the best way to keep getting better at public speaking?",
-      options: ["Speak often, even small things, like answering in class or presenting in a club", "Wait until you feel confident, then start", "Only speak when you have to", "Read books about speaking but never practise"], answer: 0,
+      options: ["Speak often, even in class or in a club", "Wait until you feel confident, then start", "Only speak when you really have to", "Read books about speaking but never practise"], answer: 0,
       hint: "Confidence comes from…?",
       note: "Confidence comes after practice, not before. Every small chance to speak counts.", badge: "rocket",
       board: true, boardLabel: "after Round 6"

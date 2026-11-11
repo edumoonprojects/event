@@ -83,7 +83,7 @@ window.GAME = {
     }),
     AQ(1, "Human or AI?", {
       prompt: "Which clue suggests AI writing the MOST?",
-      options: ["A spelling mistake", "Short, choppy sentences", "General phrases like “transformative experience” with no real details", "A local place name"], answer: 2,
+      options: ["A spelling mistake in one word", "Short, choppy sentences", "General phrases with no real details", "A local place name like Rushikonda"], answer: 2,
       hint: "Three of these are things humans do more often than AI.",
       note: "Smooth, general phrases with no specifics are the biggest clue. But it’s a clue, not proof.", badge: "search",
       board: true, boardLabel: "after Round 1"
@@ -107,13 +107,13 @@ window.GAME = {
     })),
     AQ(2, "LinkedIn Posts", {
       prompt: "Which LinkedIn line sounds the most like a real person?",
-      options: ["“Our team’s attendance app got 2nd place out of 60 teams, and I built the login screen at 3 AM.”", "“Leveraging synergies, I drove impactful outcomes.”", "“In today’s fast-paced digital landscape, adaptability is key.”", "“I’m thrilled to embark on this exciting new chapter of growth.”"], answer: 0,
+      options: ["“Our app got 2nd of 60 teams; I built the login at 3 AM.”", "“Leveraging synergies, I drove impactful outcomes.”", "“In today’s fast-paced digital landscape, adaptability is key.”", "“I’m thrilled to embark on this exciting new chapter of growth.”"], answer: 0,
       hint: "Which one has something that actually happened?",
       note: "Real numbers, a real role and a real moment. That’s what makes a post feel human and memorable.", badge: "user"
     }),
     AQ(2, "LinkedIn Posts", {
       prompt: "Is it wrong to use AI to help write a LinkedIn post?",
-      options: ["Yes, it’s always cheating", "Yes, LinkedIn bans it", "Only on weekends", "No, if the facts are yours, you check it, and it still sounds like you"], answer: 3,
+      options: ["Yes, it’s always cheating to use AI for posts", "Yes, LinkedIn bans all AI-written posts", "Only if you post it on weekends", "No, if the facts are yours and you check it"], answer: 3,
       hint: "Think of AI like a friend helping you edit.",
       note: "Using AI to polish is fine. Letting it invent experiences, or posting without reading it, is not.", badge: "check",
       board: true, boardLabel: "after Round 2"
@@ -129,19 +129,19 @@ window.GAME = {
     },
     AQ(3, "Detectors", {
       prompt: "You wrote your essay yourself, but an AI detector says it’s “80% AI”. What does that mean?",
-      options: ["You definitely used AI", "Not much. Detectors are often wrong, especially with simple, formal English", "Your essay is 80% wrong", "You should rewrite it in a different language"], answer: 1,
+      options: ["You definitely used AI, the tool is sure", "Not much. Detectors are often wrong", "Your essay is 80% wrong and needs fixing", "You should rewrite it in another language"], answer: 1,
       hint: "Remember the first point from the screen.",
       note: "Detectors give guesses, not proof. Students who write simple, formal English get flagged more often.", badge: "alarm-clock"
     }),
     AQ(3, "Detectors", {
       prompt: "What’s the best proof that you wrote something yourself?",
-      options: ["Adding spelling mistakes on purpose", "Saying “I promise”", "Your drafts, notes and the document’s version history", "Writing it very fast"], answer: 2,
+      options: ["Adding a few spelling mistakes on purpose", "Saying “I promise” to the teacher", "Your drafts and version history", "Writing it very fast in front of friends"], answer: 2,
       hint: "What shows your work as it happened?",
       note: "Google Docs and Word keep a version history. Rough notes and drafts show your thinking step by step.", badge: "file-text"
     }),
     AQ(3, "Detectors", {
       prompt: "If guessing “human or AI?” isn’t reliable, what’s the REAL skill to learn?",
-      options: ["Avoiding all AI", "Checking whether what you read is true and useful, no matter who wrote it", "Using more detectors", "Guessing faster"], answer: 1,
+      options: ["Avoiding all AI tools completely", "Checking if what you read is true", "Using three detectors instead of one", "Guessing faster than your friends"], answer: 1,
       hint: "What matters more: who wrote it, or whether it’s right?",
       note: "That’s what the next rounds are about: catching AI when it’s confidently wrong.", badge: "lightbulb",
       board: true, boardLabel: "after Round 3"
@@ -174,7 +174,7 @@ window.GAME = {
     })),
     AQ(4, "Confidently Wrong", {
       prompt: "AI gives you a research paper to cite in your project report. What should you do?",
-      options: ["Search for the paper yourself first. AI sometimes invents papers that don’t exist", "Cite it, but in small font", "Ask AI if it’s sure", "Cite it. AI knows research"], answer: 0,
+      options: ["Search for it yourself, AI can invent papers", "Cite it, but in a small font at the end", "Ask the AI if it’s sure, then cite it", "Cite it, AI knows research better than us"], answer: 0,
       hint: "Can you find it on Google Scholar or the journal’s site?",
       note: "Made-up citations have embarrassed students and even lawyers in court. If you can’t find it, don’t cite it.", badge: "book-open",
       board: true, boardLabel: "after Round 4"
@@ -190,19 +190,19 @@ window.GAME = {
     },
     AQ(5, "Better Prompts", {
       prompt: "You want help preparing for a campus interview. Which prompt will get the best answer?",
-      options: ["“Interview tips”", "“Help me”", "“Tell me everything about interviews”", "“I’m a final year CSE student with an interview for a junior web developer role next week. Ask me 5 likely HR questions one by one and give feedback on my answers.”"], answer: 3,
+      options: ["“Interview tips for freshers, all the common questions and best answers please”", "“Help me”", "“Tell me everything about interviews”", "“Final-year CSE, web dev interview. Ask me 5 HR questions.”"], answer: 3,
       hint: "Which one tells AI who you are, what you need and how?",
       note: "Context + a clear task + a format. It even turns AI into a mock interviewer instead of a list of tips.", badge: "target"
     }),
     AQ(5, "Better Prompts", {
       prompt: "AI’s explanation is too complicated. What’s the best follow-up?",
-      options: ["Copy it anyway", "Give up and close the app", "“Explain it like I’m a 2nd-year student, with one simple example”", "Ask the same question again"], answer: 2,
+      options: ["Copy it anyway and read it later", "Give up and close the app", "“Explain it simply with one example”", "Ask the same question again"], answer: 2,
       hint: "Tell it what level you need.",
       note: "AI adjusts when you tell it your level. Follow-ups are where the best answers come from.", badge: "message-circle"
     }),
     AQ(5, "Better Prompts", {
       prompt: "Which of these should you NEVER paste into an AI chat?",
-      options: ["Your passwords, Aadhaar number, or a friend’s private details", "A question from your textbook", "A paragraph from your own essay", "An error message from your code"], answer: 0,
+      options: ["Passwords, Aadhaar or a friend’s details", "A question from your textbook", "A paragraph from your own essay", "An error message from your code"], answer: 0,
       hint: "Which one would be a problem if someone else saw it?",
       note: "Treat AI chats like anything else online. Private data stays private.", badge: "lock",
       board: true, boardLabel: "after Round 5"
@@ -219,21 +219,21 @@ window.GAME = {
     AQ(6, "Smart Use", {
       double: true,
       prompt: "Which of these is a SMART use of AI?",
-      options: ["Writing your answers during a closed-book exam", "Asking it to explain a topic you didn’t understand in class, then practising questions yourself", "Submitting AI code as your own in a lab exam", "Copying an AI essay without reading it"], answer: 1,
+      options: ["Writing your answers during a closed-book exam", "Explaining a topic, then practising yourself", "Submitting AI code as your own in a lab exam", "Copying an AI essay without reading it"], answer: 1,
       hint: "Which one leaves you knowing more than before?",
       note: "Explain, then practise yourself. You learn faster, and you can still do it without AI.", badge: "lightbulb"
     }),
     AQ(6, "Smart Use", {
       double: true,
       prompt: "AI helped you write code for your project. Before you submit it, you must…",
-      options: ["Submit it as fast as possible", "Add more comments", "Change the variable names so nobody notices", "Understand every line, test it, and say you used AI if your college’s rules ask you to"], answer: 3,
+      options: ["Submit it as fast as possible before the deadline", "Add more comments so it looks well written", "Change the variable names so nobody notices", "Understand it, test it, disclose if required"], answer: 3,
       hint: "What happens if someone asks you to explain it?",
       note: "If you can’t explain it, it isn’t really your work yet. And always follow your college’s AI rules.", badge: "code"
     }),
     AQ(6, "Smart Use", {
       double: true,
       prompt: "Interviewer: “Walk me through the code in your project.” You let AI write it and never understood it. What happens?",
-      options: ["You struggle to explain it, and the interviewer notices", "You can ask AI during the interview", "You get extra marks for using AI", "Nothing, they won’t ask follow-up questions"], answer: 0,
+      options: ["You struggle to explain it", "You can quietly ask AI during the interview", "You get extra marks for using AI tools", "Nothing, they won’t ask any follow-up questions"], answer: 0,
       hint: "Interviewers dig into your projects. Remember the HR Round?",
       note: "Projects you don’t understand become interview traps. Use AI to learn, and you’ll be able to explain everything.", badge: "briefcase",
       board: true, boardLabel: "after Round 6"

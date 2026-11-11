@@ -16,6 +16,10 @@ guide = G.get("guide", {})
 W = G.get("words", {})
 ROUND = W.get("round", "Round" if W else "Door")
 e = lambda s: html.escape(str(s if s is not None else ""), quote=True)
+import re as _re
+def md_b(t):
+    return _re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", e(t))
+TALE_WORDS = [w for st in G["steps"] if st.get("type") == "tale" for w in st.get("words", [])]
 L = "ABCDEFGH"
 
 theme = open(f"{ROOT}/{gid}/theme.css").read() if os.path.exists(f"{ROOT}/{gid}/theme.css") else ""
@@ -122,8 +126,13 @@ for s in G["steps"]:
     elif t == "offer" and G.get("offers"):
         rows = "".join(f'<div class="srow"><b>{round(o["min"] * MAX)}+ points</b><span><strong>{e(o["title"])}</strong> · {e(o["text"])}</span></div>' for o in G["offers"])
         slide(f'<p class="eyebrow">{e(G.get("offerEyebrow", "Results"))}</p><h1 class="h1">{e(G.get("offerTitle", "Your results"))}</h1><p class="lead">Out of {MAX} points (not counting speaking bonuses). Find your team’s total.</p><div class="side wide">{rows}</div>')
+    elif t == "tale":
+        paras = "".join(f'<p style="margin-bottom:12px">{md_b(x)}</p>' for x in s.get("text", []))
+        slide(f'<p class="eyebrow">{e(s.get("eyebrow", ""))}</p><h1 class="h2">{e(s.get("title", ""))}</h1><div class="lead tale">{paras}</div>')
+        wcards = "".join(f'<div class="cardx sm"><h3>{e(a)}</h3><p>{e(b)}</p></div>' for a, b in s.get("words", []))
+        slide(f'<p class="eyebrow">{e(s.get("eyebrow", ""))} · Power words</p><h1 class="h2">Words from this part</h1><div class="wl">{wcards}</div>')
     elif t == "wordlist":
-        items = "".join(f'<div class="cardx sm"><h3>{e(a)}</h3><p>{e(b)}</p></div>' for a, b in s["items"])
+        items = "".join(f'<div class="cardx sm"><h3>{e(a)}</h3><p>{e(b)}</p></div>' for a, b in (s.get("items") or TALE_WORDS))
         slide(f'<p class="eyebrow">{e(s.get("eyebrow", ""))}</p><h1 class="h2">{e(s["title"])}</h1><p class="lead">{e(s.get("note", ""))}</p><div class="wl">{items}</div>')
     elif t == "end":
         slide(f'<p class="eyebrow">Final results</p><h1 class="h1">And the winners are…</h1><div class="podium"><div><span>2nd</span></div><div class="first"><span>1st</span></div><div><span>3rd</span></div></div><p class="lead">{e(W.get("endLine", ""))}</p>')
@@ -261,6 +270,10 @@ for s in G["steps"]:
         script.append(f'<h3 class="rh">The master key</h3><div class="say"><p>Reveal the key: <b>{e(G["key"])}</b>. Say: “{e(G.get("keyTitle", ""))}” Teams that cracked every door spell the full word.</p></div>')
     elif t == "offer" and G.get("offers"):
         script.append('<h3 class="rh">Offer letters</h3><div class="say"><p>With phones, each team sees its own offer. On paper, use these totals (out of ' + str(MAX) + '):</p><ul>' + "".join(f'<li><b>{round(o["min"] * MAX)}+ points:</b> {e(o["title"])}</li>' for o in G["offers"]) + "</ul></div>")
+    elif t == "tale":
+        paras = "".join(f"<p>{md_b(x)}</p>" for x in s.get("text", []))
+        wl = ", ".join(f"<b>{e(a)}</b> ({e(b)})" for a, b in s.get("words", []))
+        script.append(f'<h3 class="rh">{e(s.get("eyebrow", ""))}: {e(s.get("title", ""))}</h3><div class="say"><p>Read this part aloud slowly, with feeling. Pause at each bold word and ask what it might mean.</p>{paras}<p>Power words: {wl}</p></div>')
     elif t == "wordlist":
         script.append(f'<h3 class="rh">Take-home: {e(s["title"])}</h3><div class="say"><p>Ask everyone to take a photo or screenshot. {e(s.get("note", ""))}</p></div>')
     elif t == "end":

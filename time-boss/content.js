@@ -72,7 +72,7 @@ window.GAME = {
     }),
     TB(1, "Where Time Goes", {
       prompt: "Priya feels she has “no time”. What should she do first?",
-      options: ["Download 3 productivity apps", "Sleep 2 hours less every night", "Wake up at 4 am from tomorrow", "Write down what she actually does every hour for one day"], answer: 3,
+      options: ["Download 3 productivity apps today", "Sleep 2 hours less every night", "Wake up at 4 am from tomorrow", "Track what she does every hour"], answer: 3,
       hint: "Before fixing anything, find the problem.",
       note: "An honest log shows where time leaks. Most students find 1 to 2 hours they didn’t know they had.", badge: "search"
     }),
@@ -94,13 +94,13 @@ window.GAME = {
     },
     TB(2, "Urgent vs Important", {
       prompt: "Which of Priya’s tasks is important but NOT urgent?",
-      options: ["Revising for exams that start in 2 weeks", "An assignment due at midnight tonight", "Replying to 47 WhatsApp group messages", "A phone call from an unknown number"], answer: 0,
+      options: ["Revising for exams in 2 weeks", "An assignment due at midnight tonight", "Replying to 47 WhatsApp group messages", "A phone call from an unknown number"], answer: 0,
       hint: "It matters a lot, but nothing breaks if she starts it tomorrow… yet.",
       note: "Exam revision. Important tasks without a deadline today are the ones we keep pushing, until they become a crisis.", badge: "book-open"
     }),
     TB(2, "Urgent vs Important", {
       prompt: "A classmate asks Priya to collect printouts for the whole group right now. It’s urgent for them, not important for her. Best move?",
-      options: ["Drop her own work and go", "Ignore the message completely", "Ask if someone nearer can do it, or offer to do it after her focus block", "Do it and complain in the group later"], answer: 2,
+      options: ["Drop her own work and go right away", "Ignore the message completely", "Ask someone nearer, or do it later", "Do it, then complain in the group"], answer: 2,
       hint: "Urgent but not important: can someone else handle it, or can it wait an hour?",
       note: "Hand it off or schedule it. Helping is good, but it doesn’t have to break her focus right now.", badge: "users"
     }),
@@ -122,19 +122,19 @@ window.GAME = {
     },
     TB(3, "Planning the Week", {
       prompt: "Which to-do item is Priya most likely to actually start?",
-      options: ["“Study for exams”", "“Become better at coding”", "“Fix my life”", "“Solve 5 DBMS questions from last year’s paper, 7 to 8 pm”"], answer: 3,
+      options: ["“Study for all my exams this week properly”", "“Become better at coding”", "“Fix my life”", "“5 DBMS questions, 7 to 8 pm”"], answer: 3,
       hint: "Which one tells her exactly what to do and when?",
       note: "Specific + small + a time slot. Vague tasks make your brain freeze; clear ones get done.", badge: "list-checks"
     }),
     TB(3, "Planning the Week", {
       prompt: "When is the best time for Priya to do her hardest subject?",
-      options: ["When her energy is highest, often in the morning", "Late at night when everything else is done", "Whenever she feels motivated", "Never; she’ll skip that chapter"], answer: 0,
+      options: ["When her energy is highest", "Late at night when everything else is done", "Whenever she feels motivated enough", "Never; she’ll skip that chapter"], answer: 0,
       hint: "Hard tasks need your best brain.",
       note: "Match tasks to energy. Do the hardest work in your best hours, and save easy tasks like replying to messages for low-energy times.", badge: "zap"
     }),
     TB(3, "Planning the Week", {
       prompt: "Priya planned 12 tasks for Monday and finished 3. She feels like a failure. What’s the real problem?",
-      options: ["She’s lazy", "She planned too much. Pick 3 that matter and finish them", "She needs to work 18 hours a day", "Planning doesn’t work"], answer: 1,
+      options: ["She’s lazy and needs more discipline", "She planned too much; pick 3", "She needs to work 18 hours a day", "Planning doesn’t work for students"], answer: 1,
       hint: "Was it a bad day, or a bad plan?",
       note: "Over-planning is very common. 3 important tasks done beats 12 tasks started.", badge: "target",
       board: true, boardLabel: "after Round 3"
@@ -151,7 +151,7 @@ window.GAME = {
     },
     TB(4, "Procrastination", {
       prompt: "Priya keeps saying “I’ll start revising when I feel motivated.” What usually happens?",
-      options: ["Motivation arrives on time", "She studies better under pressure the night before", "Motivation rarely comes first. Action usually comes before motivation", "She should wait for the perfect mood"], answer: 2,
+      options: ["Motivation arrives right on time", "She studies better under pressure", "Action usually comes first", "She should wait for the perfect mood"], answer: 2,
       hint: "Have you ever felt like studying before starting?",
       note: "Motivation often shows up after you begin. Start for 5 minutes; you’ll usually keep going.", badge: "flame"
     }),
@@ -163,7 +163,7 @@ window.GAME = {
     }),
     TB(4, "Procrastination", {
       prompt: "Priya’s hackathon project report feels too big to start. Best trick?",
-      options: ["Wait until the day before", "Ask a friend to write it", "Do the whole thing in one 8-hour sitting", "Break it into small parts and start with the easiest: the title and headings"], answer: 3,
+      options: ["Wait until the day before, pressure helps", "Ask a friend to write it for her", "Do it all in one 8-hour sitting", "Start small: title and headings"], answer: 3,
       hint: "Make the first step tiny.",
       note: "Headings first, then one section a day. A big task becomes 5 small ones that don’t feel scary.", badge: "pen-tool",
       board: true, boardLabel: "after Round 4"
@@ -185,13 +185,13 @@ window.GAME = {
     }),
     TB(5, "Focus and Phones", {
       prompt: "Where should Priya’s phone be during a focus sprint?",
-      options: ["In her hand, on silent", "On the desk, face up", "In another room, or at least in a bag", "In her pocket on vibrate"], answer: 2,
+      options: ["In her hand, on silent", "On the desk, face up", "In another room or a bag", "In her pocket on vibrate"], answer: 2,
       hint: "The harder it is to reach, the less you reach.",
       note: "Another room is best. Even a silent phone on the desk takes some of your attention.", badge: "smartphone"
     }),
     TB(5, "Focus and Phones", {
       prompt: "Priya studies while watching a series and replying to chats. She says she’s “multitasking”. What’s really happening?",
-      options: ["She’s getting three times as much done", "She’s switching between tasks and doing each one worse", "It works if you’re young", "It’s the best way to study"], answer: 1,
+      options: ["She’s getting three times as much done", "Switching tasks, doing each one worse", "It works fine if you’re young", "It’s the best way to study"], answer: 1,
       hint: "Can your brain read and follow a story at the same time?",
       note: "The brain switches, it doesn’t multitask. Each switch costs focus. One thing at a time is faster.", badge: "lightbulb",
       board: true, boardLabel: "after Round 5"
@@ -208,21 +208,21 @@ window.GAME = {
     TB(6, "Crunch Week", {
       double: true,
       prompt: "The hackathon final is on Saturday, and Priya’s first exam is on Monday. Best plan?",
-      options: ["Quit the hackathon without telling her team", "Tell her team now, agree on her hours, and plan revision for Friday and Sunday", "Do both with no sleep", "Skip the exam"], answer: 1,
+      options: ["Quit the hackathon without telling her team", "Tell her team now and plan revision", "Do both with no sleep on any day", "Skip the exam and write it next year"], answer: 1,
       hint: "Talk early and plan both.",
       note: "Clashes are normal. Telling the team early and planning both is what professionals do.", badge: "users"
     }),
     TB(6, "Crunch Week", {
       double: true,
       prompt: "Friends invite Priya to a movie the night before her exam. Best reply?",
-      options: ["“I’d love to, but I’ve promised tonight to my exam. Can we go this weekend?”", "Go, and study after midnight", "Ignore the message", "“Movies are a waste of time.”"], answer: 0,
+      options: ["“Love to, but not tonight. This weekend?”", "Go, and plan to study after midnight", "Ignore the message", "“Movies are a waste of time.”"], answer: 0,
       hint: "Kind, honest and offers another time.",
       note: "A polite no with a new plan keeps the friendship and the marks.", badge: "message-circle"
     }),
     TB(6, "Crunch Week", {
       double: true,
       prompt: "Priya wants to stay up all night before her exam to finish the syllabus. Good idea?",
-      options: ["Yes, more hours means more marks", "Yes, if she drinks enough tea", "No. Revise the key topics and sleep at least 7 hours", "Only if the exam is in the afternoon"], answer: 2,
+      options: ["Yes, more hours means more marks", "Yes, if she drinks enough tea", "No. Revise key topics, then sleep", "Only if the exam is in the afternoon"], answer: 2,
       hint: "When does your brain save what you learned?",
       note: "Sleep is when memory is saved. An all-nighter often means forgetting what you studied and making silly mistakes.", badge: "heart",
       board: true, boardLabel: "after Round 6"

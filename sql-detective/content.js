@@ -254,14 +254,14 @@ window.GAME = {
       double: true,
       prompt: "Which query gives the name and hostel of that person?",
       code: HOSTEL_DB,
-      options: ["SELECT name, hostel FROM gate_log WHERE time BETWEEN '22:00' AND '22:20';", "SELECT * FROM students WHERE time BETWEEN '22:00' AND '22:20';", "SELECT s.name, s.hostel FROM students s JOIN gate_log g ON s.id = g.student_id WHERE g.time BETWEEN '22:00' AND '22:20';", "SELECT s.name FROM students s JOIN gate_log g ON s.name = g.time;"], answer: 2,
+      options: ["SELECT name, hostel FROM gate_log WHERE time BETWEEN '22:00' AND '22:20' ORDER BY time;", "SELECT * FROM students WHERE time BETWEEN '22:00' AND '22:20' AND hostel = 'A';", "SELECT s.name, s.hostel FROM students s JOIN gate_log g ON s.id = g.student_id WHERE g.time BETWEEN '22:00' AND '22:20';", "SELECT s.name FROM students s JOIN gate_log g ON s.name = g.time;"], answer: 2,
       hint: "gate_log has times. students has names. You need both.",
       note: "Only the JOIN works: gate_log has no name or hostel column, and students has no time column. Result: Anil, hostel A.", badge: "key"
     }),
     SQ(6, "Solve the Case", {
       double: true,
       prompt: "The query returns: Anil, hostel A, 22:05. What should the warden do?",
-      options: ["Announce in the hostel group that Anil stole the laptop", "Talk to Anil first: the data proves he left the gate at 22:05, not that he took the laptop", "Delete the gate log", "Suspend everyone in Hostel A"], answer: 1,
+      options: ["Announce in the hostel group that Anil stole the laptop", "Talk to Anil: the data shows he left at 22:05, not theft", "Delete the gate log", "Suspend everyone in Hostel A"], answer: 1,
       hint: "What does the gate_log actually record?",
       note: "Data shows what happened, not why. The warden asked Anil, who had borrowed the laptop for a late hackathon session and forgot to sign the register. Case closed, nobody falsely accused.", badge: "shield",
       board: true, boardLabel: "after Round 6"

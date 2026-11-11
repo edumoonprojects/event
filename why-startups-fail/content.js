@@ -67,13 +67,13 @@ window.GAME = {
     },
     SF(1, "No Real Need", {
       prompt: "“PlantPal” built an app to remind hostel students to water plants. 6 downloads in 3 months. Diagnosis?",
-      options: ["No real need: most hostel students don’t keep plants", "Too many users", "The app was too fast", "Bad logo"], answer: 0,
+      options: ["No real need: few students keep plants", "Too many users, so the servers crashed", "The app was too fast and confused people", "A bad logo that nobody remembered"], answer: 0,
       hint: "How many students have plants?",
       note: "A well-built answer to a problem few people have. Check the need first.", badge: "search"
     }),
     SF(1, "No Real Need", {
       prompt: "Best way to check real need BEFORE building an app?",
-      options: ["Build first, then see", "Watch and ask what people do about the problem today, and see if they’ll pre-order or sign up", "Post a poll with one option", "Ask friends if they like the idea"], answer: 1,
+      options: ["Build it first, then see who uses it", "Watch what people do today, ask them to sign up", "Post a poll with only one option", "Ask your friends if they like the idea"], answer: 1,
       hint: "Behaviour beats opinions.",
       note: "What people do (and pay for) tells you more than what they say.", badge: "eye"
     }),
@@ -111,7 +111,7 @@ window.GAME = {
     })),
     SF(2, "Out of Money", {
       prompt: "Runway is down to 2 months and sales are slow. Smartest move?",
-      options: ["Cut non-essential costs now, focus on what customers pay for, and talk to possible funders early", "Ignore it", "Spend more on ads and hope", "Buy more hoodies"], answer: 0,
+      options: ["Cut extra costs and talk to funders early", "Ignore it, sales will pick up on their own", "Spend more on ads and hope it works", "Buy more team hoodies to boost morale"], answer: 0,
       hint: "Extend runway, focus.",
       note: "Act early. Fundraising and fixes take time you may not have at the last minute.", badge: "trending-up",
       board: true, boardLabel: "after Round 2"
@@ -127,19 +127,19 @@ window.GAME = {
     },
     SF(3, "Too Much Too Soon", {
       prompt: "“StudyHub” launched with chat, notes, quizzes, jobs, dating and a marketplace in one app. Students are confused. Diagnosis?",
-      options: ["The app is too simple", "Students don’t use phones", "Too few features", "Too much at once; no clear reason to use it"], answer: 3,
+      options: ["The app is too simple and needs more pages", "Students don’t use phones much anymore", "Too few features compared to competitors", "Too much at once, no clear reason to use it"], answer: 3,
       hint: "What is the app FOR?",
       note: "A clear single purpose beats a confusing everything-app. Pick the one thing people love most.", badge: "list-checks"
     }),
     SF(3, "Too Much Too Soon", {
       prompt: "A laundry startup works well in 1 hostel. Should they launch in 15 colleges next week?",
-      options: ["No. Expand step by step, keep quality, and learn what breaks", "Yes, and hire 50 people", "Yes, go everywhere at once", "Close the first hostel"], answer: 0,
+      options: ["No. Grow step by step and learn what breaks", "Yes, and hire 50 people for the launch", "Yes, go everywhere at once before others copy", "Close the first hostel to focus on new ones"], answer: 0,
       hint: "What breaks when you grow too fast?",
       note: "Quality often drops when growth outruns the team. Grow steadily.", badge: "route"
     }),
     SF(3, "Too Much Too Soon", {
       prompt: "Which first version is smartest for a campus food-ordering idea?",
-      options: ["A WhatsApp number and a Google Form for one hostel", "A website in 10 languages", "A smartwatch app", "A full app with 30 features"], answer: 0,
+      options: ["A WhatsApp number and a form, one hostel", "A website in 10 languages for every state", "A smartwatch app for quick ordering", "A full app with 30 features on day one"], answer: 0,
       hint: "Smallest thing that tests the idea.",
       note: "Simple tools test demand in days. Build the full app once you know people want it.", badge: "smartphone",
       board: true, boardLabel: "after Round 3"
@@ -156,13 +156,13 @@ window.GAME = {
     },
     SF(4, "Founder Problems", {
       prompt: "Three friends started a startup with no written agreement. One stops working but wants a third of everything. What would have helped?",
-      options: ["A bigger office", "More friends", "Nothing could help", "A written founders’ agreement on roles, shares and what happens if someone leaves"], answer: 3,
+      options: ["A bigger office so everyone feels involved", "More friends joining as co-founders", "Nothing could have helped in this case", "A written founders’ agreement"], answer: 3,
       hint: "Agree early, in writing.",
       note: "Many founders use “vesting”: shares are earned over time, so someone who leaves early keeps only part.", badge: "handshake"
     }),
     SF(4, "Founder Problems", {
       prompt: "Two co-founders keep disagreeing on every decision and the team is stuck. Best fix?",
-      options: ["Agree clear areas each one decides, and a way to break ties", "Shut down immediately", "Stop talking to each other", "Let the interns vote on everything"], answer: 0,
+      options: ["Agree who decides what, and how to break ties", "Shut down the startup immediately", "Stop talking to each other until it passes", "Let the interns vote on every decision"], answer: 0,
       hint: "Clear ownership.",
       note: "Clear areas of ownership let both move fast and trust each other.", badge: "users"
     }),
@@ -186,19 +186,19 @@ window.GAME = {
     },
     SF(5, "Ignoring Customers", {
       prompt: "Many users say the app is “cool”, but almost nobody opens it a second time. What does this tell you?",
-      options: ["Users are lying", "Add more colours", "The app is a success", "It isn’t solving a problem well enough to come back. Find out why"], answer: 3,
+      options: ["Users are lying to be polite to the founders", "Add more colours so it looks exciting", "The app is a success, “cool” means it works", "It’s not solving a real problem well enough"], answer: 3,
       hint: "Behaviour over words.",
       note: "Repeat use is one of the clearest signs people value what you built.", badge: "eye"
     }),
     SF(5, "Ignoring Customers", {
       prompt: "30 customers complain that delivery is slow. The founder decides to redesign the logo. Diagnosis?",
-      options: ["Logos fix everything", "Fixing the wrong thing. The customers named the real problem", "Ignore the complaints", "Great decision"], answer: 1,
+      options: ["Logos fix everything, so it’s a good plan", "Fixing the wrong thing", "Ignore the complaints until they stop", "A great decision, branding matters most"], answer: 1,
       hint: "What did customers ask for?",
       note: "When many customers say the same thing, that’s your priority.", badge: "clock"
     }),
     SF(5, "Ignoring Customers", {
       prompt: "A founder fakes higher user numbers to impress investors. What usually happens?",
-      options: ["When the truth comes out, trust is lost, and there can be legal trouble", "It works forever", "The numbers become real", "Nothing"], answer: 0,
+      options: ["Trust is lost, and there can be legal trouble", "It works forever if nobody checks", "The numbers slowly become real over time", "Nothing, every startup does it"], answer: 0,
       hint: "Can lies survive checks?",
       note: "Investors check. Honest small numbers beat fake big ones, every time.", badge: "shield",
       board: true, boardLabel: "after Round 5"
@@ -215,7 +215,7 @@ window.GAME = {
     SF(6, "Final Cases", {
       double: true,
       prompt: "A startup tries to sell online payment services in a town where almost nobody has a smartphone yet. Diagnosis?",
-      options: ["Wrong logo", "Too early: the habit and tools weren’t there yet", "Perfect timing", "Too late"], answer: 1,
+      options: ["The logo didn’t suit a small-town market", "Too early: people weren’t ready", "Perfect timing, they were first in the town", "Too late, everyone already had it"], answer: 1,
       hint: "Were people ready?",
       note: "Even good ideas fail if customers aren’t ready yet. Timing matters.", badge: "clock"
     }),
@@ -231,7 +231,7 @@ window.GAME = {
     SF(6, "Final Cases", {
       double: true,
       prompt: "Your first startup fails. What’s the best mindset?",
-      options: ["Write down what you learned, keep your network, and use it in your next attempt or job", "Blame everyone else", "Never try again", "Hide it from your resume"], answer: 0,
+      options: ["Note what you learned and use it next time", "Blame your co-founders and the market", "Never try a startup again in your life", "Hide it from your resume and LinkedIn"], answer: 0,
       hint: "What did it teach you?",
       note: "Many successful founders failed first. A failed startup can be great experience for jobs too.", badge: "lightbulb",
       board: true, boardLabel: "after Round 6"

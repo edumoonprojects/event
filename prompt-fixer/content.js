@@ -66,19 +66,19 @@ window.GAME = {
     },
     PF(1, "Context", {
       prompt: "Which prompt will get the most useful study answer?",
-      options: ["“Explain OS”", "“I’m a 2nd-year CSE student with an OS mid exam in 3 days. Explain deadlocks simply with one real-life example.”", "“Tell me everything about operating systems”", "“OS notes pls”"], answer: 1,
+      options: ["“Explain OS”", "“2nd-year CSE, OS exam in 3 days. Explain deadlocks simply with an example.”", "“Tell me everything about operating systems in full detail, every single topic from start to end”", "“OS notes pls, important ones only”"], answer: 1,
       hint: "Which one tells AI who you are and what you need?",
       note: "Level, deadline, one topic and a format. Same AI, much better answer.", badge: "target"
     }),
     PF(1, "Context", {
       prompt: "“Give me a diet plan.” What’s the biggest problem with this prompt?",
-      options: ["It’s too polite", "It should be in capital letters", "It has no context: age, goal, food preferences or budget", "Diet plans aren’t allowed"], answer: 2,
+      options: ["It’s too polite and should be more direct", "It should be written in capital letters", "No context: age, goal, food or budget", "Diet plans are not allowed on AI tools at all"], answer: 2,
       hint: "Would a nutritionist give you a plan without asking anything?",
       note: "A hostel student on ₹3,000 a month needs a different plan from anyone else. And for health conditions, check with a doctor.", badge: "user"
     }),
     PF(1, "Context", {
       prompt: "You want resume help. What should you tell AI first?",
-      options: ["Your year, branch, the role you’re applying for and your real projects", "Your password", "Nothing, just paste “make resume”", "Your favourite film"], answer: 0,
+      options: ["Your year, branch, target role and real projects", "Your password, so it can log in and fix things", "Nothing, just paste “make resume” and wait", "Your favourite film and your hobbies list"], answer: 0,
       hint: "What would a senior ask before helping you?",
       note: "The role and your real projects decide everything. And never invent experience you don’t have.", badge: "file-user",
       board: true, boardLabel: "after Round 1"
@@ -102,13 +102,13 @@ window.GAME = {
     })),
     PF(2, "Clear Task", {
       prompt: "You want to practise for a viva. Which task works best?",
-      options: ["“Viva questions”", "“Ask me 5 viva questions on my mini project one by one, wait for my answer, then give feedback.”", "“Is viva hard?”", "“Write my viva answers”"], answer: 1,
+      options: ["“Viva questions for my project, all of them at once with answers”", "“Ask me 5 viva questions one by one and give feedback.”", "“Is viva hard? Tell me honestly”", "“Write my viva answers so I can memorise them tonight”"], answer: 1,
       hint: "Which one turns AI into a practice partner?",
       note: "One question at a time, with feedback, is like a mock viva. You learn by answering, not by reading.", badge: "mic"
     }),
     PF(2, "Clear Task", {
       prompt: "“Make my project, write the report, make slides and prepare viva answers.” Why is this weak?",
-      options: ["It’s too short", "It asks for 4 big things at once, so each one comes out shallow", "AI can’t make slides", "It needs more capital letters"], answer: 1,
+      options: ["It’s too short and AI needs at least 100 words", "4 big tasks at once, so each one is shallow", "AI can’t make slides or reports for projects", "It needs more capital letters to show urgency"], answer: 1,
       hint: "Can you do 4 big jobs well in one go?",
       note: "Split big work into steps. And for your own project, use AI to help you build it, not to build it for you.", badge: "list-checks",
       board: true, boardLabel: "after Round 2"
@@ -124,7 +124,7 @@ window.GAME = {
     },
     PF(3, "Format", {
       prompt: "You want to compare 3 laptops under ₹50,000 quickly. Which format should you ask for?",
-      options: ["A long essay", "A poem", "A table comparing price, RAM, battery and weight", "A story about laptops"], answer: 2,
+      options: ["A long essay explaining each laptop in detail", "A poem about which laptop is the best one", "A table: price, RAM, battery, weight", "A story about a student buying a laptop"], answer: 2,
       hint: "What’s easiest to compare at a glance?",
       note: "Tables are perfect for comparisons. And check prices on the shop’s site; AI’s prices can be old.", badge: "chart-column"
     }),
@@ -138,7 +138,7 @@ window.GAME = {
     })),
     PF(3, "Format", {
       prompt: "AI’s answer is 2 pages long and you have 10 minutes. Best follow-up?",
-      options: ["Read all 2 pages very fast", "Close it", "Ask the same question again", "“Summarise this in 5 bullet points I can revise in 2 minutes.”"], answer: 3,
+      options: ["Read all 2 pages very fast and hope you remember", "Close it and study from your notes instead", "Ask the same question again and wait for a shorter one", "“Summarise this in 5 bullet points.”"], answer: 3,
       hint: "Tell it the size you need.",
       note: "You can always reshape an answer. Follow-ups are free.", badge: "timer",
       board: true, boardLabel: "after Round 3"
@@ -155,13 +155,13 @@ window.GAME = {
     },
     PF(4, "Role and Examples", {
       prompt: "You want honest feedback on your 7-mark answer. Which role works best?",
-      options: ["“Act as my best friend who loves everything I write”", "“Act as a strict university examiner. Mark this out of 7 and tell me what’s missing.”", "“Act as a poet”", "No role needed"], answer: 1,
+      options: ["“Act as my best friend who loves everything I write”", "“Act as a strict examiner. Mark it out of 7.”", "“Act as a poet and make my answer sound beautiful”", "No role needed, just paste the answer and ask"], answer: 1,
       hint: "Who would give the most useful marks?",
       note: "A strict role gets honest feedback. A friendly role gets praise you can’t use.", badge: "graduation-cap"
     }),
     PF(4, "Role and Examples", {
       prompt: "You want 10 Instagram captions in your club’s style. What should you add?",
-      options: ["Nothing", "“Make them good”", "2 or 3 of your club’s best old captions as examples", "The word “please” 3 times"], answer: 2,
+      options: ["Nothing, AI already knows your club’s style", "“Make them really good and catchy please”", "2 or 3 of your best old captions as examples", "The word “please” 3 times so it tries harder"], answer: 2,
       hint: "How would AI know your style?",
       note: "Examples are the fastest way to show style. AI matches what you show it.", badge: "pen-tool"
     }),
@@ -185,7 +185,7 @@ window.GAME = {
     },
     PF(5, "Limits and Safety", {
       prompt: "Which line helps reduce made-up answers?",
-      options: ["“Answer fast”", "“Be creative”", "“Use big words”", "“If you’re not sure about something, say so instead of guessing.”"], answer: 3,
+      options: ["“Answer fast, I don’t have much time”", "“Be creative and add interesting facts”", "“Use big words so it sounds smart”", "“If you’re not sure, say so.”"], answer: 3,
       hint: "Which line gives AI permission to say it doesn’t know?",
       note: "It doesn’t remove mistakes completely, so you still check, but it helps.", badge: "check"
     }),
@@ -199,7 +199,7 @@ window.GAME = {
     })),
     PF(5, "Limits and Safety", {
       prompt: "Your English is basic and AI uses hard words. Best fix?",
-      options: ["Add: “Explain in very simple English, like to a 1st-year student, and give the Telugu word for hard terms.”", "Give up on AI", "Copy it without understanding", "Ask the question in capital letters"], answer: 0,
+      options: ["Add: “Explain in very simple English, with Telugu words for hard terms.”", "Give up on AI and only use textbooks from now on", "Copy the answer without understanding it, just for marks", "Ask the same question again, but in capital letters this time"], answer: 0,
       hint: "You can choose the language level.",
       note: "AI can explain at any level. You just have to ask.", badge: "languages",
       board: true, boardLabel: "after Round 5"
@@ -216,21 +216,21 @@ window.GAME = {
     PF(6, "Full Fix", {
       double: true,
       prompt: "Fix “internship pls”. Which version is the best?",
-      options: ["“Internship please please”", "“Give me internship”", "“I’m a 3rd-year CSE student who knows HTML, CSS and basic Python. List 5 types of internships I can apply for and the skills each needs, as a table.”", "“Where internship?”"], answer: 2,
+      options: ["“Internship please please, any company, any role, I will do anything”", "“Give me internship”", "“3rd-year CSE, I know HTML, CSS and Python. List 5 internships I can apply for.”", "“Where internship? Tell me all the companies in Vizag and Hyderabad”"], answer: 2,
       hint: "Context + task + format.",
       note: "And then check every company or website it names yourself before applying anywhere.", badge: "briefcase"
     }),
     PF(6, "Full Fix", {
       double: true,
       prompt: "Which prompt will help you LEARN, not just get an answer?",
-      options: ["“Solve this question”", "“Give me the final answer only”", "“Write it so I can copy it”", "“Don’t give me the answer. Give me hints one by one until I solve this question myself.”"], answer: 3,
+      options: ["“Solve this question step by step with the final answer”", "“Give me the final answer only, no explanation needed”", "“Write it so I can copy it into my record neatly”", "“Give me hints one by one until I solve it myself.”"], answer: 3,
       hint: "Which one makes you do the thinking?",
       note: "Hint mode turns AI into a tutor. You remember what you solve yourself.", badge: "lightbulb"
     }),
     PF(6, "Full Fix", {
       double: true,
       prompt: "AI’s first answer is okay, but not great. What do great prompters do?",
-      options: ["Accept it", "Follow up: “Make it simpler”, “Add an example”, “What did you miss?”", "Start a new chat and type the same thing", "Complain"], answer: 1,
+      options: ["Accept it, because the first answer is usually the best one", "Follow up: “Simpler”, “Add an example”", "Start a new chat and type exactly the same thing again", "Complain that AI is useless and close the app"], answer: 1,
       hint: "Is the first answer the last answer?",
       note: "The best answers come from the second or third message. Treat it like a conversation.", badge: "message-circle",
       board: true, boardLabel: "after Round 6"

@@ -12,6 +12,7 @@ Tools for adding new door games to this repo. Each game folder gets a live app (
 |---|---|
 | `scaffold.py` | Creates a game folder: `host.html`, `index.html` and `theme.css` from a colour set. Copy `art.js` and write `content.js` yourself. |
 | `gen.py <game>` | Builds `<game>/deck.html` (the online Screen Deck) and two PDFs in `./out`: the Screen Deck and the Host Guide. |
+| `node lenaudit.js [game]` | Checks that the right answer is not usually the longest option. Students can guess the longest option and win, so every game should show `ok`. Aim for the right answer being the longest in about 25% of questions, and never clearly longer than the rest. |
 | `playtest.py <game> [shots-dir]` | Plays the whole game in demo mode (host + one team answering correctly). Must end with `errors: none`. |
 
 Paths: the tools find the repo automatically (the folder above `tools/`). Set `EVENT_OUT` to choose where PDFs go. They need Python with `playwright` and `qrcode`, Node, and Chrome at `/usr/bin/google-chrome`.
@@ -37,6 +38,7 @@ Copy the pattern from an existing game, such as `hr-round/content.js` (text), `b
 - Brands, banks, numbers and links in scenarios must be made up.
 
 ## Finishing a game
+1. `node tools/lenaudit.js <game>` shows `ok`.
 1. `playtest.py` ends with `errors: none`.
 2. `gen.py` makes both PDFs. Look at a few pages.
 3. Add the game to `engine/games.js` (club, icon, title, added date, desc, years, level: beginner/medium/advanced, time, group, needs, host, player).

@@ -66,19 +66,19 @@ window.GAME = {
     },
     PB(1, "Set the Scene", {
       prompt: "Task: an invite for a club game night. Which prompt wins?",
-      options: ["“Write an invite”", "“Invite for event”", "“Write a WhatsApp invite for a free 45-minute coding game night for 1st-years who’ve never coded. Friendly, under 60 words, end with a clear time and place.”", "“Make it nice”"], answer: 2,
+      options: ["“Write an invite for our club’s game night, make it fun and exciting for everyone in college”", "“Invite for event”", "“WhatsApp invite: free coding game night for 1st-years, friendly, under 60 words, with time and place.”", "“Make it nice”"], answer: 2,
       hint: "Audience, length, tone and what must be included.",
       note: "The winning prompt says who it’s for, the tone, the length and the must-haves.", badge: "message-circle"
     }),
     PB(1, "Set the Scene", {
       prompt: "Two outputs for a canteen offer post. Which one would students actually notice?",
-      options: ["“Great food at great prices for everyone.”", "“Exam week combo: 2 samosas + chai for ₹30, only 4 to 6 PM.”", "“Quality food is our passion and priority.”", "“Come eat something.”"], answer: 1,
+      options: ["“Great food at great prices for every student on campus.”", "“Exam week combo: 2 samosas + chai for ₹30, 4 to 6 PM.”", "“Quality food is our passion and priority.”", "“Come eat something.”"], answer: 1,
       hint: "Which one has a real reason to walk over?",
       note: "Specific offer, price and time. Good prompts ask for specifics, and good judges pick them.", badge: "store"
     }),
     PB(1, "Set the Scene", {
       prompt: "Why do vague prompts give boring results?",
-      options: ["AI is lazy", "Free AI tools only write boring text", "With no details, AI picks the most common, average answer", "AI doesn’t like short prompts"], answer: 2,
+      options: ["AI is lazy unless you pay for it", "Free AI tools only write boring text", "With no details, AI gives the average answer", "AI doesn’t like short prompts and ignores them"], answer: 2,
       hint: "If AI knows nothing about your situation, what does it fall back on?",
       note: "No details means average output. Your specific details are what make it stand out.", badge: "lightbulb",
       board: true, boardLabel: "after Round 1"
@@ -94,19 +94,19 @@ window.GAME = {
     },
     PB(2, "Exact Output", {
       prompt: "You need a club name fast. Which prompt gives you the most to choose from?",
-      options: ["“Club name?”", "“Give me 10 short, catchy names for a college AI club. Under 3 words each. No ‘tech’ or ‘hub’.”", "“Name”", "“What should I name my club?”"], answer: 1,
+      options: ["“Club name? Something cool and techy for our new AI club in college”", "“10 short names for a college AI club. Under 3 words. No ‘tech’ or ‘hub’.”", "“Name”", "“What should I name my club?”"], answer: 1,
       hint: "Count + size + what to avoid.",
       note: "Asking for 10 with rules gives you real choices instead of one average guess.", badge: "list-checks"
     }),
     PB(2, "Exact Output", {
       prompt: "AI gave you 10 names. None are perfect. Best next move?",
-      options: ["Pick a random one", "“I like #3 and #7. Give me 5 more in that style.”", "Start over with “Club name?”", "Use all 10"], answer: 1,
+      options: ["Pick one at random and move on", "“I like #3 and #7. Give me 5 more like those.”", "Start over with “Club name?”", "Use all 10 names on different posts"], answer: 1,
       hint: "Tell AI what you liked.",
       note: "Iterating on what you liked is how pros get great results.", badge: "route"
     }),
     PB(2, "Exact Output", {
       prompt: "You need a reel hook (the first line). Which constraint matters MOST?",
-      options: ["It must be very long", "It must be in formal English", "It must use the word “journey”", "It must grab attention in the first 2 seconds, under 10 words"], answer: 3,
+      options: ["It must be very long so it explains everything", "It must be in formal English for a good image", "It must use the word “journey” somewhere", "It must hook people in 2 seconds"], answer: 3,
       hint: "How fast do people scroll?",
       note: "Hooks are judged in seconds. Tell AI the time and word limit.", badge: "zap",
       board: true, boardLabel: "after Round 2"
@@ -123,19 +123,19 @@ window.GAME = {
     },
     PB(3, "Examples", {
       prompt: "Your club page has a funny, short style. How do you get AI to match it?",
-      options: ["Say “be funny”", "Paste 2 of your best old captions and say “same style and length, new topic”", "Say “be like us”", "Use capital letters"], answer: 1,
+      options: ["Say “be funny and short like our page”", "Paste 2 old captions and say “same style”", "Say “be like us, you know our vibe”", "Use capital letters so AI takes it seriously"], answer: 1,
       hint: "Show, don’t describe.",
       note: "Examples are the fastest way to share a style. AI is great at copying patterns.", badge: "pen-tool"
     }),
     PB(3, "Examples", {
       prompt: "You want 7-mark exam answers in your university’s pattern. What should you paste?",
-      options: ["Nothing", "Your marks memo", "Your hall ticket", "One model 7-mark answer from a senior or a previous paper"], answer: 3,
+      options: ["Nothing, AI knows every university’s pattern", "Your marks memo from last semester", "Your hall ticket with the exam details", "One model 7-mark answer from a senior"], answer: 3,
       hint: "What does a good answer look like?",
       note: "A model answer shows structure, length and keywords. AI follows it.", badge: "graduation-cap"
     }),
     PB(3, "Examples", {
       prompt: "When is giving an example a BAD idea?",
-      options: ["When the example has someone’s private details or is copied work you’re not allowed to share", "Always", "Never", "When it’s short"], answer: 0,
+      options: ["When it has private or copied details", "Always, examples only confuse the AI", "Never, examples always give better results", "When the example is too short to be useful"], answer: 0,
       hint: "Think privacy and permission.",
       note: "Remove names, numbers and private details before you paste anything.", badge: "lock",
       board: true, boardLabel: "after Round 3"
@@ -152,19 +152,19 @@ window.GAME = {
     },
     PB(4, "Judge Like a User", {
       prompt: "Which AI-written event line would make a 1st-year actually register?",
-      options: ["“Embark on a transformative journey of growth.”", "“Unlock your potential with us.”", "“Never coded? Perfect. Build your first webpage in 45 minutes. Free. Saturday 4 PM, Seminar Hall 2.”", "“Join us for an amazing experience.”"], answer: 2,
+      options: ["“Embark on a transformative journey of growth and learning with our amazing club.”", "“Unlock your potential with us.”", "“Never coded? Build your first webpage in 45 minutes. Free. Saturday 4 PM.”", "“Join us for an amazing experience.”"], answer: 2,
       hint: "Which one answers: what, for whom, when, where?",
       note: "Specific promise, no fear, clear time and place. That’s output worth keeping.", badge: "target"
     }),
     PB(4, "Judge Like a User", {
       prompt: "AI writes: “Our app is used by 2 lakh students.” Your app has 300 users. What do you do?",
-      options: ["Keep it, sounds good", "Round it to 1 lakh", "Delete it. Never publish made-up numbers", "Add a star next to it"], answer: 2,
+      options: ["Keep it, it sounds good and nobody will check", "Round it down to 1 lakh to be safe", "Delete it, never publish made-up numbers", "Add a small star next to it as a note"], answer: 2,
       hint: "Is it true?",
       note: "AI fills gaps with confident fiction. You’re responsible for every claim you publish.", badge: "shield"
     }),
     PB(4, "Judge Like a User", {
       prompt: "Two AI outputs. One is 200 words, one is 40. For a WhatsApp message, which usually wins?",
-      options: ["The 200-word one, more detail", "The 40-word one, if it has everything important", "Neither, WhatsApp needs images only", "The longer one with more emojis"], answer: 1,
+      options: ["The 200-word one, because more detail is always better", "The 40-word one, if it has everything", "Neither, WhatsApp needs images only", "The longer one with more emojis"], answer: 1,
       hint: "How do people read WhatsApp?",
       note: "Fit the format to where it’ll be read. Short and complete wins on chat.", badge: "smartphone",
       board: true, boardLabel: "after Round 4"
@@ -181,19 +181,19 @@ window.GAME = {
     },
     PB(5, "Iterate", {
       prompt: "AI’s poster text is good but too long for the poster. Best follow-up?",
-      options: ["“Cut it to 12 words. Keep the date and the word ‘free’.”", "“Do better”", "“Again”", "“Make it perfect”"], answer: 0,
+      options: ["“Cut it to 12 words. Keep the date and ‘free’.”", "“Do better, this is too long for my poster”", "“Again, but shorter and nicer this time”", "“Make it perfect for a college poster”"], answer: 0,
       hint: "One clear, specific note.",
       note: "Say exactly what to change and what to keep.", badge: "pen-tool"
     }),
     PB(5, "Iterate", {
       prompt: "Which follow-up helps you find weaknesses you missed?",
-      options: ["“Is this good?”", "“Act as a 1st-year student seeing this poster. What would confuse you or make you skip it?”", "“Thanks”", "“Rate it 10 out of 10”"], answer: 1,
+      options: ["“Is this good? Be honest with me please”", "“Act as a 1st-year. What would confuse you here?”", "“Thanks, that’s good enough for now”", "“Rate it 10 out of 10 and explain why”"], answer: 1,
       hint: "Ask AI to play your real audience.",
       note: "Role-play your audience to stress-test your output before real people see it.", badge: "user"
     }),
     PB(5, "Iterate", {
       prompt: "You’ve iterated 3 times and it’s great. One last step before you post?",
-      options: ["Post instantly", "Ask AI to add more words", "Check every fact and detail, and add your own real touch", "Change the font"], answer: 2,
+      options: ["Post it instantly while the idea is fresh", "Ask AI to add more words and hashtags", "Check every fact and add your own touch", "Change the font to something more stylish"], answer: 2,
       hint: "Whose name goes on it?",
       note: "AI drafts, you own it. Check the details and make it sound like you.", badge: "badge-check",
       board: true, boardLabel: "after Round 5"
@@ -210,21 +210,21 @@ window.GAME = {
     PB(6, "Final Round", {
       double: true,
       prompt: "Which prompt would win a battle for “a bio for your Instagram page”?",
-      options: ["“Write a bio”", "“Bio for my page about coding tips for Telugu college students. Under 150 characters, friendly, ends with what people get by following.”", "“Cool bio”", "“Instagram bio please”"], answer: 1,
+      options: ["“Write a bio for my Instagram page about coding, make it cool and professional and catchy”", "“Bio for my coding tips page for Telugu students. Under 150 characters, friendly.”", "“Cool bio”", "“Instagram bio please”"], answer: 1,
       hint: "Scene, limit, tone, purpose.",
       note: "Instagram bios have a 150-character limit. Telling AI the real limit avoids rework.", badge: "user"
     }),
     PB(6, "Final Round", {
       double: true,
       prompt: "In a prompt battle, what usually decides the winner?",
-      options: ["Whose phone is newer", "Which AI app they used", "The longest prompt", "The most specific prompt plus smart follow-ups"], answer: 3,
+      options: ["Whose phone is newer and faster", "Which AI app they used for the battle", "Whoever writes the longest prompt", "The most specific prompt and follow-ups"], answer: 3,
       hint: "Today’s battles: what made the winning results different?",
       note: "Same tools, different results. The skill is in the prompting and iterating.", badge: "crown"
     }),
     PB(6, "Final Round", {
       double: true,
       prompt: "Your friend says, “AI wrote it, so it’s not my work.” What’s the best reply?",
-      options: ["“You’re right, AI did everything”", "“Never use AI”", "“Your ideas, prompts, choices and checks are your work, but say you used AI where rules ask you to”", "“Hide that you used AI”"], answer: 2,
+      options: ["“You’re right, AI did everything, so it isn’t really yours”", "“Never use AI again, it’s basically cheating”", "“Your ideas and checks are yours. Disclose AI where rules ask.”", "“Just hide that you used AI, nobody can tell anyway”"], answer: 2,
       hint: "What part did the human do?",
       note: "Directing, judging and fixing AI output is real skill. Honesty about using it builds trust.", badge: "handshake",
       board: true, boardLabel: "after Round 6"

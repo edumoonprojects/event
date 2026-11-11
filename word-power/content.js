@@ -95,19 +95,19 @@ window.GAME = {
     },
     WP(2, "Stronger Words", {
       prompt: "Which word is the strongest replacement for “very tired” after a 24-hour hackathon?",
-      options: ["Exhausted", "Sleepy", "Bored", "Tiring"], answer: 0,
+      options: ["Exhausted", "Sleepy and slow", "Bored of coding", "Tiring"], answer: 0,
       hint: "Tired, but much more so.",
       note: "Exhausted. One strong word is better than “very” plus a weak one.", badge: "zap"
     }),
     WP(2, "Stronger Words", {
       prompt: "Which resume line sounds strongest?",
-      options: ["“Did a website for the college fest.”", "“Was part of a website team.”", "“Helped with some website work.”", "“Built the college fest website, used by 800 students to register.”"], answer: 3,
+      options: ["“Did a website for the college fest with my team.”", "“Was part of a website team.”", "“Helped with some website work for events.”", "“Built the fest website, used by 800 students.”"], answer: 3,
       hint: "Look for a strong action word and a result.",
       note: "“Built” plus a real number. Recruiters skim resumes in seconds, and strong verbs catch the eye.", badge: "file-user"
     }),
     WP(2, "Stronger Words", {
       prompt: "You’re thanking a speaker by email. Which line is best?",
-      options: ["“Your session was nice.”", "“Your session on resumes was really helpful. I’ve already rewritten my project section.”", "“Good session sir.”", "“Nice nice, very nice.”"], answer: 1,
+      options: ["“Your session was nice, sir, thank you for coming.”", "“Your resume session helped; I rewrote my projects.”", "“Good session sir.”", "“Nice nice, very nice.”"], answer: 1,
       hint: "Specific and genuine.",
       note: "It says what was helpful and what you did with it. Speakers remember emails like this.", badge: "mail",
       board: true, boardLabel: "after Round 2"
@@ -129,13 +129,13 @@ window.GAME = {
     }),
     WP(3, "Clear Everywhere", {
       prompt: "In an email to a professor abroad, which line is clearest?",
-      options: ["“I am having a doubt in this topic.”", "“My doubt is coming.”", "“I have a question about this topic.”", "“Doubt: this topic.”"], answer: 2,
+      options: ["“I am having a doubt in this topic.”", "“My doubt is coming in this topic.”", "“I have a question about this topic.”", "“Doubt: this topic.”"], answer: 2,
       hint: "Outside India, a “doubt” means you don’t believe something.",
       note: "“I have a question”. Elsewhere, “I have a doubt” sounds like “I don’t believe you”.", badge: "message-circle"
     }),
     WP(3, "Clear Everywhere", {
       prompt: "You want an online meeting with a client in the US to happen earlier. What should you say?",
-      options: ["“Can we bring the meeting forward to 3 pm?”", "“Can we prepone the meeting?”", "“Meeting prepone please.”", "“Can we postpone it earlier?”"], answer: 0,
+      options: ["“Can we bring the meeting forward to 3 pm?”", "“Can we prepone the meeting a little bit?”", "“Meeting prepone please.”", "“Can we postpone it earlier?”"], answer: 0,
       hint: "“Prepone” is an Indian English word many people abroad don’t know.",
       note: "“Bring it forward” is understood everywhere. “Prepone” is fine with Indian colleagues.", badge: "clock",
       board: true, boardLabel: "after Round 3"
@@ -158,7 +158,7 @@ window.GAME = {
     }),
     WP(4, "Idioms", {
       prompt: "“Let’s not beat around the bush. Did I get the internship?” What does the speaker want?",
-      options: ["To go to the garden", "To wait longer", "A direct answer, without avoiding the point", "To argue"], answer: 2,
+      options: ["To go and walk in the garden", "To wait a little longer", "A direct answer", "To start an argument"], answer: 2,
       hint: "Walking around a bush, not through it.",
       note: "A direct answer. “Beating around the bush” means avoiding the main point.", badge: "target"
     }),
@@ -186,13 +186,13 @@ window.GAME = {
     }),
     WP(5, "Formal vs Casual", {
       prompt: "Which line fits a formal email asking for an extension?",
-      options: ["“I wanna submit it late.”", "“I would like to request two more days to submit my assignment, as I was unwell this week.”", "“Pls extend deadline asap.”", "“Can’t submit, sorry.”"], answer: 1,
+      options: ["“I wanna submit it late, is that okay with you?”", "“I’d like two more days, as I was unwell this week.”", "“Pls extend deadline asap.”", "“Can’t submit, sorry.”"], answer: 1,
       hint: "Full words, a clear request and a reason.",
       note: "“I would like to request…” with a reason. No wanna, pls or asap.", badge: "pen-tool"
     }),
     WP(5, "Formal vs Casual", {
       prompt: "Your manager asks when the report will be ready. Which reply is most professional?",
-      options: ["“I’ll send it by 5 pm today.”", "“ASAP.”", "“Soon, don’t worry.”", "“Whenever it’s done.”"], answer: 0,
+      options: ["“I’ll send it by 5 pm today.”", "“ASAP.”", "“Soon, don’t worry about it.”", "“Whenever it’s done, I’ll share.”"], answer: 0,
       hint: "Which one gives a real time?",
       note: "A specific time is professional and builds trust. “ASAP” and “soon” mean different things to different people.", badge: "clock",
       board: true, boardLabel: "after Round 5"
@@ -209,21 +209,21 @@ window.GAME = {
     WP(6, "Placement Vocabulary", {
       double: true,
       prompt: "The interviewer says: “We want someone proactive.” What do they mean?",
-      options: ["Someone who acts early and solves problems before being told", "Someone who is always online", "Someone who reacts quickly to orders", "Someone with a lot of certificates"], answer: 0,
+      options: ["Someone who solves problems early", "Someone who is always online", "Someone who reacts quickly to orders", "Someone with lots of certificates"], answer: 0,
       hint: "Pro = before.",
       note: "Proactive: acting early, not waiting to be told. Back it up with an example of something you did on your own.", badge: "rocket"
     }),
     WP(6, "Placement Vocabulary", {
       double: true,
       prompt: "Your project lead says: “The first deliverable is due Monday.” What is a deliverable?",
-      options: ["A parcel", "A delivery boy", "A finished piece of work you hand over, like a report or a feature", "A meeting"], answer: 2,
+      options: ["A parcel sent by courier", "A delivery boy", "Finished work you hand over", "A meeting with the client"], answer: 2,
       hint: "Something you deliver to the team.",
       note: "A deliverable is a finished piece of work: a report, a design, a working feature.", badge: "briefcase"
     }),
     WP(6, "Placement Vocabulary", {
       double: true,
       prompt: "Which sentence uses “collaborate” correctly?",
-      options: ["“I collaborated the project alone.”", "“The project collaborated me.”", "“I collaborate my assignments.”", "“I collaborated with two classmates to build a library app.”"], answer: 3,
+      options: ["“I collaborated the project alone.”", "“The project collaborated me.”", "“I collaborate my assignments every week.”", "“I collaborated with two classmates.”"], answer: 3,
       hint: "You collaborate WITH people.",
       note: "Collaborate means work together with others, so you always collaborate with someone.", badge: "users",
       board: true, boardLabel: "after Round 6"

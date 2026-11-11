@@ -54,7 +54,7 @@ window.GAME = {
     },
     R(1, "The 6-Second Test", {
       prompt: "What should a recruiter see first, at the very top of a fresher’s resume?",
-      options: ["Photo and date of birth", "Name, contact details and a one-line summary", "Hobbies and interests", "“I hereby declare that…”"], answer: 1,
+      options: ["Photo, date of birth and father’s name", "Name, contact and a one-line summary", "Hobbies and interests", "“I hereby declare that…”"], answer: 1,
       hint: "What does a recruiter need to know in the first 2 seconds?",
       note: "Name, phone, email, links, and one specific line about you. Everything else comes after.", badge: "user"
     }),
@@ -66,7 +66,7 @@ window.GAME = {
     }),
     R(1, "The 6-Second Test", {
       prompt: "Which section order works best for most freshers?",
-      options: ["Hobbies → Personal details → Education", "Declaration → Objective → Education", "Education → Skills → Projects → Internships → Achievements", "Projects → Hobbies → Education"], answer: 2,
+      options: ["Hobbies → Personal details → Education → Skills", "Declaration → Objective → Education → Projects", "Education → Skills → Projects → Internships", "Projects → Hobbies → Education → Skills"], answer: 2,
       hint: "Put what proves you can do the job near the top.",
       note: "Education, Skills, Projects, Internships, Achievements. If your projects are your strongest part, they can come right after Education.", badge: "list-checks",
       board: true, boardLabel: "after Round 1"
@@ -90,7 +90,7 @@ window.GAME = {
     })),
     R(2, "Spot the Red Flag", {
       prompt: "Ravi’s objective: “To get a job in a reputed MNC company where I can grow.” Best replacement?",
-      options: ["Seeking a challenging position in a growth-oriented organisation.", "Hardworking, honest and dedicated person.", "Final year CSE student who built 2 web apps (HTML, CSS, JavaScript), looking for a junior web developer role.", "To get a job in a reputed MNC company."], answer: 2,
+      options: ["Seeking a challenging position in a growth-oriented organisation where I can use my skills.", "Hardworking, honest and dedicated person.", "Final-year CSE, built 2 web apps, seeking a junior web developer role.", "To get a job in a reputed MNC company."], answer: 2,
       hint: "Which line could only be about Ravi?",
       note: "Who you are + what you’ve built + the role you want. Specific beats “hardworking”.", badge: "target"
     }),
@@ -114,19 +114,19 @@ window.GAME = {
     },
     R(3, "Weak vs Strong", {
       prompt: "Pick the strongest PROJECT line.",
-      options: ["Did a project on website.", "Worked on a website project in a team.", "Built a college events website (HTML, CSS, JS) used by 300+ students to register for fests.", "Website project: good experience."], answer: 2,
+      options: ["Did a project on website for the college department.", "Worked on a website project in a team of four students.", "Built a fest site (HTML, CSS, JS) used by 300+ students.", "Website project: good experience."], answer: 2,
       hint: "Find the action, the what, and the number.",
       note: "Built + what + tools + 300 students. A recruiter can picture it instantly.", badge: "code"
     }),
     R(3, "Weak vs Strong", {
       prompt: "Pick the strongest INTERNSHIP line.",
-      options: ["Did internship at XYZ Pvt Ltd.", "Fixed 12 bugs and built a login page in React during a 2-month internship at XYZ Pvt Ltd.", "Internship: learned many things.", "Was an intern, attended meetings."], answer: 1,
+      options: ["Did internship at XYZ Pvt Ltd for two months in the summer.", "Fixed 12 bugs and built a React login page at XYZ.", "Internship: learned many things.", "Was an intern, attended meetings."], answer: 1,
       hint: "Which line says what Ravi actually DID?",
       note: "Even a small internship sounds strong when you say what you did, with numbers.", badge: "briefcase"
     }),
     R(3, "Weak vs Strong", {
       prompt: "Pick the strongest ACHIEVEMENT line.",
-      options: ["Participated in many events.", "Good at coding.", "2nd place out of 60 teams in the college hackathon, for an attendance app.", "Certificate of participation in 15 events."], answer: 2,
+      options: ["Participated in many events and competitions in college.", "Good at coding.", "2nd of 60 teams in the college hackathon.", "Certificate of participation in 15 events."], answer: 2,
       hint: "“Out of how many?” makes any win more impressive.",
       note: "A rank, out of how many, and for what. Participation alone doesn’t stand out.", badge: "award",
       board: true, boardLabel: "after Round 3"
@@ -143,19 +143,19 @@ window.GAME = {
     },
     R(4, "Honest Skills", {
       prompt: "A 2nd-year student’s skills section. Which one is a red flag?",
-      options: ["C, Python (basic), HTML, CSS", "C, C++, Java, Python, JavaScript, Go, Rust, Kotlin, Swift, PHP, Ruby, R, AI, ML, Blockchain", "Python, SQL, Excel", "HTML, CSS, JavaScript, Git"], answer: 1,
+      options: ["C, Python (basic), HTML, CSS, Git, Excel", "C, C++, Java, Python, Go, Rust, AI, ML, Blockchain", "Python, SQL, Excel, Power BI (basic)", "HTML, CSS, JavaScript, Git, GitHub Pages"], answer: 1,
       hint: "Could a 2nd-year student answer interview questions on all of them?",
       note: "A long list looks copied. List only what you can explain and show.", badge: "shield"
     }),
     R(4, "Honest Skills", {
       prompt: "Instead of writing “MS Office”, what’s better?",
-      options: ["MS Office (expert)", "Computer knowledge", "Excel (pivot tables, VLOOKUP, charts)", "Typing speed"], answer: 2,
+      options: ["MS Office (expert level, all tools)", "Computer knowledge and internet", "Excel (pivot tables, VLOOKUP)", "Typing speed of 40 words a minute"], answer: 2,
       hint: "Which one tells the recruiter exactly what you can do?",
       note: "Name the tool AND what you can do with it. “MS Office” alone says very little.", badge: "chart-column"
     }),
     R(4, "Honest Skills", {
       prompt: "What’s the best way to prove a skill on your resume?",
-      options: ["Write “expert” next to it", "A link to a project or GitHub that uses it", "Make it bold", "List it twice"], answer: 1,
+      options: ["Write “expert” next to the skill name", "A project or GitHub link", "Make the skill bold and coloured", "List it twice in different sections"], answer: 1,
       hint: "What can a recruiter actually check?",
       note: "Proof beats claims. One small project with a link shows more than the word “expert”.", badge: "link-2",
       board: true, boardLabel: "after Round 4"
@@ -171,7 +171,7 @@ window.GAME = {
     },
     R(5, "Links and Proof", {
       prompt: "Ravi wants a developer job. Which link helps him most?",
-      options: ["Instagram", "GitHub with his projects", "Facebook", "A YouTube playlist"], answer: 1,
+      options: ["Instagram with his college photos", "GitHub with his projects", "Facebook with his friends list", "A YouTube playlist he made"], answer: 1,
       hint: "Where can a recruiter see his code?",
       note: "GitHub is where developers show their work. Pin the best projects at the top.", badge: "code"
     }),
@@ -183,7 +183,7 @@ window.GAME = {
     }),
     R(5, "Links and Proof", {
       prompt: "Which certificate is most worth listing?",
-      options: ["Attended a 1-hour webinar", "A course where you built and submitted a real project", "All 25 certificates you have", "A school drawing competition"], answer: 1,
+      options: ["Attended a 1-hour webinar on AI tools", "A course where you built a project", "All 25 certificates you have", "A school drawing competition"], answer: 1,
       hint: "Which one proves you can DO something?",
       note: "Pick 2 or 3 certificates that show real skills. Too many hide the good ones.", badge: "award",
       board: true, boardLabel: "after Round 5"
@@ -207,14 +207,14 @@ window.GAME = {
     R(6, "Final Fix", {
       double: true, time: 40,
       prompt: "PDF or Word?",
-      options: ["PDF, unless the company asks for Word", "Always Word", "A photo of the printed resume", "It doesn’t matter"], answer: 0,
+      options: ["PDF, unless they ask for Word", "Always Word, so they can edit it", "A photo of the printed resume", "It doesn’t matter at all"], answer: 0,
       hint: "Which one looks the same on every phone and laptop?",
       note: "PDF keeps your layout. Send Word only if the company asks for it.", badge: "badge-check"
     }),
     R(6, "Final Fix", {
       double: true, time: 45,
       prompt: "Ravi has space for one more line on his one-page resume. What should he add?",
-      options: ["A declaration and his signature", "His father’s name and religion", "A second project with its GitHub link", "Hobbies: sleeping"], answer: 2,
+      options: ["A declaration and his signature", "His father’s name and religion", "A second project with GitHub link", "Hobbies: sleeping and watching movies"], answer: 2,
       hint: "What helps him get THIS job?",
       note: "More proof of skills always wins. Personal details and declarations aren’t needed for most tech jobs.", badge: "code",
       board: true, boardLabel: "after Round 6"

@@ -79,7 +79,7 @@ window.GAME = {
     }),
     VQ(1, "Landmarks", {
       prompt: "Which kind of aircraft is on display at the naval aircraft museum on Beach Road?",
-      options: ["A Tejas fighter jet", "A Boeing 737", "A MiG-21", "A TU-142 Navy patrol aircraft"], answer: 3,
+      options: ["A Tejas Mk1 fighter jet", "A Boeing 737 passenger jet", "A MiG-21 fighter aircraft", "A TU-142 patrol aircraft"], answer: 3,
       hint: "It flew long patrols over the sea for the Navy.",
       note: "The TU-142 was a long-range Navy patrol plane. After it retired, it came to Vizag to become a museum, right across from the submarine.", badge: "compass",
       board: true, boardLabel: "after Round 1"
@@ -123,7 +123,7 @@ window.GAME = {
     },
     VQ(3, "Faith and Food", {
       prompt: "Which deity is worshipped at the Simhachalam temple?",
-      options: ["Lord Shiva", "Lord Venkateswara", "Lord Varaha Lakshmi Narasimha", "Goddess Durga"], answer: 2,
+      options: ["Lord Shiva as Bhimeswara", "Lord Venkateswara of Tirumala", "Lord Varaha Lakshmi Narasimha", "Goddess Durga as Kanaka Durga"], answer: 2,
       hint: "Simha means lion.",
       note: "Lord Varaha Lakshmi Narasimha. During Chandanotsavam, the sandalwood covering is removed and devotees see the deity’s original form.", badge: "sparkles"
     }),
@@ -186,7 +186,7 @@ window.GAME = {
     }),
     VQ(5, "Port, Steel and Navy", {
       prompt: "Which company runs the Vizag Steel Plant?",
-      options: ["Tata Steel", "SAIL", "JSW Steel", "RINL (Rashtriya Ispat Nigam Limited)"], answer: 3,
+      options: ["Tata Steel Limited", "SAIL (Steel Authority of India)", "JSW Steel Limited", "RINL (Rashtriya Ispat)"], answer: 3,
       hint: "It’s a government company formed in 1982.",
       note: "RINL. The plant is India’s first shore-based integrated steel plant.", badge: "landmark"
     }),

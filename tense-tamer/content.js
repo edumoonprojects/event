@@ -74,7 +74,7 @@ window.GAME = {
     }),
     TT(1, "State Verbs", {
       prompt: "In an interview: “Do you know Python?” Best answer?",
-      options: ["Yes, Python is knowing me.", "Yes, I knowing Python.", "Yes, I know Python and have built two projects with it.", "Yes, I am knowing Python."], answer: 2,
+      options: ["Yes, Python is knowing me from first year.", "Yes, I knowing Python.", "Yes, I know Python and built two projects.", "Yes, I am knowing Python since two years."], answer: 2,
       hint: "Know is a state verb.",
       note: "“I know Python.” Add proof and it becomes a strong answer.", badge: "code"
     }),
@@ -197,7 +197,7 @@ window.GAME = {
     })),
     TT(5, "Interview English", {
       prompt: "“What are you doing currently?” Best answer?",
-      options: ["I doing project.", "I am do final year.", "I’m in my final year and I’m building a project on attendance tracking.", "Currently I am doing nothing."], answer: 2,
+      options: ["I doing project on attendance.", "I am do final year and project also.", "I’m in final year, building an attendance app.", "Currently I am doing nothing much in college."], answer: 2,
       hint: "Present continuous for what’s happening now.",
       note: "Present continuous (“I’m building…”) is perfect for current activities.", badge: "code",
       board: true, boardLabel: "after Round 5"
@@ -221,7 +221,7 @@ window.GAME = {
     TT(6, "Emails", {
       double: true,
       prompt: "Which follow-up line is correct?",
-      options: ["I apply for the role last Monday.", "I am applied for the role last Monday.", "I applied for the role last Monday and wanted to follow up.", "I have applied for the role last Monday."], answer: 2,
+      options: ["I apply for the role last Monday, any update on it?", "I am applied for the role last Monday.", "I applied last Monday and wanted to follow up.", "I have applied for the role last Monday."], answer: 2,
       hint: "Last Monday is a finished time.",
       note: "“I applied … last Monday.” Finished time, simple past.", badge: "clock"
     }),

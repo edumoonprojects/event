@@ -67,19 +67,19 @@ window.GAME = {
     },
     SS(1, "Test Yourself", {
       prompt: "Which method helps you remember MORE for the exam?",
-      options: ["Reading the chapter 3 times", "Highlighting every line", "Reading it once, then closing the book and writing what you remember", "Copying the notes neatly"], answer: 2,
+      options: ["Reading the chapter 3 times slowly", "Highlighting every important line", "Reading once, then writing what you recall", "Copying the notes neatly into a new book"], answer: 2,
       hint: "Which one makes your brain work hardest?",
       note: "Recalling from memory (active recall) is one of the strongest study methods known.", badge: "brain"
     }),
     SS(1, "Test Yourself", {
       prompt: "Why does rereading feel effective but isn’t?",
-      options: ["Familiar text feels like knowledge, but you’re recognising it, not recalling it", "Reading is bad for eyes", "Books are boring", "It is effective"], answer: 0,
+      options: ["Familiar text feels like knowledge, but isn’t", "Reading too much is bad for your eyes", "Textbooks are boring, so you stop paying attention", "It is effective, it’s the best method"], answer: 0,
       hint: "Recognising vs remembering.",
       note: "In the exam there’s no text to recognise. You must recall. So practise recalling.", badge: "eye"
     }),
     SS(1, "Test Yourself", {
       prompt: "You have 1 hour for one unit. Best use?",
-      options: ["60 minutes reading", "20 minutes reading, 40 minutes answering questions from memory", "60 minutes highlighting", "Watching 3 videos at 2× speed"], answer: 1,
+      options: ["60 minutes reading the unit carefully", "20 minutes reading, 40 testing yourself", "60 minutes highlighting the important parts", "Watching 3 videos at 2× speed"], answer: 1,
       hint: "More time recalling than reading.",
       note: "Read a little, then spend most time testing yourself. Check and fix what you got wrong.", badge: "timer",
       board: true, boardLabel: "after Round 1"
@@ -95,7 +95,7 @@ window.GAME = {
     },
     SS(2, "Space It Out", {
       prompt: "Same 6 hours. Which plan helps you remember most?",
-      options: ["6 hours on the night before", "6 hours on one Sunday", "1 hour on each of 6 different days", "3 hours, twice in one day"], answer: 2,
+      options: ["6 hours on the night before the exam", "6 hours on one Sunday, all together", "1 hour on each of 6 days", "3 hours, twice on the same day"], answer: 2,
       hint: "Spread it.",
       note: "Spacing gives your brain time to forget a little and rebuild stronger each time.", badge: "clock"
     }),
@@ -109,7 +109,7 @@ window.GAME = {
     })),
     SS(2, "Space It Out", {
       prompt: "Your exam is 3 weeks away. When should you start revising Unit 1?",
-      options: ["This week, then revisit it every few days", "The night before", "Only after finishing all units", "Never, I’ll remember"], answer: 0,
+      options: ["This week, then revisit it every few days", "The night before the exam, so it’s fresh", "Only after finishing all the other units", "Never, I’ll remember it from class"], answer: 0,
       hint: "More gaps, more strength.",
       note: "Start early and revisit. Small sessions now save painful all-nighters later.", badge: "trending-up",
       board: true, boardLabel: "after Round 2"
@@ -125,19 +125,19 @@ window.GAME = {
     },
     SS(3, "Mix and Explain", {
       prompt: "Maths practice. Which set prepares you better for the exam?",
-      options: ["20 questions all from chapter 3", "20 questions mixed from chapters 1 to 5", "1 hard question, 20 times", "No practice, just theory"], answer: 1,
+      options: ["20 questions, all from chapter 3", "20 mixed questions from chapters 1 to 5", "1 hard question, solved 20 times", "No practice, just reading the theory"], answer: 1,
       hint: "Does the exam tell you which chapter each question is from?",
       note: "Mixed practice trains you to recognise which method each question needs.", badge: "list-checks"
     }),
     SS(3, "Mix and Explain", {
       prompt: "Best quick test that you really understand a concept?",
-      options: ["It looks familiar", "You highlighted it", "You can explain it simply, without notes, with an example", "You copied it twice"], answer: 2,
+      options: ["It looks familiar when you see it", "You highlighted it in two colours", "You can explain it simply without notes", "You copied it neatly twice"], answer: 2,
       hint: "Can you teach it?",
       note: "If you get stuck explaining, that’s exactly the part to study.", badge: "mic"
     }),
     SS(3, "Mix and Explain", {
       prompt: "You and a friend are revising. Best way to use each other?",
-      options: ["Chat about something else", "Copy each other’s notes", "Study silently side by side", "Take turns explaining topics and quizzing each other"], answer: 3,
+      options: ["Chat about something else to relax", "Copy each other’s notes to save time", "Study silently side by side", "Explain topics and quiz each other"], answer: 3,
       hint: "Turn your friend into a tester.",
       note: "Explaining and quizzing combines two strong methods. And it’s more fun.", badge: "users",
       board: true, boardLabel: "after Round 3"
@@ -154,7 +154,7 @@ window.GAME = {
     },
     SS(4, "Focus", {
       prompt: "Which 2 hours will get more done?",
-      options: ["4 blocks of 25 minutes with 5-minute breaks, phone away", "2 hours with the phone checking every 5 minutes", "2 hours with music videos playing", "2 hours in bed"], answer: 0,
+      options: ["4 blocks of 25 minutes, phone away", "2 hours, checking the phone every 5 minutes", "2 hours with music videos playing", "2 hours studying in bed under a blanket"], answer: 0,
       hint: "Count the real focus minutes.",
       note: "100 minutes of real focus beats 120 minutes of half-focus.", badge: "timer"
     }),
@@ -168,7 +168,7 @@ window.GAME = {
     })),
     SS(4, "Focus", {
       prompt: "What should a 5-minute break look like?",
-      options: ["Scrolling reels", "Starting a new series", "Standing up, water, a short walk, eyes off screens", "Gaming"], answer: 2,
+      options: ["Scrolling reels for a few minutes", "Starting a new series episode", "Stand, drink water, walk a little", "Playing one quick game on the phone"], answer: 2,
       hint: "Rest your brain, don’t refill it.",
       note: "Reels in a break often turn into 30 minutes. Move your body instead.", badge: "heart",
       board: true, boardLabel: "after Round 4"
@@ -184,19 +184,19 @@ window.GAME = {
     },
     SS(5, "Sleep and Papers", {
       prompt: "Two days before the exam. What should you do FIRST?",
-      options: ["Start reading the textbook from page 1", "Go through previous papers and list the most repeated topics", "Make colourful notes", "Watch motivational videos"], answer: 1,
+      options: ["Start reading the textbook from page 1", "List the most repeated topics in old papers", "Make colourful notes for every unit", "Watch motivational videos to get started"], answer: 1,
       hint: "What does the exam usually ask?",
       note: "Previous papers tell you where to spend your limited time.", badge: "file-text"
     }),
     SS(5, "Sleep and Papers", {
       prompt: "An all-nighter before the exam usually leads to…",
-      options: ["Better marks", "Forgetting more and making silly mistakes", "No effect", "Faster writing"], answer: 1,
+      options: ["Better marks, because everything is fresh", "Forgetting more and making silly mistakes", "No effect on the exam at all", "Faster writing in the exam hall"], answer: 1,
       hint: "Tired brains.",
       note: "Sleep-deprived brains recall less and slip more. Sleep is part of revision.", badge: "brain"
     }),
     SS(5, "Sleep and Papers", {
       prompt: "You have time for only part of the syllabus. Best strategy?",
-      options: ["Study the hardest topic only", "Study random pages", "Give up", "Cover the most repeated and easiest-to-score topics first, then go deeper"], answer: 3,
+      options: ["Study only the hardest topic in depth", "Study random pages from each unit", "Give up and hope for easy questions", "Most repeated, easiest topics first"], answer: 3,
       hint: "Pass first, then score more.",
       note: "Secure the marks you can surely get, then build up. That’s pass, score, master.", badge: "target",
       board: true, boardLabel: "after Round 5"
@@ -213,7 +213,7 @@ window.GAME = {
     SS(6, "Rescue Plan", {
       double: true,
       prompt: "3 days, 5 units. Which plan is smartest?",
-      options: ["Day 1: units 1–2. Day 2: units 3–4. Day 3: unit 5. No revision.", "Day 1: papers + top topics with self-tests. Day 2: next topics + retest Day 1. Day 3: mixed practice paper, fix gaps, sleep early.", "Read everything once on Day 3", "Make notes for 3 days"], answer: 1,
+      options: ["Day 1: units 1–2. Day 2: units 3–4. Day 3: unit 5. No revision.", "Day 1: top topics + self-tests. Day 2: more + retest. Day 3: mixed paper.", "Read everything once, all on Day 3", "Spend all 3 days making neat notes"], answer: 1,
       hint: "Which one uses testing, spacing and sleep?",
       note: "It uses previous papers, self-testing, spacing and sleep. That’s every method from today.", badge: "route"
     }),
@@ -229,7 +229,7 @@ window.GAME = {
     SS(6, "Rescue Plan", {
       double: true,
       prompt: "After the exam, what habit will help most next semester?",
-      options: ["Never think about studying again", "Copy a topper’s notes", "Start small spaced self-tests from week 1 of the semester", "Buy more highlighters"], answer: 2,
+      options: ["Never think about studying until the next exam", "Copy a topper’s notes at the start of the semester", "Small self-tests from week 1", "Buy more highlighters and sticky notes"], answer: 2,
       hint: "Little and often.",
       note: "15 minutes of self-testing a day from week 1 beats 3 all-nighters at the end.", badge: "trending-up",
       board: true, boardLabel: "after Round 6"

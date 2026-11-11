@@ -82,7 +82,7 @@ window.GAME = {
     }),
     SQ(1, "Bank Messages", {
       prompt: "You clicked the link. It looks exactly like your bank’s page. What’s the safest move?",
-      options: ["Enter your details quickly before the account is blocked", "Reply to the SMS and ask if it’s real", "Close it, then open your bank’s official app or call the number on the back of your card", "Forward it to friends to check"], answer: 2,
+      options: ["Enter your details quickly before the account is blocked", "Reply to the SMS and ask if it’s real", "Close it; use the bank’s official app", "Forward it to friends to check"], answer: 2,
       hint: "How do you reach the REAL bank?",
       note: "Always go to the bank yourself: the official app, website or card number. Never through the link or number in the message.", badge: "shield",
       board: true, boardLabel: "after Round 1"
@@ -106,13 +106,13 @@ window.GAME = {
     })),
     SQ(2, "UPI and QR", {
       prompt: "When should you enter your UPI PIN?",
-      options: ["To receive money", "Only when money is leaving your account", "To check if a QR code is real", "Whenever an app asks for it"], answer: 1,
+      options: ["To receive money from someone", "Only when money is leaving", "To check if a QR code is real", "Whenever an app asks for it"], answer: 1,
       hint: "Think of the PIN as your signature on a payment.",
       note: "PIN = you are paying. If you’re supposed to be receiving, stop.", badge: "key"
     }),
     SQ(2, "UPI and QR", {
       prompt: "A UPI request pops up: “Refund of ₹1,500 from QuickKart. Approve to receive.” What should you do?",
-      options: ["Approve it, it’s a refund", "Decline it. Approving a collect request SENDS your money", "Approve it and check later", "Ask them to send it again"], answer: 1,
+      options: ["Approve it, it’s a refund", "Decline. Approving sends your money", "Approve it and check later", "Ask them to send it again"], answer: 1,
       hint: "Look at what the button really does, not what the message says.",
       note: "Real refunds go straight into your account. A collect request asks YOU to pay. Decline, and report it in the app.", badge: "x",
       board: true, boardLabel: "after Round 2"
@@ -136,13 +136,13 @@ window.GAME = {
     })),
     SQ(3, "Fake Jobs", {
       prompt: "Which is the BIGGEST sign that a job offer is fake?",
-      options: ["The company has a website", "There is an interview", "They ask you to pay for registration, training or a laptop", "The offer comes from a company email address"], answer: 2,
+      options: ["The company has a website", "There is an interview first", "They ask you to pay a fee", "The offer comes from a company email address"], answer: 2,
       hint: "Three of these happen with real jobs too.",
       note: "Real employers never charge you to get hired. Any fee means walk away.", badge: "shield"
     }),
     SQ(3, "Fake Jobs", {
       prompt: "“Like 3 videos, earn ₹150 each. Then join our Telegram group for bigger tasks.” What usually happens next?",
-      options: ["You earn easily, forever", "It’s a real marketing internship", "Nothing happens", "Small payments first to win your trust, then they ask you to “invest” for bigger tasks, and the money disappears"], answer: 3,
+      options: ["You earn easily, forever, from home", "It’s a real marketing internship", "Nothing happens after the first task", "Small pay, then “invest”, then it’s gone"], answer: 3,
       hint: "Why would anyone pay you ₹150 to like a video?",
       note: "The first payments are bait. The moment you “invest”, you won’t see that money again.", badge: "alarm-clock",
       board: true, boardLabel: "after Round 3"
@@ -173,7 +173,7 @@ window.GAME = {
     })),
     SQ(4, "Look-Alike Links", {
       prompt: "A page shows a padlock and starts with https. Does that mean it’s safe?",
-      options: ["Yes, the padlock means it’s verified", "No. It only means the connection is private. Scam sites have padlocks too", "Only on phones", "Yes, if it loads quickly"], answer: 1,
+      options: ["Yes, the padlock means the site is verified", "No, it only means the connection is private", "Only on phones, not on laptops", "Yes, if the page loads quickly"], answer: 1,
       hint: "Who can get a padlock for their site?",
       note: "Anyone, including scammers, can get a padlock for free. Always check the website name itself.", badge: "lock",
       board: true, boardLabel: "after Round 4"
@@ -197,7 +197,7 @@ window.GAME = {
     })),
     SQ(5, "Fake Calls", {
       prompt: "A video call: “This is the police. Your Aadhaar is linked to a crime. You are under digital arrest. Stay on camera and pay to clear your name.” What do you do?",
-      options: ["Pay quickly to avoid jail", "Stay on the call and share your details", "Hang up. There’s no such thing as digital arrest. Tell your family and call 1930", "Argue with them on the call"], answer: 2,
+      options: ["Pay quickly to avoid going to jail", "Stay on the call and share your details", "Hang up; there’s no digital arrest. Call 1930", "Argue with them on the call"], answer: 2,
       hint: "Would real police arrest someone over a video call and ask for money?",
       note: "Digital arrest doesn’t exist. Scammers use fear and keep you on camera so you can’t ask anyone. Hang up and tell someone.", badge: "shield"
     }),

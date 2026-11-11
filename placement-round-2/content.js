@@ -75,13 +75,13 @@ window.GAME = {
     }),
     PQ(1, "Arrays", {
       prompt: "To reverse an array of n elements in place, how many swaps do you need?",
-      options: ["2n", "n", "n / 2 (rounded down)", "n − 1"], answer: 2,
+      options: ["2n swaps", "n swaps", "⌊n/2⌋ swaps", "n − 1 swaps"], answer: 2,
       hint: "Swap the first with the last, then move both ends inwards. When do they meet?",
       note: "One swap fixes two positions, so n / 2 swaps. For n = 5, it’s 2; the middle element stays.", badge: "route"
     }),
     PQ(1, "Arrays", {
       prompt: "What’s the fastest way to check whether an array of n numbers has a duplicate?",
-      options: ["Print the array and look", "Put each number in a hash set and check if it’s already there: O(n)", "Sort it descending twice", "Compare every pair of elements: O(n²)"], answer: 1,
+      options: ["Print the array and look for repeated numbers", "A hash set, checking each number: O(n)", "Sort it in descending order twice", "Compare every pair of elements: O(n²)"], answer: 1,
       hint: "Which tool answers “have I seen this before?” instantly?",
       note: "A hash set does it in one pass. Sorting first, O(n log n), also works if you can’t use extra memory.", badge: "search",
       board: true, boardLabel: "after Round 1"
@@ -174,13 +174,13 @@ window.GAME = {
     }),
     PQ(4, "Sorting", {
       prompt: "After k passes of bubble sort (ascending), what is guaranteed?",
-      options: ["The array is half sorted", "Nothing is guaranteed", "The first k elements are sorted", "The k largest elements are in their final places at the end"], answer: 3,
+      options: ["The array is exactly half sorted", "Nothing is guaranteed until it finishes", "The first k elements are sorted", "The k largest are in final place"], answer: 3,
       hint: "What happened to the biggest value in one pass?",
       note: "Each pass parks the next largest value at the end. That’s why later passes can stop one position earlier.", badge: "list-checks"
     }),
     PQ(4, "Sorting", {
       prompt: "You need to sort 1 million random numbers. Which is the best choice?",
-      options: ["Merge sort or quicksort", "Sort by hand", "Bubble sort", "Selection sort"], answer: 0,
+      options: ["Merge sort or quicksort", "Sort by hand on paper", "Bubble sort, it’s simplest", "Selection sort, it’s stable"], answer: 0,
       hint: "Which ones are O(n log n)?",
       note: "Merge sort and quicksort are O(n log n). For a million items that’s about 20 million steps, versus a trillion for O(n²).", badge: "rocket",
       board: true, boardLabel: "after Round 4"
@@ -227,21 +227,21 @@ window.GAME = {
     PQ(6, "Interview Thinking", {
       double: true,
       prompt: "Unsorted array. Find two numbers that add up to a target. What’s the best approach?",
-      options: ["For each number x, check if (target − x) is already in a hash set, then add x: O(n)", "Sort it and print it", "Use binary search on the unsorted array", "Check every pair: O(n²)"], answer: 0,
+      options: ["Check target − x in a hash set: O(n)", "Sort the array and print it out", "Use binary search on the unsorted array", "Check every possible pair: O(n²)"], answer: 0,
       hint: "If you need 10 and you see 3, what number are you hoping you’ve already seen?",
       note: "This is the famous two-sum problem. One pass with a hash set turns O(n²) into O(n).", badge: "key"
     }),
     PQ(6, "Interview Thinking", {
       double: true,
       prompt: "Same problem, but the array is SORTED and you can’t use extra memory. Best approach?",
-      options: ["Nested loops", "Two pointers: one at each end. Sum too small? Move left up. Too big? Move right down", "Sort it again first", "A hash set"], answer: 1,
+      options: ["Nested loops over every pair", "Two pointers, one at each end", "Sort it again first, then search", "A hash set of all the values"], answer: 1,
       hint: "Remember the strings round.",
       note: "Two pointers: O(n) time and O(1) extra space. Sorted data is a strong hint for two pointers or binary search.", badge: "route"
     }),
     PQ(6, "Interview Thinking", {
       double: true,
       prompt: "The interviewer asks: “Can you do better than O(n²)?” You don’t know yet. Best response?",
-      options: ["“No, this is the best possible.”", "“I don’t know.” and wait", "Think aloud: “The slow part is searching for the pair. If I could look values up in O(1), maybe with a hash map…”", "Stay silent and think"], answer: 2,
+      options: ["“No, this is the best possible solution for this problem.”", "“I don’t know.” and wait", "Think aloud: “If I could look up values fast, a hash map…”", "Stay silent and think"], answer: 2,
       hint: "What does the interviewer want to see?",
       note: "Thinking aloud shows your process, and interviewers often give hints when they can follow you. Silence gives them nothing to score.", badge: "message-circle",
       board: true, boardLabel: "after Round 6"

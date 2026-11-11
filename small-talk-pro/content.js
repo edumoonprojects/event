@@ -66,7 +66,7 @@ window.GAME = {
     },
     ST(1, "Openers", {
       prompt: "At a coding workshop, you sit next to someone new. Best opener?",
-      options: ["“What’s your CGPA?”", "“Is this your first workshop here? I’m trying web development for the first time.”", "Say nothing for 2 hours", "“Why are you here?” in a serious voice"], answer: 1,
+      options: ["“What’s your CGPA? Mine is not very good this semester.”", "“First workshop here? It’s my first try at web dev.”", "Say nothing for 2 hours", "“Why are you here?” in a serious voice"], answer: 1,
       hint: "Shared situation + a little about you.",
       note: "It’s friendly, about the shared situation, and gives them something to reply to.", badge: "message-circle"
     }),
@@ -78,7 +78,7 @@ window.GAME = {
     }),
     ST(1, "Openers", {
       prompt: "You want to talk to a speaker after their session. Best start?",
-      options: ["“Hi, I really liked your point about building projects in first year. Could I ask one quick question?”", "“Give me a job.”", "Wait for them to notice you", "“Your talk was okay.”"], answer: 0,
+      options: ["“Hi, I liked your point on first-year projects. One question?”", "“Give me a job, I am very interested in your company and its work.”", "Wait near the stage for them to notice you", "“Your talk was okay.”"], answer: 0,
       hint: "Specific compliment + small ask.",
       note: "A specific compliment shows you listened. A small question respects their time.", badge: "mic",
       board: true, boardLabel: "after Round 1"
@@ -94,13 +94,13 @@ window.GAME = {
     },
     ST(2, "Introductions", {
       prompt: "Best way to introduce yourself at a networking event?",
-      options: ["“I am Ravi Kumar from Vizag, born in 2005, my hobbies are…” for 3 minutes", "“Hi, I’m Ravi, a 2nd-year ECE student. I’m into robotics. What brings you here?”", "Show your ID card", "“Me Ravi.”"], answer: 1,
+      options: ["“I am Ravi Kumar from Vizag, born in 2005, my hobbies are cricket, music…”", "“Hi, I’m Ravi, 2nd-year ECE, into robotics. What brings you here?”", "Show your ID card", "“Me Ravi.”"], answer: 1,
       hint: "Short, one detail, then a question.",
       note: "Name, one detail, then pass the conversation back with a question.", badge: "user"
     }),
     ST(2, "Introductions", {
       prompt: "They say: “I’m Sneha.” Best reply?",
-      options: ["“Okay.”", "“Hmm.”", "“Nice to meet you, Sneha!”", "Check your phone"], answer: 2,
+      options: ["“Okay.”", "“Hmm, okay, nice name.”", "“Nice to meet you, Sneha!”", "Check your phone while they talk"], answer: 2,
       hint: "Use their name.",
       note: "Repeating their name is warm and helps you remember it.", badge: "heart"
     }),
@@ -124,19 +124,19 @@ window.GAME = {
     },
     ST(3, "Keep It Going", {
       prompt: "Which question keeps the conversation going?",
-      options: ["“Do you like your branch?”", "“Is it hard?”", "“What made you choose your branch?”", "“Are you okay?”"], answer: 2,
+      options: ["“Do you like your branch, or not really?”", "“Is it hard?”", "“What made you choose it?”", "“Are you okay with the classes so far?”"], answer: 2,
       hint: "Can it be answered with one word?",
       note: "“What made you…” invites a story. Stories lead to more questions.", badge: "message-circle"
     }),
     ST(3, "Keep It Going", {
       prompt: "They say: “I’m in the robotics club, we’re building a line-following robot.” Best follow-up?",
-      options: ["“Oh. Okay.”", "“Interesting! What’s the hardest part of building it?”", "“I don’t like robots.”", "Change the topic to cricket"], answer: 1,
+      options: ["“Oh. Okay.”", "“What’s the hardest part of building it?”", "“I don’t like robots much, to be honest.”", "Change the topic to yesterday’s cricket match"], answer: 1,
       hint: "Follow what THEY said.",
       note: "Picking up their topic shows you listened, and gets them talking about what they enjoy.", badge: "code"
     }),
     ST(3, "Keep It Going", {
       prompt: "You’ve asked 5 questions in a row and shared nothing. What’s the problem?",
-      options: ["It feels like an interview, not a conversation", "Nothing, perfect", "You asked too few", "Questions are rude"], answer: 0,
+      options: ["It feels like an interview", "Nothing, it’s the perfect way to talk", "You asked too few questions", "Questions are rude in small talk"], answer: 0,
       hint: "Conversations go both ways.",
       note: "Share a little about yourself too. Give and take.", badge: "users",
       board: true, boardLabel: "after Round 3"
@@ -159,7 +159,7 @@ window.GAME = {
     }),
     ST(4, "Listening", {
       prompt: "Which reaction shows you’re really listening?",
-      options: ["“Hmm.”", "Interrupting with your own story", "“Wait, you built that in 2 days? How?”", "Looking around the room"], answer: 2,
+      options: ["“Hmm.”", "Interrupting with your own story", "“Wait, you built that in 2 days? How?”", "Looking around the room for someone else"], answer: 2,
       hint: "Which one repeats what they said?",
       note: "Reacting to a specific detail proves you listened.", badge: "eye"
     }),
@@ -183,19 +183,19 @@ window.GAME = {
     },
     ST(5, "Interviews", {
       prompt: "The interviewer says: “How are you today?” Best reply?",
-      options: ["“Fine.”", "“Very nervous, I didn’t sleep, my bus was late…”", "“I’m doing well, thank you! How has your day been?”", "Silence"], answer: 2,
+      options: ["“Fine.”", "“Very nervous, I didn’t sleep, my bus was late…”", "“Doing well, thank you! How’s your day?”", "Silence and a small nod"], answer: 2,
       hint: "Positive, polite, ask back.",
       note: "Short, positive and returning the question sets a warm tone.", badge: "briefcase"
     }),
     ST(5, "Interviews", {
       prompt: "HR asks: “Did you find the office easily?” It took you 30 minutes to find it. Best reply?",
-      options: ["“No! Your office is impossible to find.”", "“Yes, thank you. The security team helped me with directions.”", "“Your map is wrong.”", "Shrug"], answer: 1,
+      options: ["“No! Your office is impossible to find, I wasted half an hour.”", "“Yes, thanks. Security gave me directions.”", "“Your map is wrong.”", "Shrug and say nothing"], answer: 1,
       hint: "Honest, short and positive.",
       note: "Keep it light and positive. Complaints aren’t a great first impression.", badge: "map"
     }),
     ST(5, "Interviews", {
       prompt: "The interview ends and the HR walks you to the door. Best last line?",
-      options: ["“Thank you for your time. I really enjoyed learning about the team.”", "“Did I get the job?”", "Walk away quietly", "“Bye.”"], answer: 0,
+      options: ["“Thank you, I enjoyed learning about the team.”", "“Did I get the job? When will I hear back?”", "Walk away quietly without saying anything", "“Bye.”"], answer: 0,
       hint: "End warm.",
       note: "A warm thank-you is the last thing they remember.", badge: "handshake",
       board: true, boardLabel: "after Round 5"
@@ -212,21 +212,21 @@ window.GAME = {
     ST(6, "Exiting", {
       double: true,
       prompt: "You’ve talked for 10 minutes and want to meet others. Best exit?",
-      options: ["Walk away mid-sentence", "Pretend to get a call", "“It was really nice talking to you, Kiran. I’m going to grab some tea. Let’s connect on LinkedIn!”", "Stay all evening even if bored"], answer: 2,
+      options: ["Walk away in the middle of their sentence", "Pretend to get a call and leave", "“Lovely talking, Kiran. Let’s connect on LinkedIn!”", "Stay all evening even if you’re bored"], answer: 2,
       hint: "Warm, honest, and stay connected.",
       note: "Name, a kind line, a reason and a way to stay in touch. Perfect exit.", badge: "handshake"
     }),
     ST(6, "Exiting", {
       double: true,
       prompt: "You connect on LinkedIn after the event. Best message?",
-      options: ["No message, just the request", "“Hi Kiran, great meeting you at the AI workshop today! Loved hearing about your drone project.”", "“Hi.”", "“Can you refer me?”"], answer: 1,
+      options: ["No message, just the request", "“Hi Kiran, great meeting you today! Loved your drone project.”", "“Hi.”", "“Can you refer me to your company? I need an internship urgently.”"], answer: 1,
       hint: "Remind them where you met.",
       note: "A short note reminding them of your chat turns a stranger into a connection.", badge: "mail"
     }),
     ST(6, "Exiting", {
       double: true,
       prompt: "What’s the best way to get better at small talk?",
-      options: ["Read about it only", "Avoid events until you’re perfect", "Wait for others to start", "Start one short conversation at every event or class, and learn from each"], answer: 3,
+      options: ["Read about it, but never try it", "Avoid events until you’re perfect", "Wait for others to start talking", "One short chat at every event"], answer: 3,
       hint: "Practice.",
       note: "Small talk is a skill. It gets easier with every conversation.", badge: "trending-up",
       board: true, boardLabel: "after Round 6"

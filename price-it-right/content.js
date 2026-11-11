@@ -78,7 +78,7 @@ window.GAME = {
     }),
     PR(1, "Cost per Item", {
       prompt: "A friend says, “Chai costs ₹6, so selling at ₹7 is still profit.” What did they forget?",
-      options: ["The cup, and other costs like gas and their own time", "Nothing, they’re right", "To add GST to the tea leaves", "That chai is hot"], answer: 0,
+      options: ["The cup, gas and their own time", "Nothing, they’re right", "To add GST to the tea leaves", "That chai is hot"], answer: 0,
       hint: "Is the tea the only cost?",
       note: "Count every cost, including the hidden ones. Otherwise “profit” is really a loss.", badge: "search",
       board: true, boardLabel: "after Round 1"
@@ -163,7 +163,7 @@ window.GAME = {
     }),
     PR(4, "Discounts", {
       prompt: "Your chai stall wants more sales in exam week. Which offer protects profit best?",
-      options: ["50% off all chai", "Free chai for everyone", "Chai + biscuit combo for ₹20 (biscuit costs you ₹3)", "Close the stall"], answer: 2,
+      options: ["50% off all chai for exam week", "Free chai for everyone who studies", "Chai + biscuit combo for ₹20", "Close the stall during exams"], answer: 2,
       hint: "Which offer adds value without cutting the chai price?",
       note: "Combos raise the bill while the extra item costs little. Profit goes up, not down.", badge: "store",
       board: true, boardLabel: "after Round 4"
@@ -179,19 +179,19 @@ window.GAME = {
     },
     PR(5, "Pricing Tricks", {
       prompt: "The notes service offers ₹49, ₹79 and ₹149 plans. Why add the ₹149 plan, even if few buy it?",
-      options: ["To confuse students", "It makes ₹79 look like great value, so more people pick the middle", "₹149 is illegal to remove", "No reason"], answer: 1,
+      options: ["To confuse students with options", "It makes ₹79 look like great value", "₹149 plans are required by law", "No reason, more plans look good"], answer: 1,
       hint: "How does ₹79 look next to ₹149?",
       note: "That’s anchoring. A premium option helps the middle option sell.", badge: "tag"
     }),
     PR(5, "Pricing Tricks", {
       prompt: "A senior’s exam-tips session saves students hours of confusion. It costs ₹20 per student to run. Best price thinking?",
-      options: ["Charge ₹20, cost price only", "Make it ₹5", "Price on the value to students, maybe ₹99, then test", "₹10,000 per student"], answer: 2,
+      options: ["Charge ₹20, just the cost price", "Make it ₹5 so everyone comes", "Price on value, maybe ₹99, then test", "₹10,000 per student"], answer: 2,
       hint: "Is it worth more than it costs?",
       note: "Price on value, then test whether students agree. Cost is the floor, not the price.", badge: "lightbulb"
     }),
     PR(5, "Pricing Tricks", {
       prompt: "You’re not sure whether to charge ₹149 or ₹199. What should you do?",
-      options: ["Ask your parents only", "Pick randomly forever", "Always choose the cheapest", "Try ₹149 one week and ₹199 the next, and compare sales and profit"], answer: 3,
+      options: ["Ask your parents only", "Pick one randomly forever", "Always choose the cheapest", "Test each for a week, compare"], answer: 3,
       hint: "Let real customers decide.",
       note: "Simple price tests give real answers. Compare total profit, not just number of sales.", badge: "chart-column",
       board: true, boardLabel: "after Round 5"
@@ -222,7 +222,7 @@ window.GAME = {
     PR(6, "Run the Business", {
       double: true,
       prompt: "A big company offers to buy 300 snack boxes at ₹55 each. Each box costs ₹60. Should you say yes?",
-      options: ["Yes, 300 is a big order", "Yes, any order is good", "No, not at ₹55: you’d lose ₹5 on every box. Negotiate a price above ₹60", "Yes, and add free delivery"], answer: 2,
+      options: ["Yes, 300 is a big order for a small business", "Yes, any order is good for growth", "No: you lose ₹5 a box. Negotiate", "Yes, and add free delivery too"], answer: 2,
       hint: "55 minus 60.",
       note: "Big orders below cost are big losses. Know your numbers before you say yes.", badge: "handshake",
       board: true, boardLabel: "after Round 6"

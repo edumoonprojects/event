@@ -41,20 +41,20 @@ window.GAME = {
     },
     Q(1, "Word Power", {
       prompt: "What does “indomitable” mean?",
-      options: ["Very tired", "Impossible to defeat or discourage", "Easily scared", "Extremely rich"], answer: 1,
+      options: ["Very tired after a long fight", "Impossible to defeat", "Easily scared of danger", "Extremely rich and powerful"], answer: 1,
       hint: "Shivudu kept climbing, no matter how many times he fell.",
       note: "Example: Shivudu’s indomitable spirit pushed him up the waterfall.", badge: "flame"
     }),
     Q(1, "Word Power", {
       prompt: "What is an “enigma”?",
-      options: ["A royal title", "A type of weapon", "A mystery that is hard to understand", "A large river"], answer: 2,
+      options: ["A royal title given to princes", "A puzzle that is hard to understand", "A type of ancient weapon", "A large river in the forest"], answer: 2,
       hint: "Nobody knew where Shivudu came from.",
       note: "Example: Where he came from remained an enigma.", badge: "search"
     }),
     { type: "speak", eyebrow: "Speaking time · optional", prompt: "Tell us about a time you didn’t give up.", note: "Anyone who wants to speak, raise your hand or unmute. Try using a power word!", points: 100 },
     Q(1, "What happens next?", {
       prompt: "What does Shivudu find at the top of the waterfall?",
-      options: ["A hidden treasure", "A kingdom ruled by a cruel king", "His real mother", "An army waiting for him"], answer: 1,
+      options: ["A hidden treasure in a cave", "A kingdom under a cruel king", "His real mother waiting for him", "An army ready for battle"], answer: 1,
       hint: "Think big: the story is about kings and thrones.",
       note: "You’ll see it in Part 2!", badge: "sparkles", board: true, boardLabel: "after Part 1"
     }),
@@ -72,20 +72,20 @@ window.GAME = {
     },
     Q(2, "Word Power", {
       prompt: "Who is a “tyrant”?",
-      options: ["A brave soldier", "A wise teacher", "A cruel ruler with total power", "A rebel leader"], answer: 2,
+      options: ["A brave soldier of the army", "A wise teacher of princes", "A cruel ruler with total power", "A rebel who fights the king"], answer: 2,
       hint: "Think of Bhallaladeva.",
       note: "Example: Bhallaladeva was a tyrant feared by all.", badge: "crown"
     }),
     Q(2, "Word Power", {
       prompt: "A “clandestine” plan is…",
-      options: ["Secret and hidden", "Loud and public", "Very old", "Easy and simple"], answer: 0,
+      options: ["Secret and hidden", "Loud and in public", "Very old and forgotten", "Easy and simple to follow"], answer: 0,
       hint: "The rebels didn’t want the king to know.",
       note: "Example: The rebels planned a clandestine rescue.", badge: "lock"
     }),
     { type: "speak", eyebrow: "Speaking time · optional", prompt: "If you were a rebel, how would you free Devasena?", note: "One sentence is enough. Bonus if you use “clandestine”!", points: 100 },
     Q(2, "What happens next?", {
       prompt: "Who is the old warrior guarding the kingdom?",
-      options: ["Bhallaladeva’s brother", "Kattappa, sworn to serve the throne", "Shivudu’s teacher", "A foreign king"], answer: 1,
+      options: ["Bhallaladeva’s younger brother", "Kattappa, sworn to the throne", "Shivudu’s childhood teacher", "A foreign king from the north"], answer: 1,
       hint: "He is loyal to the throne, whoever sits on it.",
       note: "Kattappa! And when he sees Shivudu’s face, he drops to his knees. Why? Find out in Part 3.", badge: "sparkles", board: true, boardLabel: "after Part 2"
     }),
@@ -103,20 +103,20 @@ window.GAME = {
     },
     Q(3, "Word Power", {
       prompt: "To “covet” something means to…",
-      options: ["Protect it", "Badly want what belongs to someone else", "Hide it", "Forgive it"], answer: 1,
+      options: ["Protect it from harm", "Badly want someone else’s thing", "Hide it where nobody looks", "Forgive someone for taking it"], answer: 1,
       hint: "Bhallaladeva wanted Amarendra’s throne.",
       note: "Example: Bhallaladeva coveted the throne.", badge: "target"
     }),
     Q(3, "Word Power", {
       prompt: "A “magnanimous” person is…",
-      options: ["Very large", "Angry and proud", "Easily frightened", "Generous and forgiving, even to enemies"], answer: 3,
+      options: ["Very large and tall", "Angry and proud of himself", "Easily frightened by others", "Generous, even to enemies"], answer: 3,
       hint: "Amarendra was kind even to the soldiers he defeated.",
       note: "Example: Amarendra was magnanimous even to defeated soldiers.", badge: "heart"
     }),
     { type: "speak", eyebrow: "Speaking time · optional", prompt: "What makes a good leader?", note: "Answer in one sentence. Try “valour” or “magnanimous”!", points: 100 },
     Q(3, "What happens next?", {
       prompt: "The biggest question in Indian cinema: why did Kattappa kill Baahubali?",
-      options: ["He wanted the throne for himself", "He was ordered to, after a conspiracy fooled the queen mother", "It was an accident in battle", "Baahubali asked him to"], answer: 1,
+      options: ["He wanted the throne for himself", "He was ordered to, after a conspiracy", "It was an accident in the middle of a battle", "Baahubali asked him to do it to save the kingdom"], answer: 1,
       hint: "Kattappa never disobeys the throne.",
       note: "A conspiracy turned the queen mother against her own son. The full story is in Part 4!", badge: "sparkles", board: true, boardLabel: "after Part 3"
     }),
@@ -134,13 +134,13 @@ window.GAME = {
     },
     Q(4, "Word Power", {
       prompt: "To “usurp” the throne means to…",
-      options: ["Give it up", "Share it fairly", "Take it illegally or by force", "Protect it"], answer: 2,
+      options: ["Give it up to someone else", "Share it fairly with a brother", "Take it by force", "Protect it from enemies"], answer: 2,
       hint: "Bhallaladeva took the throne by lies.",
       note: "Example: Bhallaladeva usurped the throne.", badge: "swords"
     }),
     Q(4, "Word Power", {
       prompt: "What is “retribution”?",
-      options: ["A reward", "Deserved punishment, payback", "Forgiveness", "A celebration"], answer: 1,
+      options: ["A reward for good work", "Deserved punishment", "Forgiveness for a mistake", "A celebration after a war"], answer: 1,
       hint: "The son came back to make things right.",
       note: "Example: The son returned for retribution.", badge: "shield", board: true, boardLabel: "after Part 4"
     }),

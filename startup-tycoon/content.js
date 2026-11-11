@@ -66,19 +66,19 @@ window.GAME = {
     },
     TQ(1, "The Idea", {
       prompt: "Why might food delivery inside hostels be a good startup problem?",
-      options: ["It sounds cool on Instagram", "Your friends complain every night that the canteen is far and closes at 9 PM", "A big company already does it everywhere", "Your uncle said so"], answer: 1,
+      options: ["It sounds cool and would look good on Instagram", "Friends complain the canteen shuts at 9 PM", "A big company already does it in every city", "Your uncle said it’s the next big thing"], answer: 1,
       hint: "Which reason is about a real problem people have?",
       note: "A real, frequent complaint from real people is the best starting point. That’s a problem worth solving.", badge: "lightbulb"
     }),
     TQ(1, "The Idea", {
       prompt: "Before building an app, what should you do first?",
-      options: ["Take orders through a WhatsApp group for a week and deliver them yourselves", "Design a logo", "Hire 3 developers", "Rent an office"], answer: 0,
+      options: ["Take orders on WhatsApp for a week", "Design a professional logo and brand colours", "Hire 3 developers to build the full app", "Rent a small office near the college gate"], answer: 0,
       hint: "What’s the cheapest way to learn if students will actually order?",
       note: "If students order through WhatsApp, you’ve proved demand for ₹0. Build the app only after that.", badge: "smartphone"
     }),
     TQ(1, "The Idea", {
       prompt: "What does MVP mean for a startup?",
-      options: ["Maximum Value Pricing", "A finished product with every feature", "Most Valuable Player", "Minimum Viable Product: the simplest version that tests if people want it"], answer: 3,
+      options: ["Maximum Value Pricing, the best price you can charge", "A finished product with every feature ready", "Most Valuable Player in the founding team", "The simplest version that tests demand"], answer: 3,
       hint: "Think “smallest test”.",
       note: "An MVP is about learning fast, not looking perfect. Most successful products started embarrassingly simple.", badge: "rocket",
       board: true, boardLabel: "after Month 1"
@@ -94,13 +94,13 @@ window.GAME = {
     },
     TQ(2, "First Customers", {
       prompt: "How should CampusEats get its first 10 customers?",
-      options: ["Post in your hostel WhatsApp groups and personally ask friends on your floor to try it", "Wait for people to find you", "Print 1,000 posters", "Buy a ₹5,000 newspaper ad"], answer: 0,
+      options: ["Post in hostel groups and ask friends to try", "Wait for people to find the service on their own", "Print 1,000 posters and put them all over town", "Buy a ₹5,000 ad in a city newspaper"], answer: 0,
       hint: "What’s free, personal and fast?",
       note: "The first customers come from doing things that don’t scale: personal messages, your own network, your own floor.", badge: "message-circle"
     }),
     TQ(2, "First Customers", {
       prompt: "Students say: “Delivery takes 45 minutes, too slow.” What should you do?",
-      options: ["Raise prices", "Add 20 new dishes to the menu", "Ignore it, they’ll get used to it", "Fix delivery speed first, before adding anything new"], answer: 3,
+      options: ["Raise prices so fewer people order", "Add 20 new dishes to make the menu exciting", "Ignore it, they’ll get used to the wait", "Fix delivery speed first"], answer: 3,
       hint: "What problem are customers actually telling you about?",
       note: "Fix the thing customers complain about before adding features. A fast, simple service beats a slow, big one.", badge: "clock"
     }),
@@ -122,13 +122,13 @@ window.GAME = {
     },
     TQ(3, "Pricing", {
       prompt: "Each delivery costs you ₹15. What delivery fee makes sense to start?",
-      options: ["₹100", "₹5", "Free, forever", "₹20: it covers your cost with a small profit"], answer: 3,
+      options: ["₹100, so you make a big profit quickly", "₹5, so everyone tries it at least once", "Free, forever, to beat every competitor", "₹20, it covers cost with a small profit"], answer: 3,
       hint: "Which price covers the cost and still feels fair to students?",
       note: "Below cost, every order loses money. Way above, nobody orders. Cover your cost, plus a little.", badge: "chart-column"
     }),
     TQ(3, "Pricing", {
       prompt: "A big competitor launches with FREE delivery. What’s your smartest response?",
-      options: ["Shut down", "Compete on what they can’t match: faster delivery inside hostels and late-night timing", "Complain on Instagram", "Also go free, even though you lose money on every order"], answer: 1,
+      options: ["Shut down, you can’t beat a big company", "Win on speed and late-night hostel delivery", "Complain about them on Instagram", "Also go free, even if you lose on every order"], answer: 1,
       hint: "Can a small startup win a money war against a big company?",
       note: "Don’t fight where they’re strongest. Win on speed, service and knowing your customers personally.", badge: "shield"
     }),
@@ -153,19 +153,19 @@ window.GAME = {
     },
     TQ(4, "Marketing", {
       prompt: "You have ₹2,000 for marketing. Best use?",
-      options: ["Save it and do nothing", "One big banner at the college gate", "A referral offer: when a customer brings a friend, both get ₹20 off their next order", "Pay an influencer with 1 million followers in another city"], answer: 2,
+      options: ["Save it and do nothing until you grow", "One big banner at the college gate", "Referral: both friends get ₹20 off", "Pay an influencer with 1 million followers elsewhere"], answer: 2,
       hint: "Which one reaches the right people, and can you measure it?",
       note: "Referrals bring the right people (students in your hostels) and you know exactly how many came.", badge: "users"
     }),
     TQ(4, "Marketing", {
       prompt: "Which Instagram post will probably bring the most orders?",
-      options: ["A motivational quote", "A post saying “Follow us!”", "A poster of your logo", "A reel: an order placed at 11 PM and delivered to a hostel room in 10 minutes"], answer: 3,
+      options: ["A motivational quote about hard work and success", "A post saying “Follow us for more updates!”", "A poster of your logo and brand colours", "A reel: 11 PM order, delivered in 10 minutes"], answer: 3,
       hint: "Which one shows the problem being solved?",
       note: "Showing the real experience sells. Students see it and think, “I want that tonight.”", badge: "film"
     }),
     TQ(4, "Marketing", {
       prompt: "How do you know which marketing actually worked?",
-      options: ["Guess", "Count likes", "Track how many orders each channel brings, for example a different discount code for each", "Ask your parents"], answer: 2,
+      options: ["Guess from how busy the week feels", "Count the likes on each post", "A different discount code per channel", "Ask your parents what they think"], answer: 2,
       hint: "Likes aren’t orders.",
       note: "Track orders by channel, then spend more on what works and stop what doesn’t.", badge: "search",
       board: true, boardLabel: "after Month 4"
@@ -181,19 +181,19 @@ window.GAME = {
     },
     TQ(5, "The Team", {
       prompt: "You’re great at selling. Who’s the best co-founder?",
-      options: ["Another great salesperson just like you", "A committed friend who can build the app and handle operations", "Whoever offers to join first", "Your best friend who isn’t interested in startups"], answer: 1,
+      options: ["Another great salesperson, just like you", "A friend who can build the app and run operations", "Whoever offers to join first", "Your best friend who isn’t interested in startups"], answer: 1,
       hint: "What skill is missing from your team?",
       note: "Complementary skills plus real commitment. Friendship alone isn’t enough.", badge: "users"
     }),
     TQ(5, "The Team", {
       prompt: "How should co-founders agree on who owns what?",
-      options: ["A simple written agreement, with shares earned over time if someone leaves early", "Whoever had the idea owns everything", "A handshake is enough between friends", "Decide later, once you’re successful"], answer: 0,
+      options: ["A simple written agreement, shares earned over time", "Whoever had the idea owns everything", "A handshake is enough between good friends", "Decide later, once you’re successful"], answer: 0,
       hint: "What protects the friendship if things go wrong?",
       note: "Write it down early, while everyone is happy. Shares earned over time (called vesting) protect everyone if someone leaves.", badge: "scroll"
     }),
     TQ(5, "The Team", {
       prompt: "Your co-founder has stopped doing their part. What first?",
-      options: ["Remove them from the WhatsApp group", "Do their work silently and stay angry", "Have an honest one-to-one talk early: what’s going on, and what can each of you commit to?", "Post about it online"], answer: 2,
+      options: ["Remove them from the WhatsApp group quietly", "Do their work silently and stay angry", "Have an honest one-to-one talk early", "Post about it online so they feel bad"], answer: 2,
       hint: "Remember the HR Round answer about teammates?",
       note: "Talk early and honestly. Most co-founder problems get worse the longer they stay unsaid.", badge: "message-circle",
       board: true, boardLabel: "after Month 5"
@@ -210,14 +210,14 @@ window.GAME = {
     TQ(6, "The Investor", {
       double: true,
       prompt: "An investor offers ₹5 lakh for 40% of CampusEats, today. Best move?",
-      options: ["Refuse all investors forever", "Don’t rush. 40% is a lot this early. Compare with incubators and grants, and negotiate for less equity", "Ask for ₹5 crore instead", "Accept immediately, it’s a lot of money"], answer: 1,
+      options: ["Refuse all investors forever to stay in control", "Don’t rush. Compare offers, negotiate equity", "Ask for ₹5 crore instead and see what happens", "Accept immediately, it’s a lot of money"], answer: 1,
       hint: "How much of your company would be left for future rounds?",
       note: "Giving away 40% this early can hurt you later. Explore support that costs less equity first, and negotiate.", badge: "landmark"
     }),
     TQ(6, "The Investor", {
       double: true,
       prompt: "Your pitch to the investor should start with…",
-      options: ["How much money you need", "Your college marks", "The problem and your traction: “Students wait 45 minutes for food. We deliver in 10, and do 1,200 orders a month, 60% from repeat customers.”", "Your logo and colours"], answer: 2,
+      options: ["How much money you need and what you’ll spend it on", "Your college marks and achievements", "The problem and your traction: 1,200 orders a month", "Your logo, brand colours and app screenshots"], answer: 2,
       hint: "What do investors want to know first?",
       note: "Problem + proof that people want your solution. Numbers like repeat customers speak louder than any slide design.", badge: "mic"
     }),
