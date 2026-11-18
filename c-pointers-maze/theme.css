@@ -1,0 +1,16 @@
+/* C Pointers Maze: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#060B18; --panel:#0D1630; --panel2:#0D1630; --line:#22305A;
+  --ink:#F3F5FB; --soft:#B4C2EA; --amber:#7CE0FF; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#1B2B66 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#7CE0FF,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#5B8CFF,#3446C9);color:#FFFFFF}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#7CE0FF}
+.brow:first-child{border-color:#7CE0FF}
+.word b{color:#7CE0FF;font-family:var(--body);font-size:18px}
