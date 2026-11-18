@@ -4,13 +4,17 @@
 
 window.ZONE = {
   clubs: [
-    { id: "coding", name: "Coding Club", icon: "code", color: "#4C9BFF", color2: "#1E4FD8", tagline: "Escape rooms, quizzes and placement rounds", about: "Learn real coding by playing. No laptop needed: every game runs on phones." },
-    { id: "english", name: "English Club", icon: "message-circle", color: "#FF7A8A", color2: "#D6336C", tagline: "Speaking games, stories and debates", about: "Games where everyone talks in English, with no fear of mistakes." },
-    { id: "skills", name: "Skills Club", icon: "rocket", color: "#3DDC97", color2: "#11A36A", tagline: "Careers, resumes and interview games", about: "Careers after BTech, interviews, resumes and the skills companies look for." },
-    { id: "ai-lab", name: "AI Lab", icon: "bot", color: "#B58CFF", color2: "#7048E8", tagline: "Spot fakes, fix prompts, use AI smartly", about: "Learn how AI really works and how to use it well: prompts, fact-checking, the right tools and the right choices." },
-    { id: "entrepreneurship", name: "Entrepreneurship", icon: "trending-up", color: "#FFA94D", color2: "#D9480F", tagline: "Pitch, price and build your startup", about: "Think like a founder: spot real ideas, find customers, price your product and pitch to investors." },
-    { id: "fun", name: "Fun Zone", icon: "party-popper", color: "#2DD4BF", color2: "#0B7F78", tagline: "Quizzes, brain teasers and party games", about: "Pure fun for any crowd. Great as an opener or a break between sessions." }
+    { id: "coding", planet: "Planet Code", name: "Coding Club", icon: "code", color: "#4C9BFF", color2: "#1E4FD8", tagline: "Escape rooms, quizzes and placement rounds", about: "Learn real coding by playing. No laptop needed: every game runs on phones." },
+    { id: "english", planet: "Planet English", name: "English Club", icon: "message-circle", color: "#FF7A8A", color2: "#D6336C", tagline: "Speaking games, stories and debates", about: "Games where everyone talks in English, with no fear of mistakes." },
+    { id: "skills", planet: "Planet Forge", name: "Skills Club", icon: "rocket", color: "#3DDC97", color2: "#11A36A", tagline: "Careers, resumes and interview games", about: "Careers after BTech, interviews, resumes and the skills companies look for." },
+    { id: "ai-lab", planet: "Planet AI", name: "AI Lab", icon: "bot", color: "#B58CFF", color2: "#7048E8", tagline: "Spot fakes, fix prompts, use AI smartly", about: "Learn how AI really works and how to use it well: prompts, fact-checking, the right tools and the right choices." },
+    { id: "entrepreneurship", planet: "Planet Launchpad", name: "Entrepreneurship", icon: "trending-up", color: "#FFA94D", color2: "#D9480F", tagline: "Pitch, price and build your startup", about: "Think like a founder: spot real ideas, find customers, price your product and pitch to investors." },
+    { id: "fun", planet: "Planet Party", name: "Fun Zone", icon: "party-popper", color: "#2DD4BF", color2: "#0B7F78", tagline: "Quizzes, brain teasers and party games", about: "Pure fun for any crowd. Great as an opener or a break between sessions." }
   ],
+
+  // Today's Mission on the home page changes by itself every day.
+  // To fix one game for a special day, put its folder name here, e.g. mission: "cricket-crazy-quiz". Set it back to "" afterwards.
+  mission: "",
 
   banner: {
     eyebrow: "Coming soon",
