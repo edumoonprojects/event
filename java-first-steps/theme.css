@@ -1,0 +1,16 @@
+/* Java First Steps: theme for the EduMoon Game Zone (overrides the engine colours). */
+:root{
+  --bg:#1A0E05; --panel:#2E1A0B; --panel2:#2E1A0B; --line:#56341A;
+  --ink:#F3F5FB; --soft:#F2C9A4; --amber:#FFE08A; --green:#4FD8A0; --coral:#FF6B6B; --blue:#7CC8F2;
+  --display:'Space Grotesk',Verdana,sans-serif;
+}
+body{background:radial-gradient(circle at 85% 0%,#5C2A0C 0%,var(--bg) 55%) fixed}
+html{background:var(--bg)}
+.card.amber,.keyslide{background:linear-gradient(135deg,#FFE08A,#FFF1C9)}
+.btn{background:linear-gradient(135deg,#FFA94D,#D9480F);color:#1A0E05}
+.code{background:#04070F}
+.letter{background:linear-gradient(135deg,#4FD8A0,#1E9E6E);color:#03241A}
+.letter small,.letter b{color:#03241A}
+.icon{color:#FFE08A}
+.brow:first-child{border-color:#FFE08A}
+.word b{color:#FFE08A;font-family:var(--body);font-size:18px}

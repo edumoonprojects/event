@@ -1,0 +1,9 @@
+// Original artwork for India on a Plate.
+window.STORY_ART = `<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A small food stall with a striped awning and a rupee coin">
+<defs><linearGradient id="s7050" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A0E05"/><stop offset=".6" stop-color="#2E1A0B"/><stop offset="1" stop-color="#5C2A0C"/></linearGradient></defs>
+<rect width="1200" height="300" fill="url(#s7050)"/>
+<g opacity=".08" fill="#F2C9A4" font-family="monospace" font-size="20"><text x="40" y="60">biryani</text><text x="860" y="255">dhokla</text><text x="900" y="70">pootharekulu</text><text x="60" y="260">biryani</text></g>
+<g transform="translate(400 50)"><path d="M0 60 L40 0 H360 L400 60 Z" fill="#FFA94D"/><path d="M0 60 a25 25 0 0 0 50 0" fill="#D9480F"/><path d="M50 60 a25 25 0 0 0 50 0" fill="#FFE08A"/><path d="M100 60 a25 25 0 0 0 50 0" fill="#D9480F"/><path d="M150 60 a25 25 0 0 0 50 0" fill="#FFE08A"/><path d="M200 60 a25 25 0 0 0 50 0" fill="#D9480F"/><path d="M250 60 a25 25 0 0 0 50 0" fill="#FFE08A"/><path d="M300 60 a25 25 0 0 0 50 0" fill="#D9480F"/><path d="M350 60 a25 25 0 0 0 50 0" fill="#FFE08A"/><rect x="20" y="85" width="360" height="150" fill="#2E1A0B" stroke="#56341A" stroke-width="3"/><rect x="50" y="160" width="300" height="20" rx="6" fill="#F2C9A4" opacity=".5"/>
+<rect x="70" y="120" width="40" height="40" rx="6" fill="#FFE08A"/><rect x="140" y="125" width="40" height="35" rx="6" fill="#FFA94D"/><rect x="210" y="115" width="40" height="45" rx="6" fill="#F2C9A4"/><rect x="280" y="125" width="40" height="35" rx="6" fill="#FFE08A"/></g>
+<g transform="translate(880 90)"><circle cx="60" cy="60" r="56" fill="#FFE08A"/><text x="60" y="82" text-anchor="middle" font-family="Verdana" font-weight="700" font-size="60" fill="#1A0E05">&#8377;</text></g>
+</svg>`;
