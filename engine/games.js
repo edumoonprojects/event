@@ -22,6 +22,384 @@ window.ZONE = {
 
   games: [
     {
+      club: "coding", icon: "code", title: "React First Steps", added: "2026-11-18",
+      desc: "Build your first React pieces: components, props, state with useState, events, lists with keys, showing things on a condition, and the classic beginner bugs.",
+      years: "2nd year and above", level: "medium", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "react-first-steps/host.html", player: "react-first-steps/"
+    },
+    {
+      club: "english", icon: "spell-check", title: "Confusing Pairs", added: "2026-11-18",
+      desc: "Affect or effect? Lose or loose? Learn 12 word pairs that trip everyone up, with a simple memory trick for each, then catch them in real emails.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "confusing-pairs/host.html", player: "confusing-pairs/"
+    },
+    {
+      club: "ai-lab", icon: "eye", title: "How Recommendations Work", added: "2026-11-18",
+      desc: "Why does the app know what you will watch next? Signals, content-based and collaborative filtering, feedback loops, filter bubbles, and how to take control of your feed.",
+      years: "All years", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "how-recommendations-work/host.html", player: "how-recommendations-work/"
+    },
+    {
+      club: "skills", icon: "search", title: "Fact-Check Lab", added: "2026-11-18",
+      desc: "Real or fake? Check a forward like a fact-checker: source, date, old photos, numbers that don’t add up, fake job offers, look-alike links and AI-made content.",
+      years: "All years", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "fact-check-lab/host.html", player: "fact-check-lab/"
+    },
+    {
+      club: "entrepreneurship", icon: "lightbulb", title: "Design Thinking Sprint", added: "2026-11-18",
+      desc: "Fix the 20-minute canteen queue in five stages: empathise, define, ideate, prototype and test. Users first, ideas second, and cheap tests before big builds.",
+      years: "All years", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "design-thinking-sprint/host.html", player: "design-thinking-sprint/"
+    },
+    {
+      club: "fun", icon: "rocket", title: "Who Invented It?", added: "2026-11-18",
+      desc: "From zero to USB: everyday machines, ideas from ancient India, Indians behind modern tech, happy accidents, programming languages and a double-points final.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "who-invented-it/host.html", player: "who-invented-it/"
+    },
+    {
+      club: "coding", icon: "timer", title: "Big-O Speed Race", added: "2026-11-18",
+      desc: "Your code works on 10 items. Will it survive 10 lakh? O(1), O(n), O(n²), O(log n), sorting, space, and picking the fastest approach in interviews.",
+      years: "2nd year and above", level: "advanced", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "big-o-speed-race/host.html", player: "big-o-speed-race/"
+    },
+    {
+      club: "english", icon: "book-open", title: "Word Roots Lab", added: "2026-11-18",
+      desc: "Never seen the word before? Break it into prefix, root and suffix. 12 Latin and Greek word parts to decode new words in exams and reading.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "word-roots-lab/host.html", player: "word-roots-lab/"
+    },
+    {
+      club: "ai-lab", icon: "bot", title: "Code With AI", added: "2026-11-18",
+      desc: "AI wrote your code in 5 seconds. Is it right? Clear prompts, giving context, reading and testing AI code, catching made-up functions, and staying safe and honest.",
+      years: "1st year and above", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "code-with-ai/host.html", player: "code-with-ai/"
+    },
+    {
+      club: "coding", icon: "list-checks", title: "Stacks and Queues", added: "2026-11-18",
+      desc: "Two data structures you already use: stacks (undo, back button, bracket checks) and queues (canteen lines, printers, bookings). Trace push, pop and shift in simple JavaScript and pick the right one.",
+      years: "2nd year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "stacks-and-queues/host.html", player: "stacks-and-queues/"
+    },
+    {
+      club: "english", icon: "message-circle", title: "Formal or Casual?", added: "2026-11-18",
+      desc: "“Hey bro” to your professor? “Respected Sir” to your friend? Pick the right tone for greetings, requests, apologies and closings across WhatsApp, email and interviews.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "formal-or-casual/host.html", player: "formal-or-casual/"
+    },
+    {
+      club: "ai-lab", icon: "mic", title: "Talking to Machines", added: "2026-11-18",
+      desc: "What happens between “set an alarm for 6” and the alarm: wake words, speech to text, intents and details, the spoken reply, why voice AI gets Telugu-English mixes wrong, and voice privacy.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "talking-to-machines/host.html", player: "talking-to-machines/"
+    },
+    {
+      club: "skills", icon: "users", title: "Networking 101", added: "2026-11-18",
+      desc: "Talk to people at meetups and fests: a 10-second intro, good questions, listening, polite exits, LinkedIn follow-ups within 24 hours, and staying in touch before asking for referrals.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "networking-101/host.html", player: "networking-101/"
+    },
+    {
+      club: "entrepreneurship", icon: "trending-up", title: "Growth Hacks", added: "2026-11-18",
+      desc: "No ad budget? Cheap, honest ways to get your first 100 users: small experiments, referral rewards, waitlists, communities and ambassadors, useful content, and the numbers that matter.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "growth-hacks/host.html", player: "growth-hacks/"
+    },
+    {
+      club: "fun", icon: "globe", title: "World Capitals Quest", added: "2026-11-18",
+      desc: "Sydney or Canberra? Toronto or Ottawa? Name capitals across Asia, Europe, the Americas, Africa and Oceania, beat the famous traps, and finish with Indian state capitals.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "world-capitals-quest/host.html", player: "world-capitals-quest/"
+    },
+    {
+      club: "skills", icon: "indian-rupee", title: "Salary Negotiation", added: "2026-11-18",
+      desc: "Talk about pay without fear: research a fair range, know when to ask, the exact words to use, what to ask for beyond salary, offer maths, and handling yes, no and another offer honestly.",
+      years: "Final year onwards", level: "advanced", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "salary-negotiation/host.html", player: "salary-negotiation/"
+    },
+    {
+      club: "skills", icon: "chart-column", title: "Guesstimate Challenge", added: "2026-11-18",
+      desc: "“How many cups of tea are sold in Vizag daily?” Learn to estimate anything: break it down, state assumptions, top-down vs bottom-up, sanity checks and presenting your answer.",
+      years: "Final year", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "guesstimate-challenge/host.html", player: "guesstimate-challenge/"
+    },
+    {
+      club: "entrepreneurship", icon: "trending-up", title: "Fundraising Ladder", added: "2026-11-18",
+      desc: "How startups raise money: funding stages, equity and dilution, pre- and post-money valuation, what investors look for, money without equity, and term sheet basics like vesting.",
+      years: "All years", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "fundraising-ladder/host.html", player: "fundraising-ladder/"
+    },
+    {
+      club: "entrepreneurship", icon: "shield", title: "Startup Legal Basics", added: "2026-11-18",
+      desc: "The boring stuff that saves your startup: business structures, co-founder agreements, names and trademarks, GST and invoices, contracts and IP, and personal data rules in India.",
+      years: "All years", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "startup-legal-basics/host.html", player: "startup-legal-basics/"
+    },
+    {
+      club: "fun", icon: "search", title: "Mystery Case", added: "2026-11-18",
+      desc: "The fest trophy is missing. Five suspects, one timeline. Follow the keypad log, alibis, footprints and red herrings across six clue rounds to solve the case.",
+      years: "All years", level: "advanced", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "mystery-case/host.html", player: "mystery-case/"
+    },
+    {
+      club: "fun", icon: "trophy", title: "Mega Quiz Finale", added: "2026-11-18",
+      desc: "The big closing quiz: six tough rounds of science, history, geography, tech and space, Andhra and Vizag, and a double-points grand final.",
+      years: "All years", level: "advanced", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "mega-quiz-finale/host.html", player: "mega-quiz-finale/"
+    },
+    {
+      club: "coding", icon: "key", title: "C Pointers Maze", added: "2026-11-18",
+      desc: "The C topic that scares everyone. Addresses and pointers, pass by reference, pointers and arrays, walking strings, malloc and free, and the classic crashes: uninitialised, NULL and dangling pointers.",
+      years: "2nd year onwards", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "c-pointers-maze/host.html", player: "c-pointers-maze/"
+    },
+    {
+      club: "coding", icon: "timer", title: "JavaScript Async", added: "2026-11-18",
+      desc: "Why JavaScript prints things in the “wrong” order. setTimeout, callbacks, promises, the event loop, async/await, the forgotten-await bug, try/catch and Promise.all.",
+      years: "2nd year onwards", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "javascript-async/host.html", player: "javascript-async/"
+    },
+    {
+      club: "english", icon: "file-text", title: "SOP Studio", added: "2026-11-18",
+      desc: "Write a Statement of Purpose that gets read: what readers look for, openings that are not “Since childhood”, evidence over adjectives, why this programme, goals and gaps, and final polish.",
+      years: "3rd and final year", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "sop-studio/host.html", player: "sop-studio/"
+    },
+    {
+      club: "english", icon: "lightbulb", title: "Explain It Simply", added: "2026-11-18",
+      desc: "Explain any hard idea in plain English: know the listener, kill the jargon, use analogies, lead with the point, make numbers human and check understanding. Speaking-heavy.",
+      years: "All years", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "explain-it-simply/host.html", player: "explain-it-simply/"
+    },
+    {
+      club: "ai-lab", icon: "brain", title: "Neural Networks Unboxed", added: "2026-11-18",
+      desc: "Open the black box: a single neuron by hand, ReLU, layers and parameters, loss and gradient descent, overfitting, and how CNNs and transformers use the same ideas at scale.",
+      years: "2nd year onwards", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "neural-networks-unboxed/host.html", player: "neural-networks-unboxed/"
+    },
+    {
+      club: "ai-lab", icon: "file-text", title: "How AI Reads Your Notes", added: "2026-11-18",
+      desc: "How “chat with your PDF” tools work (RAG): chunking, embeddings, finding the closest chunks, grounded answers with sources, and where it fails, including privacy.",
+      years: "2nd year onwards", level: "advanced", time: "45 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "how-ai-reads-your-notes/host.html", player: "how-ai-reads-your-notes/"
+    },
+    {
+      club: "coding", icon: "palette", title: "CSS Style Studio", added: "2026-11-17",
+      desc: "Make web pages look good: selectors and which rule wins, box model maths, rem and vh units, Flexbox, Grid and media queries for phones, and debugging CSS that fails silently.",
+      years: "1st and 2nd year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "css-style-studio/host.html", player: "css-style-studio/"
+    },
+    {
+      club: "english", icon: "spell-check", title: "Article and Preposition Rush", added: "2026-11-17",
+      desc: "The small words that make English sound right: a or an by sound, the or no article, in/on/at for time and place, and fixing “discuss about” and “reach to”. Fast 25-second questions.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "article-preposition-rush/host.html", player: "article-preposition-rush/"
+    },
+    {
+      club: "ai-lab", icon: "briefcase", title: "AI Jobs Map", added: "2026-11-17",
+      desc: "“I want a job in AI.” Which one? Data analysts, data engineers, ML engineers, AI app developers, product managers and evaluators, the skills each needs, and a realistic path from any branch.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ai-jobs-map/host.html", player: "ai-jobs-map/"
+    },
+    {
+      club: "skills", icon: "file-user", title: "Talk About Your Project", added: "2026-11-17",
+      desc: "The interview question every fresher gets. Start with the problem, say what YOU did, explain tech choices, tell one real challenge, share results honestly and handle tough follow-ups.",
+      years: "3rd and final year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "talk-about-your-project/host.html", player: "talk-about-your-project/"
+    },
+    {
+      club: "entrepreneurship", icon: "rocket", title: "MVP in a Weekend", added: "2026-11-17",
+      desc: "Stop planning for months. Find your riskiest assumption, build a no-code MVP, set one success number, run a Friday-to-Sunday plan and decide: continue, change or stop.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "mvp-in-a-weekend/host.html", player: "mvp-in-a-weekend/"
+    },
+    {
+      club: "fun", icon: "zap", title: "Number Ninja", added: "2026-11-17",
+      desc: "No calculators. Six mental maths tricks: ×11, ×5, squares ending in 5, quick percentages, doubling and halving, and divisibility checks. Type answers fast for speed points.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "number-ninja/host.html", player: "number-ninja/"
+    },
+    {
+      club: "coding", icon: "code", title: "C++ Classes and Objects", added: "2026-11-17",
+      desc: "From C to C++: cout and cin, classes and objects, private and public, constructors, member functions, and a first look at inheritance and virtual functions. The OOP basics interviews ask about.",
+      years: "2nd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "cpp-classes-objects/host.html", player: "cpp-classes-objects/"
+    },
+    {
+      club: "english", icon: "smartphone", title: "Phone Call English", added: "2026-11-17",
+      desc: "Sound clear and confident on calls: opening a call, polite requests, asking someone to repeat or spell, calm customer care complaints, good voicemails and closing HR calls well.",
+      years: "All years", level: "medium", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "phone-call-english/host.html", player: "phone-call-english/"
+    },
+    {
+      club: "ai-lab", icon: "bot", title: "Chatbot Builder", added: "2026-11-17",
+      desc: "Design a college helpdesk chatbot without code: purpose and scope, intents and example phrases, replies and flows, fallbacks and human handoff, rule-based vs AI bots, and testing with real users.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "chatbot-builder/host.html", player: "chatbot-builder/"
+    },
+    {
+      club: "skills", icon: "compass", title: "GATE, CAT or GRE?", added: "2026-11-17",
+      desc: "Which exam leads where: GATE for M.Tech and PSUs, CAT for MBA, GRE and IELTS for abroad, and UPSC, APPSC, bank and SSC exams for government jobs. Choose by your goal, not by what friends are writing.",
+      years: "2nd year onwards", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "gate-cat-or-gre/host.html", player: "gate-cat-or-gre/"
+    },
+    {
+      club: "entrepreneurship", icon: "handshake", title: "Deal Room", added: "2026-11-17",
+      desc: "Negotiation for founders: set a walk-away point, make a smart first offer, find the interest behind a demand, trade instead of giving, do quick deal maths and close fairly in writing.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "deal-room/host.html", player: "deal-room/"
+    },
+    {
+      club: "fun", icon: "map", title: "Guess the Place", added: "2026-11-17",
+      desc: "Three clues, one place in India. Monuments, natural wonders, temples, places around Vizag, city nicknames and India’s far edges.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "guess-the-place/host.html", player: "guess-the-place/"
+    },
+    {
+      club: "coding", icon: "code", title: "C Functions and Strings", added: "2026-11-17",
+      desc: "The next step after C basics. Writing functions, why swap does not swap (pass by value), void and prototypes, strings as char arrays with a hidden '\\0', strlen, strcpy, strcmp, and your first recursion.",
+      years: "1st and 2nd year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "c-functions-strings/host.html", player: "c-functions-strings/"
+    },
+    {
+      club: "english", icon: "message-circle", title: "Story Chain", added: "2026-11-17",
+      desc: "Tell stories people remember: story shape, linking words, past tenses, show-don’t-tell details, reported speech and strong endings. Ends with a live story chain built by every team.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "story-chain/host.html", player: "story-chain/"
+    },
+    {
+      club: "ai-lab", icon: "eye", title: "How AI Sees", added: "2026-11-17",
+      desc: "Computer vision made simple: images as numbers, classification vs detection vs segmentation, how models learn edges and shapes, why training data decides everything, where vision fails, and face data privacy.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "how-ai-sees/host.html", player: "how-ai-sees/"
+    },
+    {
+      club: "skills", icon: "file-text", title: "Read Your Offer Letter", added: "2026-11-17",
+      desc: "You got the offer, now read it. Role and location, joining and background checks, probation, notice period, bonds and service agreements, and how to spot a fake offer letter.",
+      years: "3rd and final year", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "read-your-offer-letter/host.html", player: "read-your-offer-letter/"
+    },
+    {
+      club: "entrepreneurship", icon: "mic", title: "60-Second Pitch", added: "2026-11-17",
+      desc: "One minute, one idea. The hook, the problem, the solution, the customer, proof and the ask, plus delivery and handling questions. Ends with live team pitches.",
+      years: "All years", level: "medium", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "sixty-second-pitch/host.html", player: "sixty-second-pitch/"
+    },
+    {
+      club: "fun", icon: "trophy", title: "Cricket Crazy Quiz", added: "2026-11-17",
+      desc: "Six overs of cricket: the rules, World Cup history, the IPL, women’s cricket including India’s 2025 World Cup win, cricket words, and a final over with a Vizag question.",
+      years: "All years", level: "medium", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "cricket-crazy-quiz/host.html", player: "cricket-crazy-quiz/"
+    },
+    {
+      club: "coding", icon: "code", title: "Java First Steps", added: "2026-11-17",
+      desc: "Java from zero: the main method, printing, data types and integer division, if/else, loops, Strings and .equals(), and a first look at methods and objects. Predict outputs and find the classic beginner bugs.",
+      years: "1st and 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "java-first-steps/host.html", player: "java-first-steps/"
+    },
+    {
+      club: "english", icon: "mic", title: "Pronunciation Party", added: "2026-11-17",
+      desc: "Say it right, say it with confidence. Silent letters, word stress, words that shrink, borrowed words like suite and queue, sounds we often mix, and interview words. The whole room says every answer aloud.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "pronunciation-party/host.html", player: "pronunciation-party/"
+    },
+    {
+      club: "ai-lab", icon: "map", title: "AI in Vizag", added: "2026-11-17",
+      desc: "Port, steel, sea, beaches and traffic: what could AI do for our city? Prediction, cameras and sensors in plain words, with ideas students from any branch can start building.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ai-in-vizag/host.html", player: "ai-in-vizag/"
+    },
+    {
+      club: "skills", icon: "timer", title: "Online Test Ready", added: "2026-11-17",
+      desc: "Don’t lose a placement test to the setup. System checks, proctoring rules, time per question, negative marking, coding round tips and what to do when the internet drops mid-test.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "online-test-ready/host.html", player: "online-test-ready/"
+    },
+    {
+      club: "entrepreneurship", icon: "message-circle", title: "Startup Words", added: "2026-11-17",
+      desc: "MVP, pivot, traction, CAC, churn, burn rate, runway, equity and valuation, explained simply with quick maths. Speak the language founders and investors use.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "startup-words/host.html", player: "startup-words/"
+    },
+    {
+      club: "fun", icon: "store", title: "India on a Plate", added: "2026-11-17",
+      desc: "A food tour of India: match the dish to the state, region by region, with a special Andhra and Telangana round and a final round on famous ingredients.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "india-on-a-plate/host.html", player: "india-on-a-plate/"
+    },
+    {
+      club: "coding", icon: "code", title: "JavaScript Jungle", added: "2026-11-17",
+      desc: "The language of every website. Guess what short JavaScript programs print: variables, strings and numbers, == vs ===, arrays, loops and functions, plus the famous surprises like \"5\" + 3.",
+      years: "1st and 2nd year", level: "beginner", time: "40 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "javascript-jungle/host.html", player: "javascript-jungle/"
+    },
+    {
+      club: "english", icon: "languages", title: "Idiom Island", added: "2026-11-17",
+      desc: "Sound natural in English. Everyday idioms about studies, people, time and money, feelings and work, what they really mean, and when to keep them out of formal writing.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "idiom-island/host.html", player: "idiom-island/"
+    },
+    {
+      club: "ai-lab", icon: "shield", title: "AI Privacy Check", added: "2026-11-17",
+      desc: "What is safe to type into AI and what is not. Your own data, other people’s data, college and company data, safer habits, and how scammers now use AI voices and fake apps.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "ai-privacy-check/host.html", player: "ai-privacy-check/"
+    },
+    {
+      club: "skills", icon: "users", title: "Team Player", added: "2026-11-17",
+      desc: "Group projects without the drama. Pick roles, split the work, handle the teammate who does nothing, settle disagreements, keep everyone updated and share the credit.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "team-player/host.html", player: "team-player/"
+    },
+    {
+      club: "entrepreneurship", icon: "trending-up", title: "Business Models 101", added: "2026-11-17",
+      desc: "Free apps, cheap rides, unlimited music: so who pays? Products, services, subscriptions, ads, commissions and freemium, with made-up Indian examples and simple maths.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "business-models-101/host.html", player: "business-models-101/"
+    },
+    {
+      club: "fun", icon: "search", title: "Odd One Out", added: "2026-11-17",
+      desc: "Four items, three belong together. Spot the odd one in 25 seconds and say why. Animals, food, tech, India, numbers and a final mix.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "odd-one-out/host.html", player: "odd-one-out/"
+    },
+    {
+      club: "coding", icon: "route", title: "Flowchart Logic", added: "2026-11-17",
+      desc: "Think like a programmer before you write any code. Algorithms, the four flowchart shapes, decisions, loops, dry runs with real numbers and finding the wrong step. Perfect before your first language.",
+      years: "1st year", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "flowchart-logic/host.html", player: "flowchart-logic/"
+    },
+    {
+      club: "english", icon: "spell-check", title: "Spell It Right", added: "2026-11-17",
+      desc: "The words everyone misspells, with a simple trick for each: double letters, ie or ei, silent letters, sound-alike words, classroom favourites and the spellings that matter on a resume.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "spell-it-right/host.html", player: "spell-it-right/"
+    },
+    {
+      club: "ai-lab", icon: "brain", title: "What Is AI?", added: "2026-11-17",
+      desc: "AI from zero. Where you already use it, how it differs from a normal program, narrow and general AI, how it learns from data, what it cannot do, and what it means for your career.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "what-is-ai/host.html", player: "what-is-ai/"
+    },
+    {
+      club: "skills", icon: "briefcase", title: "First Week at Work", added: "2026-11-17",
+      desc: "What college never teaches: your first day, asking for help the smart way, work messages, meetings, owning mistakes, taking feedback and the habits that build trust.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "first-week-at-work/host.html", player: "first-week-at-work/"
+    },
+    {
+      club: "entrepreneurship", icon: "store", title: "Side Hustle Lab", added: "2026-11-17",
+      desc: "Start a small business while studying, with almost no money. Pick a hustle, test demand, start tiny, find your first customers, track every rupee and stay safe and balanced.",
+      years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "side-hustle-lab/host.html", player: "side-hustle-lab/"
+    },
+    {
+      club: "fun", icon: "eye", title: "Three Truths and a Lie", added: "2026-11-17",
+      desc: "Four surprising facts on every screen. Three are true. Find the lie in 30 seconds. Six themes: tech, India, space, animals, food and a final mix with Vizag, the body and sports.",
+      years: "All years", level: "beginner", time: "30 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",
+      host: "three-truths-one-lie/host.html", player: "three-truths-one-lie/"
+    },
+    {
       club: "ai-lab", icon: "globe", title: "AI for Every Branch", added: "2026-11-10",
       desc: "AI isn’t only for CSE. See how AI is used in ECE and EEE, Mechanical, Civil, Commerce and Pharmacy, why branch knowledge is your edge, and how to start from any branch.",
       years: "All years", level: "beginner", time: "35 min", group: "6–30 · teams or solo", needs: "Phones or Screen Deck",

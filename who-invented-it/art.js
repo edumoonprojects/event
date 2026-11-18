@@ -1,0 +1,9 @@
+// Original artwork for Who Invented It?.
+window.STORY_ART = `<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A colourful stall roof with pennant flags">
+<defs><linearGradient id="sbc39" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17110A"/><stop offset=".6" stop-color="#2A2012"/><stop offset="1" stop-color="#4D3410"/></linearGradient></defs>
+<rect width="1200" height="300" fill="url(#sbc39)"/>
+<g opacity=".08" fill="#EAD3A8" font-family="monospace" font-size="20"><text x="40" y="60">inventor</text><text x="860" y="255">year</text><text x="900" y="70">country</text><text x="60" y="260">inventor</text></g>
+<g transform="translate(400 50)"><path d="M0 60 L40 0 H360 L400 60 Z" fill="#FFC94D"/><path d="M0 60 a25 25 0 0 0 50 0" fill="#E08A00"/><path d="M50 60 a25 25 0 0 0 50 0" fill="#7CE0FF"/><path d="M100 60 a25 25 0 0 0 50 0" fill="#E08A00"/><path d="M150 60 a25 25 0 0 0 50 0" fill="#7CE0FF"/><path d="M200 60 a25 25 0 0 0 50 0" fill="#E08A00"/><path d="M250 60 a25 25 0 0 0 50 0" fill="#7CE0FF"/><path d="M300 60 a25 25 0 0 0 50 0" fill="#E08A00"/><path d="M350 60 a25 25 0 0 0 50 0" fill="#7CE0FF"/><rect x="20" y="85" width="360" height="150" fill="#2A2012" stroke="#4D3A1E" stroke-width="3"/><rect x="50" y="160" width="300" height="20" rx="6" fill="#EAD3A8" opacity=".5"/>
+<rect x="70" y="120" width="40" height="40" rx="6" fill="#7CE0FF"/><rect x="140" y="125" width="40" height="35" rx="6" fill="#FFC94D"/><rect x="210" y="115" width="40" height="45" rx="6" fill="#EAD3A8"/><rect x="280" y="125" width="40" height="35" rx="6" fill="#7CE0FF"/></g>
+<g transform="translate(880 90)"><circle cx="60" cy="60" r="56" fill="#7CE0FF"/><text x="60" y="82" text-anchor="middle" font-family="Verdana" font-weight="700" font-size="60" fill="#17110A">&#8377;</text></g>
+</svg>`;
