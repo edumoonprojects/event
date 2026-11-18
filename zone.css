@@ -1,0 +1,164 @@
+/* EduMoon Game Zone pages (home + club pages). Uses the colours from doors.css. */
+.zone .wrap{max-width:1180px;padding-bottom:48px}
+.hero{display:flex;flex-direction:column;gap:12px;padding:12px 0 4px}
+.zt{font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em}
+.zt span{background:linear-gradient(90deg,#FFB830,#FF7A8A 45%,#4C9BFF 75%,#3DDC97);-webkit-background-clip:text;background-clip:text;color:transparent}
+.clubs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.ccard{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:24px;text-decoration:none;color:#fff;
+  background:linear-gradient(140deg,var(--c) 0%,var(--c2) 100%);min-height:220px;transition:transform .15s,box-shadow .15s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.ccard:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.ccard:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.ccard::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.14)}
+.ccard h2{font-size:clamp(26px,3vw,34px);color:#fff}
+.ccard p{font-size:17px;line-height:1.4;color:rgba(255,255,255,.92);text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.cicon{font-size:44px;line-height:1}
+.ccount{margin-top:auto;font-weight:800;background:rgba(10,14,39,.35);border-radius:99px;padding:8px 14px;width:fit-content}
+.block{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+.ggrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.gcard{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:20px;padding:22px}
+.gcard h3{font-size:26px}
+.ghead{display:flex;gap:8px;flex-wrap:wrap;min-height:0}
+.ghead:empty{display:none}
+.clubtag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.newtag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--amber);color:#1C1300;border-radius:99px;padding:3px 10px}
+.badges{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.badges li{background:var(--panel2);border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:14px;font-weight:700}
+.gbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.gbtns a{text-decoration:none;text-align:center}
+.vibe{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px;border-radius:24px;
+  background:linear-gradient(120deg,#3A1150 0%,#7A1E48 50%,#B4461E 100%);border:1px solid #B35A3A}
+.vibe h2{font-size:clamp(26px,3.4vw,40px)}
+.vibe .eyebrow{color:#FFD27A}
+.vibe a{text-decoration:none}
+.backlink{color:var(--soft);font-weight:800;text-decoration:none;width:fit-content}
+.backlink:hover{color:var(--ink)}
+.chero{display:flex;align-items:center;gap:20px;padding:28px;border-radius:24px;background:linear-gradient(140deg,var(--c) 0%,var(--c2) 100%);color:#fff}
+.chero .cicon{font-size:64px}
+.chero p{color:rgba(255,255,255,.92)}
+.steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:18px;line-height:1.4}
+.foot{color:var(--soft);font-size:14px;text-align:center;margin-top:24px}
+.foot a{color:var(--amber)}
+
+/* Line icons (no emoji) */
+.cicon .ic{width:44px;height:44px}
+.chero .cicon .ic{width:64px;height:64px}
+.gicon .ic{width:1em;height:1em;color:var(--c)}
+.badges .ic{width:15px;height:15px;opacity:.85}
+
+/* Search, filters and sort (club pages with 6+ games, and the All games page) */
+.allgames{display:flex;align-items:center;gap:10px;width:fit-content;max-width:100%;margin-top:4px;padding:12px 18px;border-radius:99px;background:var(--panel);border:1px solid var(--line);color:var(--ink);font-weight:800;text-decoration:none}
+.allgames:hover{border-color:var(--amber)}
+.allgames .ic{width:18px;height:18px;color:var(--amber)}
+.filters{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px;min-width:0}
+.fsearch{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:0 14px}
+.fsearch:focus-within{border-color:var(--amber)}
+.fsearch .ic{width:18px;height:18px;opacity:.7;flex:none}
+.fsearch input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--ink);font:inherit;font-size:17px;padding:13px 0}
+.frow{display:flex;align-items:center;gap:10px;min-width:0}
+.flabel{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);width:44px;flex:none}
+.fchips{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;min-width:0;scrollbar-width:none;padding:2px}
+.fchips::-webkit-scrollbar{display:none}
+.fchip{flex:none;font:inherit;font-size:15px;font-weight:800;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:99px;padding:8px 14px;cursor:pointer;min-height:40px}
+.fchip:hover{border-color:var(--soft)}
+.fchip.on{background:var(--amber);border-color:var(--amber);color:#1C1300}
+.fchip:focus-visible,.fclear:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.fend{justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fswitch{display:flex;align-items:center;gap:8px;font-weight:800;cursor:pointer}
+.fswitch input{width:20px;height:20px;accent-color:var(--amber)}
+.fsort{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--soft)}
+.fsort select{font:inherit;font-weight:800;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-height:40px}
+.fcount{display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:800;color:var(--soft);font-size:15px}
+.fclear{font:inherit;font-weight:800;color:var(--amber);background:none;border:0;cursor:pointer;padding:6px 0;text-decoration:underline}
+#fgrid{min-width:0}
+.nomatch{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+
+/* ===== Space Mission look (home, planet pages, All games) ===== */
+/* Starry sky: fixed, behind everything. Twinkle is slow and switches off for reduced motion. */
+body.zone{background:#070B24}
+body.zone::before,body.zone::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0}
+body.zone::before{background:
+  radial-gradient(1.4px 1.4px at 6% 12%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 18% 34%,#fff 50%,transparent 51%),
+  radial-gradient(1.2px 1.2px at 29% 8%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 41% 27%,#fff 50%,transparent 51%),
+  radial-gradient(1.6px 1.6px at 57% 5%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 66% 19%,#fff 50%,transparent 51%),
+  radial-gradient(1.3px 1.3px at 79% 11%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 93% 31%,#fff 50%,transparent 51%),
+  radial-gradient(1.2px 1.2px at 9% 58%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 24% 74%,#fff 50%,transparent 51%),
+  radial-gradient(1.4px 1.4px at 37% 52%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 51% 88%,#fff 50%,transparent 51%),
+  radial-gradient(1.2px 1.2px at 63% 63%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 74% 45%,#fff 50%,transparent 51%),
+  radial-gradient(1.5px 1.5px at 86% 79%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 96% 62%,#fff 50%,transparent 51%),
+  radial-gradient(circle at 85% -10%,#1B2563 0%,transparent 55%),radial-gradient(circle at 0% 100%,#1A1450 0%,transparent 45%);opacity:.75}
+body.zone::after{background:
+  radial-gradient(1.8px 1.8px at 14% 22%,#FFD27A 50%,transparent 51%),radial-gradient(1.6px 1.6px at 47% 41%,#fff 50%,transparent 51%),
+  radial-gradient(1.8px 1.8px at 71% 29%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 33% 91%,#FFD27A 50%,transparent 51%),
+  radial-gradient(1.8px 1.8px at 89% 53%,#fff 50%,transparent 51%);animation:twinkle 5s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.2}to{opacity:.9}}
+body.zone .wrap{position:relative;z-index:1}
+
+/* Hero with the EduMoon logo; only the moon moves, around the ring */
+.mhero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0 6px}
+.mhero .zt span{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#FFD27A}
+.mhero .big{margin-top:6px}
+.mlogo{position:relative;flex:none;width:clamp(110px,18vw,200px);aspect-ratio:1;overflow:hidden}
+.mhero .zt{font-size:clamp(36px,6.4vw,80px)}
+.mlogo img{display:block}
+.mlogo .ring{width:100%;height:100%}
+.mlogo .orbit{position:absolute;inset:0;animation:orbit 16s linear infinite}
+.mlogo .moon{position:absolute;left:71.47%;top:26.59%;width:26.59%;height:26.59%}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.mlogo .orbit,body.zone::after{animation:none}}
+
+/* Planets: plain round, club colour, icon inside. No rings. */
+.planet{--s:56px;width:var(--s);height:var(--s);flex:none;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 32% 28%,var(--c) 0%,var(--c2) 78%);box-shadow:inset -8px -8px 0 rgba(0,0,0,.18),0 0 0 4px rgba(255,255,255,.04)}
+.planet .ic{width:46%;height:46%;color:#fff}
+.planet.big{--s:96px}
+.planets{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.pcard{display:flex;align-items:center;gap:16px;padding:18px;border-radius:20px;text-decoration:none;color:var(--ink);background:rgba(17,24,66,.85);border:1px solid #2E3A78;transition:transform .15s,border-color .15s}
+.pcard:hover{transform:translateY(-3px);border-color:var(--c)}
+.pcard:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.pcard h2{font-size:22px}
+.pclub{font-weight:800;font-size:14px;color:var(--c);margin-top:3px;filter:brightness(1.25)}
+.ptag{font-size:15px;margin-top:4px;line-height:1.35}
+
+/* Today's Mission */
+.mission{display:grid;grid-template-columns:1fr;gap:0;border-radius:24px;overflow:hidden;background:rgba(17,24,66,.92);border:1px solid #3A4A99}
+.mart{display:flex;align-items:center;justify-content:center;aspect-ratio:4/1;background:linear-gradient(140deg,var(--c) 0%,var(--c2) 100%)}
+.mart.has{background:#0B1030}
+.mart svg,.nart svg{display:block;width:100%;height:100%;object-fit:cover}
+.minfo{display:flex;flex-direction:column;gap:10px;padding:clamp(18px,2.4vw,28px)}
+.minfo h2{font-size:clamp(26px,3vw,36px)}
+.minfo .mdesc{max-width:760px}
+.mplanet{font-weight:800;color:var(--soft);display:flex;align-items:center;gap:8px}
+.mplanet .ic{width:18px;height:18px;color:var(--c);filter:brightness(1.3)}
+.mmeta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-weight:800;font-size:14px;color:var(--soft)}
+.mmeta>span:not(.lv){display:inline-flex;align-items:center;gap:6px}
+.mmeta .ic{width:15px;height:15px}
+.mdesc{font-size:16px;line-height:1.45}
+@media (max-width:760px){.mart{aspect-ratio:3/1}.mhero{align-items:flex-start}}
+
+/* Difficulty label with signal bars */
+.lv{display:inline-flex;align-items:center;gap:7px;border-radius:99px;padding:5px 12px 5px 10px;font-size:14px;font-weight:800;border:1px solid transparent;width:fit-content}
+.lv .bars{display:inline-flex;align-items:flex-end;gap:2px;height:12px}
+.lv .bars i{display:block;width:3px;border-radius:1px;background:currentColor;opacity:.28}
+.lv .bars i:nth-child(1){height:5px}.lv .bars i:nth-child(2){height:8px}.lv .bars i:nth-child(3){height:12px}
+.lv .bars i.on{opacity:1}
+.lv-beginner{background:#0F3D2A;color:#7EE2B0;border-color:#1E6A48}
+.lv-medium{background:#45300A;color:#FFD27A;border-color:#7A5A16}
+.lv-advanced{background:#4A1515;color:#FF9C9C;border-color:#7E2A2A}
+.badges li.lv{padding:5px 12px 5px 10px}
+
+/* New this week */
+.ngrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.ncard{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:rgba(17,24,66,.92);border:1px solid #2E3A78}
+.nart{display:flex;align-items:center;justify-content:center;aspect-ratio:4/1;background:linear-gradient(140deg,var(--c) 0%,var(--c2) 100%)}
+.nart.has{background:#0B1030}
+.nbody{display:flex;flex-direction:column;gap:8px;padding:16px 18px 18px;flex:1}
+.nbody h3{font-size:21px}
+.nbody .gbtns{margin-top:auto;padding-top:4px}
+.btn.small{font-size:15px;padding:9px 16px;min-height:42px;border-radius:12px}
+
+/* Planet page hero and cards on the dark sky */
+.chero{background:rgba(17,24,66,.92);border:1px solid #3A4A99;color:var(--ink);align-items:center}
+.chero .eyebrow{color:#FFD27A}
+.chero p.big{color:var(--soft)}
+.gcard{background:rgba(19,26,74,.92)}
+.filters{background:rgba(19,26,74,.92)}
